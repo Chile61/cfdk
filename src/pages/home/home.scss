@@ -1,0 +1,41 @@
+.home {
+}
+.tit {
+    color: #51A7E8;
+}
+ul,li { padding: 0; margin: 0;}
+li { list-style: none;}
+.swiper-container {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}  
+
+#menu {
+    width: 100%;
+    height: 80px;
+    padding-top: 10px;
+    background: #fff;
+    border-bottom: 1px solid #d0d0d0;
+    overflow: hidden;
+}
+
+#menu .d_icon {
+    font-size: 30px;
+}
+
+#menu li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+#menu li p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 15px;
+    color: #626262;
+}

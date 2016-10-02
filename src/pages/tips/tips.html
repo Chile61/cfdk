@@ -1,0 +1,31 @@
+<ion-header>
+
+<ion-toolbar>
+
+  <ion-navbar>
+    <ion-title>
+      分享心得
+    </ion-title>
+  </ion-navbar>
+  <ion-buttons right>
+  <button (click)="send()">
+  发送
+</button>
+</ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ 		<section id="dv_my_work">
+			
+			<textarea placeholder="说点什么..."></textarea>
+			
+			<ul class="dv_clear">
+				<li (click)="presentActionSheet()" style="background: url(img/QQ20160925-0.png) no-repeat; background-size: cover;"></li>
+				
+			</ul>
+		</section>
+
+</ion-content>
