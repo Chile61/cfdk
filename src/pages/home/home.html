@@ -2,10 +2,11 @@
 
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background: url(assets/img/card-amsterdam.png) no-repeat center; background-size: cover;">Slide 1</div>
-      <div class="swiper-slide" style="background: url(assets/img/card-madison.png) no-repeat center; background-size: cover;">Slide 2</div>
-      <div class="swiper-slide" style="background: url(assets/img/card-saopaolo.png) no-repeat center; background-size: cover;">Slide 3</div>
-      <div class="swiper-slide" style="background: url(assets/img/card-sf.png) no-repeat center; background-size: cover;">Slide 3</div>
+
+      <div *ngFor="let banner of banners" class="swiper-slide"  style="color: #000;">
+        <img [src]="banner" style="width: 100%; height: 100%; display: block;">
+      </div>
+
     </div>
     <!-- 如果需要分页器 -->
     <div class="swiper-pagination"></div>
@@ -32,30 +33,16 @@
 
   <!-- ============================================ -->
   <ion-list>
-    <ion-item>
+
+    <ion-item *ngFor="let data of art">
       <ion-thumbnail item-left>
-        <img src="assets/img/thumbnail-totoro.png">
+        <img [src]="data.img" />
       </ion-thumbnail>
-      <h2>My Neighbor Totoro</h2>
-      <p>Hayao Miyazaki • 1988</p>
+      <h2>{{ data.title }}</h2>
+      <p>{{ data.cont }}</p>
       <button clear item-right>View</button>
     </ion-item>
-    <ion-item>
-      <ion-thumbnail item-left>
-        <img src="assets/img/thumbnail-rotla.png">
-      </ion-thumbnail>
-      <h2>My Neighbor Totoro</h2>
-      <p>Hayao Miyazaki • 1988</p>
-      <button clear item-right>View</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-left>
-        <img src="assets/img/thumbnail-ghostbusters.png">
-      </ion-thumbnail>
-      <h2>My Neighbor Totoro</h2>
-      <p>Hayao Miyazaki • 1988</p>
-      <button clear item-right>View</button>
-    </ion-item>
+    
   </ion-list>
   <!-- ================================================== -->
   <ion-card>
@@ -73,141 +60,54 @@
       Recent Conversations
     </ion-list-header>
     
-    <ion-item>
+    <ion-item *ngFor="let data of qus">
       <ion-avatar item-left>
-        <img src="assets/img/avatar-ts-woody.png">
+        <img [src]="data.img">
       </ion-avatar>
-      <h2>Woody</h2>
-      <p>This town ain't big enough for the two of us!</p>
+      <h2>{{ data.name }}</h2>
+      <p>{{ data.qus }}</p>
     </ion-item>
-    <ion-item>
-      <ion-avatar item-left>
-        <img src="assets/img/avatar-ts-buzz.png">
-      </ion-avatar>
-      <h2>Woody</h2>
-      <p>This town ain't big enough for the two of us!</p>
-    </ion-item>
-    <ion-item>
-      <ion-avatar item-left>
-        <img src="assets/img/avatar-ts-slinky.png">
-      </ion-avatar>
-      <h2>Woody</h2>
-      <p>This town ain't big enough for the two of us!</p>
-    </ion-item>
-
+    
     <!-- ======================================== -->
 
-    <ion-card>
+    <ion-card *ngFor="let data of works">
 
       <ion-item>
         <ion-avatar item-left>
-          <img src="assets/img/marty-avatar.png">
+          <img [src]="data.img">
         </ion-avatar>
-        <h2>Marty McFly</h2>
-        <p>November 5, 1955</p>
+        <h2>{{ data.name }}</h2>
+        <p>{{ data.dec }}</p>
       </ion-item>
 
-      <img src="assets/img/advance-card-bttf.png">
+      <img [src]="data.ban">
 
       <ion-card-content>
-        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+        <p>{{ data.cont }}</p>
       </ion-card-content>
 
       <ion-row>
         <ion-col>
           <button primary clear small>
                   <ion-icon name="thumbs-up"></ion-icon>
-                  <div>12 Likes</div>
+                  <div>{{ data.like }} Likes</div>
               </button>
         </ion-col>
         <ion-col>
           <button primary clear small>
                   <ion-icon name="text"></ion-icon>
-                  <div>4 Comments</div>
+                  <div>{{ data.comment }} Comments</div>
               </button>
         </ion-col>
         <ion-col center text-center>
           <ion-note>
-            11h ago
+            {{ data.time }}
           </ion-note>
         </ion-col>
       </ion-row>
 
     </ion-card>
-    <ion-card>
-
-      <ion-item>
-        <ion-avatar item-left>
-          <img src="assets/img/marty-avatar.png">
-        </ion-avatar>
-        <h2>Marty McFly</h2>
-        <p>November 5, 1955</p>
-      </ion-item>
-
-      <img src="assets/img/advance-card-bttf.png">
-
-      <ion-card-content>
-        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-      </ion-card-content>
-
-      <ion-row>
-        <ion-col>
-          <button primary clear small>
-                  <ion-icon name="thumbs-up"></ion-icon>
-                  <div>12 Likes</div>
-              </button>
-        </ion-col>
-        <ion-col>
-          <button primary clear small>
-                  <ion-icon name="text"></ion-icon>
-                  <div>4 Comments</div>
-              </button>
-        </ion-col>
-        <ion-col center text-center>
-          <ion-note>
-            11h ago
-          </ion-note>
-        </ion-col>
-      </ion-row>
-
-    </ion-card>
-    <ion-card>
-
-      <ion-item>
-        <ion-avatar item-left>
-          <img src="assets/img/marty-avatar.png">
-        </ion-avatar>
-        <h2>Marty McFly</h2>
-        <p>November 5, 1955</p>
-      </ion-item>
-
-      <img src="assets/img/advance-card-bttf.png">
-
-      <ion-card-content>
-        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-      </ion-card-content>
-
-      <ion-row>
-        <ion-col>
-          <button primary clear small>
-                  <ion-icon name="thumbs-up"></ion-icon>
-                  <div>12 Likes</div>
-              </button>
-        </ion-col>
-        <ion-col>
-          <button primary clear small>
-                  <ion-icon name="text"></ion-icon>
-                  <div>4 Comments</div>
-              </button>
-        </ion-col>
-        <ion-col center text-center>
-          <ion-note>
-            11h ago
-          </ion-note>
-        </ion-col>
-      </ion-row>
-
-    </ion-card>
+    
 
   </ion-list>
 

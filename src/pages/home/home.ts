@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { Headers, Http } from '@angular/http';
 
 
 declare var $:any;
@@ -14,10 +15,30 @@ declare var YCWeibo:any;
   templateUrl: 'home.html'
 })
 export class HomePage {
+	
 
-  constructor(public navCtrl: NavController) {
-  	
+  public headers: Headers;
+  banners;
+  qus;
+  art;
+  works;
+
+  constructor(public navCtrl: NavController, private http: Http) {
+  		this.GetData();
   }
+
+  //获取数据
+  GetData() {
+
+		let url = "http://www.devonhello.com/cfdk";
+		this.http.get(url).subscribe((res) => {
+
+				this.banners = res.json()[0]["banner"];
+				this.art = res.json()[0]["art"];
+				this.qus = res.json()[0]["question"];
+				this.works = res.json()[0]["work"];
+			});
+	}
 
   ionViewDidEnter() {
 
