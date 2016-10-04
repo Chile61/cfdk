@@ -37,14 +37,14 @@
 	</ion-refresher>
 
 	<ion-list *ngSwitchCase="'new'">
-		<ion-card>
+		<ion-card *ngFor="let data of question">
 			<ion-item>
 				<ion-avatar item-left>
-					<img src="assets/img/avatar-ts-barbie.png">
+					<img [src]="data.img">
 				</ion-avatar>
 				<div (click)="pushQuestionInPage()">
-					<h2>Finn</h2>
-					<p>Listen, I've had a pretty messed up day...</p>
+					<h2>{{ data.name }}</h2>
+					<p>{{ data.qus }}</p>
 				</div>
 			</ion-item>
 			<ion-row>
@@ -52,320 +52,77 @@
 				<ion-col>
 					<button primary clear small>
         <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
+        <div>{{ data.comment }} Comments</div>
       </button>
 				</ion-col>
 				<ion-col center text-center>
 					<ion-note>
-						11h ago
+						{{ data.time }}
 					</ion-note>
 				</ion-col>
 			</ion-row>
 		</ion-card>
 
-		<ion-card>
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/avatar-ts-bopeep.png">
-				</ion-avatar>
-				<div (click)="pushQuestionPage()">
-					<h2>Finn</h2>
-					<p>Listen, I've had a pretty messed up day...</p>
-				</div>
-
-			</ion-item>
-			<ion-row>
-
-				<ion-col>
-					<button primary clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-		</ion-card>
-
-		<ion-card>
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/avatar-ts-bullseye.png">
-				</ion-avatar>
-				<div (click)="pushQuestionInPage()">
-					<h2>Finn</h2>
-					<p>Listen, I've had a pretty messed up day...</p>
-				</div>
-
-			</ion-item>
-			<ion-row>
-
-				<ion-col>
-					<button primary clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-		</ion-card>
-		<ion-card>
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/avatar-ts-barbie.png">
-				</ion-avatar>
-				<div (click)="pushQuestionInPage()">
-					<h2>Finn</h2>
-					<p>Listen, I've had a pretty messed up day...</p>
-				</div>
-
-			</ion-item>
-			<ion-row>
-
-				<ion-col>
-					<button primary clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-		</ion-card>
-
-		<ion-card>
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/avatar-ts-bopeep.png">
-				</ion-avatar>
-				<div (click)="pushQuestionInPage()">
-					<h2>Finn</h2>
-					<p>Listen, I've had a pretty messed up day...</p>
-				</div>
-
-			</ion-item>
-			<ion-row>
-
-				<ion-col>
-					<button primary clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-		</ion-card>
-
-		<ion-card>
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/avatar-ts-bullseye.png">
-				</ion-avatar>
-				<div (click)="pushQuestionInPage()">
-					<h2>Finn</h2>
-					<p>Listen, I've had a pretty messed up day...</p>
-				</div>
-
-			</ion-item>
-			<ion-row>
-
-				<ion-col>
-					<button primary clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-		</ion-card>
 
 	</ion-list>
 
 	<ion-list *ngSwitchCase="'new2'">
 
-		<ion-card>
+		<ion-card *ngFor="let data of works">
 
 			<ion-item>
 				<ion-avatar item-left>
-					<img src="assets/img/marty-avatar.png">
+					<img [src]="data.head">
 				</ion-avatar>
-				<h2>Marty McFly</h2>
-				<p>November 5, 1955</p>
+				<h2>{{ data.name }}</h2>
+				<p>{{ data.dec }}</p>
 			</ion-item>
 
-			<img src="assets/img/advance-card-bttf.png">
+			<img [src]="data.img">
 
 			<ion-card-content>
-				<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+				<p>{{ data.say }}</p>
 			</ion-card-content>
 
 			<ion-row>
 				<ion-col>
 					<button primary clear small>
 			        		<ion-icon name="thumbs-up"></ion-icon>
-			        		<div>12 Likes</div>
+			        		<div>{{ data.like }} Likes</div>
 			      	</button>
 				</ion-col>
 				<ion-col>
 					<button primary clear small>
 			        		<ion-icon name="text"></ion-icon>
-			        		<div>4 Comments</div>
+			        		<div>{{ data.comment }} Comments</div>
 			      	</button>
 				</ion-col>
 				<ion-col center text-center>
 					<ion-note>
-						11h ago
+						{{ data.time }}
 					</ion-note>
 				</ion-col>
 			</ion-row>
 
 		</ion-card>
-		<ion-card>
-
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/marty-avatar.png">
-				</ion-avatar>
-				<h2>Marty McFly</h2>
-				<p>November 5, 1955</p>
-			</ion-item>
-
-			<img src="assets/img/advance-card-bttf.png">
-
-			<ion-card-content>
-				<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-			</ion-card-content>
-
-			<ion-row>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="thumbs-up"></ion-icon>
-			        		<div>12 Likes</div>
-			      	</button>
-				</ion-col>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="text"></ion-icon>
-			        		<div>4 Comments</div>
-			      	</button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-
-		</ion-card>
-		<ion-card>
-
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/marty-avatar.png">
-				</ion-avatar>
-				<h2>Marty McFly</h2>
-				<p>November 5, 1955</p>
-			</ion-item>
-
-			<img src="assets/img/advance-card-bttf.png">
-
-			<ion-card-content>
-				<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-			</ion-card-content>
-
-			<ion-row>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="thumbs-up"></ion-icon>
-			        		<div>12 Likes</div>
-			      	</button>
-				</ion-col>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="text"></ion-icon>
-			        		<div>4 Comments</div>
-			      	</button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-
-		</ion-card>
-		<ion-card>
-
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/marty-avatar.png">
-				</ion-avatar>
-				<h2>Marty McFly</h2>
-				<p>November 5, 1955</p>
-			</ion-item>
-
-			<img src="assets/img/advance-card-bttf.png">
-
-			<ion-card-content>
-				<p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-			</ion-card-content>
-
-			<ion-row>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="thumbs-up"></ion-icon>
-			        		<div>12 Likes</div>
-			      	</button>
-				</ion-col>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="text"></ion-icon>
-			        		<div>4 Comments</div>
-			      	</button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-
-		</ion-card>
+		
 
 	</ion-list>
 
 	<ion-list *ngSwitchCase="'hot'">
 
-		<ion-card (click)="pushTipsInPage()">
+		<ion-card *ngFor="let data of tips">
 
-			<ion-item>
+			<ion-item (click)="pushTipsInPage()">
 				<ion-avatar item-left>
-					<img src="assets/img/marty-avatar.png">
+					<img [src]="data.head">
 				</ion-avatar>
-				<h2>Marty McFly</h2>
+				<h2>{{ data.name }}</h2>
 				<p>November 5, 1955</p>
 			</ion-item>
 
 			<ion-card-content>
-				<p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
+				<p>{{ data.say }}</p>
 			</ion-card-content>
 			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
 			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
@@ -375,138 +132,25 @@
 				<ion-col>
 					<button primary clear small>
 			        		<ion-icon name="thumbs-up"></ion-icon>
-			        		<div>12 Likes</div>
+			        		<div>{{ data.like }} Likes</div>
 			      	</button>
 				</ion-col>
 				<ion-col>
 					<button primary clear small>
 			        		<ion-icon name="text"></ion-icon>
-			        		<div>4 Comments</div>
+			        		<div>{{ data.comment }} Comments</div>
 			      	</button>
 				</ion-col>
 				<ion-col center text-center>
 					<ion-note>
-						11h ago
+						{{ data.time }}
 					</ion-note>
 				</ion-col>
 			</ion-row>
 
 		</ion-card>
-		<ion-card (click)="pushTipsInPage()">
-
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/marty-avatar.png">
-				</ion-avatar>
-				<h2>Marty McFly</h2>
-				<p>November 5, 1955</p>
-			</ion-item>
-
-			<ion-card-content>
-				<p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
-			</ion-card-content>
-
-			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
-			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
-
-			<ion-row>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="thumbs-up"></ion-icon>
-			        		<div>12 Likes</div>
-			      	</button>
-				</ion-col>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="text"></ion-icon>
-			        		<div>4 Comments</div>
-			      	</button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-
-		</ion-card>
-		<ion-card>
-
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/marty-avatar.png">
-				</ion-avatar>
-				<h2>Marty McFly</h2>
-				<p>November 5, 1955</p>
-			</ion-item>
-
-			<ion-card-content>
-				<p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
-			</ion-card-content>
-
-			<ion-row>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="thumbs-up"></ion-icon>
-			        		<div>12 Likes</div>
-			      	</button>
-				</ion-col>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="text"></ion-icon>
-			        		<div>4 Comments</div>
-			      	</button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-
-		</ion-card>
-		<ion-card>
-
-			<ion-item>
-				<ion-avatar item-left>
-					<img src="assets/img/marty-avatar.png">
-				</ion-avatar>
-				<h2>Marty McFly</h2>
-				<p>November 5, 1955</p>
-			</ion-item>
-
-			<ion-card-content>
-				<p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
-			</ion-card-content>
-
-			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
-			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
-			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
-			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
-			<img style="width: 7.5rem; height: 7.5rem; margin: 0 0.5rem 0.5rem; float: left;" src="assets/img/advance-card-bttf.png">
-
-			<ion-row>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="thumbs-up"></ion-icon>
-			        		<div>12 Likes</div>
-			      	</button>
-				</ion-col>
-				<ion-col>
-					<button primary clear small>
-			        		<ion-icon name="text"></ion-icon>
-			        		<div>4 Comments</div>
-			      	</button>
-				</ion-col>
-				<ion-col center text-center>
-					<ion-note>
-						11h ago
-					</ion-note>
-				</ion-col>
-			</ion-row>
-
-		</ion-card>
-
+		
+		
 		
 		
 	</ion-list>
