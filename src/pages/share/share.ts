@@ -36,8 +36,11 @@ export class SharePage {
   }
 
   //查看问题
-  pushQuestionInPage(){
-    this.navCtrl.push(QuestionInPage);
+  pushQuestionInPage(id){
+
+    this.navCtrl.push(QuestionInPage,{
+      id: id,
+    });
   }
 
   //获取分享数据

@@ -42,7 +42,7 @@
 				<ion-avatar item-left>
 					<img [src]="data.img">
 				</ion-avatar>
-				<div (click)="pushQuestionInPage()">
+				<div (click)="pushQuestionInPage(data.qid)">
 					<h2>{{ data.name }}</h2>
 					<p>{{ data.qus }}</p>
 				</div>

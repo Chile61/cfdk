@@ -10,9 +10,9 @@
 
  <ion-item>
    <ion-label floating>写下您的问题</ion-label>
-   <ion-textarea></ion-textarea>
+   <ion-textarea [(ngModel)]="text"></ion-textarea>
  </ion-item>
 <br/>
-<button ion-button full>提问</button>
+<button ion-button full (click)="postQuestion()">提问</button>
 
 </ion-content>
