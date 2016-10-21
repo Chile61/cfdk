@@ -5,17 +5,6 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { MePage } from '../pages/me/me';
-import { myBasePage } from '../pages/myBase/myBase';
-import { SharePage } from '../pages/share/share';
-import { MyPopOverPage } from '../pages/pop/pop';
-import { QuestionPage } from '../pages/question/question';
-import { TipsPage } from '../pages/tips/tips';
-import { sendWorkPage } from '../pages/sendWork/sendWork';
-import { QuestionInPage } from '../pages/question_in/question_in';
-import { TipsInPage } from '../pages/tips_in/tips_in';
-
-
 
 @NgModule({
   declarations: [
@@ -23,22 +12,10 @@ import { TipsInPage } from '../pages/tips_in/tips_in';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    MePage,
-    myBasePage,
-    SharePage,
-    MyPopOverPage,
-    TipsPage,
-    QuestionPage,
-    sendWorkPage,
-    QuestionInPage,
-    TipsInPage,
-
+    TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp,{
-      tabsHideOnSubPages:true
-    })
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,17 +23,7 @@ import { TipsInPage } from '../pages/tips_in/tips_in';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    MePage,
-    myBasePage,
-    SharePage,
-    MyPopOverPage,
-    TipsPage,
-    QuestionPage,
-    sendWorkPage,
-    QuestionInPage,
-    TipsInPage,
-
+    TabsPage
   ],
   providers: []
 })
