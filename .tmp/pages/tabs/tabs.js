@@ -9,6 +9,7 @@ export var TabsPage = (function () {
         this.tab1Root = HomePage;
         this.tab2Root = AboutPage;
         this.tab3Root = ContactPage;
+        this.tab4Root = ContactPage;
     }
     TabsPage.decorators = [
         { type: Component, args: [{

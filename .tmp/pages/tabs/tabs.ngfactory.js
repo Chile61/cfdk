@@ -77,37 +77,47 @@ var _View_TabsPage0 = (function (_super) {
         var compView_0 = import12.viewFactory_Tabs0(this.viewUtils, this.injector(0), this._appEl_0);
         this._Tabs_0_4 = new import10.Tabs(this.parentInjector.get(import13.NavController, null), this.parentInjector.get(import14.ViewController, null), this.parentInjector.get(import15.App), this.parentInjector.get(import16.Config), new import17.ElementRef(this._el_0), this.parentInjector.get(import18.Platform), this.renderer, this.parentInjector.get(import19.DeepLinker));
         this._appEl_0.initComponent(this._Tabs_0_4, [], compView_0);
-        this._text_1 = this.renderer.createText(null, '\n  ', null);
+        this._text_1 = this.renderer.createText(null, '\n    ', null);
         this._el_2 = this.renderer.createElement(null, 'ion-tab', null);
         this.renderer.setElementAttribute(this._el_2, 'role', 'tabpanel');
         this.renderer.setElementAttribute(this._el_2, 'tabIcon', 'home');
-        this.renderer.setElementAttribute(this._el_2, 'tabTitle', 'Home');
+        this.renderer.setElementAttribute(this._el_2, 'tabTitle', '厨房');
         this._appEl_2 = new import2.AppElement(2, 0, this, this._el_2);
         var compView_2 = import20.viewFactory_Tab0(this.viewUtils, this.injector(2), this._appEl_2);
         this._Tab_2_4 = new import11.Tab(this._Tabs_0_4, this.parentInjector.get(import15.App), this.parentInjector.get(import16.Config), this.parentInjector.get(import21.Keyboard), new import17.ElementRef(this._el_2), this.parentInjector.get(import22.NgZone), this.renderer, this.parentInjector.get(import23.ComponentFactoryResolver), compView_2.ref, this.parentInjector.get(import24.GestureController), this.parentInjector.get(import25.TransitionController), this.parentInjector.get(import19.DeepLinker, null));
         this._appEl_2.initComponent(this._Tab_2_4, [], compView_2);
         compView_2.create(this._Tab_2_4, [], null);
-        this._text_3 = this.renderer.createText(null, '\n  ', null);
+        this._text_3 = this.renderer.createText(null, '\n    ', null);
         this._el_4 = this.renderer.createElement(null, 'ion-tab', null);
         this.renderer.setElementAttribute(this._el_4, 'role', 'tabpanel');
         this.renderer.setElementAttribute(this._el_4, 'tabIcon', 'information-circle');
-        this.renderer.setElementAttribute(this._el_4, 'tabTitle', 'About');
+        this.renderer.setElementAttribute(this._el_4, 'tabTitle', '分享');
         this._appEl_4 = new import2.AppElement(4, 0, this, this._el_4);
         var compView_4 = import20.viewFactory_Tab0(this.viewUtils, this.injector(4), this._appEl_4);
         this._Tab_4_4 = new import11.Tab(this._Tabs_0_4, this.parentInjector.get(import15.App), this.parentInjector.get(import16.Config), this.parentInjector.get(import21.Keyboard), new import17.ElementRef(this._el_4), this.parentInjector.get(import22.NgZone), this.renderer, this.parentInjector.get(import23.ComponentFactoryResolver), compView_4.ref, this.parentInjector.get(import24.GestureController), this.parentInjector.get(import25.TransitionController), this.parentInjector.get(import19.DeepLinker, null));
         this._appEl_4.initComponent(this._Tab_4_4, [], compView_4);
         compView_4.create(this._Tab_4_4, [], null);
-        this._text_5 = this.renderer.createText(null, '\n  ', null);
+        this._text_5 = this.renderer.createText(null, '\n    ', null);
         this._el_6 = this.renderer.createElement(null, 'ion-tab', null);
         this.renderer.setElementAttribute(this._el_6, 'role', 'tabpanel');
         this.renderer.setElementAttribute(this._el_6, 'tabIcon', 'contacts');
-        this.renderer.setElementAttribute(this._el_6, 'tabTitle', 'Contact');
+        this.renderer.setElementAttribute(this._el_6, 'tabTitle', '信息');
         this._appEl_6 = new import2.AppElement(6, 0, this, this._el_6);
         var compView_6 = import20.viewFactory_Tab0(this.viewUtils, this.injector(6), this._appEl_6);
         this._Tab_6_4 = new import11.Tab(this._Tabs_0_4, this.parentInjector.get(import15.App), this.parentInjector.get(import16.Config), this.parentInjector.get(import21.Keyboard), new import17.ElementRef(this._el_6), this.parentInjector.get(import22.NgZone), this.renderer, this.parentInjector.get(import23.ComponentFactoryResolver), compView_6.ref, this.parentInjector.get(import24.GestureController), this.parentInjector.get(import25.TransitionController), this.parentInjector.get(import19.DeepLinker, null));
         this._appEl_6.initComponent(this._Tab_6_4, [], compView_6);
         compView_6.create(this._Tab_6_4, [], null);
-        this._text_7 = this.renderer.createText(null, '\n', null);
+        this._text_7 = this.renderer.createText(null, '\n    ', null);
+        this._el_8 = this.renderer.createElement(null, 'ion-tab', null);
+        this.renderer.setElementAttribute(this._el_8, 'role', 'tabpanel');
+        this.renderer.setElementAttribute(this._el_8, 'tabIcon', 'contacts');
+        this.renderer.setElementAttribute(this._el_8, 'tabTitle', '我的');
+        this._appEl_8 = new import2.AppElement(8, 0, this, this._el_8);
+        var compView_8 = import20.viewFactory_Tab0(this.viewUtils, this.injector(8), this._appEl_8);
+        this._Tab_8_4 = new import11.Tab(this._Tabs_0_4, this.parentInjector.get(import15.App), this.parentInjector.get(import16.Config), this.parentInjector.get(import21.Keyboard), new import17.ElementRef(this._el_8), this.parentInjector.get(import22.NgZone), this.renderer, this.parentInjector.get(import23.ComponentFactoryResolver), compView_8.ref, this.parentInjector.get(import24.GestureController), this.parentInjector.get(import25.TransitionController), this.parentInjector.get(import19.DeepLinker, null));
+        this._appEl_8.initComponent(this._Tab_8_4, [], compView_8);
+        compView_8.create(this._Tab_8_4, [], null);
+        this._text_9 = this.renderer.createText(null, '\n', null);
         compView_0.create(this._Tabs_0_4, [[].concat([
                 this._text_1,
                 this._el_2,
@@ -115,9 +125,10 @@ var _View_TabsPage0 = (function (_super) {
                 this._el_4,
                 this._text_5,
                 this._el_6,
-                this._text_7
+                this._text_7,
+                this._el_8,
+                this._text_9
             ])], null);
-        this._text_8 = this.renderer.createText(parentRenderNode, '\n', null);
         this._expr_0 = import7.UNINITIALIZED;
         this._expr_1 = import7.UNINITIALIZED;
         this._expr_2 = import7.UNINITIALIZED;
@@ -133,6 +144,11 @@ var _View_TabsPage0 = (function (_super) {
         this._expr_12 = import7.UNINITIALIZED;
         this._expr_13 = import7.UNINITIALIZED;
         this._expr_14 = import7.UNINITIALIZED;
+        this._expr_15 = import7.UNINITIALIZED;
+        this._expr_16 = import7.UNINITIALIZED;
+        this._expr_17 = import7.UNINITIALIZED;
+        this._expr_18 = import7.UNINITIALIZED;
+        this._expr_19 = import7.UNINITIALIZED;
         this.init([], [
             this._el_0,
             this._text_1,
@@ -142,7 +158,8 @@ var _View_TabsPage0 = (function (_super) {
             this._text_5,
             this._el_6,
             this._text_7,
-            this._text_8
+            this._el_8,
+            this._text_9
         ], [], []);
         return null;
     };
@@ -156,7 +173,10 @@ var _View_TabsPage0 = (function (_super) {
         if (((token === import11.Tab) && (6 === requestNodeIndex))) {
             return this._Tab_6_4;
         }
-        if (((token === import10.Tabs) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 7)))) {
+        if (((token === import11.Tab) && (8 === requestNodeIndex))) {
+            return this._Tab_8_4;
+        }
+        if (((token === import10.Tabs) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 9)))) {
             return this._Tabs_0_4;
         }
         return notFoundResult;
@@ -167,7 +187,7 @@ var _View_TabsPage0 = (function (_super) {
             this._Tab_2_4.root = currVal_0;
             this._expr_0 = currVal_0;
         }
-        var currVal_1 = 'Home';
+        var currVal_1 = '厨房';
         if (import4.checkBinding(throwOnChange, this._expr_1, currVal_1)) {
             this._Tab_2_4.tabTitle = currVal_1;
             this._expr_1 = currVal_1;
@@ -185,7 +205,7 @@ var _View_TabsPage0 = (function (_super) {
             this._Tab_4_4.root = currVal_5;
             this._expr_5 = currVal_5;
         }
-        var currVal_6 = 'About';
+        var currVal_6 = '分享';
         if (import4.checkBinding(throwOnChange, this._expr_6, currVal_6)) {
             this._Tab_4_4.tabTitle = currVal_6;
             this._expr_6 = currVal_6;
@@ -203,7 +223,7 @@ var _View_TabsPage0 = (function (_super) {
             this._Tab_6_4.root = currVal_10;
             this._expr_10 = currVal_10;
         }
-        var currVal_11 = 'Contact';
+        var currVal_11 = '信息';
         if (import4.checkBinding(throwOnChange, this._expr_11, currVal_11)) {
             this._Tab_6_4.tabTitle = currVal_11;
             this._expr_11 = currVal_11;
@@ -215,6 +235,24 @@ var _View_TabsPage0 = (function (_super) {
         }
         if (((this.numberOfChecks === 0) && !throwOnChange)) {
             this._Tab_6_4.ngOnInit();
+        }
+        var currVal_15 = this.context.tab4Root;
+        if (import4.checkBinding(throwOnChange, this._expr_15, currVal_15)) {
+            this._Tab_8_4.root = currVal_15;
+            this._expr_15 = currVal_15;
+        }
+        var currVal_16 = '我的';
+        if (import4.checkBinding(throwOnChange, this._expr_16, currVal_16)) {
+            this._Tab_8_4.tabTitle = currVal_16;
+            this._expr_16 = currVal_16;
+        }
+        var currVal_17 = 'contacts';
+        if (import4.checkBinding(throwOnChange, this._expr_17, currVal_17)) {
+            this._Tab_8_4.tabIcon = currVal_17;
+            this._expr_17 = currVal_17;
+        }
+        if (((this.numberOfChecks === 0) && !throwOnChange)) {
+            this._Tab_8_4.ngOnInit();
         }
         this.detectContentChildrenChanges(throwOnChange);
         var currVal_3 = this._Tab_2_4._tabId;
@@ -246,6 +284,16 @@ var _View_TabsPage0 = (function (_super) {
         if (import4.checkBinding(throwOnChange, this._expr_14, currVal_14)) {
             this.renderer.setElementAttribute(this._el_6, 'aria-labelledby', ((currVal_14 == null) ? null : currVal_14.toString()));
             this._expr_14 = currVal_14;
+        }
+        var currVal_18 = this._Tab_8_4._tabId;
+        if (import4.checkBinding(throwOnChange, this._expr_18, currVal_18)) {
+            this.renderer.setElementAttribute(this._el_8, 'id', ((currVal_18 == null) ? null : currVal_18.toString()));
+            this._expr_18 = currVal_18;
+        }
+        var currVal_19 = this._Tab_8_4._btnId;
+        if (import4.checkBinding(throwOnChange, this._expr_19, currVal_19)) {
+            this.renderer.setElementAttribute(this._el_8, 'aria-labelledby', ((currVal_19 == null) ? null : currVal_19.toString()));
+            this._expr_19 = currVal_19;
         }
         this.detectViewChildrenChanges(throwOnChange);
         if (!throwOnChange) {
