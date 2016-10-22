@@ -71,75 +71,101 @@ var _View_HomePage0 = (function (_super) {
         var compView_0 = import12.viewFactory_Content0(this.viewUtils, this.injector(0), this._appEl_0);
         this._Content_0_4 = new import11.Content(this.parentInjector.get(import13.Config), new import14.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import15.App), this.parentInjector.get(import16.Keyboard), this.parentInjector.get(import17.NgZone), this.parentInjector.get(import18.ViewController, null), this.parentInjector.get(import19.Tabs, null));
         this._appEl_0.initComponent(this._Content_0_4, [], compView_0);
-        this._text_1 = this.renderer.createText(null, '\n\n    ', null);
-        this._el_2 = this.renderer.createElement(null, 'div', null);
-        this.renderer.setElementAttribute(this._el_2, 'class', 'swiper-container');
+        this._text_1 = this.renderer.createText(null, '\n    ', null);
+        this._el_2 = this.renderer.createElement(null, 'section', null);
+        this.renderer.setElementAttribute(this._el_2, 'class', 'home-page');
         this._text_3 = this.renderer.createText(this._el_2, '\n        ', null);
         this._el_4 = this.renderer.createElement(this._el_2, 'div', null);
-        this.renderer.setElementAttribute(this._el_4, 'class', 'swiper-wrapper');
-        this._text_5 = this.renderer.createText(this._el_4, '\n\n            ', null);
+        this.renderer.setElementAttribute(this._el_4, 'class', 'swiper-container');
+        this._text_5 = this.renderer.createText(this._el_4, '\n            ', null);
         this._el_6 = this.renderer.createElement(this._el_4, 'div', null);
-        this.renderer.setElementAttribute(this._el_6, 'class', 'swiper-slide');
-        this._text_7 = this.renderer.createText(this._el_6, '\n                ', null);
-        this._el_8 = this.renderer.createElement(this._el_6, 'img', null);
-        this.renderer.setElementAttribute(this._el_8, 'src', 'assets/img2/home_banner_1.jpeg');
-        this._text_9 = this.renderer.createText(this._el_6, '\n            ', null);
-        this._text_10 = this.renderer.createText(this._el_4, '\n            ', null);
-        this._el_11 = this.renderer.createElement(this._el_4, 'div', null);
-        this.renderer.setElementAttribute(this._el_11, 'class', 'swiper-slide');
-        this._text_12 = this.renderer.createText(this._el_11, '\n                ', null);
-        this._el_13 = this.renderer.createElement(this._el_11, 'img', null);
-        this.renderer.setElementAttribute(this._el_13, 'src', 'assets/img2/home_banner_2.jpeg');
-        this._text_14 = this.renderer.createText(this._el_11, '\n            ', null);
-        this._text_15 = this.renderer.createText(this._el_4, '\n            ', null);
-        this._el_16 = this.renderer.createElement(this._el_4, 'div', null);
-        this.renderer.setElementAttribute(this._el_16, 'class', 'swiper-slide');
-        this._text_17 = this.renderer.createText(this._el_16, '\n                ', null);
-        this._el_18 = this.renderer.createElement(this._el_16, 'img', null);
-        this.renderer.setElementAttribute(this._el_18, 'src', 'assets/img2/home_banner_3.jpeg');
-        this._text_19 = this.renderer.createText(this._el_16, '\n            ', null);
-        this._text_20 = this.renderer.createText(this._el_4, '\n            ', null);
-        this._el_21 = this.renderer.createElement(this._el_4, 'div', null);
-        this.renderer.setElementAttribute(this._el_21, 'class', 'swiper-slide');
-        this._text_22 = this.renderer.createText(this._el_21, '\n                ', null);
-        this._el_23 = this.renderer.createElement(this._el_21, 'img', null);
-        this.renderer.setElementAttribute(this._el_23, 'src', 'assets/img2/home_banner_4.jpeg');
-        this._text_24 = this.renderer.createText(this._el_21, '\n            ', null);
-        this._text_25 = this.renderer.createText(this._el_4, '\n\n        ', null);
-        this._text_26 = this.renderer.createText(this._el_2, '\n        ', null);
-        this._text_27 = this.renderer.createText(this._el_2, '\n        ', null);
-        this._el_28 = this.renderer.createElement(this._el_2, 'div', null);
-        this.renderer.setElementAttribute(this._el_28, 'class', 'swiper-pagination');
-        this._text_29 = this.renderer.createText(this._el_2, '\n    ', null);
-        this._text_30 = this.renderer.createText(null, '\n\n    ', null);
-        this._el_31 = this.renderer.createElement(null, 'section', null);
-        this.renderer.setElementAttribute(this._el_31, 'id', 'home_menu');
-        this._text_32 = this.renderer.createText(this._el_31, '\n        ', null);
-        this._el_33 = this.renderer.createElement(this._el_31, 'div', null);
-        this.renderer.setElementAttribute(this._el_33, 'class', 'home_menu_list');
-        this._text_34 = this.renderer.createText(this._el_33, '1', null);
-        this._text_35 = this.renderer.createText(this._el_31, '\n        ', null);
-        this._el_36 = this.renderer.createElement(this._el_31, 'div', null);
-        this.renderer.setElementAttribute(this._el_36, 'class', 'home_menu_list');
-        this._text_37 = this.renderer.createText(this._el_36, '2', null);
-        this._text_38 = this.renderer.createText(this._el_31, '\n        ', null);
-        this._el_39 = this.renderer.createElement(this._el_31, 'div', null);
-        this.renderer.setElementAttribute(this._el_39, 'class', 'home_menu_list');
-        this._text_40 = this.renderer.createText(this._el_39, '3', null);
-        this._text_41 = this.renderer.createText(this._el_31, '\n        ', null);
-        this._el_42 = this.renderer.createElement(this._el_31, 'div', null);
-        this.renderer.setElementAttribute(this._el_42, 'class', 'home_menu_list');
-        this._text_43 = this.renderer.createText(this._el_42, '4', null);
-        this._text_44 = this.renderer.createText(this._el_31, '\n    ', null);
-        this._text_45 = this.renderer.createText(null, '\n\n', null);
+        this.renderer.setElementAttribute(this._el_6, 'class', 'swiper-wrapper');
+        this._text_7 = this.renderer.createText(this._el_6, '\n\n                ', null);
+        this._el_8 = this.renderer.createElement(this._el_6, 'div', null);
+        this.renderer.setElementAttribute(this._el_8, 'class', 'swiper-slide');
+        this._text_9 = this.renderer.createText(this._el_8, '\n                    ', null);
+        this._el_10 = this.renderer.createElement(this._el_8, 'img', null);
+        this.renderer.setElementAttribute(this._el_10, 'src', 'assets/img2/home_banner_1.jpeg');
+        this._text_11 = this.renderer.createText(this._el_8, '\n                ', null);
+        this._text_12 = this.renderer.createText(this._el_6, '\n                ', null);
+        this._el_13 = this.renderer.createElement(this._el_6, 'div', null);
+        this.renderer.setElementAttribute(this._el_13, 'class', 'swiper-slide');
+        this._text_14 = this.renderer.createText(this._el_13, '\n                    ', null);
+        this._el_15 = this.renderer.createElement(this._el_13, 'img', null);
+        this.renderer.setElementAttribute(this._el_15, 'src', 'assets/img2/home_banner_2.jpeg');
+        this._text_16 = this.renderer.createText(this._el_13, '\n                ', null);
+        this._text_17 = this.renderer.createText(this._el_6, '\n                ', null);
+        this._el_18 = this.renderer.createElement(this._el_6, 'div', null);
+        this.renderer.setElementAttribute(this._el_18, 'class', 'swiper-slide');
+        this._text_19 = this.renderer.createText(this._el_18, '\n                    ', null);
+        this._el_20 = this.renderer.createElement(this._el_18, 'img', null);
+        this.renderer.setElementAttribute(this._el_20, 'src', 'assets/img2/home_banner_3.jpeg');
+        this._text_21 = this.renderer.createText(this._el_18, '\n                ', null);
+        this._text_22 = this.renderer.createText(this._el_6, '\n                ', null);
+        this._el_23 = this.renderer.createElement(this._el_6, 'div', null);
+        this.renderer.setElementAttribute(this._el_23, 'class', 'swiper-slide');
+        this._text_24 = this.renderer.createText(this._el_23, '\n                    ', null);
+        this._el_25 = this.renderer.createElement(this._el_23, 'img', null);
+        this.renderer.setElementAttribute(this._el_25, 'src', 'assets/img2/home_banner_4.jpeg');
+        this._text_26 = this.renderer.createText(this._el_23, '\n                ', null);
+        this._text_27 = this.renderer.createText(this._el_6, '\n\n            ', null);
+        this._text_28 = this.renderer.createText(this._el_4, '\n            ', null);
+        this._text_29 = this.renderer.createText(this._el_4, '\n            ', null);
+        this._el_30 = this.renderer.createElement(this._el_4, 'div', null);
+        this.renderer.setElementAttribute(this._el_30, 'class', 'swiper-pagination');
+        this._text_31 = this.renderer.createText(this._el_4, '\n        ', null);
+        this._text_32 = this.renderer.createText(this._el_2, '\n\n        ', null);
+        this._el_33 = this.renderer.createElement(this._el_2, 'section', null);
+        this.renderer.setElementAttribute(this._el_33, 'id', 'home_menu');
+        this._text_34 = this.renderer.createText(this._el_33, '\n            ', null);
+        this._el_35 = this.renderer.createElement(this._el_33, 'div', null);
+        this.renderer.setElementAttribute(this._el_35, 'class', 'home_menu_list');
+        this._text_36 = this.renderer.createText(this._el_35, '\n                ', null);
+        this._el_37 = this.renderer.createElement(this._el_35, 'img', null);
+        this.renderer.setElementAttribute(this._el_37, 'src', 'assets/icon/home/m1.png');
+        this._text_38 = this.renderer.createText(this._el_35, '\n                ', null);
+        this._el_39 = this.renderer.createElement(this._el_35, 'p', null);
+        this._text_40 = this.renderer.createText(this._el_39, '菜谱分类', null);
+        this._text_41 = this.renderer.createText(this._el_35, '\n            ', null);
+        this._text_42 = this.renderer.createText(this._el_33, '\n            ', null);
+        this._el_43 = this.renderer.createElement(this._el_33, 'div', null);
+        this.renderer.setElementAttribute(this._el_43, 'class', 'home_menu_list');
+        this._text_44 = this.renderer.createText(this._el_43, '\n                ', null);
+        this._el_45 = this.renderer.createElement(this._el_43, 'img', null);
+        this.renderer.setElementAttribute(this._el_45, 'src', 'assets/icon/home/m2.png');
+        this._text_46 = this.renderer.createText(this._el_43, '\n                ', null);
+        this._el_47 = this.renderer.createElement(this._el_43, 'p', null);
+        this._text_48 = this.renderer.createText(this._el_47, '视频', null);
+        this._text_49 = this.renderer.createText(this._el_43, '\n            ', null);
+        this._text_50 = this.renderer.createText(this._el_33, '\n            ', null);
+        this._el_51 = this.renderer.createElement(this._el_33, 'div', null);
+        this.renderer.setElementAttribute(this._el_51, 'class', 'home_menu_list');
+        this._text_52 = this.renderer.createText(this._el_51, '\n                ', null);
+        this._el_53 = this.renderer.createElement(this._el_51, 'img', null);
+        this.renderer.setElementAttribute(this._el_53, 'src', 'assets/icon/home/m3.png');
+        this._text_54 = this.renderer.createText(this._el_51, '\n                ', null);
+        this._el_55 = this.renderer.createElement(this._el_51, 'p', null);
+        this._text_56 = this.renderer.createText(this._el_55, '养生头条', null);
+        this._text_57 = this.renderer.createText(this._el_51, '\n            ', null);
+        this._text_58 = this.renderer.createText(this._el_33, '\n            ', null);
+        this._el_59 = this.renderer.createElement(this._el_33, 'div', null);
+        this.renderer.setElementAttribute(this._el_59, 'class', 'home_menu_list');
+        this._text_60 = this.renderer.createText(this._el_59, '\n                ', null);
+        this._el_61 = this.renderer.createElement(this._el_59, 'img', null);
+        this.renderer.setElementAttribute(this._el_61, 'src', 'assets/icon/home/m4.png');
+        this._text_62 = this.renderer.createText(this._el_59, '\n                ', null);
+        this._el_63 = this.renderer.createElement(this._el_59, 'p', null);
+        this._text_64 = this.renderer.createText(this._el_63, '工具分类', null);
+        this._text_65 = this.renderer.createText(this._el_59, '\n            ', null);
+        this._text_66 = this.renderer.createText(this._el_33, '\n        ', null);
+        this._text_67 = this.renderer.createText(this._el_2, '\n    ', null);
+        this._text_68 = this.renderer.createText(null, '\n', null);
         compView_0.create(this._Content_0_4, [
             [],
             [].concat([
                 this._text_1,
                 this._el_2,
-                this._text_30,
-                this._el_31,
-                this._text_45
+                this._text_68
             ]),
             []
         ], null);
@@ -155,47 +181,70 @@ var _View_HomePage0 = (function (_super) {
             this._text_7,
             this._el_8,
             this._text_9,
-            this._text_10,
-            this._el_11,
+            this._el_10,
+            this._text_11,
             this._text_12,
             this._el_13,
             this._text_14,
-            this._text_15,
-            this._el_16,
+            this._el_15,
+            this._text_16,
             this._text_17,
             this._el_18,
             this._text_19,
-            this._text_20,
-            this._el_21,
+            this._el_20,
+            this._text_21,
             this._text_22,
             this._el_23,
             this._text_24,
-            this._text_25,
+            this._el_25,
             this._text_26,
             this._text_27,
-            this._el_28,
+            this._text_28,
             this._text_29,
-            this._text_30,
-            this._el_31,
+            this._el_30,
+            this._text_31,
             this._text_32,
             this._el_33,
             this._text_34,
-            this._text_35,
-            this._el_36,
-            this._text_37,
+            this._el_35,
+            this._text_36,
+            this._el_37,
             this._text_38,
             this._el_39,
             this._text_40,
             this._text_41,
-            this._el_42,
-            this._text_43,
+            this._text_42,
+            this._el_43,
             this._text_44,
-            this._text_45
+            this._el_45,
+            this._text_46,
+            this._el_47,
+            this._text_48,
+            this._text_49,
+            this._text_50,
+            this._el_51,
+            this._text_52,
+            this._el_53,
+            this._text_54,
+            this._el_55,
+            this._text_56,
+            this._text_57,
+            this._text_58,
+            this._el_59,
+            this._text_60,
+            this._el_61,
+            this._text_62,
+            this._el_63,
+            this._text_64,
+            this._text_65,
+            this._text_66,
+            this._text_67,
+            this._text_68
         ], [], []);
         return null;
     };
     _View_HomePage0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import11.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 45)))) {
+        if (((token === import11.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 68)))) {
             return this._Content_0_4;
         }
         return notFoundResult;
