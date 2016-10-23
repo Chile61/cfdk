@@ -1,0 +1,23 @@
+<ion-header>
+
+    <ion-toolbar color="secondary">
+
+        <ion-segment [(ngModel)]="pet" color="fff">
+            <ion-segment-button value="new1">
+                厨房问答
+            </ion-segment-button>
+            <ion-segment-button value="new2">
+                厨房新作
+            </ion-segment-button>
+            <ion-segment-button value="new3">
+                厨房互动
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [ngSwitch]="pet">
+    <section *ngSwitchCase="'new1'">1</section>
+    <section *ngSwitchCase="'new2'">2</section>
+    <section *ngSwitchCase="'new3'">3</section>
+</ion-content>

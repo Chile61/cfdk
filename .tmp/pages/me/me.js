@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-export var AboutPage = (function () {
-    function AboutPage(navCtrl) {
+export var MePage = (function () {
+    function MePage(navCtrl) {
         this.navCtrl = navCtrl;
     }
-    AboutPage.decorators = [
+    MePage.decorators = [
         { type: Component, args: [{
-                    selector: 'page-about',
-                    templateUrl: 'about.html'
+                    selector: 'page-me',
+                    templateUrl: 'me.html'
                 },] },
     ];
     /** @nocollapse */
-    AboutPage.ctorParameters = [
+    MePage.ctorParameters = [
         { type: NavController, },
     ];
-    return AboutPage;
+    return MePage;
 }());

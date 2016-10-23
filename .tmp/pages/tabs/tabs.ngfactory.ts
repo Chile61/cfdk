@@ -97,12 +97,14 @@ class _View_TabsPage0 extends import1.AppView<import3.TabsPage> {
   /*private*/ _expr_13:any;
   /*private*/ _expr_14:any;
   /*private*/ _expr_15:any;
+  /*private*/ _expr_16:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_TabsPage0,renderType_TabsPage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._el_0 = this.renderer.createElement(parentRenderNode,'ion-tabs',(null as any));
+    this.renderer.setElementAttribute(this._el_0,'color','secondary');
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = import12.viewFactory_Tabs0(this.viewUtils,this.injector(0),this._appEl_0);
     this._Tabs_0_4 = new import10.Tabs(this.parentInjector.get(import13.NavController,(null as any)),this.parentInjector.get(import14.ViewController,(null as any)),this.parentInjector.get(import15.App),this.parentInjector.get(import16.Config),new import17.ElementRef(this._el_0),this.parentInjector.get(import18.Platform),this.renderer,this.parentInjector.get(import19.DeepLinker));
@@ -119,7 +121,7 @@ class _View_TabsPage0 extends import1.AppView<import3.TabsPage> {
     this._text_3 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_4 = this.renderer.createElement((null as any),'ion-tab',(null as any));
     this.renderer.setElementAttribute(this._el_4,'role','tabpanel');
-    this.renderer.setElementAttribute(this._el_4,'tabIcon','information-circle');
+    this.renderer.setElementAttribute(this._el_4,'tabIcon','list-box');
     this._appEl_4 = new import2.AppElement(4,0,this,this._el_4);
     var compView_4:any = import20.viewFactory_Tab0(this.viewUtils,this.injector(4),this._appEl_4);
     this._Tab_4_4 = new import11.Tab(this._Tabs_0_4,this.parentInjector.get(import15.App),this.parentInjector.get(import16.Config),this.parentInjector.get(import21.Keyboard),new import17.ElementRef(this._el_4),this.parentInjector.get(import22.NgZone),this.renderer,this.parentInjector.get(import23.ComponentFactoryResolver),compView_4.ref,this.parentInjector.get(import24.GestureController),this.parentInjector.get(import25.TransitionController),this.parentInjector.get(import19.DeepLinker,(null as any)));
@@ -137,7 +139,7 @@ class _View_TabsPage0 extends import1.AppView<import3.TabsPage> {
     this._text_7 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_8 = this.renderer.createElement((null as any),'ion-tab',(null as any));
     this.renderer.setElementAttribute(this._el_8,'role','tabpanel');
-    this.renderer.setElementAttribute(this._el_8,'tabIcon','contacts');
+    this.renderer.setElementAttribute(this._el_8,'tabIcon','person');
     this._appEl_8 = new import2.AppElement(8,0,this,this._el_8);
     var compView_8:any = import20.viewFactory_Tab0(this.viewUtils,this.injector(8),this._appEl_8);
     this._Tab_8_4 = new import11.Tab(this._Tabs_0_4,this.parentInjector.get(import15.App),this.parentInjector.get(import16.Config),this.parentInjector.get(import21.Keyboard),new import17.ElementRef(this._el_8),this.parentInjector.get(import22.NgZone),this.renderer,this.parentInjector.get(import23.ComponentFactoryResolver),compView_8.ref,this.parentInjector.get(import24.GestureController),this.parentInjector.get(import25.TransitionController),this.parentInjector.get(import19.DeepLinker,(null as any)));
@@ -172,6 +174,7 @@ class _View_TabsPage0 extends import1.AppView<import3.TabsPage> {
     this._expr_13 = import7.UNINITIALIZED;
     this._expr_14 = import7.UNINITIALIZED;
     this._expr_15 = import7.UNINITIALIZED;
+    this._expr_16 = import7.UNINITIALIZED;
     this.init([],[
       this._el_0,
       this._text_1,
@@ -196,90 +199,95 @@ class _View_TabsPage0 extends import1.AppView<import3.TabsPage> {
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    const currVal_0:any = this.context.tab1Root;
+    const currVal_0:any = 'secondary';
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this._Tab_2_4.root = currVal_0;
+      this._Tabs_0_4.color = currVal_0;
       this._expr_0 = currVal_0;
     }
-    const currVal_1:any = 'home';
+    const currVal_1:any = this.context.tab1Root;
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
-      this._Tab_2_4.tabIcon = currVal_1;
+      this._Tab_2_4.root = currVal_1;
       this._expr_1 = currVal_1;
     }
-    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._Tab_2_4.ngOnInit(); }
-    const currVal_4:any = this.context.tab2Root;
-    if (import4.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
-      this._Tab_4_4.root = currVal_4;
-      this._expr_4 = currVal_4;
+    const currVal_2:any = 'home';
+    if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
+      this._Tab_2_4.tabIcon = currVal_2;
+      this._expr_2 = currVal_2;
     }
-    const currVal_5:any = 'information-circle';
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._Tab_2_4.ngOnInit(); }
+    const currVal_5:any = this.context.tab2Root;
     if (import4.checkBinding(throwOnChange,this._expr_5,currVal_5)) {
-      this._Tab_4_4.tabIcon = currVal_5;
+      this._Tab_4_4.root = currVal_5;
       this._expr_5 = currVal_5;
     }
-    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._Tab_4_4.ngOnInit(); }
-    const currVal_8:any = this.context.tab3Root;
-    if (import4.checkBinding(throwOnChange,this._expr_8,currVal_8)) {
-      this._Tab_6_4.root = currVal_8;
-      this._expr_8 = currVal_8;
+    const currVal_6:any = 'list-box';
+    if (import4.checkBinding(throwOnChange,this._expr_6,currVal_6)) {
+      this._Tab_4_4.tabIcon = currVal_6;
+      this._expr_6 = currVal_6;
     }
-    const currVal_9:any = 'contacts';
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._Tab_4_4.ngOnInit(); }
+    const currVal_9:any = this.context.tab3Root;
     if (import4.checkBinding(throwOnChange,this._expr_9,currVal_9)) {
-      this._Tab_6_4.tabIcon = currVal_9;
+      this._Tab_6_4.root = currVal_9;
       this._expr_9 = currVal_9;
     }
-    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._Tab_6_4.ngOnInit(); }
-    const currVal_12:any = this.context.tab4Root;
-    if (import4.checkBinding(throwOnChange,this._expr_12,currVal_12)) {
-      this._Tab_8_4.root = currVal_12;
-      this._expr_12 = currVal_12;
+    const currVal_10:any = 'contacts';
+    if (import4.checkBinding(throwOnChange,this._expr_10,currVal_10)) {
+      this._Tab_6_4.tabIcon = currVal_10;
+      this._expr_10 = currVal_10;
     }
-    const currVal_13:any = 'contacts';
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._Tab_6_4.ngOnInit(); }
+    const currVal_13:any = this.context.tab4Root;
     if (import4.checkBinding(throwOnChange,this._expr_13,currVal_13)) {
-      this._Tab_8_4.tabIcon = currVal_13;
+      this._Tab_8_4.root = currVal_13;
       this._expr_13 = currVal_13;
+    }
+    const currVal_14:any = 'person';
+    if (import4.checkBinding(throwOnChange,this._expr_14,currVal_14)) {
+      this._Tab_8_4.tabIcon = currVal_14;
+      this._expr_14 = currVal_14;
     }
     if (((this.numberOfChecks === 0) && !throwOnChange)) { this._Tab_8_4.ngOnInit(); }
     this.detectContentChildrenChanges(throwOnChange);
-    const currVal_2:any = this._Tab_2_4._tabId;
-    if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this.renderer.setElementAttribute(this._el_2,'id',((currVal_2 == (null as any))? (null as any): currVal_2.toString()));
-      this._expr_2 = currVal_2;
-    }
-    const currVal_3:any = this._Tab_2_4._btnId;
+    const currVal_3:any = this._Tab_2_4._tabId;
     if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
-      this.renderer.setElementAttribute(this._el_2,'aria-labelledby',((currVal_3 == (null as any))? (null as any): currVal_3.toString()));
+      this.renderer.setElementAttribute(this._el_2,'id',((currVal_3 == (null as any))? (null as any): currVal_3.toString()));
       this._expr_3 = currVal_3;
     }
-    const currVal_6:any = this._Tab_4_4._tabId;
-    if (import4.checkBinding(throwOnChange,this._expr_6,currVal_6)) {
-      this.renderer.setElementAttribute(this._el_4,'id',((currVal_6 == (null as any))? (null as any): currVal_6.toString()));
-      this._expr_6 = currVal_6;
+    const currVal_4:any = this._Tab_2_4._btnId;
+    if (import4.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
+      this.renderer.setElementAttribute(this._el_2,'aria-labelledby',((currVal_4 == (null as any))? (null as any): currVal_4.toString()));
+      this._expr_4 = currVal_4;
     }
-    const currVal_7:any = this._Tab_4_4._btnId;
+    const currVal_7:any = this._Tab_4_4._tabId;
     if (import4.checkBinding(throwOnChange,this._expr_7,currVal_7)) {
-      this.renderer.setElementAttribute(this._el_4,'aria-labelledby',((currVal_7 == (null as any))? (null as any): currVal_7.toString()));
+      this.renderer.setElementAttribute(this._el_4,'id',((currVal_7 == (null as any))? (null as any): currVal_7.toString()));
       this._expr_7 = currVal_7;
     }
-    const currVal_10:any = this._Tab_6_4._tabId;
-    if (import4.checkBinding(throwOnChange,this._expr_10,currVal_10)) {
-      this.renderer.setElementAttribute(this._el_6,'id',((currVal_10 == (null as any))? (null as any): currVal_10.toString()));
-      this._expr_10 = currVal_10;
+    const currVal_8:any = this._Tab_4_4._btnId;
+    if (import4.checkBinding(throwOnChange,this._expr_8,currVal_8)) {
+      this.renderer.setElementAttribute(this._el_4,'aria-labelledby',((currVal_8 == (null as any))? (null as any): currVal_8.toString()));
+      this._expr_8 = currVal_8;
     }
-    const currVal_11:any = this._Tab_6_4._btnId;
+    const currVal_11:any = this._Tab_6_4._tabId;
     if (import4.checkBinding(throwOnChange,this._expr_11,currVal_11)) {
-      this.renderer.setElementAttribute(this._el_6,'aria-labelledby',((currVal_11 == (null as any))? (null as any): currVal_11.toString()));
+      this.renderer.setElementAttribute(this._el_6,'id',((currVal_11 == (null as any))? (null as any): currVal_11.toString()));
       this._expr_11 = currVal_11;
     }
-    const currVal_14:any = this._Tab_8_4._tabId;
-    if (import4.checkBinding(throwOnChange,this._expr_14,currVal_14)) {
-      this.renderer.setElementAttribute(this._el_8,'id',((currVal_14 == (null as any))? (null as any): currVal_14.toString()));
-      this._expr_14 = currVal_14;
+    const currVal_12:any = this._Tab_6_4._btnId;
+    if (import4.checkBinding(throwOnChange,this._expr_12,currVal_12)) {
+      this.renderer.setElementAttribute(this._el_6,'aria-labelledby',((currVal_12 == (null as any))? (null as any): currVal_12.toString()));
+      this._expr_12 = currVal_12;
     }
-    const currVal_15:any = this._Tab_8_4._btnId;
+    const currVal_15:any = this._Tab_8_4._tabId;
     if (import4.checkBinding(throwOnChange,this._expr_15,currVal_15)) {
-      this.renderer.setElementAttribute(this._el_8,'aria-labelledby',((currVal_15 == (null as any))? (null as any): currVal_15.toString()));
+      this.renderer.setElementAttribute(this._el_8,'id',((currVal_15 == (null as any))? (null as any): currVal_15.toString()));
       this._expr_15 = currVal_15;
+    }
+    const currVal_16:any = this._Tab_8_4._btnId;
+    if (import4.checkBinding(throwOnChange,this._expr_16,currVal_16)) {
+      this.renderer.setElementAttribute(this._el_8,'aria-labelledby',((currVal_16 == (null as any))? (null as any): currVal_16.toString()));
+      this._expr_16 = currVal_16;
     }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Tabs_0_4.ngAfterViewInit(); } }
