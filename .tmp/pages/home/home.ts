@@ -12,6 +12,7 @@ declare var Swiper: any;
 export class HomePage {
 
   public oSwiper = null;
+  public oUser = null;
 
   constructor(public navCtrl: NavController) {
 
@@ -28,6 +29,14 @@ export class HomePage {
         // 如果需要分页器
         pagination: '.swiper-pagination',
       });
+
+      this.oUser = new Swiper('.swiper-container-user', {
+        slidesPerView: 4,
+        paginationClickable: true,
+        slidesPerGroup: 4,
+        spaceBetween: 6
+      });
+
     }
 
   }

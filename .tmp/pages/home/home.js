@@ -4,6 +4,7 @@ export var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
         this.oSwiper = null;
+        this.oUser = null;
     }
     HomePage.prototype.ionViewDidEnter = function () {
         if (this.oSwiper == null) {
@@ -13,6 +14,12 @@ export var HomePage = (function () {
                 autoplayDisableOnInteraction: false,
                 // 如果需要分页器
                 pagination: '.swiper-pagination',
+            });
+            this.oUser = new Swiper('.swiper-container-user', {
+                slidesPerView: 4,
+                paginationClickable: true,
+                slidesPerGroup: 4,
+                spaceBetween: 6
             });
         }
     };

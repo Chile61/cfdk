@@ -181,6 +181,99 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
   _text_121:any;
   _text_122:any;
   _text_123:any;
+  _el_124:any;
+  _text_125:any;
+  _el_126:any;
+  _text_127:any;
+  _el_128:any;
+  _text_129:any;
+  _text_130:any;
+  _el_131:any;
+  _text_132:any;
+  _text_133:any;
+  _text_134:any;
+  _el_135:any;
+  _text_136:any;
+  _el_137:any;
+  _text_138:any;
+  _el_139:any;
+  _text_140:any;
+  _el_141:any;
+  _text_142:any;
+  _el_143:any;
+  _text_144:any;
+  _text_145:any;
+  _text_146:any;
+  _el_147:any;
+  _text_148:any;
+  _el_149:any;
+  _text_150:any;
+  _el_151:any;
+  _text_152:any;
+  _text_153:any;
+  _text_154:any;
+  _el_155:any;
+  _text_156:any;
+  _el_157:any;
+  _text_158:any;
+  _el_159:any;
+  _text_160:any;
+  _text_161:any;
+  _text_162:any;
+  _el_163:any;
+  _text_164:any;
+  _el_165:any;
+  _text_166:any;
+  _el_167:any;
+  _text_168:any;
+  _text_169:any;
+  _text_170:any;
+  _el_171:any;
+  _text_172:any;
+  _el_173:any;
+  _text_174:any;
+  _el_175:any;
+  _text_176:any;
+  _text_177:any;
+  _text_178:any;
+  _el_179:any;
+  _text_180:any;
+  _el_181:any;
+  _text_182:any;
+  _el_183:any;
+  _text_184:any;
+  _text_185:any;
+  _text_186:any;
+  _el_187:any;
+  _text_188:any;
+  _el_189:any;
+  _text_190:any;
+  _el_191:any;
+  _text_192:any;
+  _text_193:any;
+  _text_194:any;
+  _el_195:any;
+  _text_196:any;
+  _el_197:any;
+  _text_198:any;
+  _el_199:any;
+  _text_200:any;
+  _text_201:any;
+  _text_202:any;
+  _text_203:any;
+  _text_204:any;
+  _text_205:any;
+  _text_206:any;
+  _el_207:any;
+  _text_208:any;
+  _el_209:any;
+  _text_210:any;
+  _el_211:any;
+  _text_212:any;
+  _el_213:any;
+  _text_214:any;
+  _text_215:any;
+  _text_216:any;
   /*private*/ _expr_0:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_HomePage0,renderType_HomePage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
@@ -352,14 +445,132 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
     this._text_119 = this.renderer.createText(this._el_115,'\n                ',(null as any));
     this._text_120 = this.renderer.createText(this._el_108,'\n            ',(null as any));
     this._text_121 = this.renderer.createText(this._el_70,'\n        ',(null as any));
-    this._text_122 = this.renderer.createText(this._el_2,'\n    ',(null as any));
-    this._text_123 = this.renderer.createText((null as any),'\n',(null as any));
+    this._text_122 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._text_123 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._el_124 = this.renderer.createElement(this._el_2,'section',(null as any));
+    this.renderer.setElementAttribute(this._el_124,'class','home_hot_man');
+    this._text_125 = this.renderer.createText(this._el_124,'\n            ',(null as any));
+    this._el_126 = this.renderer.createElement(this._el_124,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_126,'class','home_hot_title');
+    this._text_127 = this.renderer.createText(this._el_126,'\n                ',(null as any));
+    this._el_128 = this.renderer.createElement(this._el_126,'p',(null as any));
+    this._text_129 = this.renderer.createText(this._el_128,'人气推荐',(null as any));
+    this._text_130 = this.renderer.createText(this._el_126,'\n                ',(null as any));
+    this._el_131 = this.renderer.createElement(this._el_126,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_131,'src','assets/icon/home/hot_more.png');
+    this._text_132 = this.renderer.createText(this._el_126,'\n            ',(null as any));
+    this._text_133 = this.renderer.createText(this._el_124,'\n            ',(null as any));
+    this._text_134 = this.renderer.createText(this._el_124,'\n            ',(null as any));
+    this._el_135 = this.renderer.createElement(this._el_124,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_135,'class','swiper-container-user');
+    this._text_136 = this.renderer.createText(this._el_135,'\n                ',(null as any));
+    this._el_137 = this.renderer.createElement(this._el_135,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_137,'class','swiper-wrapper');
+    this._text_138 = this.renderer.createText(this._el_137,'\n\n                    ',(null as any));
+    this._el_139 = this.renderer.createElement(this._el_137,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_139,'class','swiper-slide');
+    this._text_140 = this.renderer.createText(this._el_139,'\n                        ',(null as any));
+    this._el_141 = this.renderer.createElement(this._el_139,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_141,'src','assets/img2/user_1.jpeg');
+    this._text_142 = this.renderer.createText(this._el_139,'\n                        ',(null as any));
+    this._el_143 = this.renderer.createElement(this._el_139,'p',(null as any));
+    this._text_144 = this.renderer.createText(this._el_143,'萧冰xiaobing',(null as any));
+    this._text_145 = this.renderer.createText(this._el_139,'\n                    ',(null as any));
+    this._text_146 = this.renderer.createText(this._el_137,'\n                    ',(null as any));
+    this._el_147 = this.renderer.createElement(this._el_137,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_147,'class','swiper-slide');
+    this._text_148 = this.renderer.createText(this._el_147,'\n                        ',(null as any));
+    this._el_149 = this.renderer.createElement(this._el_147,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_149,'src','assets/img2/user_2.jpeg');
+    this._text_150 = this.renderer.createText(this._el_147,'\n                        ',(null as any));
+    this._el_151 = this.renderer.createElement(this._el_147,'p',(null as any));
+    this._text_152 = this.renderer.createText(this._el_151,'毓玲珑',(null as any));
+    this._text_153 = this.renderer.createText(this._el_147,'\n                    ',(null as any));
+    this._text_154 = this.renderer.createText(this._el_137,'\n                    ',(null as any));
+    this._el_155 = this.renderer.createElement(this._el_137,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_155,'class','swiper-slide');
+    this._text_156 = this.renderer.createText(this._el_155,'\n                        ',(null as any));
+    this._el_157 = this.renderer.createElement(this._el_155,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_157,'src','assets/img2/user_3.jpeg');
+    this._text_158 = this.renderer.createText(this._el_155,'\n                        ',(null as any));
+    this._el_159 = this.renderer.createElement(this._el_155,'p',(null as any));
+    this._text_160 = this.renderer.createText(this._el_159,'徐徐徐萌萌',(null as any));
+    this._text_161 = this.renderer.createText(this._el_155,'\n                    ',(null as any));
+    this._text_162 = this.renderer.createText(this._el_137,'\n                    ',(null as any));
+    this._el_163 = this.renderer.createElement(this._el_137,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_163,'class','swiper-slide');
+    this._text_164 = this.renderer.createText(this._el_163,'\n                        ',(null as any));
+    this._el_165 = this.renderer.createElement(this._el_163,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_165,'src','assets/img2/user_4.jpeg');
+    this._text_166 = this.renderer.createText(this._el_163,'\n                        ',(null as any));
+    this._el_167 = this.renderer.createElement(this._el_163,'p',(null as any));
+    this._text_168 = this.renderer.createText(this._el_167,'春燕_Lsg6',(null as any));
+    this._text_169 = this.renderer.createText(this._el_163,'\n                    ',(null as any));
+    this._text_170 = this.renderer.createText(this._el_137,'\n                    ',(null as any));
+    this._el_171 = this.renderer.createElement(this._el_137,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_171,'class','swiper-slide');
+    this._text_172 = this.renderer.createText(this._el_171,'\n                        ',(null as any));
+    this._el_173 = this.renderer.createElement(this._el_171,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_173,'src','assets/img2/user_1.jpeg');
+    this._text_174 = this.renderer.createText(this._el_171,'\n                        ',(null as any));
+    this._el_175 = this.renderer.createElement(this._el_171,'p',(null as any));
+    this._text_176 = this.renderer.createText(this._el_175,'萧冰xiaobing',(null as any));
+    this._text_177 = this.renderer.createText(this._el_171,'\n                    ',(null as any));
+    this._text_178 = this.renderer.createText(this._el_137,'\n                    ',(null as any));
+    this._el_179 = this.renderer.createElement(this._el_137,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_179,'class','swiper-slide');
+    this._text_180 = this.renderer.createText(this._el_179,'\n                        ',(null as any));
+    this._el_181 = this.renderer.createElement(this._el_179,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_181,'src','assets/img2/user_2.jpeg');
+    this._text_182 = this.renderer.createText(this._el_179,'\n                        ',(null as any));
+    this._el_183 = this.renderer.createElement(this._el_179,'p',(null as any));
+    this._text_184 = this.renderer.createText(this._el_183,'毓玲珑',(null as any));
+    this._text_185 = this.renderer.createText(this._el_179,'\n                    ',(null as any));
+    this._text_186 = this.renderer.createText(this._el_137,'\n                    ',(null as any));
+    this._el_187 = this.renderer.createElement(this._el_137,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_187,'class','swiper-slide');
+    this._text_188 = this.renderer.createText(this._el_187,'\n                        ',(null as any));
+    this._el_189 = this.renderer.createElement(this._el_187,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_189,'src','assets/img2/user_3.jpeg');
+    this._text_190 = this.renderer.createText(this._el_187,'\n                        ',(null as any));
+    this._el_191 = this.renderer.createElement(this._el_187,'p',(null as any));
+    this._text_192 = this.renderer.createText(this._el_191,'徐徐徐萌萌',(null as any));
+    this._text_193 = this.renderer.createText(this._el_187,'\n                    ',(null as any));
+    this._text_194 = this.renderer.createText(this._el_137,'\n                    ',(null as any));
+    this._el_195 = this.renderer.createElement(this._el_137,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_195,'class','swiper-slide');
+    this._text_196 = this.renderer.createText(this._el_195,'\n                        ',(null as any));
+    this._el_197 = this.renderer.createElement(this._el_195,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_197,'src','assets/img2/user_4.jpeg');
+    this._text_198 = this.renderer.createText(this._el_195,'\n                        ',(null as any));
+    this._el_199 = this.renderer.createElement(this._el_195,'p',(null as any));
+    this._text_200 = this.renderer.createText(this._el_199,'春燕_Lsg6',(null as any));
+    this._text_201 = this.renderer.createText(this._el_195,'\n                    ',(null as any));
+    this._text_202 = this.renderer.createText(this._el_137,'\n\n                ',(null as any));
+    this._text_203 = this.renderer.createText(this._el_135,'\n\n            ',(null as any));
+    this._text_204 = this.renderer.createText(this._el_124,'\n        ',(null as any));
+    this._text_205 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._text_206 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._el_207 = this.renderer.createElement(this._el_2,'section',(null as any));
+    this.renderer.setElementAttribute(this._el_207,'class','home_class');
+    this._text_208 = this.renderer.createText(this._el_207,'\n            ',(null as any));
+    this._el_209 = this.renderer.createElement(this._el_207,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_209,'src','assets/img2/home_ad_1.jpeg');
+    this._text_210 = this.renderer.createText(this._el_207,'\n            ',(null as any));
+    this._el_211 = this.renderer.createElement(this._el_207,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_211,'src','assets/img2/home_ad_2.png');
+    this._text_212 = this.renderer.createText(this._el_207,'\n            ',(null as any));
+    this._el_213 = this.renderer.createElement(this._el_207,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_213,'src','assets/img2/home_ad_3.png');
+    this._text_214 = this.renderer.createText(this._el_207,'\n        ',(null as any));
+    this._text_215 = this.renderer.createText(this._el_2,'\n    ',(null as any));
+    this._text_216 = this.renderer.createText((null as any),'\n',(null as any));
     compView_0.create(this._Content_0_4,[
       [],
       [].concat([
         this._text_1,
         this._el_2,
-        this._text_123
+        this._text_216
       ]
       ),
       []
@@ -490,13 +701,106 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
       this._text_120,
       this._text_121,
       this._text_122,
-      this._text_123
+      this._text_123,
+      this._el_124,
+      this._text_125,
+      this._el_126,
+      this._text_127,
+      this._el_128,
+      this._text_129,
+      this._text_130,
+      this._el_131,
+      this._text_132,
+      this._text_133,
+      this._text_134,
+      this._el_135,
+      this._text_136,
+      this._el_137,
+      this._text_138,
+      this._el_139,
+      this._text_140,
+      this._el_141,
+      this._text_142,
+      this._el_143,
+      this._text_144,
+      this._text_145,
+      this._text_146,
+      this._el_147,
+      this._text_148,
+      this._el_149,
+      this._text_150,
+      this._el_151,
+      this._text_152,
+      this._text_153,
+      this._text_154,
+      this._el_155,
+      this._text_156,
+      this._el_157,
+      this._text_158,
+      this._el_159,
+      this._text_160,
+      this._text_161,
+      this._text_162,
+      this._el_163,
+      this._text_164,
+      this._el_165,
+      this._text_166,
+      this._el_167,
+      this._text_168,
+      this._text_169,
+      this._text_170,
+      this._el_171,
+      this._text_172,
+      this._el_173,
+      this._text_174,
+      this._el_175,
+      this._text_176,
+      this._text_177,
+      this._text_178,
+      this._el_179,
+      this._text_180,
+      this._el_181,
+      this._text_182,
+      this._el_183,
+      this._text_184,
+      this._text_185,
+      this._text_186,
+      this._el_187,
+      this._text_188,
+      this._el_189,
+      this._text_190,
+      this._el_191,
+      this._text_192,
+      this._text_193,
+      this._text_194,
+      this._el_195,
+      this._text_196,
+      this._el_197,
+      this._text_198,
+      this._el_199,
+      this._text_200,
+      this._text_201,
+      this._text_202,
+      this._text_203,
+      this._text_204,
+      this._text_205,
+      this._text_206,
+      this._el_207,
+      this._text_208,
+      this._el_209,
+      this._text_210,
+      this._el_211,
+      this._text_212,
+      this._el_213,
+      this._text_214,
+      this._text_215,
+      this._text_216
     ]
     ,[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import11.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 123)))) { return this._Content_0_4; }
+    if (((token === import11.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 216)))) { return this._Content_0_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {

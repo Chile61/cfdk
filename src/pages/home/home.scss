@@ -1,6 +1,6 @@
 .home-page {
     background: #f1eee4;
-    height: 100%;
+    height: auto;
 }
 
 .swiper-container {
@@ -46,6 +46,7 @@
     width: 100%;
     padding: 3%;
     background: #fff;
+    margin-bottom: 12px;
 }
 
 .home_hot_title {
@@ -94,4 +95,49 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.home_hot_man {
+    padding: 3%;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 12px;
+}
+
+.home_hot_man .home_hot_title {
+    padding-bottom: 15px;
+}
+
+.swiper-container-user {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.swiper-container-user .swiper-slide img {
+    display: block;
+    width: 53px;
+    height: 53px;
+    border-radius: 99999px;
+    border: none;
+    margin: 0 auto;
+}
+
+.swiper-container-user .swiper-slide {
+    display: block;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.home_class {
+    width: 100%;
+    background: #fff;
+}
+
+.home_class img {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
 }
