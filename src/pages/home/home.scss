@@ -86,6 +86,7 @@
     flex: 2;
     -webkit-flex: 2;
     padding-left: 8px;
+    color: #999;
 }
 
 .home_hot_list .home_hot_item .home_hot_item_title {
@@ -95,6 +96,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #666;
 }
 
 .home_hot_man {
@@ -134,10 +136,67 @@
 .home_class {
     width: 100%;
     background: #fff;
+    margin-bottom: 12px;
 }
 
 .home_class img {
     display: block;
     width: 100%;
     margin-bottom: 5px;
+}
+
+.home_works {
+    width: 100%;
+    background: #fff;
+}
+
+.home_work_list {
+    width: 100%;
+    overflow: hidden;
+}
+
+.home_work_list img {
+    display: block;
+    width: 100%;
+}
+
+.home_works .home_hot_title {
+    width: 100%;
+    padding: 3%;
+}
+
+.home_work_cont {
+    width: 100%;
+    display: flex;
+    -webkit-display: flex;
+    background: #fff;
+    padding: 3%;
+}
+
+.home_work_cont_left {
+    flex: 4;
+    -webkit-flex: 4;
+    color: #999999;
+}
+
+.home_work_cont_left_title {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    color: #666;
+}
+
+.home_work_cont_right {
+    flex: 1;
+    -webkit-flex: 1;
+    text-align: center;
+    color: #999999;
+}
+
+.home_work_cont_right img {
+    width: 54px;
+    height: 54px;
+    display: block;
+    border-radius: 9999px;
+    margin: 0 auto;
 }
