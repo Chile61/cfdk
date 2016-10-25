@@ -477,15 +477,611 @@ export function viewFactory_SharePage0(viewUtils:import4.ViewUtils,parentInjecto
 class _View_SharePage1 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
+  _el_2:any;
+  _text_3:any;
+  _el_4:any;
+  _text_5:any;
+  _text_6:any;
+  _el_7:any;
+  _text_8:any;
+  _el_9:any;
+  _text_10:any;
+  _el_11:any;
+  _text_12:any;
+  _text_13:any;
+  _text_14:any;
+  _el_15:any;
+  _text_16:any;
+  _text_17:any;
+  _el_18:any;
+  _text_19:any;
+  _el_20:any;
+  _text_21:any;
+  _text_22:any;
+  _el_23:any;
+  _text_24:any;
+  _text_25:any;
+  _text_26:any;
+  _text_27:any;
+  _el_28:any;
+  _text_29:any;
+  _el_30:any;
+  _text_31:any;
+  _text_32:any;
+  _el_33:any;
+  _text_34:any;
+  _el_35:any;
+  _text_36:any;
+  _el_37:any;
+  _text_38:any;
+  _text_39:any;
+  _text_40:any;
+  _el_41:any;
+  _text_42:any;
+  _text_43:any;
+  _el_44:any;
+  _text_45:any;
+  _el_46:any;
+  _text_47:any;
+  _text_48:any;
+  _el_49:any;
+  _text_50:any;
+  _text_51:any;
+  _text_52:any;
+  _text_53:any;
+  _el_54:any;
+  _text_55:any;
+  _el_56:any;
+  _text_57:any;
+  _text_58:any;
+  _el_59:any;
+  _text_60:any;
+  _el_61:any;
+  _text_62:any;
+  _el_63:any;
+  _text_64:any;
+  _text_65:any;
+  _text_66:any;
+  _el_67:any;
+  _text_68:any;
+  _text_69:any;
+  _el_70:any;
+  _text_71:any;
+  _el_72:any;
+  _text_73:any;
+  _text_74:any;
+  _el_75:any;
+  _text_76:any;
+  _text_77:any;
+  _text_78:any;
+  _text_79:any;
+  _el_80:any;
+  _text_81:any;
+  _el_82:any;
+  _text_83:any;
+  _text_84:any;
+  _el_85:any;
+  _text_86:any;
+  _el_87:any;
+  _text_88:any;
+  _el_89:any;
+  _text_90:any;
+  _text_91:any;
+  _text_92:any;
+  _el_93:any;
+  _text_94:any;
+  _text_95:any;
+  _el_96:any;
+  _text_97:any;
+  _el_98:any;
+  _text_99:any;
+  _text_100:any;
+  _el_101:any;
+  _text_102:any;
+  _text_103:any;
+  _text_104:any;
+  _text_105:any;
+  _el_106:any;
+  _text_107:any;
+  _el_108:any;
+  _text_109:any;
+  _text_110:any;
+  _el_111:any;
+  _text_112:any;
+  _el_113:any;
+  _text_114:any;
+  _el_115:any;
+  _text_116:any;
+  _text_117:any;
+  _text_118:any;
+  _el_119:any;
+  _text_120:any;
+  _text_121:any;
+  _el_122:any;
+  _text_123:any;
+  _el_124:any;
+  _text_125:any;
+  _text_126:any;
+  _el_127:any;
+  _text_128:any;
+  _text_129:any;
+  _text_130:any;
+  _text_131:any;
+  _el_132:any;
+  _text_133:any;
+  _el_134:any;
+  _text_135:any;
+  _text_136:any;
+  _el_137:any;
+  _text_138:any;
+  _el_139:any;
+  _text_140:any;
+  _el_141:any;
+  _text_142:any;
+  _text_143:any;
+  _text_144:any;
+  _el_145:any;
+  _text_146:any;
+  _text_147:any;
+  _el_148:any;
+  _text_149:any;
+  _el_150:any;
+  _text_151:any;
+  _text_152:any;
+  _el_153:any;
+  _text_154:any;
+  _text_155:any;
+  _text_156:any;
+  _text_157:any;
+  _el_158:any;
+  _text_159:any;
+  _el_160:any;
+  _text_161:any;
+  _text_162:any;
+  _el_163:any;
+  _text_164:any;
+  _el_165:any;
+  _text_166:any;
+  _el_167:any;
+  _text_168:any;
+  _text_169:any;
+  _text_170:any;
+  _el_171:any;
+  _text_172:any;
+  _text_173:any;
+  _el_174:any;
+  _text_175:any;
+  _el_176:any;
+  _text_177:any;
+  _text_178:any;
+  _el_179:any;
+  _text_180:any;
+  _text_181:any;
+  _text_182:any;
+  _text_183:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_SharePage1,renderType_SharePage,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'section',(null as any));
-    this._text_1 = this.renderer.createText(this._el_0,'1',(null as any));
+    this.renderer.setElementAttribute(this._el_0,'id','qus_wrap');
+    this._text_1 = this.renderer.createText(this._el_0,'\n\n        ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_2,'class','qus_list');
+    this._text_3 = this.renderer.createText(this._el_2,'\n            ',(null as any));
+    this._el_4 = this.renderer.createElement(this._el_2,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_4,'class','qus_list_title');
+    this._text_5 = this.renderer.createText(this._el_4,'如何炸出kfc和m记的薯条？',(null as any));
+    this._text_6 = this.renderer.createText(this._el_2,'\n            ',(null as any));
+    this._el_7 = this.renderer.createElement(this._el_2,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_7,'class','qus_user_wrap');
+    this._text_8 = this.renderer.createText(this._el_7,'\n                ',(null as any));
+    this._el_9 = this.renderer.createElement(this._el_7,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_9,'src','assets/img2/user_2.jpeg');
+    this._text_10 = this.renderer.createText(this._el_7,'\n                ',(null as any));
+    this._el_11 = this.renderer.createElement(this._el_7,'p',(null as any));
+    this._text_12 = this.renderer.createText(this._el_11,'毓玲珑',(null as any));
+    this._text_13 = this.renderer.createText(this._el_7,'\n            ',(null as any));
+    this._text_14 = this.renderer.createText(this._el_2,'\n            ',(null as any));
+    this._el_15 = this.renderer.createElement(this._el_2,'p',(null as any));
+    this._text_16 = this.renderer.createText(this._el_15,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就',(null as any));
+    this._text_17 = this.renderer.createText(this._el_2,'\n            ',(null as any));
+    this._el_18 = this.renderer.createElement(this._el_2,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_18,'class','qus_btm_wrap');
+    this._text_19 = this.renderer.createText(this._el_18,'\n                ',(null as any));
+    this._el_20 = this.renderer.createElement(this._el_18,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_20,'class','qus_hd');
+    this._text_21 = this.renderer.createText(this._el_20,'0个回答',(null as any));
+    this._text_22 = this.renderer.createText(this._el_18,'\n                ',(null as any));
+    this._el_23 = this.renderer.createElement(this._el_18,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_23,'class','qus_time');
+    this._text_24 = this.renderer.createText(this._el_23,'10-26',(null as any));
+    this._text_25 = this.renderer.createText(this._el_18,'\n            ',(null as any));
+    this._text_26 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._text_27 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_28 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_28,'class','qus_list');
+    this._text_29 = this.renderer.createText(this._el_28,'\n            ',(null as any));
+    this._el_30 = this.renderer.createElement(this._el_28,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_30,'class','qus_list_title');
+    this._text_31 = this.renderer.createText(this._el_30,'如何炸出kfc和m记的薯条？',(null as any));
+    this._text_32 = this.renderer.createText(this._el_28,'\n            ',(null as any));
+    this._el_33 = this.renderer.createElement(this._el_28,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_33,'class','qus_user_wrap');
+    this._text_34 = this.renderer.createText(this._el_33,'\n                ',(null as any));
+    this._el_35 = this.renderer.createElement(this._el_33,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_35,'src','assets/img2/user_1.jpeg');
+    this._text_36 = this.renderer.createText(this._el_33,'\n                ',(null as any));
+    this._el_37 = this.renderer.createElement(this._el_33,'p',(null as any));
+    this._text_38 = this.renderer.createText(this._el_37,'毓玲珑',(null as any));
+    this._text_39 = this.renderer.createText(this._el_33,'\n            ',(null as any));
+    this._text_40 = this.renderer.createText(this._el_28,'\n            ',(null as any));
+    this._el_41 = this.renderer.createElement(this._el_28,'p',(null as any));
+    this._text_42 = this.renderer.createText(this._el_41,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就',(null as any));
+    this._text_43 = this.renderer.createText(this._el_28,'\n            ',(null as any));
+    this._el_44 = this.renderer.createElement(this._el_28,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_44,'class','qus_btm_wrap');
+    this._text_45 = this.renderer.createText(this._el_44,'\n                ',(null as any));
+    this._el_46 = this.renderer.createElement(this._el_44,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_46,'class','qus_hd');
+    this._text_47 = this.renderer.createText(this._el_46,'0个回答',(null as any));
+    this._text_48 = this.renderer.createText(this._el_44,'\n                ',(null as any));
+    this._el_49 = this.renderer.createElement(this._el_44,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_49,'class','qus_time');
+    this._text_50 = this.renderer.createText(this._el_49,'10-26',(null as any));
+    this._text_51 = this.renderer.createText(this._el_44,'\n            ',(null as any));
+    this._text_52 = this.renderer.createText(this._el_28,'\n        ',(null as any));
+    this._text_53 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_54 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_54,'class','qus_list');
+    this._text_55 = this.renderer.createText(this._el_54,'\n            ',(null as any));
+    this._el_56 = this.renderer.createElement(this._el_54,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_56,'class','qus_list_title');
+    this._text_57 = this.renderer.createText(this._el_56,'如何炸出kfc和m记的薯条？',(null as any));
+    this._text_58 = this.renderer.createText(this._el_54,'\n            ',(null as any));
+    this._el_59 = this.renderer.createElement(this._el_54,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_59,'class','qus_user_wrap');
+    this._text_60 = this.renderer.createText(this._el_59,'\n                ',(null as any));
+    this._el_61 = this.renderer.createElement(this._el_59,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_61,'src','assets/img2/user_3.jpeg');
+    this._text_62 = this.renderer.createText(this._el_59,'\n                ',(null as any));
+    this._el_63 = this.renderer.createElement(this._el_59,'p',(null as any));
+    this._text_64 = this.renderer.createText(this._el_63,'毓玲珑',(null as any));
+    this._text_65 = this.renderer.createText(this._el_59,'\n            ',(null as any));
+    this._text_66 = this.renderer.createText(this._el_54,'\n            ',(null as any));
+    this._el_67 = this.renderer.createElement(this._el_54,'p',(null as any));
+    this._text_68 = this.renderer.createText(this._el_67,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就',(null as any));
+    this._text_69 = this.renderer.createText(this._el_54,'\n            ',(null as any));
+    this._el_70 = this.renderer.createElement(this._el_54,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_70,'class','qus_btm_wrap');
+    this._text_71 = this.renderer.createText(this._el_70,'\n                ',(null as any));
+    this._el_72 = this.renderer.createElement(this._el_70,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_72,'class','qus_hd');
+    this._text_73 = this.renderer.createText(this._el_72,'0个回答',(null as any));
+    this._text_74 = this.renderer.createText(this._el_70,'\n                ',(null as any));
+    this._el_75 = this.renderer.createElement(this._el_70,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_75,'class','qus_time');
+    this._text_76 = this.renderer.createText(this._el_75,'10-26',(null as any));
+    this._text_77 = this.renderer.createText(this._el_70,'\n            ',(null as any));
+    this._text_78 = this.renderer.createText(this._el_54,'\n        ',(null as any));
+    this._text_79 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_80 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_80,'class','qus_list');
+    this._text_81 = this.renderer.createText(this._el_80,'\n            ',(null as any));
+    this._el_82 = this.renderer.createElement(this._el_80,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_82,'class','qus_list_title');
+    this._text_83 = this.renderer.createText(this._el_82,'如何炸出kfc和m记的薯条？',(null as any));
+    this._text_84 = this.renderer.createText(this._el_80,'\n            ',(null as any));
+    this._el_85 = this.renderer.createElement(this._el_80,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_85,'class','qus_user_wrap');
+    this._text_86 = this.renderer.createText(this._el_85,'\n                ',(null as any));
+    this._el_87 = this.renderer.createElement(this._el_85,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_87,'src','assets/img2/user_4.jpeg');
+    this._text_88 = this.renderer.createText(this._el_85,'\n                ',(null as any));
+    this._el_89 = this.renderer.createElement(this._el_85,'p',(null as any));
+    this._text_90 = this.renderer.createText(this._el_89,'毓玲珑',(null as any));
+    this._text_91 = this.renderer.createText(this._el_85,'\n            ',(null as any));
+    this._text_92 = this.renderer.createText(this._el_80,'\n            ',(null as any));
+    this._el_93 = this.renderer.createElement(this._el_80,'p',(null as any));
+    this._text_94 = this.renderer.createText(this._el_93,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就',(null as any));
+    this._text_95 = this.renderer.createText(this._el_80,'\n            ',(null as any));
+    this._el_96 = this.renderer.createElement(this._el_80,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_96,'class','qus_btm_wrap');
+    this._text_97 = this.renderer.createText(this._el_96,'\n                ',(null as any));
+    this._el_98 = this.renderer.createElement(this._el_96,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_98,'class','qus_hd');
+    this._text_99 = this.renderer.createText(this._el_98,'0个回答',(null as any));
+    this._text_100 = this.renderer.createText(this._el_96,'\n                ',(null as any));
+    this._el_101 = this.renderer.createElement(this._el_96,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_101,'class','qus_time');
+    this._text_102 = this.renderer.createText(this._el_101,'10-26',(null as any));
+    this._text_103 = this.renderer.createText(this._el_96,'\n            ',(null as any));
+    this._text_104 = this.renderer.createText(this._el_80,'\n        ',(null as any));
+    this._text_105 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_106 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_106,'class','qus_list');
+    this._text_107 = this.renderer.createText(this._el_106,'\n            ',(null as any));
+    this._el_108 = this.renderer.createElement(this._el_106,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_108,'class','qus_list_title');
+    this._text_109 = this.renderer.createText(this._el_108,'如何炸出kfc和m记的薯条？',(null as any));
+    this._text_110 = this.renderer.createText(this._el_106,'\n            ',(null as any));
+    this._el_111 = this.renderer.createElement(this._el_106,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_111,'class','qus_user_wrap');
+    this._text_112 = this.renderer.createText(this._el_111,'\n                ',(null as any));
+    this._el_113 = this.renderer.createElement(this._el_111,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_113,'src','assets/img2/user_1.jpeg');
+    this._text_114 = this.renderer.createText(this._el_111,'\n                ',(null as any));
+    this._el_115 = this.renderer.createElement(this._el_111,'p',(null as any));
+    this._text_116 = this.renderer.createText(this._el_115,'毓玲珑',(null as any));
+    this._text_117 = this.renderer.createText(this._el_111,'\n            ',(null as any));
+    this._text_118 = this.renderer.createText(this._el_106,'\n            ',(null as any));
+    this._el_119 = this.renderer.createElement(this._el_106,'p',(null as any));
+    this._text_120 = this.renderer.createText(this._el_119,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就',(null as any));
+    this._text_121 = this.renderer.createText(this._el_106,'\n            ',(null as any));
+    this._el_122 = this.renderer.createElement(this._el_106,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_122,'class','qus_btm_wrap');
+    this._text_123 = this.renderer.createText(this._el_122,'\n                ',(null as any));
+    this._el_124 = this.renderer.createElement(this._el_122,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_124,'class','qus_hd');
+    this._text_125 = this.renderer.createText(this._el_124,'0个回答',(null as any));
+    this._text_126 = this.renderer.createText(this._el_122,'\n                ',(null as any));
+    this._el_127 = this.renderer.createElement(this._el_122,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_127,'class','qus_time');
+    this._text_128 = this.renderer.createText(this._el_127,'10-26',(null as any));
+    this._text_129 = this.renderer.createText(this._el_122,'\n            ',(null as any));
+    this._text_130 = this.renderer.createText(this._el_106,'\n        ',(null as any));
+    this._text_131 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_132 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_132,'class','qus_list');
+    this._text_133 = this.renderer.createText(this._el_132,'\n            ',(null as any));
+    this._el_134 = this.renderer.createElement(this._el_132,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_134,'class','qus_list_title');
+    this._text_135 = this.renderer.createText(this._el_134,'如何炸出kfc和m记的薯条？',(null as any));
+    this._text_136 = this.renderer.createText(this._el_132,'\n            ',(null as any));
+    this._el_137 = this.renderer.createElement(this._el_132,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_137,'class','qus_user_wrap');
+    this._text_138 = this.renderer.createText(this._el_137,'\n                ',(null as any));
+    this._el_139 = this.renderer.createElement(this._el_137,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_139,'src','assets/img2/user_3.jpeg');
+    this._text_140 = this.renderer.createText(this._el_137,'\n                ',(null as any));
+    this._el_141 = this.renderer.createElement(this._el_137,'p',(null as any));
+    this._text_142 = this.renderer.createText(this._el_141,'毓玲珑',(null as any));
+    this._text_143 = this.renderer.createText(this._el_137,'\n            ',(null as any));
+    this._text_144 = this.renderer.createText(this._el_132,'\n            ',(null as any));
+    this._el_145 = this.renderer.createElement(this._el_132,'p',(null as any));
+    this._text_146 = this.renderer.createText(this._el_145,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就',(null as any));
+    this._text_147 = this.renderer.createText(this._el_132,'\n            ',(null as any));
+    this._el_148 = this.renderer.createElement(this._el_132,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_148,'class','qus_btm_wrap');
+    this._text_149 = this.renderer.createText(this._el_148,'\n                ',(null as any));
+    this._el_150 = this.renderer.createElement(this._el_148,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_150,'class','qus_hd');
+    this._text_151 = this.renderer.createText(this._el_150,'0个回答',(null as any));
+    this._text_152 = this.renderer.createText(this._el_148,'\n                ',(null as any));
+    this._el_153 = this.renderer.createElement(this._el_148,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_153,'class','qus_time');
+    this._text_154 = this.renderer.createText(this._el_153,'10-26',(null as any));
+    this._text_155 = this.renderer.createText(this._el_148,'\n            ',(null as any));
+    this._text_156 = this.renderer.createText(this._el_132,'\n        ',(null as any));
+    this._text_157 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_158 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_158,'class','qus_list');
+    this._text_159 = this.renderer.createText(this._el_158,'\n            ',(null as any));
+    this._el_160 = this.renderer.createElement(this._el_158,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_160,'class','qus_list_title');
+    this._text_161 = this.renderer.createText(this._el_160,'如何炸出kfc和m记的薯条？',(null as any));
+    this._text_162 = this.renderer.createText(this._el_158,'\n            ',(null as any));
+    this._el_163 = this.renderer.createElement(this._el_158,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_163,'class','qus_user_wrap');
+    this._text_164 = this.renderer.createText(this._el_163,'\n                ',(null as any));
+    this._el_165 = this.renderer.createElement(this._el_163,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_165,'src','assets/img2/user_4.jpeg');
+    this._text_166 = this.renderer.createText(this._el_163,'\n                ',(null as any));
+    this._el_167 = this.renderer.createElement(this._el_163,'p',(null as any));
+    this._text_168 = this.renderer.createText(this._el_167,'毓玲珑',(null as any));
+    this._text_169 = this.renderer.createText(this._el_163,'\n            ',(null as any));
+    this._text_170 = this.renderer.createText(this._el_158,'\n            ',(null as any));
+    this._el_171 = this.renderer.createElement(this._el_158,'p',(null as any));
+    this._text_172 = this.renderer.createText(this._el_171,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就',(null as any));
+    this._text_173 = this.renderer.createText(this._el_158,'\n            ',(null as any));
+    this._el_174 = this.renderer.createElement(this._el_158,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_174,'class','qus_btm_wrap');
+    this._text_175 = this.renderer.createText(this._el_174,'\n                ',(null as any));
+    this._el_176 = this.renderer.createElement(this._el_174,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_176,'class','qus_hd');
+    this._text_177 = this.renderer.createText(this._el_176,'0个回答',(null as any));
+    this._text_178 = this.renderer.createText(this._el_174,'\n                ',(null as any));
+    this._el_179 = this.renderer.createElement(this._el_174,'span',(null as any));
+    this.renderer.setElementAttribute(this._el_179,'class','qus_time');
+    this._text_180 = this.renderer.createText(this._el_179,'10-26',(null as any));
+    this._text_181 = this.renderer.createText(this._el_174,'\n            ',(null as any));
+    this._text_182 = this.renderer.createText(this._el_158,'\n        ',(null as any));
+    this._text_183 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
     this.init([].concat([this._el_0]),[
       this._el_0,
-      this._text_1
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._el_4,
+      this._text_5,
+      this._text_6,
+      this._el_7,
+      this._text_8,
+      this._el_9,
+      this._text_10,
+      this._el_11,
+      this._text_12,
+      this._text_13,
+      this._text_14,
+      this._el_15,
+      this._text_16,
+      this._text_17,
+      this._el_18,
+      this._text_19,
+      this._el_20,
+      this._text_21,
+      this._text_22,
+      this._el_23,
+      this._text_24,
+      this._text_25,
+      this._text_26,
+      this._text_27,
+      this._el_28,
+      this._text_29,
+      this._el_30,
+      this._text_31,
+      this._text_32,
+      this._el_33,
+      this._text_34,
+      this._el_35,
+      this._text_36,
+      this._el_37,
+      this._text_38,
+      this._text_39,
+      this._text_40,
+      this._el_41,
+      this._text_42,
+      this._text_43,
+      this._el_44,
+      this._text_45,
+      this._el_46,
+      this._text_47,
+      this._text_48,
+      this._el_49,
+      this._text_50,
+      this._text_51,
+      this._text_52,
+      this._text_53,
+      this._el_54,
+      this._text_55,
+      this._el_56,
+      this._text_57,
+      this._text_58,
+      this._el_59,
+      this._text_60,
+      this._el_61,
+      this._text_62,
+      this._el_63,
+      this._text_64,
+      this._text_65,
+      this._text_66,
+      this._el_67,
+      this._text_68,
+      this._text_69,
+      this._el_70,
+      this._text_71,
+      this._el_72,
+      this._text_73,
+      this._text_74,
+      this._el_75,
+      this._text_76,
+      this._text_77,
+      this._text_78,
+      this._text_79,
+      this._el_80,
+      this._text_81,
+      this._el_82,
+      this._text_83,
+      this._text_84,
+      this._el_85,
+      this._text_86,
+      this._el_87,
+      this._text_88,
+      this._el_89,
+      this._text_90,
+      this._text_91,
+      this._text_92,
+      this._el_93,
+      this._text_94,
+      this._text_95,
+      this._el_96,
+      this._text_97,
+      this._el_98,
+      this._text_99,
+      this._text_100,
+      this._el_101,
+      this._text_102,
+      this._text_103,
+      this._text_104,
+      this._text_105,
+      this._el_106,
+      this._text_107,
+      this._el_108,
+      this._text_109,
+      this._text_110,
+      this._el_111,
+      this._text_112,
+      this._el_113,
+      this._text_114,
+      this._el_115,
+      this._text_116,
+      this._text_117,
+      this._text_118,
+      this._el_119,
+      this._text_120,
+      this._text_121,
+      this._el_122,
+      this._text_123,
+      this._el_124,
+      this._text_125,
+      this._text_126,
+      this._el_127,
+      this._text_128,
+      this._text_129,
+      this._text_130,
+      this._text_131,
+      this._el_132,
+      this._text_133,
+      this._el_134,
+      this._text_135,
+      this._text_136,
+      this._el_137,
+      this._text_138,
+      this._el_139,
+      this._text_140,
+      this._el_141,
+      this._text_142,
+      this._text_143,
+      this._text_144,
+      this._el_145,
+      this._text_146,
+      this._text_147,
+      this._el_148,
+      this._text_149,
+      this._el_150,
+      this._text_151,
+      this._text_152,
+      this._el_153,
+      this._text_154,
+      this._text_155,
+      this._text_156,
+      this._text_157,
+      this._el_158,
+      this._text_159,
+      this._el_160,
+      this._text_161,
+      this._text_162,
+      this._el_163,
+      this._text_164,
+      this._el_165,
+      this._text_166,
+      this._el_167,
+      this._text_168,
+      this._text_169,
+      this._text_170,
+      this._el_171,
+      this._text_172,
+      this._text_173,
+      this._el_174,
+      this._text_175,
+      this._el_176,
+      this._text_177,
+      this._text_178,
+      this._el_179,
+      this._text_180,
+      this._text_181,
+      this._text_182,
+      this._text_183
     ]
     ,[],[]);
     return (null as any);
@@ -497,15 +1093,380 @@ function viewFactory_SharePage1(viewUtils:import4.ViewUtils,parentInjector:impor
 class _View_SharePage2 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
+  _el_2:any;
+  _text_3:any;
+  _el_4:any;
+  _text_5:any;
+  _el_6:any;
+  _text_7:any;
+  _el_8:any;
+  _text_9:any;
+  _el_10:any;
+  _text_11:any;
+  _text_12:any;
+  _el_13:any;
+  _text_14:any;
+  _text_15:any;
+  _el_16:any;
+  _text_17:any;
+  _text_18:any;
+  _text_19:any;
+  _el_20:any;
+  _text_21:any;
+  _el_22:any;
+  _text_23:any;
+  _el_24:any;
+  _text_25:any;
+  _text_26:any;
+  _text_27:any;
+  _text_28:any;
+  _text_29:any;
+  _el_30:any;
+  _text_31:any;
+  _el_32:any;
+  _text_33:any;
+  _el_34:any;
+  _text_35:any;
+  _el_36:any;
+  _text_37:any;
+  _el_38:any;
+  _text_39:any;
+  _text_40:any;
+  _el_41:any;
+  _text_42:any;
+  _text_43:any;
+  _el_44:any;
+  _text_45:any;
+  _text_46:any;
+  _text_47:any;
+  _el_48:any;
+  _text_49:any;
+  _el_50:any;
+  _text_51:any;
+  _el_52:any;
+  _text_53:any;
+  _text_54:any;
+  _text_55:any;
+  _text_56:any;
+  _text_57:any;
+  _el_58:any;
+  _text_59:any;
+  _el_60:any;
+  _text_61:any;
+  _el_62:any;
+  _text_63:any;
+  _el_64:any;
+  _text_65:any;
+  _el_66:any;
+  _text_67:any;
+  _text_68:any;
+  _el_69:any;
+  _text_70:any;
+  _text_71:any;
+  _el_72:any;
+  _text_73:any;
+  _text_74:any;
+  _text_75:any;
+  _el_76:any;
+  _text_77:any;
+  _el_78:any;
+  _text_79:any;
+  _el_80:any;
+  _text_81:any;
+  _text_82:any;
+  _text_83:any;
+  _text_84:any;
+  _text_85:any;
+  _el_86:any;
+  _text_87:any;
+  _el_88:any;
+  _text_89:any;
+  _el_90:any;
+  _text_91:any;
+  _el_92:any;
+  _text_93:any;
+  _el_94:any;
+  _text_95:any;
+  _text_96:any;
+  _el_97:any;
+  _text_98:any;
+  _text_99:any;
+  _el_100:any;
+  _text_101:any;
+  _text_102:any;
+  _text_103:any;
+  _el_104:any;
+  _text_105:any;
+  _el_106:any;
+  _text_107:any;
+  _el_108:any;
+  _text_109:any;
+  _text_110:any;
+  _text_111:any;
+  _text_112:any;
+  _text_113:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_SharePage2,renderType_SharePage,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'section',(null as any));
-    this._text_1 = this.renderer.createText(this._el_0,'2',(null as any));
+    this.renderer.setElementAttribute(this._el_0,'class','home_works');
+    this._text_1 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_2,'class','home_work_list');
+    this._text_3 = this.renderer.createText(this._el_2,'\n            ',(null as any));
+    this._el_4 = this.renderer.createElement(this._el_2,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_4,'src','assets/img2/home_work_1.jpeg');
+    this._text_5 = this.renderer.createText(this._el_2,'\n            ',(null as any));
+    this._el_6 = this.renderer.createElement(this._el_2,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_6,'class','home_work_cont');
+    this._text_7 = this.renderer.createText(this._el_6,'\n                ',(null as any));
+    this._el_8 = this.renderer.createElement(this._el_6,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_8,'class','home_work_cont_left');
+    this._text_9 = this.renderer.createText(this._el_8,'\n                    ',(null as any));
+    this._el_10 = this.renderer.createElement(this._el_8,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_10,'class','home_work_cont_left_title');
+    this._text_11 = this.renderer.createText(this._el_10,'蚝油鸡胸肉',(null as any));
+    this._text_12 = this.renderer.createText(this._el_8,'\n                    ',(null as any));
+    this._el_13 = this.renderer.createElement(this._el_8,'p',(null as any));
+    this._text_14 = this.renderer.createText(this._el_13,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_15 = this.renderer.createText(this._el_8,'\n                    ',(null as any));
+    this._el_16 = this.renderer.createElement(this._el_8,'p',(null as any));
+    this._text_17 = this.renderer.createText(this._el_16,'10-22',(null as any));
+    this._text_18 = this.renderer.createText(this._el_8,'\n                ',(null as any));
+    this._text_19 = this.renderer.createText(this._el_6,'\n                ',(null as any));
+    this._el_20 = this.renderer.createElement(this._el_6,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_20,'class','home_work_cont_right');
+    this._text_21 = this.renderer.createText(this._el_20,'\n                    ',(null as any));
+    this._el_22 = this.renderer.createElement(this._el_20,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_22,'src','assets/img2/user_4.jpeg');
+    this._text_23 = this.renderer.createText(this._el_20,'\n                    ',(null as any));
+    this._el_24 = this.renderer.createElement(this._el_20,'p',(null as any));
+    this._text_25 = this.renderer.createText(this._el_24,'春燕_Lsg6',(null as any));
+    this._text_26 = this.renderer.createText(this._el_20,'\n                ',(null as any));
+    this._text_27 = this.renderer.createText(this._el_6,'\n            ',(null as any));
+    this._text_28 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._text_29 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_30 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_30,'class','home_work_list');
+    this._text_31 = this.renderer.createText(this._el_30,'\n            ',(null as any));
+    this._el_32 = this.renderer.createElement(this._el_30,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_32,'src','assets/img2/home_work_2.jpeg');
+    this._text_33 = this.renderer.createText(this._el_30,'\n            ',(null as any));
+    this._el_34 = this.renderer.createElement(this._el_30,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_34,'class','home_work_cont');
+    this._text_35 = this.renderer.createText(this._el_34,'\n                ',(null as any));
+    this._el_36 = this.renderer.createElement(this._el_34,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_36,'class','home_work_cont_left');
+    this._text_37 = this.renderer.createText(this._el_36,'\n                    ',(null as any));
+    this._el_38 = this.renderer.createElement(this._el_36,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_38,'class','home_work_cont_left_title');
+    this._text_39 = this.renderer.createText(this._el_38,'蚝油鸡胸肉',(null as any));
+    this._text_40 = this.renderer.createText(this._el_36,'\n                    ',(null as any));
+    this._el_41 = this.renderer.createElement(this._el_36,'p',(null as any));
+    this._text_42 = this.renderer.createText(this._el_41,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_43 = this.renderer.createText(this._el_36,'\n                    ',(null as any));
+    this._el_44 = this.renderer.createElement(this._el_36,'p',(null as any));
+    this._text_45 = this.renderer.createText(this._el_44,'10-22',(null as any));
+    this._text_46 = this.renderer.createText(this._el_36,'\n                ',(null as any));
+    this._text_47 = this.renderer.createText(this._el_34,'\n                ',(null as any));
+    this._el_48 = this.renderer.createElement(this._el_34,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_48,'class','home_work_cont_right');
+    this._text_49 = this.renderer.createText(this._el_48,'\n                    ',(null as any));
+    this._el_50 = this.renderer.createElement(this._el_48,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_50,'src','assets/img2/user_3.jpeg');
+    this._text_51 = this.renderer.createText(this._el_48,'\n                    ',(null as any));
+    this._el_52 = this.renderer.createElement(this._el_48,'p',(null as any));
+    this._text_53 = this.renderer.createText(this._el_52,'徐徐徐萌萌',(null as any));
+    this._text_54 = this.renderer.createText(this._el_48,'\n                ',(null as any));
+    this._text_55 = this.renderer.createText(this._el_34,'\n            ',(null as any));
+    this._text_56 = this.renderer.createText(this._el_30,'\n        ',(null as any));
+    this._text_57 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_58 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_58,'class','home_work_list');
+    this._text_59 = this.renderer.createText(this._el_58,'\n            ',(null as any));
+    this._el_60 = this.renderer.createElement(this._el_58,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_60,'src','assets/img2/home_work_3.jpeg');
+    this._text_61 = this.renderer.createText(this._el_58,'\n            ',(null as any));
+    this._el_62 = this.renderer.createElement(this._el_58,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_62,'class','home_work_cont');
+    this._text_63 = this.renderer.createText(this._el_62,'\n                ',(null as any));
+    this._el_64 = this.renderer.createElement(this._el_62,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_64,'class','home_work_cont_left');
+    this._text_65 = this.renderer.createText(this._el_64,'\n                    ',(null as any));
+    this._el_66 = this.renderer.createElement(this._el_64,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_66,'class','home_work_cont_left_title');
+    this._text_67 = this.renderer.createText(this._el_66,'蚝油鸡胸肉',(null as any));
+    this._text_68 = this.renderer.createText(this._el_64,'\n                    ',(null as any));
+    this._el_69 = this.renderer.createElement(this._el_64,'p',(null as any));
+    this._text_70 = this.renderer.createText(this._el_69,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_71 = this.renderer.createText(this._el_64,'\n                    ',(null as any));
+    this._el_72 = this.renderer.createElement(this._el_64,'p',(null as any));
+    this._text_73 = this.renderer.createText(this._el_72,'10-22',(null as any));
+    this._text_74 = this.renderer.createText(this._el_64,'\n                ',(null as any));
+    this._text_75 = this.renderer.createText(this._el_62,'\n                ',(null as any));
+    this._el_76 = this.renderer.createElement(this._el_62,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_76,'class','home_work_cont_right');
+    this._text_77 = this.renderer.createText(this._el_76,'\n                    ',(null as any));
+    this._el_78 = this.renderer.createElement(this._el_76,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_78,'src','assets/img2/user_2.jpeg');
+    this._text_79 = this.renderer.createText(this._el_76,'\n                    ',(null as any));
+    this._el_80 = this.renderer.createElement(this._el_76,'p',(null as any));
+    this._text_81 = this.renderer.createText(this._el_80,'毓玲珑',(null as any));
+    this._text_82 = this.renderer.createText(this._el_76,'\n                ',(null as any));
+    this._text_83 = this.renderer.createText(this._el_62,'\n            ',(null as any));
+    this._text_84 = this.renderer.createText(this._el_58,'\n        ',(null as any));
+    this._text_85 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_86 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_86,'class','home_work_list');
+    this._text_87 = this.renderer.createText(this._el_86,'\n            ',(null as any));
+    this._el_88 = this.renderer.createElement(this._el_86,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_88,'src','assets/img2/home_work_1.jpeg');
+    this._text_89 = this.renderer.createText(this._el_86,'\n            ',(null as any));
+    this._el_90 = this.renderer.createElement(this._el_86,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_90,'class','home_work_cont');
+    this._text_91 = this.renderer.createText(this._el_90,'\n                ',(null as any));
+    this._el_92 = this.renderer.createElement(this._el_90,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_92,'class','home_work_cont_left');
+    this._text_93 = this.renderer.createText(this._el_92,'\n                    ',(null as any));
+    this._el_94 = this.renderer.createElement(this._el_92,'p',(null as any));
+    this.renderer.setElementAttribute(this._el_94,'class','home_work_cont_left_title');
+    this._text_95 = this.renderer.createText(this._el_94,'蚝油鸡胸肉',(null as any));
+    this._text_96 = this.renderer.createText(this._el_92,'\n                    ',(null as any));
+    this._el_97 = this.renderer.createElement(this._el_92,'p',(null as any));
+    this._text_98 = this.renderer.createText(this._el_97,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_99 = this.renderer.createText(this._el_92,'\n                    ',(null as any));
+    this._el_100 = this.renderer.createElement(this._el_92,'p',(null as any));
+    this._text_101 = this.renderer.createText(this._el_100,'10-22',(null as any));
+    this._text_102 = this.renderer.createText(this._el_92,'\n                ',(null as any));
+    this._text_103 = this.renderer.createText(this._el_90,'\n                ',(null as any));
+    this._el_104 = this.renderer.createElement(this._el_90,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_104,'class','home_work_cont_right');
+    this._text_105 = this.renderer.createText(this._el_104,'\n                    ',(null as any));
+    this._el_106 = this.renderer.createElement(this._el_104,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_106,'src','assets/img2/user_1.jpeg');
+    this._text_107 = this.renderer.createText(this._el_104,'\n                    ',(null as any));
+    this._el_108 = this.renderer.createElement(this._el_104,'p',(null as any));
+    this._text_109 = this.renderer.createText(this._el_108,'萧冰xiaobing',(null as any));
+    this._text_110 = this.renderer.createText(this._el_104,'\n                ',(null as any));
+    this._text_111 = this.renderer.createText(this._el_90,'\n            ',(null as any));
+    this._text_112 = this.renderer.createText(this._el_86,'\n        ',(null as any));
+    this._text_113 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this.init([].concat([this._el_0]),[
       this._el_0,
-      this._text_1
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._el_4,
+      this._text_5,
+      this._el_6,
+      this._text_7,
+      this._el_8,
+      this._text_9,
+      this._el_10,
+      this._text_11,
+      this._text_12,
+      this._el_13,
+      this._text_14,
+      this._text_15,
+      this._el_16,
+      this._text_17,
+      this._text_18,
+      this._text_19,
+      this._el_20,
+      this._text_21,
+      this._el_22,
+      this._text_23,
+      this._el_24,
+      this._text_25,
+      this._text_26,
+      this._text_27,
+      this._text_28,
+      this._text_29,
+      this._el_30,
+      this._text_31,
+      this._el_32,
+      this._text_33,
+      this._el_34,
+      this._text_35,
+      this._el_36,
+      this._text_37,
+      this._el_38,
+      this._text_39,
+      this._text_40,
+      this._el_41,
+      this._text_42,
+      this._text_43,
+      this._el_44,
+      this._text_45,
+      this._text_46,
+      this._text_47,
+      this._el_48,
+      this._text_49,
+      this._el_50,
+      this._text_51,
+      this._el_52,
+      this._text_53,
+      this._text_54,
+      this._text_55,
+      this._text_56,
+      this._text_57,
+      this._el_58,
+      this._text_59,
+      this._el_60,
+      this._text_61,
+      this._el_62,
+      this._text_63,
+      this._el_64,
+      this._text_65,
+      this._el_66,
+      this._text_67,
+      this._text_68,
+      this._el_69,
+      this._text_70,
+      this._text_71,
+      this._el_72,
+      this._text_73,
+      this._text_74,
+      this._text_75,
+      this._el_76,
+      this._text_77,
+      this._el_78,
+      this._text_79,
+      this._el_80,
+      this._text_81,
+      this._text_82,
+      this._text_83,
+      this._text_84,
+      this._text_85,
+      this._el_86,
+      this._text_87,
+      this._el_88,
+      this._text_89,
+      this._el_90,
+      this._text_91,
+      this._el_92,
+      this._text_93,
+      this._el_94,
+      this._text_95,
+      this._text_96,
+      this._el_97,
+      this._text_98,
+      this._text_99,
+      this._el_100,
+      this._text_101,
+      this._text_102,
+      this._text_103,
+      this._el_104,
+      this._text_105,
+      this._el_106,
+      this._text_107,
+      this._el_108,
+      this._text_109,
+      this._text_110,
+      this._text_111,
+      this._text_112,
+      this._text_113
     ]
     ,[],[]);
     return (null as any);

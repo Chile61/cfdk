@@ -467,10 +467,424 @@ var _View_SharePage1 = (function (_super) {
     }
     _View_SharePage1.prototype.createInternal = function (rootSelector) {
         this._el_0 = this.renderer.createElement(null, 'section', null);
-        this._text_1 = this.renderer.createText(this._el_0, '1', null);
+        this.renderer.setElementAttribute(this._el_0, 'id', 'qus_wrap');
+        this._text_1 = this.renderer.createText(this._el_0, '\n\n        ', null);
+        this._el_2 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_2, 'class', 'qus_list');
+        this._text_3 = this.renderer.createText(this._el_2, '\n            ', null);
+        this._el_4 = this.renderer.createElement(this._el_2, 'p', null);
+        this.renderer.setElementAttribute(this._el_4, 'class', 'qus_list_title');
+        this._text_5 = this.renderer.createText(this._el_4, '如何炸出kfc和m记的薯条？', null);
+        this._text_6 = this.renderer.createText(this._el_2, '\n            ', null);
+        this._el_7 = this.renderer.createElement(this._el_2, 'div', null);
+        this.renderer.setElementAttribute(this._el_7, 'class', 'qus_user_wrap');
+        this._text_8 = this.renderer.createText(this._el_7, '\n                ', null);
+        this._el_9 = this.renderer.createElement(this._el_7, 'img', null);
+        this.renderer.setElementAttribute(this._el_9, 'src', 'assets/img2/user_2.jpeg');
+        this._text_10 = this.renderer.createText(this._el_7, '\n                ', null);
+        this._el_11 = this.renderer.createElement(this._el_7, 'p', null);
+        this._text_12 = this.renderer.createText(this._el_11, '毓玲珑', null);
+        this._text_13 = this.renderer.createText(this._el_7, '\n            ', null);
+        this._text_14 = this.renderer.createText(this._el_2, '\n            ', null);
+        this._el_15 = this.renderer.createElement(this._el_2, 'p', null);
+        this._text_16 = this.renderer.createText(this._el_15, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就', null);
+        this._text_17 = this.renderer.createText(this._el_2, '\n            ', null);
+        this._el_18 = this.renderer.createElement(this._el_2, 'p', null);
+        this.renderer.setElementAttribute(this._el_18, 'class', 'qus_btm_wrap');
+        this._text_19 = this.renderer.createText(this._el_18, '\n                ', null);
+        this._el_20 = this.renderer.createElement(this._el_18, 'span', null);
+        this.renderer.setElementAttribute(this._el_20, 'class', 'qus_hd');
+        this._text_21 = this.renderer.createText(this._el_20, '0个回答', null);
+        this._text_22 = this.renderer.createText(this._el_18, '\n                ', null);
+        this._el_23 = this.renderer.createElement(this._el_18, 'span', null);
+        this.renderer.setElementAttribute(this._el_23, 'class', 'qus_time');
+        this._text_24 = this.renderer.createText(this._el_23, '10-26', null);
+        this._text_25 = this.renderer.createText(this._el_18, '\n            ', null);
+        this._text_26 = this.renderer.createText(this._el_2, '\n        ', null);
+        this._text_27 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_28 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_28, 'class', 'qus_list');
+        this._text_29 = this.renderer.createText(this._el_28, '\n            ', null);
+        this._el_30 = this.renderer.createElement(this._el_28, 'p', null);
+        this.renderer.setElementAttribute(this._el_30, 'class', 'qus_list_title');
+        this._text_31 = this.renderer.createText(this._el_30, '如何炸出kfc和m记的薯条？', null);
+        this._text_32 = this.renderer.createText(this._el_28, '\n            ', null);
+        this._el_33 = this.renderer.createElement(this._el_28, 'div', null);
+        this.renderer.setElementAttribute(this._el_33, 'class', 'qus_user_wrap');
+        this._text_34 = this.renderer.createText(this._el_33, '\n                ', null);
+        this._el_35 = this.renderer.createElement(this._el_33, 'img', null);
+        this.renderer.setElementAttribute(this._el_35, 'src', 'assets/img2/user_1.jpeg');
+        this._text_36 = this.renderer.createText(this._el_33, '\n                ', null);
+        this._el_37 = this.renderer.createElement(this._el_33, 'p', null);
+        this._text_38 = this.renderer.createText(this._el_37, '毓玲珑', null);
+        this._text_39 = this.renderer.createText(this._el_33, '\n            ', null);
+        this._text_40 = this.renderer.createText(this._el_28, '\n            ', null);
+        this._el_41 = this.renderer.createElement(this._el_28, 'p', null);
+        this._text_42 = this.renderer.createText(this._el_41, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就', null);
+        this._text_43 = this.renderer.createText(this._el_28, '\n            ', null);
+        this._el_44 = this.renderer.createElement(this._el_28, 'p', null);
+        this.renderer.setElementAttribute(this._el_44, 'class', 'qus_btm_wrap');
+        this._text_45 = this.renderer.createText(this._el_44, '\n                ', null);
+        this._el_46 = this.renderer.createElement(this._el_44, 'span', null);
+        this.renderer.setElementAttribute(this._el_46, 'class', 'qus_hd');
+        this._text_47 = this.renderer.createText(this._el_46, '0个回答', null);
+        this._text_48 = this.renderer.createText(this._el_44, '\n                ', null);
+        this._el_49 = this.renderer.createElement(this._el_44, 'span', null);
+        this.renderer.setElementAttribute(this._el_49, 'class', 'qus_time');
+        this._text_50 = this.renderer.createText(this._el_49, '10-26', null);
+        this._text_51 = this.renderer.createText(this._el_44, '\n            ', null);
+        this._text_52 = this.renderer.createText(this._el_28, '\n        ', null);
+        this._text_53 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_54 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_54, 'class', 'qus_list');
+        this._text_55 = this.renderer.createText(this._el_54, '\n            ', null);
+        this._el_56 = this.renderer.createElement(this._el_54, 'p', null);
+        this.renderer.setElementAttribute(this._el_56, 'class', 'qus_list_title');
+        this._text_57 = this.renderer.createText(this._el_56, '如何炸出kfc和m记的薯条？', null);
+        this._text_58 = this.renderer.createText(this._el_54, '\n            ', null);
+        this._el_59 = this.renderer.createElement(this._el_54, 'div', null);
+        this.renderer.setElementAttribute(this._el_59, 'class', 'qus_user_wrap');
+        this._text_60 = this.renderer.createText(this._el_59, '\n                ', null);
+        this._el_61 = this.renderer.createElement(this._el_59, 'img', null);
+        this.renderer.setElementAttribute(this._el_61, 'src', 'assets/img2/user_3.jpeg');
+        this._text_62 = this.renderer.createText(this._el_59, '\n                ', null);
+        this._el_63 = this.renderer.createElement(this._el_59, 'p', null);
+        this._text_64 = this.renderer.createText(this._el_63, '毓玲珑', null);
+        this._text_65 = this.renderer.createText(this._el_59, '\n            ', null);
+        this._text_66 = this.renderer.createText(this._el_54, '\n            ', null);
+        this._el_67 = this.renderer.createElement(this._el_54, 'p', null);
+        this._text_68 = this.renderer.createText(this._el_67, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就', null);
+        this._text_69 = this.renderer.createText(this._el_54, '\n            ', null);
+        this._el_70 = this.renderer.createElement(this._el_54, 'p', null);
+        this.renderer.setElementAttribute(this._el_70, 'class', 'qus_btm_wrap');
+        this._text_71 = this.renderer.createText(this._el_70, '\n                ', null);
+        this._el_72 = this.renderer.createElement(this._el_70, 'span', null);
+        this.renderer.setElementAttribute(this._el_72, 'class', 'qus_hd');
+        this._text_73 = this.renderer.createText(this._el_72, '0个回答', null);
+        this._text_74 = this.renderer.createText(this._el_70, '\n                ', null);
+        this._el_75 = this.renderer.createElement(this._el_70, 'span', null);
+        this.renderer.setElementAttribute(this._el_75, 'class', 'qus_time');
+        this._text_76 = this.renderer.createText(this._el_75, '10-26', null);
+        this._text_77 = this.renderer.createText(this._el_70, '\n            ', null);
+        this._text_78 = this.renderer.createText(this._el_54, '\n        ', null);
+        this._text_79 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_80 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_80, 'class', 'qus_list');
+        this._text_81 = this.renderer.createText(this._el_80, '\n            ', null);
+        this._el_82 = this.renderer.createElement(this._el_80, 'p', null);
+        this.renderer.setElementAttribute(this._el_82, 'class', 'qus_list_title');
+        this._text_83 = this.renderer.createText(this._el_82, '如何炸出kfc和m记的薯条？', null);
+        this._text_84 = this.renderer.createText(this._el_80, '\n            ', null);
+        this._el_85 = this.renderer.createElement(this._el_80, 'div', null);
+        this.renderer.setElementAttribute(this._el_85, 'class', 'qus_user_wrap');
+        this._text_86 = this.renderer.createText(this._el_85, '\n                ', null);
+        this._el_87 = this.renderer.createElement(this._el_85, 'img', null);
+        this.renderer.setElementAttribute(this._el_87, 'src', 'assets/img2/user_4.jpeg');
+        this._text_88 = this.renderer.createText(this._el_85, '\n                ', null);
+        this._el_89 = this.renderer.createElement(this._el_85, 'p', null);
+        this._text_90 = this.renderer.createText(this._el_89, '毓玲珑', null);
+        this._text_91 = this.renderer.createText(this._el_85, '\n            ', null);
+        this._text_92 = this.renderer.createText(this._el_80, '\n            ', null);
+        this._el_93 = this.renderer.createElement(this._el_80, 'p', null);
+        this._text_94 = this.renderer.createText(this._el_93, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就', null);
+        this._text_95 = this.renderer.createText(this._el_80, '\n            ', null);
+        this._el_96 = this.renderer.createElement(this._el_80, 'p', null);
+        this.renderer.setElementAttribute(this._el_96, 'class', 'qus_btm_wrap');
+        this._text_97 = this.renderer.createText(this._el_96, '\n                ', null);
+        this._el_98 = this.renderer.createElement(this._el_96, 'span', null);
+        this.renderer.setElementAttribute(this._el_98, 'class', 'qus_hd');
+        this._text_99 = this.renderer.createText(this._el_98, '0个回答', null);
+        this._text_100 = this.renderer.createText(this._el_96, '\n                ', null);
+        this._el_101 = this.renderer.createElement(this._el_96, 'span', null);
+        this.renderer.setElementAttribute(this._el_101, 'class', 'qus_time');
+        this._text_102 = this.renderer.createText(this._el_101, '10-26', null);
+        this._text_103 = this.renderer.createText(this._el_96, '\n            ', null);
+        this._text_104 = this.renderer.createText(this._el_80, '\n        ', null);
+        this._text_105 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_106 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_106, 'class', 'qus_list');
+        this._text_107 = this.renderer.createText(this._el_106, '\n            ', null);
+        this._el_108 = this.renderer.createElement(this._el_106, 'p', null);
+        this.renderer.setElementAttribute(this._el_108, 'class', 'qus_list_title');
+        this._text_109 = this.renderer.createText(this._el_108, '如何炸出kfc和m记的薯条？', null);
+        this._text_110 = this.renderer.createText(this._el_106, '\n            ', null);
+        this._el_111 = this.renderer.createElement(this._el_106, 'div', null);
+        this.renderer.setElementAttribute(this._el_111, 'class', 'qus_user_wrap');
+        this._text_112 = this.renderer.createText(this._el_111, '\n                ', null);
+        this._el_113 = this.renderer.createElement(this._el_111, 'img', null);
+        this.renderer.setElementAttribute(this._el_113, 'src', 'assets/img2/user_1.jpeg');
+        this._text_114 = this.renderer.createText(this._el_111, '\n                ', null);
+        this._el_115 = this.renderer.createElement(this._el_111, 'p', null);
+        this._text_116 = this.renderer.createText(this._el_115, '毓玲珑', null);
+        this._text_117 = this.renderer.createText(this._el_111, '\n            ', null);
+        this._text_118 = this.renderer.createText(this._el_106, '\n            ', null);
+        this._el_119 = this.renderer.createElement(this._el_106, 'p', null);
+        this._text_120 = this.renderer.createText(this._el_119, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就', null);
+        this._text_121 = this.renderer.createText(this._el_106, '\n            ', null);
+        this._el_122 = this.renderer.createElement(this._el_106, 'p', null);
+        this.renderer.setElementAttribute(this._el_122, 'class', 'qus_btm_wrap');
+        this._text_123 = this.renderer.createText(this._el_122, '\n                ', null);
+        this._el_124 = this.renderer.createElement(this._el_122, 'span', null);
+        this.renderer.setElementAttribute(this._el_124, 'class', 'qus_hd');
+        this._text_125 = this.renderer.createText(this._el_124, '0个回答', null);
+        this._text_126 = this.renderer.createText(this._el_122, '\n                ', null);
+        this._el_127 = this.renderer.createElement(this._el_122, 'span', null);
+        this.renderer.setElementAttribute(this._el_127, 'class', 'qus_time');
+        this._text_128 = this.renderer.createText(this._el_127, '10-26', null);
+        this._text_129 = this.renderer.createText(this._el_122, '\n            ', null);
+        this._text_130 = this.renderer.createText(this._el_106, '\n        ', null);
+        this._text_131 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_132 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_132, 'class', 'qus_list');
+        this._text_133 = this.renderer.createText(this._el_132, '\n            ', null);
+        this._el_134 = this.renderer.createElement(this._el_132, 'p', null);
+        this.renderer.setElementAttribute(this._el_134, 'class', 'qus_list_title');
+        this._text_135 = this.renderer.createText(this._el_134, '如何炸出kfc和m记的薯条？', null);
+        this._text_136 = this.renderer.createText(this._el_132, '\n            ', null);
+        this._el_137 = this.renderer.createElement(this._el_132, 'div', null);
+        this.renderer.setElementAttribute(this._el_137, 'class', 'qus_user_wrap');
+        this._text_138 = this.renderer.createText(this._el_137, '\n                ', null);
+        this._el_139 = this.renderer.createElement(this._el_137, 'img', null);
+        this.renderer.setElementAttribute(this._el_139, 'src', 'assets/img2/user_3.jpeg');
+        this._text_140 = this.renderer.createText(this._el_137, '\n                ', null);
+        this._el_141 = this.renderer.createElement(this._el_137, 'p', null);
+        this._text_142 = this.renderer.createText(this._el_141, '毓玲珑', null);
+        this._text_143 = this.renderer.createText(this._el_137, '\n            ', null);
+        this._text_144 = this.renderer.createText(this._el_132, '\n            ', null);
+        this._el_145 = this.renderer.createElement(this._el_132, 'p', null);
+        this._text_146 = this.renderer.createText(this._el_145, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就', null);
+        this._text_147 = this.renderer.createText(this._el_132, '\n            ', null);
+        this._el_148 = this.renderer.createElement(this._el_132, 'p', null);
+        this.renderer.setElementAttribute(this._el_148, 'class', 'qus_btm_wrap');
+        this._text_149 = this.renderer.createText(this._el_148, '\n                ', null);
+        this._el_150 = this.renderer.createElement(this._el_148, 'span', null);
+        this.renderer.setElementAttribute(this._el_150, 'class', 'qus_hd');
+        this._text_151 = this.renderer.createText(this._el_150, '0个回答', null);
+        this._text_152 = this.renderer.createText(this._el_148, '\n                ', null);
+        this._el_153 = this.renderer.createElement(this._el_148, 'span', null);
+        this.renderer.setElementAttribute(this._el_153, 'class', 'qus_time');
+        this._text_154 = this.renderer.createText(this._el_153, '10-26', null);
+        this._text_155 = this.renderer.createText(this._el_148, '\n            ', null);
+        this._text_156 = this.renderer.createText(this._el_132, '\n        ', null);
+        this._text_157 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_158 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_158, 'class', 'qus_list');
+        this._text_159 = this.renderer.createText(this._el_158, '\n            ', null);
+        this._el_160 = this.renderer.createElement(this._el_158, 'p', null);
+        this.renderer.setElementAttribute(this._el_160, 'class', 'qus_list_title');
+        this._text_161 = this.renderer.createText(this._el_160, '如何炸出kfc和m记的薯条？', null);
+        this._text_162 = this.renderer.createText(this._el_158, '\n            ', null);
+        this._el_163 = this.renderer.createElement(this._el_158, 'div', null);
+        this.renderer.setElementAttribute(this._el_163, 'class', 'qus_user_wrap');
+        this._text_164 = this.renderer.createText(this._el_163, '\n                ', null);
+        this._el_165 = this.renderer.createElement(this._el_163, 'img', null);
+        this.renderer.setElementAttribute(this._el_165, 'src', 'assets/img2/user_4.jpeg');
+        this._text_166 = this.renderer.createText(this._el_163, '\n                ', null);
+        this._el_167 = this.renderer.createElement(this._el_163, 'p', null);
+        this._text_168 = this.renderer.createText(this._el_167, '毓玲珑', null);
+        this._text_169 = this.renderer.createText(this._el_163, '\n            ', null);
+        this._text_170 = this.renderer.createText(this._el_158, '\n            ', null);
+        this._el_171 = this.renderer.createElement(this._el_158, 'p', null);
+        this._text_172 = this.renderer.createText(this._el_171, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就', null);
+        this._text_173 = this.renderer.createText(this._el_158, '\n            ', null);
+        this._el_174 = this.renderer.createElement(this._el_158, 'p', null);
+        this.renderer.setElementAttribute(this._el_174, 'class', 'qus_btm_wrap');
+        this._text_175 = this.renderer.createText(this._el_174, '\n                ', null);
+        this._el_176 = this.renderer.createElement(this._el_174, 'span', null);
+        this.renderer.setElementAttribute(this._el_176, 'class', 'qus_hd');
+        this._text_177 = this.renderer.createText(this._el_176, '0个回答', null);
+        this._text_178 = this.renderer.createText(this._el_174, '\n                ', null);
+        this._el_179 = this.renderer.createElement(this._el_174, 'span', null);
+        this.renderer.setElementAttribute(this._el_179, 'class', 'qus_time');
+        this._text_180 = this.renderer.createText(this._el_179, '10-26', null);
+        this._text_181 = this.renderer.createText(this._el_174, '\n            ', null);
+        this._text_182 = this.renderer.createText(this._el_158, '\n        ', null);
+        this._text_183 = this.renderer.createText(this._el_0, '\n\n    ', null);
         this.init([].concat([this._el_0]), [
             this._el_0,
-            this._text_1
+            this._text_1,
+            this._el_2,
+            this._text_3,
+            this._el_4,
+            this._text_5,
+            this._text_6,
+            this._el_7,
+            this._text_8,
+            this._el_9,
+            this._text_10,
+            this._el_11,
+            this._text_12,
+            this._text_13,
+            this._text_14,
+            this._el_15,
+            this._text_16,
+            this._text_17,
+            this._el_18,
+            this._text_19,
+            this._el_20,
+            this._text_21,
+            this._text_22,
+            this._el_23,
+            this._text_24,
+            this._text_25,
+            this._text_26,
+            this._text_27,
+            this._el_28,
+            this._text_29,
+            this._el_30,
+            this._text_31,
+            this._text_32,
+            this._el_33,
+            this._text_34,
+            this._el_35,
+            this._text_36,
+            this._el_37,
+            this._text_38,
+            this._text_39,
+            this._text_40,
+            this._el_41,
+            this._text_42,
+            this._text_43,
+            this._el_44,
+            this._text_45,
+            this._el_46,
+            this._text_47,
+            this._text_48,
+            this._el_49,
+            this._text_50,
+            this._text_51,
+            this._text_52,
+            this._text_53,
+            this._el_54,
+            this._text_55,
+            this._el_56,
+            this._text_57,
+            this._text_58,
+            this._el_59,
+            this._text_60,
+            this._el_61,
+            this._text_62,
+            this._el_63,
+            this._text_64,
+            this._text_65,
+            this._text_66,
+            this._el_67,
+            this._text_68,
+            this._text_69,
+            this._el_70,
+            this._text_71,
+            this._el_72,
+            this._text_73,
+            this._text_74,
+            this._el_75,
+            this._text_76,
+            this._text_77,
+            this._text_78,
+            this._text_79,
+            this._el_80,
+            this._text_81,
+            this._el_82,
+            this._text_83,
+            this._text_84,
+            this._el_85,
+            this._text_86,
+            this._el_87,
+            this._text_88,
+            this._el_89,
+            this._text_90,
+            this._text_91,
+            this._text_92,
+            this._el_93,
+            this._text_94,
+            this._text_95,
+            this._el_96,
+            this._text_97,
+            this._el_98,
+            this._text_99,
+            this._text_100,
+            this._el_101,
+            this._text_102,
+            this._text_103,
+            this._text_104,
+            this._text_105,
+            this._el_106,
+            this._text_107,
+            this._el_108,
+            this._text_109,
+            this._text_110,
+            this._el_111,
+            this._text_112,
+            this._el_113,
+            this._text_114,
+            this._el_115,
+            this._text_116,
+            this._text_117,
+            this._text_118,
+            this._el_119,
+            this._text_120,
+            this._text_121,
+            this._el_122,
+            this._text_123,
+            this._el_124,
+            this._text_125,
+            this._text_126,
+            this._el_127,
+            this._text_128,
+            this._text_129,
+            this._text_130,
+            this._text_131,
+            this._el_132,
+            this._text_133,
+            this._el_134,
+            this._text_135,
+            this._text_136,
+            this._el_137,
+            this._text_138,
+            this._el_139,
+            this._text_140,
+            this._el_141,
+            this._text_142,
+            this._text_143,
+            this._text_144,
+            this._el_145,
+            this._text_146,
+            this._text_147,
+            this._el_148,
+            this._text_149,
+            this._el_150,
+            this._text_151,
+            this._text_152,
+            this._el_153,
+            this._text_154,
+            this._text_155,
+            this._text_156,
+            this._text_157,
+            this._el_158,
+            this._text_159,
+            this._el_160,
+            this._text_161,
+            this._text_162,
+            this._el_163,
+            this._text_164,
+            this._el_165,
+            this._text_166,
+            this._el_167,
+            this._text_168,
+            this._text_169,
+            this._text_170,
+            this._el_171,
+            this._text_172,
+            this._text_173,
+            this._el_174,
+            this._text_175,
+            this._el_176,
+            this._text_177,
+            this._text_178,
+            this._el_179,
+            this._text_180,
+            this._text_181,
+            this._text_182,
+            this._text_183
         ], [], []);
         return null;
     };
@@ -486,10 +900,263 @@ var _View_SharePage2 = (function (_super) {
     }
     _View_SharePage2.prototype.createInternal = function (rootSelector) {
         this._el_0 = this.renderer.createElement(null, 'section', null);
-        this._text_1 = this.renderer.createText(this._el_0, '2', null);
+        this.renderer.setElementAttribute(this._el_0, 'class', 'home_works');
+        this._text_1 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_2 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_2, 'class', 'home_work_list');
+        this._text_3 = this.renderer.createText(this._el_2, '\n            ', null);
+        this._el_4 = this.renderer.createElement(this._el_2, 'img', null);
+        this.renderer.setElementAttribute(this._el_4, 'src', 'assets/img2/home_work_1.jpeg');
+        this._text_5 = this.renderer.createText(this._el_2, '\n            ', null);
+        this._el_6 = this.renderer.createElement(this._el_2, 'div', null);
+        this.renderer.setElementAttribute(this._el_6, 'class', 'home_work_cont');
+        this._text_7 = this.renderer.createText(this._el_6, '\n                ', null);
+        this._el_8 = this.renderer.createElement(this._el_6, 'div', null);
+        this.renderer.setElementAttribute(this._el_8, 'class', 'home_work_cont_left');
+        this._text_9 = this.renderer.createText(this._el_8, '\n                    ', null);
+        this._el_10 = this.renderer.createElement(this._el_8, 'p', null);
+        this.renderer.setElementAttribute(this._el_10, 'class', 'home_work_cont_left_title');
+        this._text_11 = this.renderer.createText(this._el_10, '蚝油鸡胸肉', null);
+        this._text_12 = this.renderer.createText(this._el_8, '\n                    ', null);
+        this._el_13 = this.renderer.createElement(this._el_8, 'p', null);
+        this._text_14 = this.renderer.createText(this._el_13, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...', null);
+        this._text_15 = this.renderer.createText(this._el_8, '\n                    ', null);
+        this._el_16 = this.renderer.createElement(this._el_8, 'p', null);
+        this._text_17 = this.renderer.createText(this._el_16, '10-22', null);
+        this._text_18 = this.renderer.createText(this._el_8, '\n                ', null);
+        this._text_19 = this.renderer.createText(this._el_6, '\n                ', null);
+        this._el_20 = this.renderer.createElement(this._el_6, 'div', null);
+        this.renderer.setElementAttribute(this._el_20, 'class', 'home_work_cont_right');
+        this._text_21 = this.renderer.createText(this._el_20, '\n                    ', null);
+        this._el_22 = this.renderer.createElement(this._el_20, 'img', null);
+        this.renderer.setElementAttribute(this._el_22, 'src', 'assets/img2/user_4.jpeg');
+        this._text_23 = this.renderer.createText(this._el_20, '\n                    ', null);
+        this._el_24 = this.renderer.createElement(this._el_20, 'p', null);
+        this._text_25 = this.renderer.createText(this._el_24, '春燕_Lsg6', null);
+        this._text_26 = this.renderer.createText(this._el_20, '\n                ', null);
+        this._text_27 = this.renderer.createText(this._el_6, '\n            ', null);
+        this._text_28 = this.renderer.createText(this._el_2, '\n        ', null);
+        this._text_29 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_30 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_30, 'class', 'home_work_list');
+        this._text_31 = this.renderer.createText(this._el_30, '\n            ', null);
+        this._el_32 = this.renderer.createElement(this._el_30, 'img', null);
+        this.renderer.setElementAttribute(this._el_32, 'src', 'assets/img2/home_work_2.jpeg');
+        this._text_33 = this.renderer.createText(this._el_30, '\n            ', null);
+        this._el_34 = this.renderer.createElement(this._el_30, 'div', null);
+        this.renderer.setElementAttribute(this._el_34, 'class', 'home_work_cont');
+        this._text_35 = this.renderer.createText(this._el_34, '\n                ', null);
+        this._el_36 = this.renderer.createElement(this._el_34, 'div', null);
+        this.renderer.setElementAttribute(this._el_36, 'class', 'home_work_cont_left');
+        this._text_37 = this.renderer.createText(this._el_36, '\n                    ', null);
+        this._el_38 = this.renderer.createElement(this._el_36, 'p', null);
+        this.renderer.setElementAttribute(this._el_38, 'class', 'home_work_cont_left_title');
+        this._text_39 = this.renderer.createText(this._el_38, '蚝油鸡胸肉', null);
+        this._text_40 = this.renderer.createText(this._el_36, '\n                    ', null);
+        this._el_41 = this.renderer.createElement(this._el_36, 'p', null);
+        this._text_42 = this.renderer.createText(this._el_41, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...', null);
+        this._text_43 = this.renderer.createText(this._el_36, '\n                    ', null);
+        this._el_44 = this.renderer.createElement(this._el_36, 'p', null);
+        this._text_45 = this.renderer.createText(this._el_44, '10-22', null);
+        this._text_46 = this.renderer.createText(this._el_36, '\n                ', null);
+        this._text_47 = this.renderer.createText(this._el_34, '\n                ', null);
+        this._el_48 = this.renderer.createElement(this._el_34, 'div', null);
+        this.renderer.setElementAttribute(this._el_48, 'class', 'home_work_cont_right');
+        this._text_49 = this.renderer.createText(this._el_48, '\n                    ', null);
+        this._el_50 = this.renderer.createElement(this._el_48, 'img', null);
+        this.renderer.setElementAttribute(this._el_50, 'src', 'assets/img2/user_3.jpeg');
+        this._text_51 = this.renderer.createText(this._el_48, '\n                    ', null);
+        this._el_52 = this.renderer.createElement(this._el_48, 'p', null);
+        this._text_53 = this.renderer.createText(this._el_52, '徐徐徐萌萌', null);
+        this._text_54 = this.renderer.createText(this._el_48, '\n                ', null);
+        this._text_55 = this.renderer.createText(this._el_34, '\n            ', null);
+        this._text_56 = this.renderer.createText(this._el_30, '\n        ', null);
+        this._text_57 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_58 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_58, 'class', 'home_work_list');
+        this._text_59 = this.renderer.createText(this._el_58, '\n            ', null);
+        this._el_60 = this.renderer.createElement(this._el_58, 'img', null);
+        this.renderer.setElementAttribute(this._el_60, 'src', 'assets/img2/home_work_3.jpeg');
+        this._text_61 = this.renderer.createText(this._el_58, '\n            ', null);
+        this._el_62 = this.renderer.createElement(this._el_58, 'div', null);
+        this.renderer.setElementAttribute(this._el_62, 'class', 'home_work_cont');
+        this._text_63 = this.renderer.createText(this._el_62, '\n                ', null);
+        this._el_64 = this.renderer.createElement(this._el_62, 'div', null);
+        this.renderer.setElementAttribute(this._el_64, 'class', 'home_work_cont_left');
+        this._text_65 = this.renderer.createText(this._el_64, '\n                    ', null);
+        this._el_66 = this.renderer.createElement(this._el_64, 'p', null);
+        this.renderer.setElementAttribute(this._el_66, 'class', 'home_work_cont_left_title');
+        this._text_67 = this.renderer.createText(this._el_66, '蚝油鸡胸肉', null);
+        this._text_68 = this.renderer.createText(this._el_64, '\n                    ', null);
+        this._el_69 = this.renderer.createElement(this._el_64, 'p', null);
+        this._text_70 = this.renderer.createText(this._el_69, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...', null);
+        this._text_71 = this.renderer.createText(this._el_64, '\n                    ', null);
+        this._el_72 = this.renderer.createElement(this._el_64, 'p', null);
+        this._text_73 = this.renderer.createText(this._el_72, '10-22', null);
+        this._text_74 = this.renderer.createText(this._el_64, '\n                ', null);
+        this._text_75 = this.renderer.createText(this._el_62, '\n                ', null);
+        this._el_76 = this.renderer.createElement(this._el_62, 'div', null);
+        this.renderer.setElementAttribute(this._el_76, 'class', 'home_work_cont_right');
+        this._text_77 = this.renderer.createText(this._el_76, '\n                    ', null);
+        this._el_78 = this.renderer.createElement(this._el_76, 'img', null);
+        this.renderer.setElementAttribute(this._el_78, 'src', 'assets/img2/user_2.jpeg');
+        this._text_79 = this.renderer.createText(this._el_76, '\n                    ', null);
+        this._el_80 = this.renderer.createElement(this._el_76, 'p', null);
+        this._text_81 = this.renderer.createText(this._el_80, '毓玲珑', null);
+        this._text_82 = this.renderer.createText(this._el_76, '\n                ', null);
+        this._text_83 = this.renderer.createText(this._el_62, '\n            ', null);
+        this._text_84 = this.renderer.createText(this._el_58, '\n        ', null);
+        this._text_85 = this.renderer.createText(this._el_0, '\n        ', null);
+        this._el_86 = this.renderer.createElement(this._el_0, 'div', null);
+        this.renderer.setElementAttribute(this._el_86, 'class', 'home_work_list');
+        this._text_87 = this.renderer.createText(this._el_86, '\n            ', null);
+        this._el_88 = this.renderer.createElement(this._el_86, 'img', null);
+        this.renderer.setElementAttribute(this._el_88, 'src', 'assets/img2/home_work_1.jpeg');
+        this._text_89 = this.renderer.createText(this._el_86, '\n            ', null);
+        this._el_90 = this.renderer.createElement(this._el_86, 'div', null);
+        this.renderer.setElementAttribute(this._el_90, 'class', 'home_work_cont');
+        this._text_91 = this.renderer.createText(this._el_90, '\n                ', null);
+        this._el_92 = this.renderer.createElement(this._el_90, 'div', null);
+        this.renderer.setElementAttribute(this._el_92, 'class', 'home_work_cont_left');
+        this._text_93 = this.renderer.createText(this._el_92, '\n                    ', null);
+        this._el_94 = this.renderer.createElement(this._el_92, 'p', null);
+        this.renderer.setElementAttribute(this._el_94, 'class', 'home_work_cont_left_title');
+        this._text_95 = this.renderer.createText(this._el_94, '蚝油鸡胸肉', null);
+        this._text_96 = this.renderer.createText(this._el_92, '\n                    ', null);
+        this._el_97 = this.renderer.createElement(this._el_92, 'p', null);
+        this._text_98 = this.renderer.createText(this._el_97, '这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...', null);
+        this._text_99 = this.renderer.createText(this._el_92, '\n                    ', null);
+        this._el_100 = this.renderer.createElement(this._el_92, 'p', null);
+        this._text_101 = this.renderer.createText(this._el_100, '10-22', null);
+        this._text_102 = this.renderer.createText(this._el_92, '\n                ', null);
+        this._text_103 = this.renderer.createText(this._el_90, '\n                ', null);
+        this._el_104 = this.renderer.createElement(this._el_90, 'div', null);
+        this.renderer.setElementAttribute(this._el_104, 'class', 'home_work_cont_right');
+        this._text_105 = this.renderer.createText(this._el_104, '\n                    ', null);
+        this._el_106 = this.renderer.createElement(this._el_104, 'img', null);
+        this.renderer.setElementAttribute(this._el_106, 'src', 'assets/img2/user_1.jpeg');
+        this._text_107 = this.renderer.createText(this._el_104, '\n                    ', null);
+        this._el_108 = this.renderer.createElement(this._el_104, 'p', null);
+        this._text_109 = this.renderer.createText(this._el_108, '萧冰xiaobing', null);
+        this._text_110 = this.renderer.createText(this._el_104, '\n                ', null);
+        this._text_111 = this.renderer.createText(this._el_90, '\n            ', null);
+        this._text_112 = this.renderer.createText(this._el_86, '\n        ', null);
+        this._text_113 = this.renderer.createText(this._el_0, '\n    ', null);
         this.init([].concat([this._el_0]), [
             this._el_0,
-            this._text_1
+            this._text_1,
+            this._el_2,
+            this._text_3,
+            this._el_4,
+            this._text_5,
+            this._el_6,
+            this._text_7,
+            this._el_8,
+            this._text_9,
+            this._el_10,
+            this._text_11,
+            this._text_12,
+            this._el_13,
+            this._text_14,
+            this._text_15,
+            this._el_16,
+            this._text_17,
+            this._text_18,
+            this._text_19,
+            this._el_20,
+            this._text_21,
+            this._el_22,
+            this._text_23,
+            this._el_24,
+            this._text_25,
+            this._text_26,
+            this._text_27,
+            this._text_28,
+            this._text_29,
+            this._el_30,
+            this._text_31,
+            this._el_32,
+            this._text_33,
+            this._el_34,
+            this._text_35,
+            this._el_36,
+            this._text_37,
+            this._el_38,
+            this._text_39,
+            this._text_40,
+            this._el_41,
+            this._text_42,
+            this._text_43,
+            this._el_44,
+            this._text_45,
+            this._text_46,
+            this._text_47,
+            this._el_48,
+            this._text_49,
+            this._el_50,
+            this._text_51,
+            this._el_52,
+            this._text_53,
+            this._text_54,
+            this._text_55,
+            this._text_56,
+            this._text_57,
+            this._el_58,
+            this._text_59,
+            this._el_60,
+            this._text_61,
+            this._el_62,
+            this._text_63,
+            this._el_64,
+            this._text_65,
+            this._el_66,
+            this._text_67,
+            this._text_68,
+            this._el_69,
+            this._text_70,
+            this._text_71,
+            this._el_72,
+            this._text_73,
+            this._text_74,
+            this._text_75,
+            this._el_76,
+            this._text_77,
+            this._el_78,
+            this._text_79,
+            this._el_80,
+            this._text_81,
+            this._text_82,
+            this._text_83,
+            this._text_84,
+            this._text_85,
+            this._el_86,
+            this._text_87,
+            this._el_88,
+            this._text_89,
+            this._el_90,
+            this._text_91,
+            this._el_92,
+            this._text_93,
+            this._el_94,
+            this._text_95,
+            this._text_96,
+            this._el_97,
+            this._text_98,
+            this._text_99,
+            this._el_100,
+            this._text_101,
+            this._text_102,
+            this._text_103,
+            this._el_104,
+            this._text_105,
+            this._el_106,
+            this._text_107,
+            this._el_108,
+            this._text_109,
+            this._text_110,
+            this._text_111,
+            this._text_112,
+            this._text_113
         ], [], []);
         return null;
     };
