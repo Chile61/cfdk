@@ -106,3 +106,39 @@ page-share {}
     border-radius: 9999px;
     margin: 0 auto;
 }
+
+ion-fab[bottom] {
+    margin-bottom: 60px;
+}
+
+.fab-close-icon {
+    line-height: 70px;
+}
+
+.home_works .home_work_list .home_work_list_imgs {
+    width: 100%;
+    display: flex;
+    -webkit-display: flex;
+    background: #fff;
+}
+
+.home_works .home_work_list .home_work_list_imgs .list_imgs {
+    flex: 1;
+    -webkit-flex: 1;
+    padding: 1%;
+}
+
+.home_works_hd {
+    background: transparent;
+}
+
+.home_works_hd .home_work_list {
+    margin-bottom: 1.6rem;
+    box-shadow: 0 5px 10px #e4e4e4;
+    padding-top: 0.3rem;
+}
+
+.home_works_hd .home_work_cont_right img {
+    width: 3.5rem;
+    height: 3.5rem;
+}

@@ -1,7 +1,5 @@
 <ion-header>
-
     <ion-toolbar color="secondary">
-
         <ion-segment [(ngModel)]="pet" color="fff">
             <ion-segment-button value="new1">
                 厨房问答
@@ -15,10 +13,8 @@
         </ion-segment>
     </ion-toolbar>
 </ion-header>
-
 <ion-content [ngSwitch]="pet">
     <section *ngSwitchCase="'new1'" id="qus_wrap">
-
         <div class="qus_list">
             <p class="qus_list_title">如何炸出kfc和m记的薯条？</p>
             <div class="qus_user_wrap">
@@ -103,7 +99,6 @@
                 <span class="qus_time">10-26</span>
             </p>
         </div>
-
     </section>
     <section *ngSwitchCase="'new2'" class="home_works">
         <div class="home_work_list">
@@ -163,5 +158,94 @@
             </div>
         </div>
     </section>
-    <section *ngSwitchCase="'new3'">3</section>
+    <section *ngSwitchCase="'new3'" class="home_works home_works_hd">
+        <div class="home_work_list">
+            <div class="home_work_list_imgs">
+                <div class="list_imgs"><img src="assets/img2/hot_1.jpeg" /></div>
+                <div class="list_imgs"><img src="assets/img2/hot_2.jpeg" /></div>
+                <div class="list_imgs"><img src="assets/img2/hot_3.jpeg" /></div>
+            </div>
+            <div class="home_work_cont">
+                <div class="home_work_cont_left">
+                    <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
+                    <p>10-22</p>
+                </div>
+                <div class="home_work_cont_right">
+                    <img src="assets/img2/user_4.jpeg" />
+                    <p>春燕_Lsg6</p>
+                </div>
+            </div>
+        </div>
+        <div class="home_work_list">
+            <div class="home_work_list_imgs">
+                <div class="list_imgs"><img src="assets/img2/hot_1.jpeg" /></div>
+                <div class="list_imgs"><img src="assets/img2/hot_2.jpeg" /></div>
+                <div class="list_imgs"><img src="assets/img2/hot_3.jpeg" /></div>
+            </div>
+            <div class="home_work_cont">
+                <div class="home_work_cont_left">
+                    <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
+                    <p>10-22</p>
+                </div>
+                <div class="home_work_cont_right">
+                    <img src="assets/img2/user_4.jpeg" />
+                    <p>春燕_Lsg6</p>
+                </div>
+            </div>
+        </div>
+        <div class="home_work_list">
+            <div class="home_work_list_imgs">
+                <div class="list_imgs"><img src="assets/img2/hot_1.jpeg" /></div>
+                <div class="list_imgs"><img src="assets/img2/hot_2.jpeg" /></div>
+            </div>
+            <div class="home_work_cont">
+                <div class="home_work_cont_left">
+                    <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
+                    <p>10-22</p>
+                </div>
+                <div class="home_work_cont_right">
+                    <img src="assets/img2/user_4.jpeg" />
+                    <p>春燕_Lsg6</p>
+                </div>
+            </div>
+        </div>
+        <div class="home_work_list">
+            <div class="home_work_list_imgs">
+                <div class="list_imgs"><img src="assets/img2/hot_1.jpeg" /></div>
+            </div>
+            <div class="home_work_cont">
+                <div class="home_work_cont_left">
+                    <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
+                    <p>10-22</p>
+                </div>
+                <div class="home_work_cont_right">
+                    <img src="assets/img2/user_4.jpeg" />
+                    <p>春燕_Lsg6</p>
+                </div>
+            </div>
+        </div>
+        <div class="home_work_list">
+            <div class="home_work_list_imgs">
+            </div>
+            <div class="home_work_cont">
+                <div class="home_work_cont_left">
+                    <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
+                    <p>10-22</p>
+                </div>
+                <div class="home_work_cont_right">
+                    <img src="assets/img2/user_4.jpeg" />
+                    <p>春燕_Lsg6</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--发布按钮-->
+    <ion-fab right bottom edge #327eff>
+        <button ion-fab><ion-icon name="arrow-dropup"></ion-icon></button>
+        <ion-fab-list side="top">
+            <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+        </ion-fab-list>
+    </ion-fab>
 </ion-content>

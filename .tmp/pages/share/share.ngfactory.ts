@@ -22,18 +22,21 @@ import * as import14 from 'ionic-angular/components/segment/segment';
 import * as import15 from '@angular/core/src/linker/query_list';
 import * as import16 from '@angular/common/src/directives/ng_switch';
 import * as import17 from 'ionic-angular/components/content/content';
-import * as import18 from 'ionic-angular/config/config';
-import * as import19 from '@angular/core/src/linker/element_ref';
-import * as import20 from 'ionic-angular/navigation/view-controller';
-import * as import21 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
-import * as import22 from '../../node_modules/ionic-angular/components/segment/segment.ngfactory';
-import * as import23 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import24 from 'ionic-angular/components/app/app';
-import * as import25 from 'ionic-angular/util/keyboard';
-import * as import26 from '@angular/core/src/zone/ng_zone';
-import * as import27 from 'ionic-angular/components/tabs/tabs';
-import * as import28 from '@angular/core/src/linker/template_ref';
-import * as import29 from '@angular/forms/src/directives/ng_control';
+import * as import18 from 'ionic-angular/components/fab/fab';
+import * as import19 from 'ionic-angular/components/icon/icon';
+import * as import20 from 'ionic-angular/config/config';
+import * as import21 from '@angular/core/src/linker/element_ref';
+import * as import22 from 'ionic-angular/navigation/view-controller';
+import * as import23 from '../../node_modules/ionic-angular/components/toolbar/toolbar.ngfactory';
+import * as import24 from '../../node_modules/ionic-angular/components/segment/segment.ngfactory';
+import * as import25 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import26 from 'ionic-angular/components/app/app';
+import * as import27 from 'ionic-angular/util/keyboard';
+import * as import28 from '@angular/core/src/zone/ng_zone';
+import * as import29 from 'ionic-angular/components/tabs/tabs';
+import * as import30 from '@angular/core/src/linker/template_ref';
+import * as import31 from '../../node_modules/ionic-angular/components/fab/fab.ngfactory';
+import * as import32 from '@angular/forms/src/directives/ng_control';
 var renderType_SharePage_Host:import0.RenderComponentType = (null as any);
 class _View_SharePage_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -117,6 +120,43 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
   _TemplateRef_24_5:any;
   _NgSwitchCase_24_6:import16.NgSwitchCase;
   _text_25:any;
+  _text_26:any;
+  _el_27:any;
+  /*private*/ _appEl_27:import2.AppElement;
+  _FabContainer_27_4:import18.FabContainer;
+  _query_FabButton_27_0:import15.QueryList<any>;
+  _query_FabList_27_1:import15.QueryList<any>;
+  _text_28:any;
+  _el_29:any;
+  /*private*/ _appEl_29:import2.AppElement;
+  _FabButton_29_4:import18.FabButton;
+  _el_30:any;
+  _Icon_30_3:import19.Icon;
+  _text_31:any;
+  _el_32:any;
+  _FabList_32_3:import18.FabList;
+  _query_FabButton_32_0:import15.QueryList<any>;
+  _text_33:any;
+  _el_34:any;
+  /*private*/ _appEl_34:import2.AppElement;
+  _FabButton_34_4:import18.FabButton;
+  _el_35:any;
+  _Icon_35_3:import19.Icon;
+  _text_36:any;
+  _el_37:any;
+  /*private*/ _appEl_37:import2.AppElement;
+  _FabButton_37_4:import18.FabButton;
+  _el_38:any;
+  _Icon_38_3:import19.Icon;
+  _text_39:any;
+  _el_40:any;
+  /*private*/ _appEl_40:import2.AppElement;
+  _FabButton_40_4:import18.FabButton;
+  _el_41:any;
+  _Icon_41_3:import19.Icon;
+  _text_42:any;
+  _text_43:any;
+  _text_44:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_3:any;
@@ -135,28 +175,36 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
   /*private*/ _expr_19:any;
   /*private*/ _expr_20:any;
   /*private*/ _expr_21:any;
+  /*private*/ _expr_22:any;
+  /*private*/ _expr_23:any;
+  /*private*/ _expr_24:any;
+  /*private*/ _expr_25:any;
+  /*private*/ _expr_26:any;
+  /*private*/ _expr_27:any;
+  /*private*/ _expr_28:any;
+  /*private*/ _expr_29:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_SharePage0,renderType_SharePage,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._el_0 = this.renderer.createElement(parentRenderNode,'ion-header',(null as any));
-    this._Header_0_3 = new import11.Header(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import20.ViewController,(null as any)));
-    this._text_1 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._Header_0_3 = new import11.Header(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import22.ViewController,(null as any)));
+    this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'ion-toolbar',(null as any));
     this.renderer.setElementAttribute(this._el_2,'class','toolbar');
     this.renderer.setElementAttribute(this._el_2,'color','secondary');
     this._appEl_2 = new import2.AppElement(2,0,this,this._el_2);
-    var compView_2:any = import21.viewFactory_Toolbar0(this.viewUtils,this.injector(2),this._appEl_2);
-    this._Toolbar_2_4 = new import11.Toolbar(this.parentInjector.get(import20.ViewController,(null as any)),this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_2),this.renderer);
+    var compView_2:any = import23.viewFactory_Toolbar0(this.viewUtils,this.injector(2),this._appEl_2);
+    this._Toolbar_2_4 = new import11.Toolbar(this.parentInjector.get(import22.ViewController,(null as any)),this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_2),this.renderer);
     this._appEl_2.initComponent(this._Toolbar_2_4,[],compView_2);
-    this._text_3 = this.renderer.createText((null as any),'\n\n        ',(null as any));
+    this._text_3 = this.renderer.createText((null as any),'\n        ',(null as any));
     this._el_4 = this.renderer.createElement((null as any),'ion-segment',(null as any));
     this.renderer.setElementAttribute(this._el_4,'color','fff');
     this._NgModel_4_3 = new import12.NgModel((null as any),(null as any),(null as any),(null as any));
     this._NgControl_4_4 = this._NgModel_4_3;
     this._NgControlStatus_4_5 = new import13.NgControlStatus(this._NgControl_4_4);
-    this._Segment_4_6 = new import14.Segment(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_4),this.renderer,this._NgControl_4_4);
+    this._Segment_4_6 = new import14.Segment(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_4),this.renderer,this._NgControl_4_4);
     this._query_SegmentButton_4_0 = new import15.QueryList<any>();
     this._text_5 = this.renderer.createText(this._el_4,'\n            ',(null as any));
     this._el_6 = this.renderer.createElement(this._el_4,'ion-segment-button',(null as any));
@@ -165,8 +213,8 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
     this.renderer.setElementAttribute(this._el_6,'tappable','');
     this.renderer.setElementAttribute(this._el_6,'value','new1');
     this._appEl_6 = new import2.AppElement(6,4,this,this._el_6);
-    var compView_6:any = import22.viewFactory_SegmentButton0(this.viewUtils,this.injector(6),this._appEl_6);
-    this._SegmentButton_6_4 = new import14.SegmentButton(this.renderer,new import19.ElementRef(this._el_6));
+    var compView_6:any = import24.viewFactory_SegmentButton0(this.viewUtils,this.injector(6),this._appEl_6);
+    this._SegmentButton_6_4 = new import14.SegmentButton(this.renderer,new import21.ElementRef(this._el_6));
     this._appEl_6.initComponent(this._SegmentButton_6_4,[],compView_6);
     this._text_7 = this.renderer.createText((null as any),'\n                厨房问答\n            ',(null as any));
     compView_6.create(this._SegmentButton_6_4,[[].concat([this._text_7])],(null as any));
@@ -177,8 +225,8 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
     this.renderer.setElementAttribute(this._el_9,'tappable','');
     this.renderer.setElementAttribute(this._el_9,'value','new2');
     this._appEl_9 = new import2.AppElement(9,4,this,this._el_9);
-    var compView_9:any = import22.viewFactory_SegmentButton0(this.viewUtils,this.injector(9),this._appEl_9);
-    this._SegmentButton_9_4 = new import14.SegmentButton(this.renderer,new import19.ElementRef(this._el_9));
+    var compView_9:any = import24.viewFactory_SegmentButton0(this.viewUtils,this.injector(9),this._appEl_9);
+    this._SegmentButton_9_4 = new import14.SegmentButton(this.renderer,new import21.ElementRef(this._el_9));
     this._appEl_9.initComponent(this._SegmentButton_9_4,[],compView_9);
     this._text_10 = this.renderer.createText((null as any),'\n                厨房新作\n            ',(null as any));
     compView_9.create(this._SegmentButton_9_4,[[].concat([this._text_10])],(null as any));
@@ -189,8 +237,8 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
     this.renderer.setElementAttribute(this._el_12,'tappable','');
     this.renderer.setElementAttribute(this._el_12,'value','new3');
     this._appEl_12 = new import2.AppElement(12,4,this,this._el_12);
-    var compView_12:any = import22.viewFactory_SegmentButton0(this.viewUtils,this.injector(12),this._appEl_12);
-    this._SegmentButton_12_4 = new import14.SegmentButton(this.renderer,new import19.ElementRef(this._el_12));
+    var compView_12:any = import24.viewFactory_SegmentButton0(this.viewUtils,this.injector(12),this._appEl_12);
+    this._SegmentButton_12_4 = new import14.SegmentButton(this.renderer,new import21.ElementRef(this._el_12));
     this._appEl_12.initComponent(this._SegmentButton_12_4,[],compView_12);
     this._text_13 = this.renderer.createText((null as any),'\n                厨房互动\n            ',(null as any));
     compView_12.create(this._SegmentButton_12_4,[[].concat([this._text_13])],(null as any));
@@ -209,31 +257,108 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
     ]
     ,(null as any));
     this._text_16 = this.renderer.createText(this._el_0,'\n',(null as any));
-    this._text_17 = this.renderer.createText(parentRenderNode,'\n\n',(null as any));
+    this._text_17 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._el_18 = this.renderer.createElement(parentRenderNode,'ion-content',(null as any));
     this._appEl_18 = new import2.AppElement(18,(null as any),this,this._el_18);
-    var compView_18:any = import23.viewFactory_Content0(this.viewUtils,this.injector(18),this._appEl_18);
+    var compView_18:any = import25.viewFactory_Content0(this.viewUtils,this.injector(18),this._appEl_18);
     this._NgSwitch_18_4 = new import16.NgSwitch();
-    this._Content_18_5 = new import17.Content(this.parentInjector.get(import18.Config),new import19.ElementRef(this._el_18),this.renderer,this.parentInjector.get(import24.App),this.parentInjector.get(import25.Keyboard),this.parentInjector.get(import26.NgZone),this.parentInjector.get(import20.ViewController,(null as any)),this.parentInjector.get(import27.Tabs,(null as any)));
+    this._Content_18_5 = new import17.Content(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_18),this.renderer,this.parentInjector.get(import26.App),this.parentInjector.get(import27.Keyboard),this.parentInjector.get(import28.NgZone),this.parentInjector.get(import22.ViewController,(null as any)),this.parentInjector.get(import29.Tabs,(null as any)));
     this._appEl_18.initComponent(this._Content_18_5,[],compView_18);
     this._text_19 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._anchor_20 = this.renderer.createTemplateAnchor((null as any),(null as any));
     this._appEl_20 = new import2.AppElement(20,18,this,this._anchor_20);
-    this._TemplateRef_20_5 = new import28.TemplateRef_(this._appEl_20,viewFactory_SharePage1);
+    this._TemplateRef_20_5 = new import30.TemplateRef_(this._appEl_20,viewFactory_SharePage1);
     this._NgSwitchCase_20_6 = new import16.NgSwitchCase(this._appEl_20.vcRef,this._TemplateRef_20_5,this._NgSwitch_18_4);
     this._text_21 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._anchor_22 = this.renderer.createTemplateAnchor((null as any),(null as any));
     this._appEl_22 = new import2.AppElement(22,18,this,this._anchor_22);
-    this._TemplateRef_22_5 = new import28.TemplateRef_(this._appEl_22,viewFactory_SharePage2);
+    this._TemplateRef_22_5 = new import30.TemplateRef_(this._appEl_22,viewFactory_SharePage2);
     this._NgSwitchCase_22_6 = new import16.NgSwitchCase(this._appEl_22.vcRef,this._TemplateRef_22_5,this._NgSwitch_18_4);
     this._text_23 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._anchor_24 = this.renderer.createTemplateAnchor((null as any),(null as any));
     this._appEl_24 = new import2.AppElement(24,18,this,this._anchor_24);
-    this._TemplateRef_24_5 = new import28.TemplateRef_(this._appEl_24,viewFactory_SharePage3);
+    this._TemplateRef_24_5 = new import30.TemplateRef_(this._appEl_24,viewFactory_SharePage3);
     this._NgSwitchCase_24_6 = new import16.NgSwitchCase(this._appEl_24.vcRef,this._TemplateRef_24_5,this._NgSwitch_18_4);
-    this._text_25 = this.renderer.createText((null as any),'\n',(null as any));
+    this._text_25 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._text_26 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._el_27 = this.renderer.createElement((null as any),'ion-fab',(null as any));
+    this.renderer.setElementAttribute(this._el_27,'bottom','');
+    this.renderer.setElementAttribute(this._el_27,'edge','');
+    this.renderer.setElementAttribute(this._el_27,'right','');
+    this._appEl_27 = new import2.AppElement(27,18,this,this._el_27);
+    var compView_27:any = import31.viewFactory_FabContainer0(this.viewUtils,this.injector(27),this._appEl_27);
+    this._FabContainer_27_4 = new import18.FabContainer(new import21.ElementRef(this._el_27));
+    this._query_FabButton_27_0 = new import15.QueryList<any>();
+    this._query_FabList_27_1 = new import15.QueryList<any>();
+    this._appEl_27.initComponent(this._FabContainer_27_4,[],compView_27);
+    this._text_28 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._el_29 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_29,'ion-fab','');
+    this._appEl_29 = new import2.AppElement(29,27,this,this._el_29);
+    var compView_29:any = import31.viewFactory_FabButton0(this.viewUtils,this.injector(29),this._appEl_29);
+    this._FabButton_29_4 = new import18.FabButton(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_29),this.renderer);
+    this._appEl_29.initComponent(this._FabButton_29_4,[],compView_29);
+    this._el_30 = this.renderer.createElement((null as any),'ion-icon',(null as any));
+    this.renderer.setElementAttribute(this._el_30,'name','arrow-dropup');
+    this.renderer.setElementAttribute(this._el_30,'role','img');
+    this._Icon_30_3 = new import19.Icon(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_30),this.renderer);
+    compView_29.create(this._FabButton_29_4,[[].concat([this._el_30])],(null as any));
+    this._text_31 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._el_32 = this.renderer.createElement((null as any),'ion-fab-list',(null as any));
+    this.renderer.setElementAttribute(this._el_32,'side','top');
+    this._FabList_32_3 = new import18.FabList(new import21.ElementRef(this._el_32),this.renderer);
+    this._query_FabButton_32_0 = new import15.QueryList<any>();
+    this._text_33 = this.renderer.createText(this._el_32,'\n            ',(null as any));
+    this._el_34 = this.renderer.createElement(this._el_32,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_34,'ion-fab','');
+    this._appEl_34 = new import2.AppElement(34,32,this,this._el_34);
+    var compView_34:any = import31.viewFactory_FabButton0(this.viewUtils,this.injector(34),this._appEl_34);
+    this._FabButton_34_4 = new import18.FabButton(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_34),this.renderer);
+    this._appEl_34.initComponent(this._FabButton_34_4,[],compView_34);
+    this._el_35 = this.renderer.createElement((null as any),'ion-icon',(null as any));
+    this.renderer.setElementAttribute(this._el_35,'name','logo-facebook');
+    this.renderer.setElementAttribute(this._el_35,'role','img');
+    this._Icon_35_3 = new import19.Icon(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_35),this.renderer);
+    compView_34.create(this._FabButton_34_4,[[].concat([this._el_35])],(null as any));
+    this._text_36 = this.renderer.createText(this._el_32,'\n            ',(null as any));
+    this._el_37 = this.renderer.createElement(this._el_32,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_37,'ion-fab','');
+    this._appEl_37 = new import2.AppElement(37,32,this,this._el_37);
+    var compView_37:any = import31.viewFactory_FabButton0(this.viewUtils,this.injector(37),this._appEl_37);
+    this._FabButton_37_4 = new import18.FabButton(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_37),this.renderer);
+    this._appEl_37.initComponent(this._FabButton_37_4,[],compView_37);
+    this._el_38 = this.renderer.createElement((null as any),'ion-icon',(null as any));
+    this.renderer.setElementAttribute(this._el_38,'name','logo-twitter');
+    this.renderer.setElementAttribute(this._el_38,'role','img');
+    this._Icon_38_3 = new import19.Icon(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_38),this.renderer);
+    compView_37.create(this._FabButton_37_4,[[].concat([this._el_38])],(null as any));
+    this._text_39 = this.renderer.createText(this._el_32,'\n            ',(null as any));
+    this._el_40 = this.renderer.createElement(this._el_32,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_40,'ion-fab','');
+    this._appEl_40 = new import2.AppElement(40,32,this,this._el_40);
+    var compView_40:any = import31.viewFactory_FabButton0(this.viewUtils,this.injector(40),this._appEl_40);
+    this._FabButton_40_4 = new import18.FabButton(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_40),this.renderer);
+    this._appEl_40.initComponent(this._FabButton_40_4,[],compView_40);
+    this._el_41 = this.renderer.createElement((null as any),'ion-icon',(null as any));
+    this.renderer.setElementAttribute(this._el_41,'name','logo-vimeo');
+    this.renderer.setElementAttribute(this._el_41,'role','img');
+    this._Icon_41_3 = new import19.Icon(this.parentInjector.get(import20.Config),new import21.ElementRef(this._el_41),this.renderer);
+    compView_40.create(this._FabButton_40_4,[[].concat([this._el_41])],(null as any));
+    this._text_42 = this.renderer.createText(this._el_32,'\n        ',(null as any));
+    this._text_43 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._query_FabButton_27_0.reset([this._FabButton_29_4]);
+    this._FabContainer_27_4._mainButton = this._query_FabButton_27_0.first;
+      compView_27.create(this._FabContainer_27_4,[[].concat([
+        this._text_28,
+        this._el_29,
+        this._text_31,
+        this._el_32,
+        this._text_43
+      ]
+    )],(null as any));
+    this._text_44 = this.renderer.createText((null as any),'\n',(null as any));
     compView_18.create(this._Content_18_5,[
-      [],
+      [].concat([this._el_27]),
       [].concat([
         this._text_19,
         this._appEl_20,
@@ -241,7 +366,9 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
         this._appEl_22,
         this._text_23,
         this._appEl_24,
-        this._text_25
+        this._text_25,
+        this._text_26,
+        this._text_44
       ]
       ),
       []
@@ -270,6 +397,14 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
     this._expr_19 = import7.UNINITIALIZED;
     this._expr_20 = import7.UNINITIALIZED;
     this._expr_21 = import7.UNINITIALIZED;
+    this._expr_22 = import7.UNINITIALIZED;
+    this._expr_23 = import7.UNINITIALIZED;
+    this._expr_24 = import7.UNINITIALIZED;
+    this._expr_25 = import7.UNINITIALIZED;
+    this._expr_26 = import7.UNINITIALIZED;
+    this._expr_27 = import7.UNINITIALIZED;
+    this._expr_28 = import7.UNINITIALIZED;
+    this._expr_29 = import7.UNINITIALIZED;
     this.init([],[
       this._el_0,
       this._text_1,
@@ -296,7 +431,26 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
       this._anchor_22,
       this._text_23,
       this._anchor_24,
-      this._text_25
+      this._text_25,
+      this._text_26,
+      this._el_27,
+      this._text_28,
+      this._el_29,
+      this._el_30,
+      this._text_31,
+      this._el_32,
+      this._text_33,
+      this._el_34,
+      this._el_35,
+      this._text_36,
+      this._el_37,
+      this._el_38,
+      this._text_39,
+      this._el_40,
+      this._el_41,
+      this._text_42,
+      this._text_43,
+      this._text_44
     ]
     ,[
       disposable_0,
@@ -312,19 +466,29 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
     if (((token === import14.SegmentButton) && ((9 <= requestNodeIndex) && (requestNodeIndex <= 10)))) { return this._SegmentButton_9_4; }
     if (((token === import14.SegmentButton) && ((12 <= requestNodeIndex) && (requestNodeIndex <= 13)))) { return this._SegmentButton_12_4; }
     if (((token === import12.NgModel) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 14)))) { return this._NgModel_4_3; }
-    if (((token === import29.NgControl) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 14)))) { return this._NgControl_4_4; }
+    if (((token === import32.NgControl) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 14)))) { return this._NgControl_4_4; }
     if (((token === import13.NgControlStatus) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 14)))) { return this._NgControlStatus_4_5; }
     if (((token === import14.Segment) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 14)))) { return this._Segment_4_6; }
     if (((token === import11.Toolbar) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 15)))) { return this._Toolbar_2_4; }
     if (((token === import11.Header) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 16)))) { return this._Header_0_3; }
-    if (((token === import28.TemplateRef) && (20 === requestNodeIndex))) { return this._TemplateRef_20_5; }
+    if (((token === import30.TemplateRef) && (20 === requestNodeIndex))) { return this._TemplateRef_20_5; }
     if (((token === import16.NgSwitchCase) && (20 === requestNodeIndex))) { return this._NgSwitchCase_20_6; }
-    if (((token === import28.TemplateRef) && (22 === requestNodeIndex))) { return this._TemplateRef_22_5; }
+    if (((token === import30.TemplateRef) && (22 === requestNodeIndex))) { return this._TemplateRef_22_5; }
     if (((token === import16.NgSwitchCase) && (22 === requestNodeIndex))) { return this._NgSwitchCase_22_6; }
-    if (((token === import28.TemplateRef) && (24 === requestNodeIndex))) { return this._TemplateRef_24_5; }
+    if (((token === import30.TemplateRef) && (24 === requestNodeIndex))) { return this._TemplateRef_24_5; }
     if (((token === import16.NgSwitchCase) && (24 === requestNodeIndex))) { return this._NgSwitchCase_24_6; }
-    if (((token === import16.NgSwitch) && ((18 <= requestNodeIndex) && (requestNodeIndex <= 25)))) { return this._NgSwitch_18_4; }
-    if (((token === import17.Content) && ((18 <= requestNodeIndex) && (requestNodeIndex <= 25)))) { return this._Content_18_5; }
+    if (((token === import19.Icon) && (30 === requestNodeIndex))) { return this._Icon_30_3; }
+    if (((token === import18.FabButton) && ((29 <= requestNodeIndex) && (requestNodeIndex <= 30)))) { return this._FabButton_29_4; }
+    if (((token === import19.Icon) && (35 === requestNodeIndex))) { return this._Icon_35_3; }
+    if (((token === import18.FabButton) && ((34 <= requestNodeIndex) && (requestNodeIndex <= 35)))) { return this._FabButton_34_4; }
+    if (((token === import19.Icon) && (38 === requestNodeIndex))) { return this._Icon_38_3; }
+    if (((token === import18.FabButton) && ((37 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._FabButton_37_4; }
+    if (((token === import19.Icon) && (41 === requestNodeIndex))) { return this._Icon_41_3; }
+    if (((token === import18.FabButton) && ((40 <= requestNodeIndex) && (requestNodeIndex <= 41)))) { return this._FabButton_40_4; }
+    if (((token === import18.FabList) && ((32 <= requestNodeIndex) && (requestNodeIndex <= 42)))) { return this._FabList_32_3; }
+    if (((token === import18.FabContainer) && ((27 <= requestNodeIndex) && (requestNodeIndex <= 43)))) { return this._FabContainer_27_4; }
+    if (((token === import16.NgSwitch) && ((18 <= requestNodeIndex) && (requestNodeIndex <= 44)))) { return this._NgSwitch_18_4; }
+    if (((token === import17.Content) && ((18 <= requestNodeIndex) && (requestNodeIndex <= 44)))) { return this._Content_18_5; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -391,17 +555,55 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
       this._NgSwitchCase_24_6.ngSwitchCase = currVal_21;
       this._expr_21 = currVal_21;
     }
+    const currVal_22:any = 'arrow-dropup';
+    if (import4.checkBinding(throwOnChange,this._expr_22,currVal_22)) {
+      this._Icon_30_3.name = currVal_22;
+      this._expr_22 = currVal_22;
+    }
+    const currVal_24:any = 'logo-facebook';
+    if (import4.checkBinding(throwOnChange,this._expr_24,currVal_24)) {
+      this._Icon_35_3.name = currVal_24;
+      this._expr_24 = currVal_24;
+    }
+    const currVal_26:any = 'logo-twitter';
+    if (import4.checkBinding(throwOnChange,this._expr_26,currVal_26)) {
+      this._Icon_38_3.name = currVal_26;
+      this._expr_26 = currVal_26;
+    }
+    const currVal_28:any = 'logo-vimeo';
+    if (import4.checkBinding(throwOnChange,this._expr_28,currVal_28)) {
+      this._Icon_41_3.name = currVal_28;
+      this._expr_28 = currVal_28;
+    }
     this.detectContentChildrenChanges(throwOnChange);
-    if (!throwOnChange) { if (this._query_SegmentButton_4_0.dirty) {
-      this._query_SegmentButton_4_0.reset([
-        this._SegmentButton_6_4,
-        this._SegmentButton_9_4,
-        this._SegmentButton_12_4
-      ]
-      );
-      this._Segment_4_6._buttons = this._query_SegmentButton_4_0;
-      this._query_SegmentButton_4_0.notifyOnChanges();
-    } }
+    if (!throwOnChange) {
+      if (this._query_SegmentButton_4_0.dirty) {
+        this._query_SegmentButton_4_0.reset([
+          this._SegmentButton_6_4,
+          this._SegmentButton_9_4,
+          this._SegmentButton_12_4
+        ]
+        );
+        this._Segment_4_6._buttons = this._query_SegmentButton_4_0;
+        this._query_SegmentButton_4_0.notifyOnChanges();
+      }
+      if (this._query_FabButton_32_0.dirty) {
+        this._query_FabButton_32_0.reset([
+          this._FabButton_34_4,
+          this._FabButton_37_4,
+          this._FabButton_40_4
+        ]
+        );
+        this._FabList_32_3._setbuttons = this._query_FabButton_32_0;
+        this._query_FabButton_32_0.notifyOnChanges();
+      }
+      if (this._query_FabList_27_1.dirty) {
+        this._query_FabList_27_1.reset([this._FabList_32_3]);
+        this._FabContainer_27_4._fabLists = this._query_FabList_27_1;
+        this._query_FabList_27_1.notifyOnChanges();
+      }
+      if ((this.numberOfChecks === 0)) { this._FabContainer_27_4.ngAfterContentInit(); }
+    }
     const currVal_1:any = this._Toolbar_2_4._sbPadding;
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
       this.renderer.setElementClass(this._el_2,'statusbar-padding',currVal_1);
@@ -442,11 +644,36 @@ class _View_SharePage0 extends import1.AppView<import3.SharePage> {
       this.renderer.setElementClass(this._el_18,'statusbar-padding',currVal_18);
       this._expr_18 = currVal_18;
     }
+    const currVal_23:any = this._Icon_30_3._hidden;
+    if (import4.checkBinding(throwOnChange,this._expr_23,currVal_23)) {
+      this.renderer.setElementClass(this._el_30,'hide',currVal_23);
+      this._expr_23 = currVal_23;
+    }
+    const currVal_25:any = this._Icon_35_3._hidden;
+    if (import4.checkBinding(throwOnChange,this._expr_25,currVal_25)) {
+      this.renderer.setElementClass(this._el_35,'hide',currVal_25);
+      this._expr_25 = currVal_25;
+    }
+    const currVal_27:any = this._Icon_38_3._hidden;
+    if (import4.checkBinding(throwOnChange,this._expr_27,currVal_27)) {
+      this.renderer.setElementClass(this._el_38,'hide',currVal_27);
+      this._expr_27 = currVal_27;
+    }
+    const currVal_29:any = this._Icon_41_3._hidden;
+    if (import4.checkBinding(throwOnChange,this._expr_29,currVal_29)) {
+      this.renderer.setElementClass(this._el_41,'hide',currVal_29);
+      this._expr_29 = currVal_29;
+    }
     this.detectViewChildrenChanges(throwOnChange);
     if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._Segment_4_6.ngAfterViewInit(); } }
   }
   destroyInternal():void {
     this._NgModel_4_3.ngOnDestroy();
+    this._Icon_30_3.ngOnDestroy();
+    this._Icon_35_3.ngOnDestroy();
+    this._Icon_38_3.ngOnDestroy();
+    this._Icon_41_3.ngOnDestroy();
+    this._FabContainer_27_4.ngOnDestroy();
     this._Content_18_5.ngOnDestroy();
   }
   private _handle_ngModelChange_4_0($event:any):boolean {
@@ -665,7 +892,7 @@ class _View_SharePage1 extends import1.AppView<any> {
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'section',(null as any));
     this.renderer.setElementAttribute(this._el_0,'id','qus_wrap');
-    this._text_1 = this.renderer.createText(this._el_0,'\n\n        ',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n        ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'div',(null as any));
     this.renderer.setElementAttribute(this._el_2,'class','qus_list');
     this._text_3 = this.renderer.createText(this._el_2,'\n            ',(null as any));
@@ -896,7 +1123,7 @@ class _View_SharePage1 extends import1.AppView<any> {
     this._text_180 = this.renderer.createText(this._el_179,'10-26',(null as any));
     this._text_181 = this.renderer.createText(this._el_174,'\n            ',(null as any));
     this._text_182 = this.renderer.createText(this._el_158,'\n        ',(null as any));
-    this._text_183 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._text_183 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this.init([].concat([this._el_0]),[
       this._el_0,
       this._text_1,
@@ -1478,15 +1705,535 @@ function viewFactory_SharePage2(viewUtils:import4.ViewUtils,parentInjector:impor
 class _View_SharePage3 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
+  _el_2:any;
+  _text_3:any;
+  _el_4:any;
+  _text_5:any;
+  _el_6:any;
+  _el_7:any;
+  _text_8:any;
+  _el_9:any;
+  _el_10:any;
+  _text_11:any;
+  _el_12:any;
+  _el_13:any;
+  _text_14:any;
+  _text_15:any;
+  _el_16:any;
+  _text_17:any;
+  _el_18:any;
+  _text_19:any;
+  _el_20:any;
+  _text_21:any;
+  _text_22:any;
+  _el_23:any;
+  _text_24:any;
+  _text_25:any;
+  _text_26:any;
+  _el_27:any;
+  _text_28:any;
+  _el_29:any;
+  _text_30:any;
+  _el_31:any;
+  _text_32:any;
+  _text_33:any;
+  _text_34:any;
+  _text_35:any;
+  _text_36:any;
+  _el_37:any;
+  _text_38:any;
+  _el_39:any;
+  _text_40:any;
+  _el_41:any;
+  _el_42:any;
+  _text_43:any;
+  _el_44:any;
+  _el_45:any;
+  _text_46:any;
+  _el_47:any;
+  _el_48:any;
+  _text_49:any;
+  _text_50:any;
+  _el_51:any;
+  _text_52:any;
+  _el_53:any;
+  _text_54:any;
+  _el_55:any;
+  _text_56:any;
+  _text_57:any;
+  _el_58:any;
+  _text_59:any;
+  _text_60:any;
+  _text_61:any;
+  _el_62:any;
+  _text_63:any;
+  _el_64:any;
+  _text_65:any;
+  _el_66:any;
+  _text_67:any;
+  _text_68:any;
+  _text_69:any;
+  _text_70:any;
+  _text_71:any;
+  _el_72:any;
+  _text_73:any;
+  _el_74:any;
+  _text_75:any;
+  _el_76:any;
+  _el_77:any;
+  _text_78:any;
+  _el_79:any;
+  _el_80:any;
+  _text_81:any;
+  _text_82:any;
+  _el_83:any;
+  _text_84:any;
+  _el_85:any;
+  _text_86:any;
+  _el_87:any;
+  _text_88:any;
+  _text_89:any;
+  _el_90:any;
+  _text_91:any;
+  _text_92:any;
+  _text_93:any;
+  _el_94:any;
+  _text_95:any;
+  _el_96:any;
+  _text_97:any;
+  _el_98:any;
+  _text_99:any;
+  _text_100:any;
+  _text_101:any;
+  _text_102:any;
+  _text_103:any;
+  _el_104:any;
+  _text_105:any;
+  _el_106:any;
+  _text_107:any;
+  _el_108:any;
+  _el_109:any;
+  _text_110:any;
+  _text_111:any;
+  _el_112:any;
+  _text_113:any;
+  _el_114:any;
+  _text_115:any;
+  _el_116:any;
+  _text_117:any;
+  _text_118:any;
+  _el_119:any;
+  _text_120:any;
+  _text_121:any;
+  _text_122:any;
+  _el_123:any;
+  _text_124:any;
+  _el_125:any;
+  _text_126:any;
+  _el_127:any;
+  _text_128:any;
+  _text_129:any;
+  _text_130:any;
+  _text_131:any;
+  _text_132:any;
+  _el_133:any;
+  _text_134:any;
+  _el_135:any;
+  _text_136:any;
+  _text_137:any;
+  _el_138:any;
+  _text_139:any;
+  _el_140:any;
+  _text_141:any;
+  _el_142:any;
+  _text_143:any;
+  _text_144:any;
+  _el_145:any;
+  _text_146:any;
+  _text_147:any;
+  _text_148:any;
+  _el_149:any;
+  _text_150:any;
+  _el_151:any;
+  _text_152:any;
+  _el_153:any;
+  _text_154:any;
+  _text_155:any;
+  _text_156:any;
+  _text_157:any;
+  _text_158:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_SharePage3,renderType_SharePage,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'section',(null as any));
-    this._text_1 = this.renderer.createText(this._el_0,'3',(null as any));
+    this.renderer.setElementAttribute(this._el_0,'class','home_works home_works_hd');
+    this._text_1 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_2,'class','home_work_list');
+    this._text_3 = this.renderer.createText(this._el_2,'\n            ',(null as any));
+    this._el_4 = this.renderer.createElement(this._el_2,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_4,'class','home_work_list_imgs');
+    this._text_5 = this.renderer.createText(this._el_4,'\n                ',(null as any));
+    this._el_6 = this.renderer.createElement(this._el_4,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_6,'class','list_imgs');
+    this._el_7 = this.renderer.createElement(this._el_6,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_7,'src','assets/img2/hot_1.jpeg');
+    this._text_8 = this.renderer.createText(this._el_4,'\n                ',(null as any));
+    this._el_9 = this.renderer.createElement(this._el_4,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_9,'class','list_imgs');
+    this._el_10 = this.renderer.createElement(this._el_9,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_10,'src','assets/img2/hot_2.jpeg');
+    this._text_11 = this.renderer.createText(this._el_4,'\n                ',(null as any));
+    this._el_12 = this.renderer.createElement(this._el_4,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_12,'class','list_imgs');
+    this._el_13 = this.renderer.createElement(this._el_12,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_13,'src','assets/img2/hot_3.jpeg');
+    this._text_14 = this.renderer.createText(this._el_4,'\n            ',(null as any));
+    this._text_15 = this.renderer.createText(this._el_2,'\n            ',(null as any));
+    this._el_16 = this.renderer.createElement(this._el_2,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_16,'class','home_work_cont');
+    this._text_17 = this.renderer.createText(this._el_16,'\n                ',(null as any));
+    this._el_18 = this.renderer.createElement(this._el_16,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_18,'class','home_work_cont_left');
+    this._text_19 = this.renderer.createText(this._el_18,'\n                    ',(null as any));
+    this._el_20 = this.renderer.createElement(this._el_18,'p',(null as any));
+    this._text_21 = this.renderer.createText(this._el_20,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_22 = this.renderer.createText(this._el_18,'\n                    ',(null as any));
+    this._el_23 = this.renderer.createElement(this._el_18,'p',(null as any));
+    this._text_24 = this.renderer.createText(this._el_23,'10-22',(null as any));
+    this._text_25 = this.renderer.createText(this._el_18,'\n                ',(null as any));
+    this._text_26 = this.renderer.createText(this._el_16,'\n                ',(null as any));
+    this._el_27 = this.renderer.createElement(this._el_16,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_27,'class','home_work_cont_right');
+    this._text_28 = this.renderer.createText(this._el_27,'\n                    ',(null as any));
+    this._el_29 = this.renderer.createElement(this._el_27,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_29,'src','assets/img2/user_4.jpeg');
+    this._text_30 = this.renderer.createText(this._el_27,'\n                    ',(null as any));
+    this._el_31 = this.renderer.createElement(this._el_27,'p',(null as any));
+    this._text_32 = this.renderer.createText(this._el_31,'春燕_Lsg6',(null as any));
+    this._text_33 = this.renderer.createText(this._el_27,'\n                ',(null as any));
+    this._text_34 = this.renderer.createText(this._el_16,'\n            ',(null as any));
+    this._text_35 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._text_36 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_37 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_37,'class','home_work_list');
+    this._text_38 = this.renderer.createText(this._el_37,'\n            ',(null as any));
+    this._el_39 = this.renderer.createElement(this._el_37,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_39,'class','home_work_list_imgs');
+    this._text_40 = this.renderer.createText(this._el_39,'\n                ',(null as any));
+    this._el_41 = this.renderer.createElement(this._el_39,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_41,'class','list_imgs');
+    this._el_42 = this.renderer.createElement(this._el_41,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_42,'src','assets/img2/hot_1.jpeg');
+    this._text_43 = this.renderer.createText(this._el_39,'\n                ',(null as any));
+    this._el_44 = this.renderer.createElement(this._el_39,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_44,'class','list_imgs');
+    this._el_45 = this.renderer.createElement(this._el_44,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_45,'src','assets/img2/hot_2.jpeg');
+    this._text_46 = this.renderer.createText(this._el_39,'\n                ',(null as any));
+    this._el_47 = this.renderer.createElement(this._el_39,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_47,'class','list_imgs');
+    this._el_48 = this.renderer.createElement(this._el_47,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_48,'src','assets/img2/hot_3.jpeg');
+    this._text_49 = this.renderer.createText(this._el_39,'\n            ',(null as any));
+    this._text_50 = this.renderer.createText(this._el_37,'\n            ',(null as any));
+    this._el_51 = this.renderer.createElement(this._el_37,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_51,'class','home_work_cont');
+    this._text_52 = this.renderer.createText(this._el_51,'\n                ',(null as any));
+    this._el_53 = this.renderer.createElement(this._el_51,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_53,'class','home_work_cont_left');
+    this._text_54 = this.renderer.createText(this._el_53,'\n                    ',(null as any));
+    this._el_55 = this.renderer.createElement(this._el_53,'p',(null as any));
+    this._text_56 = this.renderer.createText(this._el_55,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_57 = this.renderer.createText(this._el_53,'\n                    ',(null as any));
+    this._el_58 = this.renderer.createElement(this._el_53,'p',(null as any));
+    this._text_59 = this.renderer.createText(this._el_58,'10-22',(null as any));
+    this._text_60 = this.renderer.createText(this._el_53,'\n                ',(null as any));
+    this._text_61 = this.renderer.createText(this._el_51,'\n                ',(null as any));
+    this._el_62 = this.renderer.createElement(this._el_51,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_62,'class','home_work_cont_right');
+    this._text_63 = this.renderer.createText(this._el_62,'\n                    ',(null as any));
+    this._el_64 = this.renderer.createElement(this._el_62,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_64,'src','assets/img2/user_4.jpeg');
+    this._text_65 = this.renderer.createText(this._el_62,'\n                    ',(null as any));
+    this._el_66 = this.renderer.createElement(this._el_62,'p',(null as any));
+    this._text_67 = this.renderer.createText(this._el_66,'春燕_Lsg6',(null as any));
+    this._text_68 = this.renderer.createText(this._el_62,'\n                ',(null as any));
+    this._text_69 = this.renderer.createText(this._el_51,'\n            ',(null as any));
+    this._text_70 = this.renderer.createText(this._el_37,'\n        ',(null as any));
+    this._text_71 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_72 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_72,'class','home_work_list');
+    this._text_73 = this.renderer.createText(this._el_72,'\n            ',(null as any));
+    this._el_74 = this.renderer.createElement(this._el_72,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_74,'class','home_work_list_imgs');
+    this._text_75 = this.renderer.createText(this._el_74,'\n                ',(null as any));
+    this._el_76 = this.renderer.createElement(this._el_74,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_76,'class','list_imgs');
+    this._el_77 = this.renderer.createElement(this._el_76,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_77,'src','assets/img2/hot_1.jpeg');
+    this._text_78 = this.renderer.createText(this._el_74,'\n                ',(null as any));
+    this._el_79 = this.renderer.createElement(this._el_74,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_79,'class','list_imgs');
+    this._el_80 = this.renderer.createElement(this._el_79,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_80,'src','assets/img2/hot_2.jpeg');
+    this._text_81 = this.renderer.createText(this._el_74,'\n            ',(null as any));
+    this._text_82 = this.renderer.createText(this._el_72,'\n            ',(null as any));
+    this._el_83 = this.renderer.createElement(this._el_72,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_83,'class','home_work_cont');
+    this._text_84 = this.renderer.createText(this._el_83,'\n                ',(null as any));
+    this._el_85 = this.renderer.createElement(this._el_83,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_85,'class','home_work_cont_left');
+    this._text_86 = this.renderer.createText(this._el_85,'\n                    ',(null as any));
+    this._el_87 = this.renderer.createElement(this._el_85,'p',(null as any));
+    this._text_88 = this.renderer.createText(this._el_87,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_89 = this.renderer.createText(this._el_85,'\n                    ',(null as any));
+    this._el_90 = this.renderer.createElement(this._el_85,'p',(null as any));
+    this._text_91 = this.renderer.createText(this._el_90,'10-22',(null as any));
+    this._text_92 = this.renderer.createText(this._el_85,'\n                ',(null as any));
+    this._text_93 = this.renderer.createText(this._el_83,'\n                ',(null as any));
+    this._el_94 = this.renderer.createElement(this._el_83,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_94,'class','home_work_cont_right');
+    this._text_95 = this.renderer.createText(this._el_94,'\n                    ',(null as any));
+    this._el_96 = this.renderer.createElement(this._el_94,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_96,'src','assets/img2/user_4.jpeg');
+    this._text_97 = this.renderer.createText(this._el_94,'\n                    ',(null as any));
+    this._el_98 = this.renderer.createElement(this._el_94,'p',(null as any));
+    this._text_99 = this.renderer.createText(this._el_98,'春燕_Lsg6',(null as any));
+    this._text_100 = this.renderer.createText(this._el_94,'\n                ',(null as any));
+    this._text_101 = this.renderer.createText(this._el_83,'\n            ',(null as any));
+    this._text_102 = this.renderer.createText(this._el_72,'\n        ',(null as any));
+    this._text_103 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_104 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_104,'class','home_work_list');
+    this._text_105 = this.renderer.createText(this._el_104,'\n            ',(null as any));
+    this._el_106 = this.renderer.createElement(this._el_104,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_106,'class','home_work_list_imgs');
+    this._text_107 = this.renderer.createText(this._el_106,'\n                ',(null as any));
+    this._el_108 = this.renderer.createElement(this._el_106,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_108,'class','list_imgs');
+    this._el_109 = this.renderer.createElement(this._el_108,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_109,'src','assets/img2/hot_1.jpeg');
+    this._text_110 = this.renderer.createText(this._el_106,'\n            ',(null as any));
+    this._text_111 = this.renderer.createText(this._el_104,'\n            ',(null as any));
+    this._el_112 = this.renderer.createElement(this._el_104,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_112,'class','home_work_cont');
+    this._text_113 = this.renderer.createText(this._el_112,'\n                ',(null as any));
+    this._el_114 = this.renderer.createElement(this._el_112,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_114,'class','home_work_cont_left');
+    this._text_115 = this.renderer.createText(this._el_114,'\n                    ',(null as any));
+    this._el_116 = this.renderer.createElement(this._el_114,'p',(null as any));
+    this._text_117 = this.renderer.createText(this._el_116,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_118 = this.renderer.createText(this._el_114,'\n                    ',(null as any));
+    this._el_119 = this.renderer.createElement(this._el_114,'p',(null as any));
+    this._text_120 = this.renderer.createText(this._el_119,'10-22',(null as any));
+    this._text_121 = this.renderer.createText(this._el_114,'\n                ',(null as any));
+    this._text_122 = this.renderer.createText(this._el_112,'\n                ',(null as any));
+    this._el_123 = this.renderer.createElement(this._el_112,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_123,'class','home_work_cont_right');
+    this._text_124 = this.renderer.createText(this._el_123,'\n                    ',(null as any));
+    this._el_125 = this.renderer.createElement(this._el_123,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_125,'src','assets/img2/user_4.jpeg');
+    this._text_126 = this.renderer.createText(this._el_123,'\n                    ',(null as any));
+    this._el_127 = this.renderer.createElement(this._el_123,'p',(null as any));
+    this._text_128 = this.renderer.createText(this._el_127,'春燕_Lsg6',(null as any));
+    this._text_129 = this.renderer.createText(this._el_123,'\n                ',(null as any));
+    this._text_130 = this.renderer.createText(this._el_112,'\n            ',(null as any));
+    this._text_131 = this.renderer.createText(this._el_104,'\n        ',(null as any));
+    this._text_132 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_133 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_133,'class','home_work_list');
+    this._text_134 = this.renderer.createText(this._el_133,'\n            ',(null as any));
+    this._el_135 = this.renderer.createElement(this._el_133,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_135,'class','home_work_list_imgs');
+    this._text_136 = this.renderer.createText(this._el_135,'\n            ',(null as any));
+    this._text_137 = this.renderer.createText(this._el_133,'\n            ',(null as any));
+    this._el_138 = this.renderer.createElement(this._el_133,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_138,'class','home_work_cont');
+    this._text_139 = this.renderer.createText(this._el_138,'\n                ',(null as any));
+    this._el_140 = this.renderer.createElement(this._el_138,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_140,'class','home_work_cont_left');
+    this._text_141 = this.renderer.createText(this._el_140,'\n                    ',(null as any));
+    this._el_142 = this.renderer.createElement(this._el_140,'p',(null as any));
+    this._text_143 = this.renderer.createText(this._el_142,'这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...',(null as any));
+    this._text_144 = this.renderer.createText(this._el_140,'\n                    ',(null as any));
+    this._el_145 = this.renderer.createElement(this._el_140,'p',(null as any));
+    this._text_146 = this.renderer.createText(this._el_145,'10-22',(null as any));
+    this._text_147 = this.renderer.createText(this._el_140,'\n                ',(null as any));
+    this._text_148 = this.renderer.createText(this._el_138,'\n                ',(null as any));
+    this._el_149 = this.renderer.createElement(this._el_138,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_149,'class','home_work_cont_right');
+    this._text_150 = this.renderer.createText(this._el_149,'\n                    ',(null as any));
+    this._el_151 = this.renderer.createElement(this._el_149,'img',(null as any));
+    this.renderer.setElementAttribute(this._el_151,'src','assets/img2/user_4.jpeg');
+    this._text_152 = this.renderer.createText(this._el_149,'\n                    ',(null as any));
+    this._el_153 = this.renderer.createElement(this._el_149,'p',(null as any));
+    this._text_154 = this.renderer.createText(this._el_153,'春燕_Lsg6',(null as any));
+    this._text_155 = this.renderer.createText(this._el_149,'\n                ',(null as any));
+    this._text_156 = this.renderer.createText(this._el_138,'\n            ',(null as any));
+    this._text_157 = this.renderer.createText(this._el_133,'\n        ',(null as any));
+    this._text_158 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this.init([].concat([this._el_0]),[
       this._el_0,
-      this._text_1
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._el_4,
+      this._text_5,
+      this._el_6,
+      this._el_7,
+      this._text_8,
+      this._el_9,
+      this._el_10,
+      this._text_11,
+      this._el_12,
+      this._el_13,
+      this._text_14,
+      this._text_15,
+      this._el_16,
+      this._text_17,
+      this._el_18,
+      this._text_19,
+      this._el_20,
+      this._text_21,
+      this._text_22,
+      this._el_23,
+      this._text_24,
+      this._text_25,
+      this._text_26,
+      this._el_27,
+      this._text_28,
+      this._el_29,
+      this._text_30,
+      this._el_31,
+      this._text_32,
+      this._text_33,
+      this._text_34,
+      this._text_35,
+      this._text_36,
+      this._el_37,
+      this._text_38,
+      this._el_39,
+      this._text_40,
+      this._el_41,
+      this._el_42,
+      this._text_43,
+      this._el_44,
+      this._el_45,
+      this._text_46,
+      this._el_47,
+      this._el_48,
+      this._text_49,
+      this._text_50,
+      this._el_51,
+      this._text_52,
+      this._el_53,
+      this._text_54,
+      this._el_55,
+      this._text_56,
+      this._text_57,
+      this._el_58,
+      this._text_59,
+      this._text_60,
+      this._text_61,
+      this._el_62,
+      this._text_63,
+      this._el_64,
+      this._text_65,
+      this._el_66,
+      this._text_67,
+      this._text_68,
+      this._text_69,
+      this._text_70,
+      this._text_71,
+      this._el_72,
+      this._text_73,
+      this._el_74,
+      this._text_75,
+      this._el_76,
+      this._el_77,
+      this._text_78,
+      this._el_79,
+      this._el_80,
+      this._text_81,
+      this._text_82,
+      this._el_83,
+      this._text_84,
+      this._el_85,
+      this._text_86,
+      this._el_87,
+      this._text_88,
+      this._text_89,
+      this._el_90,
+      this._text_91,
+      this._text_92,
+      this._text_93,
+      this._el_94,
+      this._text_95,
+      this._el_96,
+      this._text_97,
+      this._el_98,
+      this._text_99,
+      this._text_100,
+      this._text_101,
+      this._text_102,
+      this._text_103,
+      this._el_104,
+      this._text_105,
+      this._el_106,
+      this._text_107,
+      this._el_108,
+      this._el_109,
+      this._text_110,
+      this._text_111,
+      this._el_112,
+      this._text_113,
+      this._el_114,
+      this._text_115,
+      this._el_116,
+      this._text_117,
+      this._text_118,
+      this._el_119,
+      this._text_120,
+      this._text_121,
+      this._text_122,
+      this._el_123,
+      this._text_124,
+      this._el_125,
+      this._text_126,
+      this._el_127,
+      this._text_128,
+      this._text_129,
+      this._text_130,
+      this._text_131,
+      this._text_132,
+      this._el_133,
+      this._text_134,
+      this._el_135,
+      this._text_136,
+      this._text_137,
+      this._el_138,
+      this._text_139,
+      this._el_140,
+      this._text_141,
+      this._el_142,
+      this._text_143,
+      this._text_144,
+      this._el_145,
+      this._text_146,
+      this._text_147,
+      this._text_148,
+      this._el_149,
+      this._text_150,
+      this._el_151,
+      this._text_152,
+      this._el_153,
+      this._text_154,
+      this._text_155,
+      this._text_156,
+      this._text_157,
+      this._text_158
     ]
     ,[],[]);
     return (null as any);
