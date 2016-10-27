@@ -523,7 +523,7 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
     this.renderer.setElementAttribute(this._el_72,'class','home_hot_title');
     this._text_73 = this.renderer.createText(this._el_72,'\n                ',(null as any));
     this._el_74 = this.renderer.createElement(this._el_72,'p',(null as any));
-    this._text_75 = this.renderer.createText(this._el_74,'养生头条',(null as any));
+    this._text_75 = this.renderer.createText(this._el_74,'最热头条',(null as any));
     this._text_76 = this.renderer.createText(this._el_72,'\n                ',(null as any));
     this._el_77 = this.renderer.createElement(this._el_72,'img',(null as any));
     this.renderer.setElementAttribute(this._el_77,'src','assets/icon/home/hot_more.png');
@@ -889,6 +889,10 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
     ]
     ,(null as any));
     this._expr_0 = import7.UNINITIALIZED;
+    var disposable_0:Function = this.renderer.listen(this._el_72,'click',this.eventHandler(this._handle_click_72_0.bind(this)));
+    var disposable_1:Function = this.renderer.listen(this._el_80,'click',this.eventHandler(this._handle_click_80_0.bind(this)));
+    var disposable_2:Function = this.renderer.listen(this._el_100,'click',this.eventHandler(this._handle_click_100_0.bind(this)));
+    var disposable_3:Function = this.renderer.listen(this._el_120,'click',this.eventHandler(this._handle_click_120_0.bind(this)));
     this.init([],[
       this._el_0,
       this._text_1,
@@ -1249,7 +1253,13 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
       this._text_356,
       this._text_357
     ]
-    ,[],[]);
+    ,[
+      disposable_0,
+      disposable_1,
+      disposable_2,
+      disposable_3
+    ]
+    ,[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
@@ -1268,6 +1278,26 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
   }
   destroyInternal():void {
     this._Content_0_4.ngOnDestroy();
+  }
+  private _handle_click_72_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.pushtoutiaoHotListPage()) !== false);
+    return (true && pd_0);
+  }
+  private _handle_click_80_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.pushtoutiaoPage()) !== false);
+    return (true && pd_0);
+  }
+  private _handle_click_100_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.pushtoutiaoPage()) !== false);
+    return (true && pd_0);
+  }
+  private _handle_click_120_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.pushtoutiaoPage()) !== false);
+    return (true && pd_0);
   }
 }
 export function viewFactory_HomePage0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.HomePage> {

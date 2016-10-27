@@ -168,7 +168,7 @@ var _View_HomePage0 = (function (_super) {
         this.renderer.setElementAttribute(this._el_72, 'class', 'home_hot_title');
         this._text_73 = this.renderer.createText(this._el_72, '\n                ', null);
         this._el_74 = this.renderer.createElement(this._el_72, 'p', null);
-        this._text_75 = this.renderer.createText(this._el_74, '养生头条', null);
+        this._text_75 = this.renderer.createText(this._el_74, '最热头条', null);
         this._text_76 = this.renderer.createText(this._el_72, '\n                ', null);
         this._el_77 = this.renderer.createElement(this._el_72, 'img', null);
         this.renderer.setElementAttribute(this._el_77, 'src', 'assets/icon/home/hot_more.png');
@@ -532,6 +532,10 @@ var _View_HomePage0 = (function (_super) {
             []
         ], null);
         this._expr_0 = import7.UNINITIALIZED;
+        var disposable_0 = this.renderer.listen(this._el_72, 'click', this.eventHandler(this._handle_click_72_0.bind(this)));
+        var disposable_1 = this.renderer.listen(this._el_80, 'click', this.eventHandler(this._handle_click_80_0.bind(this)));
+        var disposable_2 = this.renderer.listen(this._el_100, 'click', this.eventHandler(this._handle_click_100_0.bind(this)));
+        var disposable_3 = this.renderer.listen(this._el_120, 'click', this.eventHandler(this._handle_click_120_0.bind(this)));
         this.init([], [
             this._el_0,
             this._text_1,
@@ -891,7 +895,12 @@ var _View_HomePage0 = (function (_super) {
             this._text_355,
             this._text_356,
             this._text_357
-        ], [], []);
+        ], [
+            disposable_0,
+            disposable_1,
+            disposable_2,
+            disposable_3
+        ], []);
         return null;
     };
     _View_HomePage0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
@@ -914,6 +923,26 @@ var _View_HomePage0 = (function (_super) {
     };
     _View_HomePage0.prototype.destroyInternal = function () {
         this._Content_0_4.ngOnDestroy();
+    };
+    _View_HomePage0.prototype._handle_click_72_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this.context.pushtoutiaoHotListPage() !== false);
+        return (true && pd_0);
+    };
+    _View_HomePage0.prototype._handle_click_80_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this.context.pushtoutiaoPage() !== false);
+        return (true && pd_0);
+    };
+    _View_HomePage0.prototype._handle_click_100_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this.context.pushtoutiaoPage() !== false);
+        return (true && pd_0);
+    };
+    _View_HomePage0.prototype._handle_click_120_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this.context.pushtoutiaoPage() !== false);
+        return (true && pd_0);
     };
     return _View_HomePage0;
 }(import1.AppView));

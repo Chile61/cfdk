@@ -6,6 +6,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MePage } from '../pages/me/me';
+import { toutiaoPage } from '../pages/toutiao/toutiao';
+import { toutiaoHotListPage } from '../pages/toutiaoHotList/toutiaoHotList';
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -17,10 +19,14 @@ export var AppModule = (function () {
                         ContactPage,
                         HomePage,
                         TabsPage,
-                        MePage
+                        MePage,
+                        toutiaoPage,
+                        toutiaoHotListPage,
                     ],
                     imports: [
-                        IonicModule.forRoot(MyApp)
+                        IonicModule.forRoot(MyApp, {
+                            tabsHideOnSubPages: true
+                        })
                     ],
                     bootstrap: [IonicApp],
                     entryComponents: [
@@ -29,7 +35,9 @@ export var AppModule = (function () {
                         ContactPage,
                         HomePage,
                         TabsPage,
-                        MePage
+                        MePage,
+                        toutiaoPage,
+                        toutiaoHotListPage,
                     ],
                     providers: []
                 },] },

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
+import { toutiaoPage } from '../toutiao/toutiao';
+import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
 
 
 declare var $: any;
@@ -16,6 +18,17 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+
+  //打开养生头条
+  pushtoutiaoPage(){
+    this.navCtrl.push(toutiaoPage);
+  }
+
+  //打开热门养生头条
+  pushtoutiaoHotListPage(){
+    this.navCtrl.push(toutiaoHotListPage);
   }
 
 

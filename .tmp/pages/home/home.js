@@ -1,11 +1,21 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { toutiaoPage } from '../toutiao/toutiao';
+import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
 export var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
         this.oSwiper = null;
         this.oUser = null;
     }
+    //打开养生头条
+    HomePage.prototype.pushtoutiaoPage = function () {
+        this.navCtrl.push(toutiaoPage);
+    };
+    //打开热门养生头条
+    HomePage.prototype.pushtoutiaoHotListPage = function () {
+        this.navCtrl.push(toutiaoHotListPage);
+    };
     HomePage.prototype.ionViewDidEnter = function () {
         if (this.oSwiper == null) {
             this.oSwiper = new Swiper('.swiper-container', {
