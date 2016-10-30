@@ -6,5 +6,6 @@ export declare class HomePage {
     constructor(navCtrl: NavController);
     pushtoutiaoPage(): void;
     pushtoutiaoHotListPage(): void;
+    pushvideoPage(): void;
     ionViewDidEnter(): void;
 }

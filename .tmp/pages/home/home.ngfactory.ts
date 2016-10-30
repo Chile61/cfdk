@@ -889,10 +889,11 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
     ]
     ,(null as any));
     this._expr_0 = import7.UNINITIALIZED;
-    var disposable_0:Function = this.renderer.listen(this._el_72,'click',this.eventHandler(this._handle_click_72_0.bind(this)));
-    var disposable_1:Function = this.renderer.listen(this._el_80,'click',this.eventHandler(this._handle_click_80_0.bind(this)));
-    var disposable_2:Function = this.renderer.listen(this._el_100,'click',this.eventHandler(this._handle_click_100_0.bind(this)));
-    var disposable_3:Function = this.renderer.listen(this._el_120,'click',this.eventHandler(this._handle_click_120_0.bind(this)));
+    var disposable_0:Function = this.renderer.listen(this._el_44,'click',this.eventHandler(this._handle_click_44_0.bind(this)));
+    var disposable_1:Function = this.renderer.listen(this._el_72,'click',this.eventHandler(this._handle_click_72_0.bind(this)));
+    var disposable_2:Function = this.renderer.listen(this._el_80,'click',this.eventHandler(this._handle_click_80_0.bind(this)));
+    var disposable_3:Function = this.renderer.listen(this._el_100,'click',this.eventHandler(this._handle_click_100_0.bind(this)));
+    var disposable_4:Function = this.renderer.listen(this._el_120,'click',this.eventHandler(this._handle_click_120_0.bind(this)));
     this.init([],[
       this._el_0,
       this._text_1,
@@ -1257,7 +1258,8 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
       disposable_0,
       disposable_1,
       disposable_2,
-      disposable_3
+      disposable_3,
+      disposable_4
     ]
     ,[]);
     return (null as any);
@@ -1278,6 +1280,11 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
   }
   destroyInternal():void {
     this._Content_0_4.ngOnDestroy();
+  }
+  private _handle_click_44_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.pushvideoPage()) !== false);
+    return (true && pd_0);
   }
   private _handle_click_72_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();

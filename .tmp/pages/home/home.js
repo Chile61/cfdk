@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
+import { videoPage } from '../video/video';
 export var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
@@ -15,6 +16,10 @@ export var HomePage = (function () {
     //打开热门养生头条
     HomePage.prototype.pushtoutiaoHotListPage = function () {
         this.navCtrl.push(toutiaoHotListPage);
+    };
+    //打开视频
+    HomePage.prototype.pushvideoPage = function () {
+        this.navCtrl.push(videoPage);
     };
     HomePage.prototype.ionViewDidEnter = function () {
         if (this.oSwiper == null) {

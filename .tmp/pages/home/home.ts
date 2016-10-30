@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
+import { videoPage } from '../video/video';
 
 
 declare var $: any;
@@ -29,6 +30,11 @@ export class HomePage {
   //打开热门养生头条
   pushtoutiaoHotListPage(){
     this.navCtrl.push(toutiaoHotListPage);
+  }
+
+  //打开视频
+  pushvideoPage(){
+    this.navCtrl.push(videoPage);
   }
 
 

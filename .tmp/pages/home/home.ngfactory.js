@@ -532,10 +532,11 @@ var _View_HomePage0 = (function (_super) {
             []
         ], null);
         this._expr_0 = import7.UNINITIALIZED;
-        var disposable_0 = this.renderer.listen(this._el_72, 'click', this.eventHandler(this._handle_click_72_0.bind(this)));
-        var disposable_1 = this.renderer.listen(this._el_80, 'click', this.eventHandler(this._handle_click_80_0.bind(this)));
-        var disposable_2 = this.renderer.listen(this._el_100, 'click', this.eventHandler(this._handle_click_100_0.bind(this)));
-        var disposable_3 = this.renderer.listen(this._el_120, 'click', this.eventHandler(this._handle_click_120_0.bind(this)));
+        var disposable_0 = this.renderer.listen(this._el_44, 'click', this.eventHandler(this._handle_click_44_0.bind(this)));
+        var disposable_1 = this.renderer.listen(this._el_72, 'click', this.eventHandler(this._handle_click_72_0.bind(this)));
+        var disposable_2 = this.renderer.listen(this._el_80, 'click', this.eventHandler(this._handle_click_80_0.bind(this)));
+        var disposable_3 = this.renderer.listen(this._el_100, 'click', this.eventHandler(this._handle_click_100_0.bind(this)));
+        var disposable_4 = this.renderer.listen(this._el_120, 'click', this.eventHandler(this._handle_click_120_0.bind(this)));
         this.init([], [
             this._el_0,
             this._text_1,
@@ -899,7 +900,8 @@ var _View_HomePage0 = (function (_super) {
             disposable_0,
             disposable_1,
             disposable_2,
-            disposable_3
+            disposable_3,
+            disposable_4
         ], []);
         return null;
     };
@@ -923,6 +925,11 @@ var _View_HomePage0 = (function (_super) {
     };
     _View_HomePage0.prototype.destroyInternal = function () {
         this._Content_0_4.ngOnDestroy();
+    };
+    _View_HomePage0.prototype._handle_click_44_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this.context.pushvideoPage() !== false);
+        return (true && pd_0);
     };
     _View_HomePage0.prototype._handle_click_72_0 = function ($event) {
         this.markPathToRootAsCheckOnce();
