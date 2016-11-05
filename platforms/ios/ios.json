@@ -35,6 +35,20 @@
                         {
                             "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"JPushPlugin\"><param name=\"ios-package\" value=\"JPushPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*PushConfig.plist": {
+                "parents": {
+                    "APP_KEY": [
+                        {
+                            "xml": "<string>771239dc9889d8453ddb859c</string>",
+                            "count": 1
                         }
                     ]
                 }
@@ -59,6 +73,10 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "jpush-phonegap-plugin": {
+            "API_KEY": "771239dc9889d8453ddb859c",
+            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
         }
     },
     "dependent_plugins": {},
@@ -111,6 +129,14 @@
                 "cordova.plugins.Keyboard"
             ],
             "runs": true
+        },
+        {
+            "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+            "id": "jpush-phonegap-plugin.JPushPlugin",
+            "pluginId": "jpush-phonegap-plugin",
+            "clobbers": [
+                "JPush"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -119,6 +145,7 @@
         "cordova-plugin-splashscreen": "4.0.0",
         "cordova-plugin-statusbar": "2.2.0",
         "cordova-plugin-whitelist": "1.3.0",
-        "ionic-plugin-keyboard": "2.2.1"
+        "ionic-plugin-keyboard": "2.2.1",
+        "jpush-phonegap-plugin": "2.2.7"
     }
 }

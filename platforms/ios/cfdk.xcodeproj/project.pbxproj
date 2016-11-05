@@ -21,6 +21,20 @@
 		F389925FE6FC474E81A34FDD /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 25786CA5EEE440069D3ECF53 /* CDVViewController+SplashScreen.m */; };
 		E8816824AD684D9981C93E56 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6B275B2E4858B9162900 /* CDVStatusBar.m */; };
 		D7B60201B1B04EC5A7087FA5 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D51737A79474D9D0E97A6 /* IonicKeyboard.m */; };
+		2328D672B3BE4E4D8200E5F8 /* JPushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 844332D5E830484DBD98DB78 /* JPushPlugin.m */; };
+		DFC1A2375345496189D85F63 /* jpush-ios-2.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 649B0DEA71EF47188B954210 /* jpush-ios-2.1.9.a */; };
+		03707A5C50E5435ABFBB2E5B /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF16F868034B6DB4A08B1E /* AppDelegate+JPush.m */; };
+		2504CA5BB40F43FDBCB742A9 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F50EFBB0D00347DA83563028 /* PushConfig.plist */; };
+		4AC3EA1C9A0942358D95750D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DABCA905ED04891B6EF0F81 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		65E0C6E6F87041B88F8F1498 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1C1277EC6148DC88B41061 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4D11420240A147B0812EA5C0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFE5B3FF7104FE39D326683 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C69FB3C6DE5A463683F0FAA2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0737C8CE187424A86939212 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		83B6985F7F114D6E87C575E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403736A054A24D7CB72EE83A /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		74159E94AF304C3F992069FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C821F14455949FA9F5EE4C8 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6114CB4412D747AF9684C572 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1290E44C142D0A1A30E3E /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CB280C4B76974971A28C6116 /* libz.tbd in Resources */ = {isa = PBXBuildFile; fileRef = EBA9762163DF49D98D3E66C7 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B87B4F7D2311482CA292C3DD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380F752179BB46D8821FA906 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BC1C16CD5AD949DC9F16F98E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4795A6424042219F3B1FC6 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +86,23 @@
 		64F4A4E7D08545C387DBA4CC /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		554D51737A79474D9D0E97A6 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		71B01E448EA04519ABECF103 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		844332D5E830484DBD98DB78 /* JPushPlugin.m */ = {isa = PBXFileReference; name = "JPushPlugin.m"; path = "jpush-phonegap-plugin/JPushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		649B0DEA71EF47188B954210 /* jpush-ios-2.1.9.a */ = {isa = PBXFileReference; name = "jpush-ios-2.1.9.a"; path = "cfdk/Plugins/jpush-phonegap-plugin/jpush-ios-2.1.9.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6DEF16F868034B6DB4A08B1E /* AppDelegate+JPush.m */ = {isa = PBXFileReference; name = "AppDelegate+JPush.m"; path = "jpush-phonegap-plugin/AppDelegate+JPush.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		3EC9B0C033CF42A7AF711B8E /* JPushPlugin.h */ = {isa = PBXFileReference; name = "JPushPlugin.h"; path = "jpush-phonegap-plugin/JPushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D2E24AC8FEED405681F95174 /* JPUSHService.h */ = {isa = PBXFileReference; name = "JPUSHService.h"; path = "jpush-phonegap-plugin/JPUSHService.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		88DD63E9583540B6A3B9CCF6 /* AppDelegate+JPush.h */ = {isa = PBXFileReference; name = "AppDelegate+JPush.h"; path = "jpush-phonegap-plugin/AppDelegate+JPush.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F50EFBB0D00347DA83563028 /* PushConfig.plist */ = {isa = PBXFileReference; name = "PushConfig.plist"; path = "PushConfig.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
+		1DABCA905ED04891B6EF0F81 /* CFNetwork.framework */ = {isa = PBXFileReference; name = "CFNetwork.framework"; path = "System/Library/Frameworks/CFNetwork.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9E1C1277EC6148DC88B41061 /* CoreFoundation.framework */ = {isa = PBXFileReference; name = "CoreFoundation.framework"; path = "System/Library/Frameworks/CoreFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		ECFE5B3FF7104FE39D326683 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B0737C8CE187424A86939212 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		403736A054A24D7CB72EE83A /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		5C821F14455949FA9F5EE4C8 /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B9B1290E44C142D0A1A30E3E /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		EBA9762163DF49D98D3E66C7 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "libz.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		380F752179BB46D8821FA906 /* AdSupport.framework */ = {isa = PBXFileReference; name = "AdSupport.framework"; path = "System/Library/Frameworks/AdSupport.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		EF4795A6424042219F3B1FC6 /* UserNotifications.framework */ = {isa = PBXFileReference; name = "UserNotifications.framework"; path = "System/Library/Frameworks/UserNotifications.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +111,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				DFC1A2375345496189D85F63 /* jpush-ios-2.1.9.a in Frameworks */,
+				4AC3EA1C9A0942358D95750D /* CFNetwork.framework in Frameworks */,
+				65E0C6E6F87041B88F8F1498 /* CoreFoundation.framework in Frameworks */,
+				4D11420240A147B0812EA5C0 /* CoreTelephony.framework in Frameworks */,
+				C69FB3C6DE5A463683F0FAA2 /* SystemConfiguration.framework in Frameworks */,
+				83B6985F7F114D6E87C575E8 /* Foundation.framework in Frameworks */,
+				74159E94AF304C3F992069FE /* UIKit.framework in Frameworks */,
+				6114CB4412D747AF9684C572 /* Security.framework in Frameworks */,
+				CB280C4B76974971A28C6116 /* libz.tbd in Resources */,
+				B87B4F7D2311482CA292C3DD /* AdSupport.framework in Frameworks */,
+				BC1C16CD5AD949DC9F16F98E /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +183,7 @@
 				0207DA571B56EA530066E2B4 /* Images.xcassets */,
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* cfdk-Info.plist */,
+				F50EFBB0D00347DA83563028 /* PushConfig.plist */,
 			);
 			name = Resources;
 			path = "cfdk/Resources";
@@ -149,6 +192,17 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				649B0DEA71EF47188B954210 /* jpush-ios-2.1.9.a */,
+				1DABCA905ED04891B6EF0F81 /* CFNetwork.framework */,
+				9E1C1277EC6148DC88B41061 /* CoreFoundation.framework */,
+				ECFE5B3FF7104FE39D326683 /* CoreTelephony.framework */,
+				B0737C8CE187424A86939212 /* SystemConfiguration.framework */,
+				403736A054A24D7CB72EE83A /* Foundation.framework */,
+				5C821F14455949FA9F5EE4C8 /* UIKit.framework */,
+				B9B1290E44C142D0A1A30E3E /* Security.framework */,
+				EBA9762163DF49D98D3E66C7 /* libz.tbd */,
+				380F752179BB46D8821FA906 /* AdSupport.framework */,
+				EF4795A6424042219F3B1FC6 /* UserNotifications.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +240,11 @@
 				64F4A4E7D08545C387DBA4CC /* CDVStatusBar.h */,
 				554D51737A79474D9D0E97A6 /* IonicKeyboard.m */,
 				71B01E448EA04519ABECF103 /* IonicKeyboard.h */,
+				844332D5E830484DBD98DB78 /* JPushPlugin.m */,
+				6DEF16F868034B6DB4A08B1E /* AppDelegate+JPush.m */,
+				3EC9B0C033CF42A7AF711B8E /* JPushPlugin.h */,
+				D2E24AC8FEED405681F95174 /* JPUSHService.h */,
+				88DD63E9583540B6A3B9CCF6 /* AppDelegate+JPush.h */,
 			);
 			name = Plugins;
 			path = "cfdk/Plugins";
@@ -269,6 +328,7 @@
 				3047A5141AB8059700498E2A /* build.xcconfig in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */,
+				2504CA5BB40F43FDBCB742A9 /* PushConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +366,8 @@
 				F389925FE6FC474E81A34FDD /* CDVViewController+SplashScreen.m in Sources */,
 				E8816824AD684D9981C93E56 /* CDVStatusBar.m in Sources */,
 				D7B60201B1B04EC5A7087FA5 /* IonicKeyboard.m in Sources */,
+				2328D672B3BE4E4D8200E5F8 /* JPushPlugin.m in Sources */,
+				03707A5C50E5435ABFBB2E5B /* AppDelegate+JPush.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +401,10 @@
 				INFOPLIST_FILE = "cfdk/cfdk-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "cfdk";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+				);
 			};
 			name = Debug;
 		};
@@ -358,6 +424,10 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "cfdk/cfdk-Info.plist";
 				PRODUCT_NAME = "cfdk";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+				);
 			};
 			name = Release;
 		};
@@ -385,6 +455,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				PRODUCT_NAME = "cfdk";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+				);
 			};
 			name = Debug;
 		};
@@ -411,6 +485,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				PRODUCT_NAME = "cfdk";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+				);
 			};
 			name = Release;
 		};
