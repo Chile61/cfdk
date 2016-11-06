@@ -13,17 +13,18 @@ import * as import5 from '@angular/core/src/di/injector';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
-import * as import9 from '@angular/core/src/metadata/view';
-import * as import10 from '@angular/core/src/linker/component_factory';
-import * as import11 from 'ionic-angular/components/content/content';
-import * as import12 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import13 from 'ionic-angular/config/config';
-import * as import14 from '@angular/core/src/linker/element_ref';
-import * as import15 from 'ionic-angular/components/app/app';
-import * as import16 from 'ionic-angular/util/keyboard';
-import * as import17 from '@angular/core/src/zone/ng_zone';
-import * as import18 from 'ionic-angular/navigation/view-controller';
-import * as import19 from 'ionic-angular/components/tabs/tabs';
+import * as import9 from '@angular/http/src/http';
+import * as import10 from '@angular/core/src/metadata/view';
+import * as import11 from '@angular/core/src/linker/component_factory';
+import * as import12 from 'ionic-angular/components/content/content';
+import * as import13 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import14 from 'ionic-angular/config/config';
+import * as import15 from '@angular/core/src/linker/element_ref';
+import * as import16 from 'ionic-angular/components/app/app';
+import * as import17 from 'ionic-angular/util/keyboard';
+import * as import18 from '@angular/core/src/zone/ng_zone';
+import * as import19 from 'ionic-angular/navigation/view-controller';
+import * as import20 from 'ionic-angular/components/tabs/tabs';
 var renderType_HomePage_Host:import0.RenderComponentType = (null as any);
 class _View_HomePage_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -36,7 +37,7 @@ class _View_HomePage_Host0 extends import1.AppView<any> {
     this._el_0 = this.selectOrCreateHostElement('page-home',rootSelector,(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = viewFactory_HomePage0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._HomePage_0_4 = new import3.HomePage(this.parentInjector.get(import8.NavController));
+    this._HomePage_0_4 = new import3.HomePage(this.parentInjector.get(import8.NavController),this.parentInjector.get(import9.Http));
     this._appEl_0.initComponent(this._HomePage_0_4,[],compView_0);
     compView_0.create(this._HomePage_0_4,this.projectableNodes,(null as any));
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
@@ -48,16 +49,16 @@ class _View_HomePage_Host0 extends import1.AppView<any> {
   }
 }
 function viewFactory_HomePage_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
-  if ((renderType_HomePage_Host === (null as any))) { (renderType_HomePage_Host = viewUtils.createRenderComponentType('',0,import9.ViewEncapsulation.None,[],{})); }
+  if ((renderType_HomePage_Host === (null as any))) { (renderType_HomePage_Host = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,[],{})); }
   return new _View_HomePage_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const HomePageNgFactory:import10.ComponentFactory<import3.HomePage> = new import10.ComponentFactory<import3.HomePage>('page-home',viewFactory_HomePage_Host0,import3.HomePage);
+export const HomePageNgFactory:import11.ComponentFactory<import3.HomePage> = new import11.ComponentFactory<import3.HomePage>('page-home',viewFactory_HomePage_Host0,import3.HomePage);
 const styles_HomePage:any[] = [];
 var renderType_HomePage:import0.RenderComponentType = (null as any);
 class _View_HomePage0 extends import1.AppView<import3.HomePage> {
   _el_0:any;
   /*private*/ _appEl_0:import2.AppElement;
-  _Content_0_4:import11.Content;
+  _Content_0_4:import12.Content;
   _text_1:any;
   _el_2:any;
   _text_3:any;
@@ -423,8 +424,8 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._el_0 = this.renderer.createElement(parentRenderNode,'ion-content',(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
-    var compView_0:any = import12.viewFactory_Content0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._Content_0_4 = new import11.Content(this.parentInjector.get(import13.Config),new import14.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import15.App),this.parentInjector.get(import16.Keyboard),this.parentInjector.get(import17.NgZone),this.parentInjector.get(import18.ViewController,(null as any)),this.parentInjector.get(import19.Tabs,(null as any)));
+    var compView_0:any = import13.viewFactory_Content0(this.viewUtils,this.injector(0),this._appEl_0);
+    this._Content_0_4 = new import12.Content(this.parentInjector.get(import14.Config),new import15.ElementRef(this._el_0),this.renderer,this.parentInjector.get(import16.App),this.parentInjector.get(import17.Keyboard),this.parentInjector.get(import18.NgZone),this.parentInjector.get(import19.ViewController,(null as any)),this.parentInjector.get(import20.Tabs,(null as any)));
     this._appEl_0.initComponent(this._Content_0_4,[],compView_0);
     this._text_1 = this.renderer.createText((null as any),'\n    ',(null as any));
     this._el_2 = this.renderer.createElement((null as any),'section',(null as any));
@@ -1265,7 +1266,7 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import11.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 357)))) { return this._Content_0_4; }
+    if (((token === import12.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 357)))) { return this._Content_0_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -1308,6 +1309,6 @@ class _View_HomePage0 extends import1.AppView<import3.HomePage> {
   }
 }
 export function viewFactory_HomePage0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.HomePage> {
-  if ((renderType_HomePage === (null as any))) { (renderType_HomePage = viewUtils.createRenderComponentType('/Users/apple/Desktop/github/cfdk/.tmp/pages/home/home.html',0,import9.ViewEncapsulation.None,styles_HomePage,{})); }
+  if ((renderType_HomePage === (null as any))) { (renderType_HomePage = viewUtils.createRenderComponentType('/Users/apple/Desktop/github/cfdk/.tmp/pages/home/home.html',0,import10.ViewEncapsulation.None,styles_HomePage,{})); }
   return new _View_HomePage0(viewUtils,parentInjector,declarationEl);
 }

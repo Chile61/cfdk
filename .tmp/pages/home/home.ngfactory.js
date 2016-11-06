@@ -15,17 +15,18 @@ import * as import4 from '@angular/core/src/linker/view_utils';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from 'ionic-angular/navigation/nav-controller';
-import * as import9 from '@angular/core/src/metadata/view';
-import * as import10 from '@angular/core/src/linker/component_factory';
-import * as import11 from 'ionic-angular/components/content/content';
-import * as import12 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
-import * as import13 from 'ionic-angular/config/config';
-import * as import14 from '@angular/core/src/linker/element_ref';
-import * as import15 from 'ionic-angular/components/app/app';
-import * as import16 from 'ionic-angular/util/keyboard';
-import * as import17 from '@angular/core/src/zone/ng_zone';
-import * as import18 from 'ionic-angular/navigation/view-controller';
-import * as import19 from 'ionic-angular/components/tabs/tabs';
+import * as import9 from '@angular/http/src/http';
+import * as import10 from '@angular/core/src/metadata/view';
+import * as import11 from '@angular/core/src/linker/component_factory';
+import * as import12 from 'ionic-angular/components/content/content';
+import * as import13 from '../../node_modules/ionic-angular/components/content/content.ngfactory';
+import * as import14 from 'ionic-angular/config/config';
+import * as import15 from '@angular/core/src/linker/element_ref';
+import * as import16 from 'ionic-angular/components/app/app';
+import * as import17 from 'ionic-angular/util/keyboard';
+import * as import18 from '@angular/core/src/zone/ng_zone';
+import * as import19 from 'ionic-angular/navigation/view-controller';
+import * as import20 from 'ionic-angular/components/tabs/tabs';
 var renderType_HomePage_Host = null;
 var _View_HomePage_Host0 = (function (_super) {
     __extends(_View_HomePage_Host0, _super);
@@ -36,7 +37,7 @@ var _View_HomePage_Host0 = (function (_super) {
         this._el_0 = this.selectOrCreateHostElement('page-home', rootSelector, null);
         this._appEl_0 = new import2.AppElement(0, null, this, this._el_0);
         var compView_0 = viewFactory_HomePage0(this.viewUtils, this.injector(0), this._appEl_0);
-        this._HomePage_0_4 = new import3.HomePage(this.parentInjector.get(import8.NavController));
+        this._HomePage_0_4 = new import3.HomePage(this.parentInjector.get(import8.NavController), this.parentInjector.get(import9.Http));
         this._appEl_0.initComponent(this._HomePage_0_4, [], compView_0);
         compView_0.create(this._HomePage_0_4, this.projectableNodes, null);
         this.init([].concat([this._el_0]), [this._el_0], [], []);
@@ -52,11 +53,11 @@ var _View_HomePage_Host0 = (function (_super) {
 }(import1.AppView));
 function viewFactory_HomePage_Host0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_HomePage_Host === null)) {
-        (renderType_HomePage_Host = viewUtils.createRenderComponentType('', 0, import9.ViewEncapsulation.None, [], {}));
+        (renderType_HomePage_Host = viewUtils.createRenderComponentType('', 0, import10.ViewEncapsulation.None, [], {}));
     }
     return new _View_HomePage_Host0(viewUtils, parentInjector, declarationEl);
 }
-export var HomePageNgFactory = new import10.ComponentFactory('page-home', viewFactory_HomePage_Host0, import3.HomePage);
+export var HomePageNgFactory = new import11.ComponentFactory('page-home', viewFactory_HomePage_Host0, import3.HomePage);
 var styles_HomePage = [];
 var renderType_HomePage = null;
 var _View_HomePage0 = (function (_super) {
@@ -68,8 +69,8 @@ var _View_HomePage0 = (function (_super) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
         this._el_0 = this.renderer.createElement(parentRenderNode, 'ion-content', null);
         this._appEl_0 = new import2.AppElement(0, null, this, this._el_0);
-        var compView_0 = import12.viewFactory_Content0(this.viewUtils, this.injector(0), this._appEl_0);
-        this._Content_0_4 = new import11.Content(this.parentInjector.get(import13.Config), new import14.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import15.App), this.parentInjector.get(import16.Keyboard), this.parentInjector.get(import17.NgZone), this.parentInjector.get(import18.ViewController, null), this.parentInjector.get(import19.Tabs, null));
+        var compView_0 = import13.viewFactory_Content0(this.viewUtils, this.injector(0), this._appEl_0);
+        this._Content_0_4 = new import12.Content(this.parentInjector.get(import14.Config), new import15.ElementRef(this._el_0), this.renderer, this.parentInjector.get(import16.App), this.parentInjector.get(import17.Keyboard), this.parentInjector.get(import18.NgZone), this.parentInjector.get(import19.ViewController, null), this.parentInjector.get(import20.Tabs, null));
         this._appEl_0.initComponent(this._Content_0_4, [], compView_0);
         this._text_1 = this.renderer.createText(null, '\n    ', null);
         this._el_2 = this.renderer.createElement(null, 'section', null);
@@ -906,7 +907,7 @@ var _View_HomePage0 = (function (_super) {
         return null;
     };
     _View_HomePage0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import11.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 357)))) {
+        if (((token === import12.Content) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 357)))) {
             return this._Content_0_4;
         }
         return notFoundResult;
@@ -955,7 +956,7 @@ var _View_HomePage0 = (function (_super) {
 }(import1.AppView));
 export function viewFactory_HomePage0(viewUtils, parentInjector, declarationEl) {
     if ((renderType_HomePage === null)) {
-        (renderType_HomePage = viewUtils.createRenderComponentType('/Users/apple/Desktop/github/cfdk/.tmp/pages/home/home.html', 0, import9.ViewEncapsulation.None, styles_HomePage, {}));
+        (renderType_HomePage = viewUtils.createRenderComponentType('/Users/apple/Desktop/github/cfdk/.tmp/pages/home/home.html', 0, import10.ViewEncapsulation.None, styles_HomePage, {}));
     }
     return new _View_HomePage0(viewUtils, parentInjector, declarationEl);
 }
