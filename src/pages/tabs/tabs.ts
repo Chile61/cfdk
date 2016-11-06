@@ -5,6 +5,7 @@ import { SharePage } from '../share/share';
 import { MePage } from '../me/me';
 import { ContactPage } from '../contact/contact';
 
+
 @Component({
   templateUrl: 'tabs.html'
 })
@@ -17,6 +18,6 @@ export class TabsPage {
   tab4Root: any = MePage;
 
   constructor() {
-
+      
   }
 }

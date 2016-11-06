@@ -9,6 +9,7 @@ import { MePage } from '../pages/me/me';
 import { toutiaoPage } from '../pages/toutiao/toutiao';
 import { toutiaoHotListPage } from '../pages/toutiaoHotList/toutiaoHotList';
 import { videoPage } from '../pages/video/video';
+import { videolistPage } from '../pages/videolist/videolist';
 export var AppModule = (function () {
     function AppModule() {
     }
@@ -24,6 +25,7 @@ export var AppModule = (function () {
                         toutiaoPage,
                         toutiaoHotListPage,
                         videoPage,
+                        videolistPage,
                     ],
                     imports: [
                         IonicModule.forRoot(MyApp, {
@@ -41,6 +43,7 @@ export var AppModule = (function () {
                         toutiaoPage,
                         toutiaoHotListPage,
                         videoPage,
+                        videolistPage,
                     ],
                     providers: []
                 },] },

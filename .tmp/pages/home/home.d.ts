@@ -4,6 +4,7 @@ export declare class HomePage {
     oSwiper: any;
     oUser: any;
     constructor(navCtrl: NavController);
+    RongCloudLibPlugin_init(): void;
     pushtoutiaoPage(): void;
     pushtoutiaoHotListPage(): void;
     pushvideoPage(): void;

@@ -8,6 +8,7 @@ import { videoPage } from '../video/video';
 
 declare var $: any;
 declare var Swiper: any;
+declare var RongCloudLibPlugin: any;
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -21,6 +22,19 @@ export class HomePage {
 
   }
 
+  //初始化融云
+  RongCloudLibPlugin_init(){
+    RongCloudLibPlugin.init({
+      appKey: "sfci50a7c59yi"},
+    function(ret, err){
+      if (ret.status == 'error'){
+        alert(err.code);
+      }else{
+        alert("成功");
+      }
+        
+    });
+  }
 
   //打开养生头条
   pushtoutiaoPage(){
@@ -41,6 +55,9 @@ export class HomePage {
   ionViewDidEnter() {
 
     if (this.oSwiper == null) {
+
+      this.RongCloudLibPlugin_init();
+
       this.oSwiper = new Swiper('.swiper-container', {
         loop: true,
         autoplay: 5000,
@@ -56,6 +73,7 @@ export class HomePage {
         spaceBetween: 6
       });
 
+      
     }
 
   }

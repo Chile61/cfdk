@@ -9,6 +9,18 @@ export var HomePage = (function () {
         this.oSwiper = null;
         this.oUser = null;
     }
+    //初始化融云
+    HomePage.prototype.RongCloudLibPlugin_init = function () {
+        RongCloudLibPlugin.init({
+            appKey: "sfci50a7c59yi" }, function (ret, err) {
+            if (ret.status == 'error') {
+                alert(err.code);
+            }
+            else {
+                alert("成功");
+            }
+        });
+    };
     //打开养生头条
     HomePage.prototype.pushtoutiaoPage = function () {
         this.navCtrl.push(toutiaoPage);
@@ -23,6 +35,7 @@ export var HomePage = (function () {
     };
     HomePage.prototype.ionViewDidEnter = function () {
         if (this.oSwiper == null) {
+            this.RongCloudLibPlugin_init();
             this.oSwiper = new Swiper('.swiper-container', {
                 loop: true,
                 autoplay: 5000,

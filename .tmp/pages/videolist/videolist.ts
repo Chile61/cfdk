@@ -2,15 +2,14 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-
 @Component({
-  selector: 'page-video',
-  templateUrl: 'video.html'
+  selector: 'page-videolist',
+  templateUrl: 'videolist.html'
 })
-export class videoPage {
+export class videolistPage {
 
   constructor(public navCtrl: NavController) {
-    
+
   }
 
 }

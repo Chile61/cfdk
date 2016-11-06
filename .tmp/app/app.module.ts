@@ -10,6 +10,8 @@ import { MePage } from '../pages/me/me';
 import { toutiaoPage } from '../pages/toutiao/toutiao';
 import { toutiaoHotListPage } from '../pages/toutiaoHotList/toutiaoHotList';
 import { videoPage } from '../pages/video/video';
+import { videolistPage } from '../pages/videolist/videolist';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { videoPage } from '../pages/video/video';
     toutiaoPage,
     toutiaoHotListPage,
     videoPage,
+    videolistPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -39,6 +42,7 @@ import { videoPage } from '../pages/video/video';
     toutiaoPage,
     toutiaoHotListPage,
     videoPage,
+    videolistPage,
   ],
   providers: []
 })
