@@ -40,6 +40,14 @@ module.exports = [
         "clobbers": [
             "JPush"
         ]
+    },
+    {
+        "id": "io.rong.imlib.RongCloudLibPlugin",
+        "file": "plugins/io.rong.imlib/www/RongCloudLibPlugin.js",
+        "pluginId": "io.rong.imlib",
+        "clobbers": [
+            "RongCloudLibPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -51,7 +59,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.2.0",
     "cordova-plugin-whitelist": "1.3.0",
     "ionic-plugin-keyboard": "2.2.1",
-    "jpush-phonegap-plugin": "2.2.7"
+    "jpush-phonegap-plugin": "2.2.7",
+    "io.rong.imlib": "2.3.7"
 };
 // BOTTOM OF METADATA
 });

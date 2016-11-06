@@ -36,6 +36,9 @@
     <feature name="JPushPlugin">
         <param name="ios-package" value="JPushPlugin" />
     </feature>
+    <feature name="RongCloudLibPlugin">
+        <param name="ios-package" value="RongCloudLibPlugin" />
+    </feature>
     <name>厨房大咖</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>

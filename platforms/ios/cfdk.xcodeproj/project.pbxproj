@@ -35,6 +35,30 @@
 		CB280C4B76974971A28C6116 /* libz.tbd in Resources */ = {isa = PBXBuildFile; fileRef = EBA9762163DF49D98D3E66C7 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B87B4F7D2311482CA292C3DD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380F752179BB46D8821FA906 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BC1C16CD5AD949DC9F16F98E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4795A6424042219F3B1FC6 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CCBD16F965E64E5D83E47839 /* RongCloudAppEventReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8539D5DFEFAA403E87EFABA2 /* RongCloudAppEventReceiver.m */; };
+		7697733CDB0B44969F6161A9 /* RongCloudApplicationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E30859775464B2FB6736C06 /* RongCloudApplicationHandler.m */; };
+		235524670C3C48D7BAFF2E3B /* RongCloudHybridAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C0E4EC8AD4AB8A90F5932 /* RongCloudHybridAdapter.m */; };
+		E9C4F23614C24B39A471A3F5 /* RongCloudLibPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 46037D7360B2443688F3857E /* RongCloudLibPlugin.m */; };
+		280EABFA9BC04577B2599B59 /* RongCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FB4D60677B4C0C8227DB1D /* RongCloudModel.m */; };
+		67BD1F37BF074B2A84CCE6B9 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 631E1B9F37204381B1C821F1 /* libopencore-amrnb.a */; };
+		672CDD6D2F6744659289912A /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8933CD31B707479D9CD5EDAE /* RCConfig.plist */; };
+		E6843D6C82714F5A90705318 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354F63097FD46B1BFE8C93F /* RongIMLib.framework */; };
+		B7E44A12F14D4383AD447BC1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90BFDBB0346E412DB0A7CA9A /* ImageIO.framework */; };
+		72B1BFB10B25497A87C36AA5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BE8B7539A54CA1923A53F1 /* MapKit.framework */; };
+		5C79E6FC57D9459D9A22BD0D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2DDD8D7B344B16BCDA4742 /* CoreLocation.framework */; };
+		2555484E6A334FEBA61421CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9638E79A7D5C43D6B8517A33 /* QuartzCore.framework */; };
+		35DFB1F7A19A476BBCB6DCB4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E847F8A3575845479ED0BBA2 /* OpenGLES.framework */; };
+		5E7558FB2D4843D6AE80469C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A424933F79DC4BB7899461B0 /* CoreVideo.framework */; };
+		C7EC785DF48E4BC1BDA75958 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F891DB58D8E24E69A7DD1FE4 /* CoreMedia.framework */; };
+		617266B25CAE4A83AD8C2B9D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BBA8587944030830B7109 /* CoreAudio.framework */; };
+		846D0DB34E5D48C3948DE7BF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653708965D0E4D0F8B0669DF /* AudioToolbox.framework */; };
+		2F0A9527BE6E48048DF81D81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A0DBF26A2C4EC294A6154E /* AVFoundation.framework */; };
+		122107DEF0C84773AAADCB5C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C33E1452DA84C95A40C7A10 /* libxml2.dylib */; };
+		B9CB9DF5432843F09D7511B4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0062254F1659461B9D15FF72 /* libz.dylib */; };
+		CE044F90458647CB9F341985 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDEB9AA58364A058BFD0DCA /* libstdc++.dylib */; };
+		BC46EB6E5CFE433D85894F08 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC66BABFB44C61AF879346 /* libsqlite3.dylib */; };
+		A08ED093BC02498D98761BCC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A9F3475EB24205B958AE5B /* libc++.dylib */; };
+		C52BADE089F54D02AE96F443 /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB260FAAE964AC4A4754986 /* libc++abi.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +127,36 @@
 		EBA9762163DF49D98D3E66C7 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "libz.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		380F752179BB46D8821FA906 /* AdSupport.framework */ = {isa = PBXFileReference; name = "AdSupport.framework"; path = "System/Library/Frameworks/AdSupport.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		EF4795A6424042219F3B1FC6 /* UserNotifications.framework */ = {isa = PBXFileReference; name = "UserNotifications.framework"; path = "System/Library/Frameworks/UserNotifications.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		8539D5DFEFAA403E87EFABA2 /* RongCloudAppEventReceiver.m */ = {isa = PBXFileReference; name = "RongCloudAppEventReceiver.m"; path = "io.rong.imlib/src/ios/RongCloudAppEventReceiver.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4E30859775464B2FB6736C06 /* RongCloudApplicationHandler.m */ = {isa = PBXFileReference; name = "RongCloudApplicationHandler.m"; path = "io.rong.imlib/src/ios/RongCloudApplicationHandler.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A93C0E4EC8AD4AB8A90F5932 /* RongCloudHybridAdapter.m */ = {isa = PBXFileReference; name = "RongCloudHybridAdapter.m"; path = "io.rong.imlib/src/ios/RongCloudHybridAdapter.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		46037D7360B2443688F3857E /* RongCloudLibPlugin.m */ = {isa = PBXFileReference; name = "RongCloudLibPlugin.m"; path = "io.rong.imlib/src/ios/RongCloudLibPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		88FB4D60677B4C0C8227DB1D /* RongCloudModel.m */ = {isa = PBXFileReference; name = "RongCloudModel.m"; path = "io.rong.imlib/src/ios/RongCloudModel.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		631E1B9F37204381B1C821F1 /* libopencore-amrnb.a */ = {isa = PBXFileReference; name = "libopencore-amrnb.a"; path = "cfdk/Plugins/io.rong.imlib/libopencore-amrnb.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		00AECFC9A26C477FB89DEB2F /* RongCloudAppEventReceiver.h */ = {isa = PBXFileReference; name = "RongCloudAppEventReceiver.h"; path = "io.rong.imlib/src/ios/RongCloudAppEventReceiver.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E65163CC15E64F84960ECAC6 /* RongCloudApplicationHandler.h */ = {isa = PBXFileReference; name = "RongCloudApplicationHandler.h"; path = "io.rong.imlib/src/ios/RongCloudApplicationHandler.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		64757886B0524103B1D16FFD /* RongCloudHybridAdapter.h */ = {isa = PBXFileReference; name = "RongCloudHybridAdapter.h"; path = "io.rong.imlib/src/ios/RongCloudHybridAdapter.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		46F27030DF7549669CA91DF2 /* RongCloudConstant.h */ = {isa = PBXFileReference; name = "RongCloudConstant.h"; path = "io.rong.imlib/src/ios/RongCloudConstant.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0187B5F578F24A60A57357F7 /* RongCloudLibPlugin.h */ = {isa = PBXFileReference; name = "RongCloudLibPlugin.h"; path = "io.rong.imlib/src/ios/RongCloudLibPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B30FF5C3840641198C90EC8D /* RongCloudModel.h */ = {isa = PBXFileReference; name = "RongCloudModel.h"; path = "io.rong.imlib/src/ios/RongCloudModel.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		8933CD31B707479D9CD5EDAE /* RCConfig.plist */ = {isa = PBXFileReference; name = "RCConfig.plist"; path = "RCConfig.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
+		6354F63097FD46B1BFE8C93F /* RongIMLib.framework */ = {isa = PBXFileReference; name = "RongIMLib.framework"; path = "cfdk/Plugins/io.rong.imlib/RongIMLib.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		90BFDBB0346E412DB0A7CA9A /* ImageIO.framework */ = {isa = PBXFileReference; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		F0BE8B7539A54CA1923A53F1 /* MapKit.framework */ = {isa = PBXFileReference; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		6D2DDD8D7B344B16BCDA4742 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9638E79A7D5C43D6B8517A33 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E847F8A3575845479ED0BBA2 /* OpenGLES.framework */ = {isa = PBXFileReference; name = "OpenGLES.framework"; path = "System/Library/Frameworks/OpenGLES.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A424933F79DC4BB7899461B0 /* CoreVideo.framework */ = {isa = PBXFileReference; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		F891DB58D8E24E69A7DD1FE4 /* CoreMedia.framework */ = {isa = PBXFileReference; name = "CoreMedia.framework"; path = "System/Library/Frameworks/CoreMedia.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		D65BBA8587944030830B7109 /* CoreAudio.framework */ = {isa = PBXFileReference; name = "CoreAudio.framework"; path = "System/Library/Frameworks/CoreAudio.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		653708965D0E4D0F8B0669DF /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		73A0DBF26A2C4EC294A6154E /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		8C33E1452DA84C95A40C7A10 /* libxml2.dylib */ = {isa = PBXFileReference; name = "libxml2.dylib"; path = "usr/lib/libxml2.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		0062254F1659461B9D15FF72 /* libz.dylib */ = {isa = PBXFileReference; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		ABDEB9AA58364A058BFD0DCA /* libstdc++.dylib */ = {isa = PBXFileReference; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		0DDC66BABFB44C61AF879346 /* libsqlite3.dylib */ = {isa = PBXFileReference; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		A0A9F3475EB24205B958AE5B /* libc++.dylib */ = {isa = PBXFileReference; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		0CB260FAAE964AC4A4754986 /* libc++abi.dylib */ = {isa = PBXFileReference; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +176,24 @@
 				CB280C4B76974971A28C6116 /* libz.tbd in Resources */,
 				B87B4F7D2311482CA292C3DD /* AdSupport.framework in Frameworks */,
 				BC1C16CD5AD949DC9F16F98E /* UserNotifications.framework in Frameworks */,
+				67BD1F37BF074B2A84CCE6B9 /* libopencore-amrnb.a in Frameworks */,
+				E6843D6C82714F5A90705318 /* RongIMLib.framework in Frameworks */,
+				B7E44A12F14D4383AD447BC1 /* ImageIO.framework in Frameworks */,
+				72B1BFB10B25497A87C36AA5 /* MapKit.framework in Frameworks */,
+				5C79E6FC57D9459D9A22BD0D /* CoreLocation.framework in Frameworks */,
+				2555484E6A334FEBA61421CE /* QuartzCore.framework in Frameworks */,
+				35DFB1F7A19A476BBCB6DCB4 /* OpenGLES.framework in Frameworks */,
+				5E7558FB2D4843D6AE80469C /* CoreVideo.framework in Frameworks */,
+				C7EC785DF48E4BC1BDA75958 /* CoreMedia.framework in Frameworks */,
+				617266B25CAE4A83AD8C2B9D /* CoreAudio.framework in Frameworks */,
+				846D0DB34E5D48C3948DE7BF /* AudioToolbox.framework in Frameworks */,
+				2F0A9527BE6E48048DF81D81 /* AVFoundation.framework in Frameworks */,
+				122107DEF0C84773AAADCB5C /* libxml2.dylib in Frameworks */,
+				B9CB9DF5432843F09D7511B4 /* libz.dylib in Frameworks */,
+				CE044F90458647CB9F341985 /* libstdc++.dylib in Frameworks */,
+				BC46EB6E5CFE433D85894F08 /* libsqlite3.dylib in Frameworks */,
+				A08ED093BC02498D98761BCC /* libc++.dylib in Frameworks */,
+				C52BADE089F54D02AE96F443 /* libc++abi.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +256,7 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* cfdk-Info.plist */,
 				F50EFBB0D00347DA83563028 /* PushConfig.plist */,
+				8933CD31B707479D9CD5EDAE /* RCConfig.plist */,
 			);
 			name = Resources;
 			path = "cfdk/Resources";
@@ -203,6 +276,24 @@
 				EBA9762163DF49D98D3E66C7 /* libz.tbd */,
 				380F752179BB46D8821FA906 /* AdSupport.framework */,
 				EF4795A6424042219F3B1FC6 /* UserNotifications.framework */,
+				631E1B9F37204381B1C821F1 /* libopencore-amrnb.a */,
+				6354F63097FD46B1BFE8C93F /* RongIMLib.framework */,
+				90BFDBB0346E412DB0A7CA9A /* ImageIO.framework */,
+				F0BE8B7539A54CA1923A53F1 /* MapKit.framework */,
+				6D2DDD8D7B344B16BCDA4742 /* CoreLocation.framework */,
+				9638E79A7D5C43D6B8517A33 /* QuartzCore.framework */,
+				E847F8A3575845479ED0BBA2 /* OpenGLES.framework */,
+				A424933F79DC4BB7899461B0 /* CoreVideo.framework */,
+				F891DB58D8E24E69A7DD1FE4 /* CoreMedia.framework */,
+				D65BBA8587944030830B7109 /* CoreAudio.framework */,
+				653708965D0E4D0F8B0669DF /* AudioToolbox.framework */,
+				73A0DBF26A2C4EC294A6154E /* AVFoundation.framework */,
+				8C33E1452DA84C95A40C7A10 /* libxml2.dylib */,
+				0062254F1659461B9D15FF72 /* libz.dylib */,
+				ABDEB9AA58364A058BFD0DCA /* libstdc++.dylib */,
+				0DDC66BABFB44C61AF879346 /* libsqlite3.dylib */,
+				A0A9F3475EB24205B958AE5B /* libc++.dylib */,
+				0CB260FAAE964AC4A4754986 /* libc++abi.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -245,6 +336,17 @@
 				3EC9B0C033CF42A7AF711B8E /* JPushPlugin.h */,
 				D2E24AC8FEED405681F95174 /* JPUSHService.h */,
 				88DD63E9583540B6A3B9CCF6 /* AppDelegate+JPush.h */,
+				8539D5DFEFAA403E87EFABA2 /* RongCloudAppEventReceiver.m */,
+				4E30859775464B2FB6736C06 /* RongCloudApplicationHandler.m */,
+				A93C0E4EC8AD4AB8A90F5932 /* RongCloudHybridAdapter.m */,
+				46037D7360B2443688F3857E /* RongCloudLibPlugin.m */,
+				88FB4D60677B4C0C8227DB1D /* RongCloudModel.m */,
+				00AECFC9A26C477FB89DEB2F /* RongCloudAppEventReceiver.h */,
+				E65163CC15E64F84960ECAC6 /* RongCloudApplicationHandler.h */,
+				64757886B0524103B1D16FFD /* RongCloudHybridAdapter.h */,
+				46F27030DF7549669CA91DF2 /* RongCloudConstant.h */,
+				0187B5F578F24A60A57357F7 /* RongCloudLibPlugin.h */,
+				B30FF5C3840641198C90EC8D /* RongCloudModel.h */,
 			);
 			name = Plugins;
 			path = "cfdk/Plugins";
@@ -329,6 +431,7 @@
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */,
 				2504CA5BB40F43FDBCB742A9 /* PushConfig.plist in Resources */,
+				672CDD6D2F6744659289912A /* RCConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +471,11 @@
 				D7B60201B1B04EC5A7087FA5 /* IonicKeyboard.m in Sources */,
 				2328D672B3BE4E4D8200E5F8 /* JPushPlugin.m in Sources */,
 				03707A5C50E5435ABFBB2E5B /* AppDelegate+JPush.m in Sources */,
+				CCBD16F965E64E5D83E47839 /* RongCloudAppEventReceiver.m in Sources */,
+				7697733CDB0B44969F6161A9 /* RongCloudApplicationHandler.m in Sources */,
+				235524670C3C48D7BAFF2E3B /* RongCloudHybridAdapter.m in Sources */,
+				E9C4F23614C24B39A471A3F5 /* RongCloudLibPlugin.m in Sources */,
+				280EABFA9BC04577B2599B59 /* RongCloudModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +512,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+					"\"$(SRCROOT)/cfdk/Plugins/io.rong.imlib\"",
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"cfdk/Plugins/io.rong.imlib\"",
 				);
 			};
 			name = Debug;
@@ -427,6 +540,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+					"\"$(SRCROOT)/cfdk/Plugins/io.rong.imlib\"",
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"cfdk/Plugins/io.rong.imlib\"",
 				);
 			};
 			name = Release;
@@ -458,6 +576,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+					"\"$(SRCROOT)/cfdk/Plugins/io.rong.imlib\"",
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"cfdk/Plugins/io.rong.imlib\"",
 				);
 			};
 			name = Debug;
@@ -488,6 +611,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+					"\"$(SRCROOT)/cfdk/Plugins/io.rong.imlib\"",
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"cfdk/Plugins/io.rong.imlib\"",
 				);
 			};
 			name = Release;

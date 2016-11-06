@@ -31,6 +31,10 @@
                         {
                             "xml": "<feature name=\"JPushPlugin\"><param name=\"android-package\" value=\"cn.jpush.phonegap.JPushPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"RongCloudLibPlugin\"><param name=\"android-package\" value=\"io.rong.cordova.RongCloudLibPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -48,19 +52,19 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
@@ -68,7 +72,7 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\" />",
@@ -76,7 +80,7 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\" />",
@@ -88,6 +92,30 @@
                         },
                         {
                             "xml": "<permission android:name=\"com.ionicframework.cfdk380447.permission.JPUSH_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_TASKS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\" />",
                             "count": 1
                         }
                     ],
@@ -131,6 +159,34 @@
                         {
                             "xml": "<meta-data android:name=\"JPUSH_APPKEY\" android:value=\"771239dc9889d8453ddb859c\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"io.rong.imlib.ipc.RongService\" android:process=\":ipc\"></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"io.rong.imlib.ReConnectService\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"io.rong.imlib.ConnectChangeReceiver\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"io.rong.push.notification.PushMessageReceiver\" android:permission=\"rong.permission.push.com.rong.app\"><intent-filter><action android:name=\"io.rong.push.intent.action.message\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"io.rong.push.PushService\" android:process=\"io.rong.push\"><intent-filter><category android:name=\"android.intent.category.DEFAULT\" /><action android:name=\"io.rong.push\" /></intent-filter></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"io.rong.push.PushReceiver\" android:process=\"io.rong.push\"><intent-filter><action android:name=\"io.rong.push.intent.action.HeartBeat\" /></intent-filter><intent-filter><action android:name=\"android.net.conn.CONNECTIVITY_CHANGE\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.BOOT_COMPLETED\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.USER_PRESENT\" /><action android:name=\"android.intent.action.ACTION_POWER_CONNECTED\" /><action android:name=\"android.intent.action.ACTION_POWER_DISCONNECTED\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"RONG_CLOUD_APP_KEY\" android:value=\"z3v5yqkbv8v30\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -158,6 +214,9 @@
         },
         "jpush-phonegap-plugin": {
             "API_KEY": "771239dc9889d8453ddb859c",
+            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+        },
+        "io.rong.imlib": {
             "PACKAGE_NAME": "com.ionicframework.cfdk380447"
         }
     },
@@ -203,6 +262,14 @@
             "clobbers": [
                 "JPush"
             ]
+        },
+        {
+            "id": "io.rong.imlib.RongCloudLibPlugin",
+            "file": "plugins/io.rong.imlib/www/RongCloudLibPlugin.js",
+            "pluginId": "io.rong.imlib",
+            "clobbers": [
+                "RongCloudLibPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -212,6 +279,7 @@
         "cordova-plugin-statusbar": "2.2.0",
         "cordova-plugin-whitelist": "1.3.0",
         "ionic-plugin-keyboard": "2.2.1",
-        "jpush-phonegap-plugin": "2.2.7"
+        "jpush-phonegap-plugin": "2.2.7",
+        "io.rong.imlib": "2.3.7"
     }
 }

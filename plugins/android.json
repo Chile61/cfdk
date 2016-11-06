@@ -28,6 +28,9 @@
         "jpush-phonegap-plugin": {
             "API_KEY": "771239dc9889d8453ddb859c",
             "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+        },
+        "io.rong.imlib": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
         }
     },
     "dependent_plugins": {}

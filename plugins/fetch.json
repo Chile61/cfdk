@@ -57,5 +57,14 @@
         "variables": {
             "API_KEY": "771239dc9889d8453ddb859c"
         }
+    },
+    "io.rong.imlib": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/rongcloud/cordova-plugin-rongcloud-im",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

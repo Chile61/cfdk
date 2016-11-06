@@ -39,6 +39,10 @@
                         {
                             "xml": "<feature name=\"JPushPlugin\"><param name=\"ios-package\" value=\"JPushPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"RongCloudLibPlugin\"><param name=\"ios-package\" value=\"RongCloudLibPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -76,6 +80,9 @@
         },
         "jpush-phonegap-plugin": {
             "API_KEY": "771239dc9889d8453ddb859c",
+            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+        },
+        "io.rong.imlib": {
             "PACKAGE_NAME": "com.ionicframework.cfdk380447"
         }
     },
@@ -137,6 +144,14 @@
             "clobbers": [
                 "JPush"
             ]
+        },
+        {
+            "file": "plugins/io.rong.imlib/www/RongCloudLibPlugin.js",
+            "id": "io.rong.imlib.RongCloudLibPlugin",
+            "pluginId": "io.rong.imlib",
+            "clobbers": [
+                "RongCloudLibPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -146,6 +161,7 @@
         "cordova-plugin-statusbar": "2.2.0",
         "cordova-plugin-whitelist": "1.3.0",
         "ionic-plugin-keyboard": "2.2.1",
-        "jpush-phonegap-plugin": "2.2.7"
+        "jpush-phonegap-plugin": "2.2.7",
+        "io.rong.imlib": "2.3.7"
     }
 }
