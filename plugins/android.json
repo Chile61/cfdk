@@ -8,29 +8,29 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
-        },
-        "jpush-phonegap-plugin": {
-            "API_KEY": "771239dc9889d8453ddb859c",
-            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
         "io.rong.imlib": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk380447"
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "jpush-phonegap-plugin": {
+            "APP_KEY": "771239dc9889d8453ddb859c",
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         }
     },
     "dependent_plugins": {}

@@ -11,19 +11,16 @@
 #import <objc/runtime.h>
 #import <AdSupport/AdSupport.h>
 #import <UserNotifications/UserNotifications.h>
-
-
+#import "JPushDefine.h"
 
 @implementation AppDelegate (JPush)
 
 +(void)load{
-
-    Method origin;
-    Method swizzle;
-
-    origin=class_getInstanceMethod([self class],@selector(init));
-    swizzle=class_getInstanceMethod([self class], @selector(init_plus));
-    method_exchangeImplementations(origin, swizzle);
+    Method origin1;
+    Method swizzle1;
+    origin1  = class_getInstanceMethod([self class],@selector(init));
+    swizzle1 = class_getInstanceMethod([self class], @selector(init_plus));
+    method_exchangeImplementations(origin1, swizzle1);
 }
 
 -(instancetype)init_plus{
@@ -31,10 +28,70 @@
     return [self init_plus];
 }
 
+NSDictionary *_launchOptions;
+
 -(void)applicationDidLaunch:(NSNotification *)notification{
+
     if (notification) {
-        [self registerForIos10RemoteNotification];
-        [JPushPlugin setLaunchOptions:notification.userInfo];
+        if (notification.userInfo) {
+            NSDictionary *userInfo1 = [notification.userInfo valueForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+            if (userInfo1.count > 0) {
+                [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+                    if (SharedJPushPlugin) {
+                        [JPushPlugin fireDocumentEvent:JPushDocumentEvent_OpenNotification jsString:[userInfo1 toJsonString]];
+                        [timer invalidate];
+                    }
+                }];
+            }
+            NSDictionary *userInfo2 = [notification.userInfo valueForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+            if (userInfo2.count > 0) {
+                [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+                    if (SharedJPushPlugin) {
+                        [JPushPlugin fireDocumentEvent:JPushDocumentEvent_OpenNotification jsString:[userInfo2 toJsonString]];
+                        [timer invalidate];
+                    }
+                }];
+            }
+        }
+        [JPUSHService setDebugMode];
+
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:JPushConfig_FileName ofType:@"plist"];
+        NSMutableDictionary *plistData = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+        NSNumber *delay       = [plistData valueForKey:JPushConfig_Delay];
+
+        _launchOptions = notification.userInfo;
+
+        if (![delay boolValue]) {
+            [self startJPushSDK];
+        }
+
+    }
+}
+
+-(void)startJPushSDK{
+    [self registerForRemoteNotification];
+    [JPushPlugin setupJPushSDK:_launchOptions];
+}
+
+-(void)registerForRemoteNotification{
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+        JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+        entity.types = UNAuthorizationOptionAlert|UNAuthorizationOptionBadge|UNAuthorizationOptionSound;
+        [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+#endif
+    }else if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                          UIUserNotificationTypeSound |
+                                                          UIUserNotificationTypeAlert)
+                                              categories:nil];
+    } else if([[UIDevice currentDevice].systemVersion floatValue] < 8.0){
+        //categories 必须为nil
+        [JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                          UIRemoteNotificationTypeSound |
+                                                          UIRemoteNotificationTypeAlert)
+                                              categories:nil];
     }
 }
 
@@ -44,36 +101,33 @@
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
     [JPUSHService handleRemoteNotification:userInfo];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kJPushPluginReceiveNotification object:userInfo];
+
+    [JPushPlugin fireDocumentEvent:JPushDocumentEvent_ReceiveNotification jsString:[userInfo toJsonString]];
 }
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
     [JPUSHService handleRemoteNotification:userInfo];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kJPushPluginReceiveNotification object:userInfo];
+    NSString *eventName;
+    switch ([UIApplication sharedApplication].applicationState) {
+        case UIApplicationStateInactive:
+            eventName = JPushDocumentEvent_OpenNotification;
+            break;
+        case UIApplicationStateActive:
+            eventName = JPushDocumentEvent_ReceiveNotification;
+            break;
+        case UIApplicationStateBackground:
+            eventName = JPushDocumentEvent_BackgroundNotification;
+            break;
+        default:
+            break;
+    }
+    [JPushPlugin fireDocumentEvent:eventName jsString:[userInfo toJsonString]];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-    [JPUSHService showLocalNotificationAtFront:notification identifierKey:nil];
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    //  [application setApplicationIconBadgeNumber:0];
-    //  [application cancelAllLocalNotifications];
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    //  [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
-}
-
 -(void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler{
-
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:notification.request.content.userInfo];
-
-    [userInfo setValue:kJPushPluginiOS10ForegroundReceiveNotification forKey:@"JPushNotificationType"];
-
-    [[NSNotificationCenter defaultCenter] postNotificationName:kJPushPluginiOS10ForegroundReceiveNotification object:userInfo];
-
+    [JPushPlugin fireDocumentEvent:JPushDocumentEvent_ReceiveNotification jsString:[userInfo toJsonString]];
     completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert);
 }
 
@@ -83,19 +137,21 @@
         [userInfo setValue:[response valueForKey:@"userText"] forKey:@"userText"];
     } @catch (NSException *exception) { }
     [userInfo setValue:response.actionIdentifier forKey:@"actionIdentifier"];
-    [userInfo setValue:kJPushPluginiOS10ClickNotification forKey:@"JPushNotificationType"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kJPushPluginiOS10ClickNotification object:userInfo];
+    [JPushPlugin fireDocumentEvent:JPushDocumentEvent_OpenNotification jsString:[userInfo toJsonString]];
     completionHandler();
 }
 
--(void)registerForIos10RemoteNotification{
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
-#ifdef NSFoundationVersionNumber_iOS_9_x_Max
-        JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-        entity.types = UNAuthorizationOptionAlert|UNAuthorizationOptionBadge|UNAuthorizationOptionSound;
-        [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-#endif
-    }
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    [[NSNotificationCenter defaultCenter] postNotificationName:JPushDocumentEvent_ReceiveLocalNotification object:notification.userInfo];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    //  [application setApplicationIconBadgeNumber:0];
+    //  [application cancelAllLocalNotifications];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    //  [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 @end

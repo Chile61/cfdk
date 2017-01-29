@@ -1,8 +1,8 @@
 {
-    "cordova-plugin-device": {
+    "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-device"
+            "id": "cordova-plugin-whitelist@1.3.1"
         },
         "is_top_level": true,
         "variables": {}
@@ -10,23 +10,7 @@
     "cordova-plugin-console": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-console"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-whitelist": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-whitelist@1.3.0"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-splashscreen": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-splashscreen@~4.0.0"
+            "id": "cordova-plugin-console@1.0.5"
         },
         "is_top_level": true,
         "variables": {}
@@ -34,7 +18,23 @@
     "cordova-plugin-statusbar": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-statusbar@~2.2.0"
+            "id": "cordova-plugin-statusbar@2.2.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device@1.1.4"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen@~4.0.1"
         },
         "is_top_level": true,
         "variables": {}
@@ -42,29 +42,27 @@
     "ionic-plugin-keyboard": {
         "source": {
             "type": "registry",
-            "id": "ionic-plugin-keyboard"
+            "id": "ionic-plugin-keyboard@~2.2.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "io.rong.imlib": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-rongcloud-im"
         },
         "is_top_level": true,
         "variables": {}
     },
     "jpush-phonegap-plugin": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/jpush/jpush-phonegap-plugin.git",
-            "subdir": "."
+            "type": "registry",
+            "id": "jpush-phonegap-plugin"
         },
         "is_top_level": true,
         "variables": {
-            "API_KEY": "771239dc9889d8453ddb859c"
+            "APP_KEY": "771239dc9889d8453ddb859c"
         }
-    },
-    "io.rong.imlib": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/rongcloud/cordova-plugin-rongcloud-im",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
     }
 }

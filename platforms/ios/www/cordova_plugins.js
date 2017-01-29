@@ -50,33 +50,33 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
-        "id": "jpush-phonegap-plugin.JPushPlugin",
-        "pluginId": "jpush-phonegap-plugin",
-        "clobbers": [
-            "JPush"
-        ]
-    },
-    {
         "file": "plugins/io.rong.imlib/www/RongCloudLibPlugin.js",
         "id": "io.rong.imlib.RongCloudLibPlugin",
         "pluginId": "io.rong.imlib",
         "clobbers": [
             "RongCloudLibPlugin"
         ]
+    },
+    {
+        "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+        "id": "jpush-phonegap-plugin.JPushPlugin",
+        "pluginId": "jpush-phonegap-plugin",
+        "clobbers": [
+            "JPush"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-console": "1.0.4",
-    "cordova-plugin-device": "1.1.3",
-    "cordova-plugin-splashscreen": "4.0.0",
-    "cordova-plugin-statusbar": "2.2.0",
-    "cordova-plugin-whitelist": "1.3.0",
+    "cordova-plugin-console": "1.0.5",
+    "cordova-plugin-device": "1.1.4",
+    "cordova-plugin-splashscreen": "4.0.1",
+    "cordova-plugin-statusbar": "2.2.1",
+    "cordova-plugin-whitelist": "1.3.1",
     "ionic-plugin-keyboard": "2.2.1",
-    "jpush-phonegap-plugin": "2.2.7",
-    "io.rong.imlib": "2.3.7"
+    "io.rong.imlib": "2.3.7",
+    "jpush-phonegap-plugin": "3.0.3"
 }
 // BOTTOM OF METADATA
 });

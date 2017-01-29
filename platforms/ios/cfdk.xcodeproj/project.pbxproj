@@ -15,50 +15,52 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
-		6211F4152D57458B875FFA8F /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5769CC6B405A47AC88E3E1F2 /* CDVLogger.m */; };
-		98E5E296260A48E193FF32B0 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC5CB766DB04AEF8602E08B /* CDVDevice.m */; };
-		62D6C694C95C4409BFE7947F /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D62C4297230046B19D3E23D5 /* CDVSplashScreen.m */; };
-		F389925FE6FC474E81A34FDD /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 25786CA5EEE440069D3ECF53 /* CDVViewController+SplashScreen.m */; };
-		E8816824AD684D9981C93E56 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6B275B2E4858B9162900 /* CDVStatusBar.m */; };
-		D7B60201B1B04EC5A7087FA5 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 554D51737A79474D9D0E97A6 /* IonicKeyboard.m */; };
-		2328D672B3BE4E4D8200E5F8 /* JPushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 844332D5E830484DBD98DB78 /* JPushPlugin.m */; };
-		DFC1A2375345496189D85F63 /* jpush-ios-2.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 649B0DEA71EF47188B954210 /* jpush-ios-2.1.9.a */; };
-		03707A5C50E5435ABFBB2E5B /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF16F868034B6DB4A08B1E /* AppDelegate+JPush.m */; };
-		2504CA5BB40F43FDBCB742A9 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = F50EFBB0D00347DA83563028 /* PushConfig.plist */; };
-		4AC3EA1C9A0942358D95750D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DABCA905ED04891B6EF0F81 /* CFNetwork.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		65E0C6E6F87041B88F8F1498 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1C1277EC6148DC88B41061 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		4D11420240A147B0812EA5C0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFE5B3FF7104FE39D326683 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C69FB3C6DE5A463683F0FAA2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0737C8CE187424A86939212 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		83B6985F7F114D6E87C575E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403736A054A24D7CB72EE83A /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		74159E94AF304C3F992069FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C821F14455949FA9F5EE4C8 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		6114CB4412D747AF9684C572 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1290E44C142D0A1A30E3E /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		CB280C4B76974971A28C6116 /* libz.tbd in Resources */ = {isa = PBXBuildFile; fileRef = EBA9762163DF49D98D3E66C7 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B87B4F7D2311482CA292C3DD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380F752179BB46D8821FA906 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		BC1C16CD5AD949DC9F16F98E /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4795A6424042219F3B1FC6 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		CCBD16F965E64E5D83E47839 /* RongCloudAppEventReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8539D5DFEFAA403E87EFABA2 /* RongCloudAppEventReceiver.m */; };
-		7697733CDB0B44969F6161A9 /* RongCloudApplicationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E30859775464B2FB6736C06 /* RongCloudApplicationHandler.m */; };
-		235524670C3C48D7BAFF2E3B /* RongCloudHybridAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A93C0E4EC8AD4AB8A90F5932 /* RongCloudHybridAdapter.m */; };
-		E9C4F23614C24B39A471A3F5 /* RongCloudLibPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 46037D7360B2443688F3857E /* RongCloudLibPlugin.m */; };
-		280EABFA9BC04577B2599B59 /* RongCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FB4D60677B4C0C8227DB1D /* RongCloudModel.m */; };
-		67BD1F37BF074B2A84CCE6B9 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 631E1B9F37204381B1C821F1 /* libopencore-amrnb.a */; };
-		672CDD6D2F6744659289912A /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8933CD31B707479D9CD5EDAE /* RCConfig.plist */; };
-		E6843D6C82714F5A90705318 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6354F63097FD46B1BFE8C93F /* RongIMLib.framework */; };
-		B7E44A12F14D4383AD447BC1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90BFDBB0346E412DB0A7CA9A /* ImageIO.framework */; };
-		72B1BFB10B25497A87C36AA5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BE8B7539A54CA1923A53F1 /* MapKit.framework */; };
-		5C79E6FC57D9459D9A22BD0D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2DDD8D7B344B16BCDA4742 /* CoreLocation.framework */; };
-		2555484E6A334FEBA61421CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9638E79A7D5C43D6B8517A33 /* QuartzCore.framework */; };
-		35DFB1F7A19A476BBCB6DCB4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E847F8A3575845479ED0BBA2 /* OpenGLES.framework */; };
-		5E7558FB2D4843D6AE80469C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A424933F79DC4BB7899461B0 /* CoreVideo.framework */; };
-		C7EC785DF48E4BC1BDA75958 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F891DB58D8E24E69A7DD1FE4 /* CoreMedia.framework */; };
-		617266B25CAE4A83AD8C2B9D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65BBA8587944030830B7109 /* CoreAudio.framework */; };
-		846D0DB34E5D48C3948DE7BF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653708965D0E4D0F8B0669DF /* AudioToolbox.framework */; };
-		2F0A9527BE6E48048DF81D81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A0DBF26A2C4EC294A6154E /* AVFoundation.framework */; };
-		122107DEF0C84773AAADCB5C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C33E1452DA84C95A40C7A10 /* libxml2.dylib */; };
-		B9CB9DF5432843F09D7511B4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0062254F1659461B9D15FF72 /* libz.dylib */; };
-		CE044F90458647CB9F341985 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDEB9AA58364A058BFD0DCA /* libstdc++.dylib */; };
-		BC46EB6E5CFE433D85894F08 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDC66BABFB44C61AF879346 /* libsqlite3.dylib */; };
-		A08ED093BC02498D98761BCC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A9F3475EB24205B958AE5B /* libc++.dylib */; };
-		C52BADE089F54D02AE96F443 /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB260FAAE964AC4A4754986 /* libc++abi.dylib */; };
+		FD78A69D47B64E5DAC8E824F /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D466D2303F1B4B5298BB0057 /* CDVLogger.m */; };
+		2BAEB2B53B9C45F29502D9B6 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 441BF6E53A9444568D0B24F7 /* CDVDevice.m */; };
+		8FCBAC3394D644AA9DDD714B /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 49BC05FF05E540C88D5920CA /* CDVSplashScreen.m */; };
+		A331201806A14306A079DAD6 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA110848FB24DCDA7B9595D /* CDVViewController+SplashScreen.m */; };
+		6DABEBC2C42A4D149394D43D /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEBA552FAA04AC78D9B05BE /* CDVStatusBar.m */; };
+		736497963A5C435B98BCB6DF /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6149C69D3D434D20A70EA208 /* IonicKeyboard.m */; };
+		C1C05A9D3953449481006A20 /* RongCloudAppEventReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDEA89237D48B592653EDF /* RongCloudAppEventReceiver.m */; };
+		4FF4E366F31E425CA3C2A790 /* RongCloudApplicationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E8A6B15264519ABF53280 /* RongCloudApplicationHandler.m */; };
+		77115CC20A68443D95C7DAFC /* RongCloudHybridAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C112D895FC046F59260453D /* RongCloudHybridAdapter.m */; };
+		3DE73166814744DE914E0EDC /* RongCloudLibPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 7099D8FE65D941CFAB507809 /* RongCloudLibPlugin.m */; };
+		2A2920405F62492BBB8F69C2 /* RongCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF8DCBFD2784F2F91854065 /* RongCloudModel.m */; };
+		A5090A9F1E674863B80FBB85 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EE4EC68B024EF994C3DB21 /* libopencore-amrnb.a */; };
+		774A6927824F40BB84279EE8 /* RCConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D9BB49E3C5B40768235E6E1 /* RCConfig.plist */; };
+		88A74001823F423499352CA8 /* RongIMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDE046B9F354C348DB5E9A0 /* RongIMLib.framework */; };
+		06C076F641CF4169836EA13A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78700E72ACF747C9AE21256E /* ImageIO.framework */; };
+		E76375F087364DDD9716C046 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346124D6458E49D781318ACA /* MapKit.framework */; };
+		A6C134D7E3504DCC9FAC8A4E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3596E9D4079E42F3A6D1D599 /* CoreLocation.framework */; };
+		C68A72697F804DE58366DA8C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87317A7839F4166ACE6BB4F /* SystemConfiguration.framework */; };
+		2508A0680C334357AD503538 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D548A53B6A1E4D31A6EC7242 /* QuartzCore.framework */; };
+		1492AE89D360489493718966 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A01C13055740919A93B78C /* OpenGLES.framework */; };
+		5EBFEC320494489D892B3C28 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CB91FDF923474BB1326D2C /* CoreVideo.framework */; };
+		2CFC4038A757431C957F5F47 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2662C83F4534608B8281C72 /* CoreTelephony.framework */; };
+		F1AC30C7111D4AB58636F176 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DAC31FFE8747F99A8D4D41 /* CoreMedia.framework */; };
+		EECDE3D380CC4964ABA56D98 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2FC68D69024C11AF4CDA5C /* CoreAudio.framework */; };
+		F654280B9A6B403B98B742CF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C027608878413D8C158F40 /* CFNetwork.framework */; };
+		8CD4B16CA6E342F79E7ECB63 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3660C7FC6A59481B9E1377DD /* AudioToolbox.framework */; };
+		5577B87912474EB9A8DEFA03 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB783FC647B04322B9F5DD27 /* AVFoundation.framework */; };
+		15CD5DCBAC464E1BA0503637 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9628E444374C8AB3CDCD8B /* UIKit.framework */; };
+		94DD68F74FD844E698CB281B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B6290AF8DCAC4EA29B400165 /* libxml2.dylib */; };
+		859D1B0E596E41D592D92159 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8131F5C4634D12B779629D /* libz.dylib */; };
+		358912F2F28F4CD2A9572030 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ECAF192B84245A8866EC80A /* libstdc++.dylib */; };
+		CB90E1030B914759B89D6BAC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E561C4A6F64675BB7A7089 /* libsqlite3.dylib */; };
+		449B44BB49BF4DC28ED850C3 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D4CA909255044A9B99E2F6CB /* libc++.dylib */; };
+		2E93B5455D92436CA583B9A5 /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D61AEFFF0744496AC85BD1A /* libc++abi.dylib */; };
+		E42820C90469484CA78290D2 /* JPushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D6D75560D74982B1AB8761 /* JPushPlugin.m */; };
+		4EFA65286AFF4F3A8F1E7803 /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = CD83797A36E74345B1617DC4 /* AppDelegate+JPush.m */; };
+		1A8C8273A3E749398AE163DF /* jpush-ios-3.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB97F857D5274CFD8F665350 /* jpush-ios-3.0.0.a */; };
+		8608BA953EFC419392310CBD /* jcore-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B83DD0E90604FBABB86E95C /* jcore-ios-1.0.0.a */; };
+		0390AAA8636841EEA54142F9 /* JPushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 891485C09A984D59BBD481B5 /* JPushConfig.plist */; };
+		31E7A94FBB44436BBB55817B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59914609DD8A439381868B5D /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7BA62B04C1E44F7790B41DE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C32FB031DB84894AE14B261 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A026F6B9EE2E4CB6A0D51987 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AED1AD6F6F4791B7918134 /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8DB4577BA9FA4EAE994DE351 /* libz.tbd in Resources */ = {isa = PBXBuildFile; fileRef = 3A4EB4E8CE6B46BE8B1A8AFC /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		38829FC6ABB04787A44BC231 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2660D598CD14EDB967F02A7 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3B685344603E4C349761D256 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01726E54AD3F4144AF6F65EE /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9CC3A925F3F4497A8994BF0E /* libresolv.tbd in Resources */ = {isa = PBXBuildFile; fileRef = C7BBCDB4F3EF41578410C688 /* libresolv.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,65 +100,68 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "cfdk/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		5769CC6B405A47AC88E3E1F2 /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		8FD3B86456DB42B9BB54ACB5 /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		3BC5CB766DB04AEF8602E08B /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		994B004B47E64AED95965778 /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		D62C4297230046B19D3E23D5 /* CDVSplashScreen.m */ = {isa = PBXFileReference; name = "CDVSplashScreen.m"; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		25786CA5EEE440069D3ECF53 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		860E1C48CF6E4A1E8AF81F3F /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		3C323EB666C348C4B02305B9 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		14CC6B275B2E4858B9162900 /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		64F4A4E7D08545C387DBA4CC /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		554D51737A79474D9D0E97A6 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		71B01E448EA04519ABECF103 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		844332D5E830484DBD98DB78 /* JPushPlugin.m */ = {isa = PBXFileReference; name = "JPushPlugin.m"; path = "jpush-phonegap-plugin/JPushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		649B0DEA71EF47188B954210 /* jpush-ios-2.1.9.a */ = {isa = PBXFileReference; name = "jpush-ios-2.1.9.a"; path = "cfdk/Plugins/jpush-phonegap-plugin/jpush-ios-2.1.9.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		6DEF16F868034B6DB4A08B1E /* AppDelegate+JPush.m */ = {isa = PBXFileReference; name = "AppDelegate+JPush.m"; path = "jpush-phonegap-plugin/AppDelegate+JPush.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		3EC9B0C033CF42A7AF711B8E /* JPushPlugin.h */ = {isa = PBXFileReference; name = "JPushPlugin.h"; path = "jpush-phonegap-plugin/JPushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		D2E24AC8FEED405681F95174 /* JPUSHService.h */ = {isa = PBXFileReference; name = "JPUSHService.h"; path = "jpush-phonegap-plugin/JPUSHService.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		88DD63E9583540B6A3B9CCF6 /* AppDelegate+JPush.h */ = {isa = PBXFileReference; name = "AppDelegate+JPush.h"; path = "jpush-phonegap-plugin/AppDelegate+JPush.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		F50EFBB0D00347DA83563028 /* PushConfig.plist */ = {isa = PBXFileReference; name = "PushConfig.plist"; path = "PushConfig.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
-		1DABCA905ED04891B6EF0F81 /* CFNetwork.framework */ = {isa = PBXFileReference; name = "CFNetwork.framework"; path = "System/Library/Frameworks/CFNetwork.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		9E1C1277EC6148DC88B41061 /* CoreFoundation.framework */ = {isa = PBXFileReference; name = "CoreFoundation.framework"; path = "System/Library/Frameworks/CoreFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		ECFE5B3FF7104FE39D326683 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		B0737C8CE187424A86939212 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		403736A054A24D7CB72EE83A /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		5C821F14455949FA9F5EE4C8 /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		B9B1290E44C142D0A1A30E3E /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		EBA9762163DF49D98D3E66C7 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "libz.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		380F752179BB46D8821FA906 /* AdSupport.framework */ = {isa = PBXFileReference; name = "AdSupport.framework"; path = "System/Library/Frameworks/AdSupport.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		EF4795A6424042219F3B1FC6 /* UserNotifications.framework */ = {isa = PBXFileReference; name = "UserNotifications.framework"; path = "System/Library/Frameworks/UserNotifications.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		8539D5DFEFAA403E87EFABA2 /* RongCloudAppEventReceiver.m */ = {isa = PBXFileReference; name = "RongCloudAppEventReceiver.m"; path = "io.rong.imlib/src/ios/RongCloudAppEventReceiver.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		4E30859775464B2FB6736C06 /* RongCloudApplicationHandler.m */ = {isa = PBXFileReference; name = "RongCloudApplicationHandler.m"; path = "io.rong.imlib/src/ios/RongCloudApplicationHandler.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		A93C0E4EC8AD4AB8A90F5932 /* RongCloudHybridAdapter.m */ = {isa = PBXFileReference; name = "RongCloudHybridAdapter.m"; path = "io.rong.imlib/src/ios/RongCloudHybridAdapter.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		46037D7360B2443688F3857E /* RongCloudLibPlugin.m */ = {isa = PBXFileReference; name = "RongCloudLibPlugin.m"; path = "io.rong.imlib/src/ios/RongCloudLibPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		88FB4D60677B4C0C8227DB1D /* RongCloudModel.m */ = {isa = PBXFileReference; name = "RongCloudModel.m"; path = "io.rong.imlib/src/ios/RongCloudModel.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		631E1B9F37204381B1C821F1 /* libopencore-amrnb.a */ = {isa = PBXFileReference; name = "libopencore-amrnb.a"; path = "cfdk/Plugins/io.rong.imlib/libopencore-amrnb.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		00AECFC9A26C477FB89DEB2F /* RongCloudAppEventReceiver.h */ = {isa = PBXFileReference; name = "RongCloudAppEventReceiver.h"; path = "io.rong.imlib/src/ios/RongCloudAppEventReceiver.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		E65163CC15E64F84960ECAC6 /* RongCloudApplicationHandler.h */ = {isa = PBXFileReference; name = "RongCloudApplicationHandler.h"; path = "io.rong.imlib/src/ios/RongCloudApplicationHandler.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		64757886B0524103B1D16FFD /* RongCloudHybridAdapter.h */ = {isa = PBXFileReference; name = "RongCloudHybridAdapter.h"; path = "io.rong.imlib/src/ios/RongCloudHybridAdapter.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		46F27030DF7549669CA91DF2 /* RongCloudConstant.h */ = {isa = PBXFileReference; name = "RongCloudConstant.h"; path = "io.rong.imlib/src/ios/RongCloudConstant.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		0187B5F578F24A60A57357F7 /* RongCloudLibPlugin.h */ = {isa = PBXFileReference; name = "RongCloudLibPlugin.h"; path = "io.rong.imlib/src/ios/RongCloudLibPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		B30FF5C3840641198C90EC8D /* RongCloudModel.h */ = {isa = PBXFileReference; name = "RongCloudModel.h"; path = "io.rong.imlib/src/ios/RongCloudModel.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		8933CD31B707479D9CD5EDAE /* RCConfig.plist */ = {isa = PBXFileReference; name = "RCConfig.plist"; path = "RCConfig.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
-		6354F63097FD46B1BFE8C93F /* RongIMLib.framework */ = {isa = PBXFileReference; name = "RongIMLib.framework"; path = "cfdk/Plugins/io.rong.imlib/RongIMLib.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		90BFDBB0346E412DB0A7CA9A /* ImageIO.framework */ = {isa = PBXFileReference; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		F0BE8B7539A54CA1923A53F1 /* MapKit.framework */ = {isa = PBXFileReference; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		6D2DDD8D7B344B16BCDA4742 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		9638E79A7D5C43D6B8517A33 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		E847F8A3575845479ED0BBA2 /* OpenGLES.framework */ = {isa = PBXFileReference; name = "OpenGLES.framework"; path = "System/Library/Frameworks/OpenGLES.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		A424933F79DC4BB7899461B0 /* CoreVideo.framework */ = {isa = PBXFileReference; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		F891DB58D8E24E69A7DD1FE4 /* CoreMedia.framework */ = {isa = PBXFileReference; name = "CoreMedia.framework"; path = "System/Library/Frameworks/CoreMedia.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		D65BBA8587944030830B7109 /* CoreAudio.framework */ = {isa = PBXFileReference; name = "CoreAudio.framework"; path = "System/Library/Frameworks/CoreAudio.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		653708965D0E4D0F8B0669DF /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		73A0DBF26A2C4EC294A6154E /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		8C33E1452DA84C95A40C7A10 /* libxml2.dylib */ = {isa = PBXFileReference; name = "libxml2.dylib"; path = "usr/lib/libxml2.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
-		0062254F1659461B9D15FF72 /* libz.dylib */ = {isa = PBXFileReference; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
-		ABDEB9AA58364A058BFD0DCA /* libstdc++.dylib */ = {isa = PBXFileReference; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
-		0DDC66BABFB44C61AF879346 /* libsqlite3.dylib */ = {isa = PBXFileReference; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
-		A0A9F3475EB24205B958AE5B /* libc++.dylib */ = {isa = PBXFileReference; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
-		0CB260FAAE964AC4A4754986 /* libc++abi.dylib */ = {isa = PBXFileReference; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		D466D2303F1B4B5298BB0057 /* CDVLogger.m */ = {isa = PBXFileReference; name = "CDVLogger.m"; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		6993BD42046E4FC09C1F460F /* CDVLogger.h */ = {isa = PBXFileReference; name = "CDVLogger.h"; path = "cordova-plugin-console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		441BF6E53A9444568D0B24F7 /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		3DF36750E21E4267854CB62C /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		49BC05FF05E540C88D5920CA /* CDVSplashScreen.m */ = {isa = PBXFileReference; name = "CDVSplashScreen.m"; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FFA110848FB24DCDA7B9595D /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		97284B5C94874E5FA0A0E05D /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		99205FD01FBF481B9E0340D9 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		EFEBA552FAA04AC78D9B05BE /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		EC964D92D975427083D28476 /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6149C69D3D434D20A70EA208 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E5205D5BF2B84D7FB81AE481 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4ACDEA89237D48B592653EDF /* RongCloudAppEventReceiver.m */ = {isa = PBXFileReference; name = "RongCloudAppEventReceiver.m"; path = "io.rong.imlib/src/ios/RongCloudAppEventReceiver.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C20E8A6B15264519ABF53280 /* RongCloudApplicationHandler.m */ = {isa = PBXFileReference; name = "RongCloudApplicationHandler.m"; path = "io.rong.imlib/src/ios/RongCloudApplicationHandler.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0C112D895FC046F59260453D /* RongCloudHybridAdapter.m */ = {isa = PBXFileReference; name = "RongCloudHybridAdapter.m"; path = "io.rong.imlib/src/ios/RongCloudHybridAdapter.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		7099D8FE65D941CFAB507809 /* RongCloudLibPlugin.m */ = {isa = PBXFileReference; name = "RongCloudLibPlugin.m"; path = "io.rong.imlib/src/ios/RongCloudLibPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FCF8DCBFD2784F2F91854065 /* RongCloudModel.m */ = {isa = PBXFileReference; name = "RongCloudModel.m"; path = "io.rong.imlib/src/ios/RongCloudModel.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F2EE4EC68B024EF994C3DB21 /* libopencore-amrnb.a */ = {isa = PBXFileReference; name = "libopencore-amrnb.a"; path = "cfdk/Plugins/io.rong.imlib/libopencore-amrnb.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		8D4835C52DF14FD09162087B /* RongCloudAppEventReceiver.h */ = {isa = PBXFileReference; name = "RongCloudAppEventReceiver.h"; path = "io.rong.imlib/src/ios/RongCloudAppEventReceiver.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4CE54D4C2F924A3BA2CBF137 /* RongCloudApplicationHandler.h */ = {isa = PBXFileReference; name = "RongCloudApplicationHandler.h"; path = "io.rong.imlib/src/ios/RongCloudApplicationHandler.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		58285332242E473BB6E5F4C7 /* RongCloudHybridAdapter.h */ = {isa = PBXFileReference; name = "RongCloudHybridAdapter.h"; path = "io.rong.imlib/src/ios/RongCloudHybridAdapter.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		BB308DF8DDF647A08C458095 /* RongCloudConstant.h */ = {isa = PBXFileReference; name = "RongCloudConstant.h"; path = "io.rong.imlib/src/ios/RongCloudConstant.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D6BFE7AC349A4663B3E06CB4 /* RongCloudLibPlugin.h */ = {isa = PBXFileReference; name = "RongCloudLibPlugin.h"; path = "io.rong.imlib/src/ios/RongCloudLibPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C8EC5F7348CC4C7D801AD826 /* RongCloudModel.h */ = {isa = PBXFileReference; name = "RongCloudModel.h"; path = "io.rong.imlib/src/ios/RongCloudModel.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0D9BB49E3C5B40768235E6E1 /* RCConfig.plist */ = {isa = PBXFileReference; name = "RCConfig.plist"; path = "RCConfig.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
+		7CDE046B9F354C348DB5E9A0 /* RongIMLib.framework */ = {isa = PBXFileReference; name = "RongIMLib.framework"; path = "cfdk/Plugins/io.rong.imlib/RongIMLib.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		78700E72ACF747C9AE21256E /* ImageIO.framework */ = {isa = PBXFileReference; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		346124D6458E49D781318ACA /* MapKit.framework */ = {isa = PBXFileReference; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		3596E9D4079E42F3A6D1D599 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		F87317A7839F4166ACE6BB4F /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		D548A53B6A1E4D31A6EC7242 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		55A01C13055740919A93B78C /* OpenGLES.framework */ = {isa = PBXFileReference; name = "OpenGLES.framework"; path = "System/Library/Frameworks/OpenGLES.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		03CB91FDF923474BB1326D2C /* CoreVideo.framework */ = {isa = PBXFileReference; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A2662C83F4534608B8281C72 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A8DAC31FFE8747F99A8D4D41 /* CoreMedia.framework */ = {isa = PBXFileReference; name = "CoreMedia.framework"; path = "System/Library/Frameworks/CoreMedia.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		1E2FC68D69024C11AF4CDA5C /* CoreAudio.framework */ = {isa = PBXFileReference; name = "CoreAudio.framework"; path = "System/Library/Frameworks/CoreAudio.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		62C027608878413D8C158F40 /* CFNetwork.framework */ = {isa = PBXFileReference; name = "CFNetwork.framework"; path = "System/Library/Frameworks/CFNetwork.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		3660C7FC6A59481B9E1377DD /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		EB783FC647B04322B9F5DD27 /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		6B9628E444374C8AB3CDCD8B /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B6290AF8DCAC4EA29B400165 /* libxml2.dylib */ = {isa = PBXFileReference; name = "libxml2.dylib"; path = "usr/lib/libxml2.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		1F8131F5C4634D12B779629D /* libz.dylib */ = {isa = PBXFileReference; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		9ECAF192B84245A8866EC80A /* libstdc++.dylib */ = {isa = PBXFileReference; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		92E561C4A6F64675BB7A7089 /* libsqlite3.dylib */ = {isa = PBXFileReference; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		D4CA909255044A9B99E2F6CB /* libc++.dylib */ = {isa = PBXFileReference; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		1D61AEFFF0744496AC85BD1A /* libc++abi.dylib */ = {isa = PBXFileReference; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		E2D6D75560D74982B1AB8761 /* JPushPlugin.m */ = {isa = PBXFileReference; name = "JPushPlugin.m"; path = "jpush-phonegap-plugin/JPushPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		CD83797A36E74345B1617DC4 /* AppDelegate+JPush.m */ = {isa = PBXFileReference; name = "AppDelegate+JPush.m"; path = "jpush-phonegap-plugin/AppDelegate+JPush.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		CB97F857D5274CFD8F665350 /* jpush-ios-3.0.0.a */ = {isa = PBXFileReference; name = "jpush-ios-3.0.0.a"; path = "cfdk/Plugins/jpush-phonegap-plugin/jpush-ios-3.0.0.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5B83DD0E90604FBABB86E95C /* jcore-ios-1.0.0.a */ = {isa = PBXFileReference; name = "jcore-ios-1.0.0.a"; path = "cfdk/Plugins/jpush-phonegap-plugin/jcore-ios-1.0.0.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1B1F9A48513A46AA90A938DB /* JPushDefine.h */ = {isa = PBXFileReference; name = "JPushDefine.h"; path = "jpush-phonegap-plugin/JPushDefine.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		CD69382583F4465BA615CD2E /* JPushPlugin.h */ = {isa = PBXFileReference; name = "JPushPlugin.h"; path = "jpush-phonegap-plugin/JPushPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		566ACC42BF674013B6266C33 /* AppDelegate+JPush.h */ = {isa = PBXFileReference; name = "AppDelegate+JPush.h"; path = "jpush-phonegap-plugin/AppDelegate+JPush.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D76EA3CAAA404CB391DF61DF /* JPUSHService.h */ = {isa = PBXFileReference; name = "JPUSHService.h"; path = "jpush-phonegap-plugin/JPUSHService.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		891485C09A984D59BBD481B5 /* JPushConfig.plist */ = {isa = PBXFileReference; name = "JPushConfig.plist"; path = "JPushConfig.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
+		59914609DD8A439381868B5D /* CoreFoundation.framework */ = {isa = PBXFileReference; name = "CoreFoundation.framework"; path = "System/Library/Frameworks/CoreFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		4C32FB031DB84894AE14B261 /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		95AED1AD6F6F4791B7918134 /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		3A4EB4E8CE6B46BE8B1A8AFC /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "libz.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D2660D598CD14EDB967F02A7 /* AdSupport.framework */ = {isa = PBXFileReference; name = "AdSupport.framework"; path = "System/Library/Frameworks/AdSupport.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		01726E54AD3F4144AF6F65EE /* UserNotifications.framework */ = {isa = PBXFileReference; name = "UserNotifications.framework"; path = "System/Library/Frameworks/UserNotifications.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		C7BBCDB4F3EF41578410C688 /* libresolv.tbd */ = {isa = PBXFileReference; name = "libresolv.tbd"; path = "libresolv.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,35 +170,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				DFC1A2375345496189D85F63 /* jpush-ios-2.1.9.a in Frameworks */,
-				4AC3EA1C9A0942358D95750D /* CFNetwork.framework in Frameworks */,
-				65E0C6E6F87041B88F8F1498 /* CoreFoundation.framework in Frameworks */,
-				4D11420240A147B0812EA5C0 /* CoreTelephony.framework in Frameworks */,
-				C69FB3C6DE5A463683F0FAA2 /* SystemConfiguration.framework in Frameworks */,
-				83B6985F7F114D6E87C575E8 /* Foundation.framework in Frameworks */,
-				74159E94AF304C3F992069FE /* UIKit.framework in Frameworks */,
-				6114CB4412D747AF9684C572 /* Security.framework in Frameworks */,
-				CB280C4B76974971A28C6116 /* libz.tbd in Resources */,
-				B87B4F7D2311482CA292C3DD /* AdSupport.framework in Frameworks */,
-				BC1C16CD5AD949DC9F16F98E /* UserNotifications.framework in Frameworks */,
-				67BD1F37BF074B2A84CCE6B9 /* libopencore-amrnb.a in Frameworks */,
-				E6843D6C82714F5A90705318 /* RongIMLib.framework in Frameworks */,
-				B7E44A12F14D4383AD447BC1 /* ImageIO.framework in Frameworks */,
-				72B1BFB10B25497A87C36AA5 /* MapKit.framework in Frameworks */,
-				5C79E6FC57D9459D9A22BD0D /* CoreLocation.framework in Frameworks */,
-				2555484E6A334FEBA61421CE /* QuartzCore.framework in Frameworks */,
-				35DFB1F7A19A476BBCB6DCB4 /* OpenGLES.framework in Frameworks */,
-				5E7558FB2D4843D6AE80469C /* CoreVideo.framework in Frameworks */,
-				C7EC785DF48E4BC1BDA75958 /* CoreMedia.framework in Frameworks */,
-				617266B25CAE4A83AD8C2B9D /* CoreAudio.framework in Frameworks */,
-				846D0DB34E5D48C3948DE7BF /* AudioToolbox.framework in Frameworks */,
-				2F0A9527BE6E48048DF81D81 /* AVFoundation.framework in Frameworks */,
-				122107DEF0C84773AAADCB5C /* libxml2.dylib in Frameworks */,
-				B9CB9DF5432843F09D7511B4 /* libz.dylib in Frameworks */,
-				CE044F90458647CB9F341985 /* libstdc++.dylib in Frameworks */,
-				BC46EB6E5CFE433D85894F08 /* libsqlite3.dylib in Frameworks */,
-				A08ED093BC02498D98761BCC /* libc++.dylib in Frameworks */,
-				C52BADE089F54D02AE96F443 /* libc++abi.dylib in Frameworks */,
+				A5090A9F1E674863B80FBB85 /* libopencore-amrnb.a in Frameworks */,
+				88A74001823F423499352CA8 /* RongIMLib.framework in Frameworks */,
+				06C076F641CF4169836EA13A /* ImageIO.framework in Frameworks */,
+				E76375F087364DDD9716C046 /* MapKit.framework in Frameworks */,
+				A6C134D7E3504DCC9FAC8A4E /* CoreLocation.framework in Frameworks */,
+				C68A72697F804DE58366DA8C /* SystemConfiguration.framework in Frameworks */,
+				2508A0680C334357AD503538 /* QuartzCore.framework in Frameworks */,
+				1492AE89D360489493718966 /* OpenGLES.framework in Frameworks */,
+				5EBFEC320494489D892B3C28 /* CoreVideo.framework in Frameworks */,
+				2CFC4038A757431C957F5F47 /* CoreTelephony.framework in Frameworks */,
+				F1AC30C7111D4AB58636F176 /* CoreMedia.framework in Frameworks */,
+				EECDE3D380CC4964ABA56D98 /* CoreAudio.framework in Frameworks */,
+				F654280B9A6B403B98B742CF /* CFNetwork.framework in Frameworks */,
+				8CD4B16CA6E342F79E7ECB63 /* AudioToolbox.framework in Frameworks */,
+				5577B87912474EB9A8DEFA03 /* AVFoundation.framework in Frameworks */,
+				15CD5DCBAC464E1BA0503637 /* UIKit.framework in Frameworks */,
+				94DD68F74FD844E698CB281B /* libxml2.dylib in Frameworks */,
+				859D1B0E596E41D592D92159 /* libz.dylib in Frameworks */,
+				358912F2F28F4CD2A9572030 /* libstdc++.dylib in Frameworks */,
+				CB90E1030B914759B89D6BAC /* libsqlite3.dylib in Frameworks */,
+				449B44BB49BF4DC28ED850C3 /* libc++.dylib in Frameworks */,
+				2E93B5455D92436CA583B9A5 /* libc++abi.dylib in Frameworks */,
+				1A8C8273A3E749398AE163DF /* jpush-ios-3.0.0.a in Frameworks */,
+				8608BA953EFC419392310CBD /* jcore-ios-1.0.0.a in Frameworks */,
+				31E7A94FBB44436BBB55817B /* CoreFoundation.framework in Frameworks */,
+				7BA62B04C1E44F7790B41DE9 /* Foundation.framework in Frameworks */,
+				A026F6B9EE2E4CB6A0D51987 /* Security.framework in Frameworks */,
+				8DB4577BA9FA4EAE994DE351 /* libz.tbd in Resources */,
+				38829FC6ABB04787A44BC231 /* AdSupport.framework in Frameworks */,
+				3B685344603E4C349761D256 /* UserNotifications.framework in Frameworks */,
+				9CC3A925F3F4497A8994BF0E /* libresolv.tbd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +262,8 @@
 				0207DA571B56EA530066E2B4 /* Images.xcassets */,
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* cfdk-Info.plist */,
-				F50EFBB0D00347DA83563028 /* PushConfig.plist */,
-				8933CD31B707479D9CD5EDAE /* RCConfig.plist */,
+				0D9BB49E3C5B40768235E6E1 /* RCConfig.plist */,
+				891485C09A984D59BBD481B5 /* JPushConfig.plist */,
 			);
 			name = Resources;
 			path = "cfdk/Resources";
@@ -265,35 +272,37 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				649B0DEA71EF47188B954210 /* jpush-ios-2.1.9.a */,
-				1DABCA905ED04891B6EF0F81 /* CFNetwork.framework */,
-				9E1C1277EC6148DC88B41061 /* CoreFoundation.framework */,
-				ECFE5B3FF7104FE39D326683 /* CoreTelephony.framework */,
-				B0737C8CE187424A86939212 /* SystemConfiguration.framework */,
-				403736A054A24D7CB72EE83A /* Foundation.framework */,
-				5C821F14455949FA9F5EE4C8 /* UIKit.framework */,
-				B9B1290E44C142D0A1A30E3E /* Security.framework */,
-				EBA9762163DF49D98D3E66C7 /* libz.tbd */,
-				380F752179BB46D8821FA906 /* AdSupport.framework */,
-				EF4795A6424042219F3B1FC6 /* UserNotifications.framework */,
-				631E1B9F37204381B1C821F1 /* libopencore-amrnb.a */,
-				6354F63097FD46B1BFE8C93F /* RongIMLib.framework */,
-				90BFDBB0346E412DB0A7CA9A /* ImageIO.framework */,
-				F0BE8B7539A54CA1923A53F1 /* MapKit.framework */,
-				6D2DDD8D7B344B16BCDA4742 /* CoreLocation.framework */,
-				9638E79A7D5C43D6B8517A33 /* QuartzCore.framework */,
-				E847F8A3575845479ED0BBA2 /* OpenGLES.framework */,
-				A424933F79DC4BB7899461B0 /* CoreVideo.framework */,
-				F891DB58D8E24E69A7DD1FE4 /* CoreMedia.framework */,
-				D65BBA8587944030830B7109 /* CoreAudio.framework */,
-				653708965D0E4D0F8B0669DF /* AudioToolbox.framework */,
-				73A0DBF26A2C4EC294A6154E /* AVFoundation.framework */,
-				8C33E1452DA84C95A40C7A10 /* libxml2.dylib */,
-				0062254F1659461B9D15FF72 /* libz.dylib */,
-				ABDEB9AA58364A058BFD0DCA /* libstdc++.dylib */,
-				0DDC66BABFB44C61AF879346 /* libsqlite3.dylib */,
-				A0A9F3475EB24205B958AE5B /* libc++.dylib */,
-				0CB260FAAE964AC4A4754986 /* libc++abi.dylib */,
+				F2EE4EC68B024EF994C3DB21 /* libopencore-amrnb.a */,
+				7CDE046B9F354C348DB5E9A0 /* RongIMLib.framework */,
+				78700E72ACF747C9AE21256E /* ImageIO.framework */,
+				346124D6458E49D781318ACA /* MapKit.framework */,
+				3596E9D4079E42F3A6D1D599 /* CoreLocation.framework */,
+				F87317A7839F4166ACE6BB4F /* SystemConfiguration.framework */,
+				D548A53B6A1E4D31A6EC7242 /* QuartzCore.framework */,
+				55A01C13055740919A93B78C /* OpenGLES.framework */,
+				03CB91FDF923474BB1326D2C /* CoreVideo.framework */,
+				A2662C83F4534608B8281C72 /* CoreTelephony.framework */,
+				A8DAC31FFE8747F99A8D4D41 /* CoreMedia.framework */,
+				1E2FC68D69024C11AF4CDA5C /* CoreAudio.framework */,
+				62C027608878413D8C158F40 /* CFNetwork.framework */,
+				3660C7FC6A59481B9E1377DD /* AudioToolbox.framework */,
+				EB783FC647B04322B9F5DD27 /* AVFoundation.framework */,
+				6B9628E444374C8AB3CDCD8B /* UIKit.framework */,
+				B6290AF8DCAC4EA29B400165 /* libxml2.dylib */,
+				1F8131F5C4634D12B779629D /* libz.dylib */,
+				9ECAF192B84245A8866EC80A /* libstdc++.dylib */,
+				92E561C4A6F64675BB7A7089 /* libsqlite3.dylib */,
+				D4CA909255044A9B99E2F6CB /* libc++.dylib */,
+				1D61AEFFF0744496AC85BD1A /* libc++abi.dylib */,
+				CB97F857D5274CFD8F665350 /* jpush-ios-3.0.0.a */,
+				5B83DD0E90604FBABB86E95C /* jcore-ios-1.0.0.a */,
+				59914609DD8A439381868B5D /* CoreFoundation.framework */,
+				4C32FB031DB84894AE14B261 /* Foundation.framework */,
+				95AED1AD6F6F4791B7918134 /* Security.framework */,
+				3A4EB4E8CE6B46BE8B1A8AFC /* libz.tbd */,
+				D2660D598CD14EDB967F02A7 /* AdSupport.framework */,
+				01726E54AD3F4144AF6F65EE /* UserNotifications.framework */,
+				C7BBCDB4F3EF41578410C688 /* libresolv.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -319,34 +328,35 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				5769CC6B405A47AC88E3E1F2 /* CDVLogger.m */,
-				8FD3B86456DB42B9BB54ACB5 /* CDVLogger.h */,
-				3BC5CB766DB04AEF8602E08B /* CDVDevice.m */,
-				994B004B47E64AED95965778 /* CDVDevice.h */,
-				D62C4297230046B19D3E23D5 /* CDVSplashScreen.m */,
-				25786CA5EEE440069D3ECF53 /* CDVViewController+SplashScreen.m */,
-				860E1C48CF6E4A1E8AF81F3F /* CDVSplashScreen.h */,
-				3C323EB666C348C4B02305B9 /* CDVViewController+SplashScreen.h */,
-				14CC6B275B2E4858B9162900 /* CDVStatusBar.m */,
-				64F4A4E7D08545C387DBA4CC /* CDVStatusBar.h */,
-				554D51737A79474D9D0E97A6 /* IonicKeyboard.m */,
-				71B01E448EA04519ABECF103 /* IonicKeyboard.h */,
-				844332D5E830484DBD98DB78 /* JPushPlugin.m */,
-				6DEF16F868034B6DB4A08B1E /* AppDelegate+JPush.m */,
-				3EC9B0C033CF42A7AF711B8E /* JPushPlugin.h */,
-				D2E24AC8FEED405681F95174 /* JPUSHService.h */,
-				88DD63E9583540B6A3B9CCF6 /* AppDelegate+JPush.h */,
-				8539D5DFEFAA403E87EFABA2 /* RongCloudAppEventReceiver.m */,
-				4E30859775464B2FB6736C06 /* RongCloudApplicationHandler.m */,
-				A93C0E4EC8AD4AB8A90F5932 /* RongCloudHybridAdapter.m */,
-				46037D7360B2443688F3857E /* RongCloudLibPlugin.m */,
-				88FB4D60677B4C0C8227DB1D /* RongCloudModel.m */,
-				00AECFC9A26C477FB89DEB2F /* RongCloudAppEventReceiver.h */,
-				E65163CC15E64F84960ECAC6 /* RongCloudApplicationHandler.h */,
-				64757886B0524103B1D16FFD /* RongCloudHybridAdapter.h */,
-				46F27030DF7549669CA91DF2 /* RongCloudConstant.h */,
-				0187B5F578F24A60A57357F7 /* RongCloudLibPlugin.h */,
-				B30FF5C3840641198C90EC8D /* RongCloudModel.h */,
+				D466D2303F1B4B5298BB0057 /* CDVLogger.m */,
+				6993BD42046E4FC09C1F460F /* CDVLogger.h */,
+				441BF6E53A9444568D0B24F7 /* CDVDevice.m */,
+				3DF36750E21E4267854CB62C /* CDVDevice.h */,
+				49BC05FF05E540C88D5920CA /* CDVSplashScreen.m */,
+				FFA110848FB24DCDA7B9595D /* CDVViewController+SplashScreen.m */,
+				97284B5C94874E5FA0A0E05D /* CDVSplashScreen.h */,
+				99205FD01FBF481B9E0340D9 /* CDVViewController+SplashScreen.h */,
+				EFEBA552FAA04AC78D9B05BE /* CDVStatusBar.m */,
+				EC964D92D975427083D28476 /* CDVStatusBar.h */,
+				6149C69D3D434D20A70EA208 /* IonicKeyboard.m */,
+				E5205D5BF2B84D7FB81AE481 /* IonicKeyboard.h */,
+				4ACDEA89237D48B592653EDF /* RongCloudAppEventReceiver.m */,
+				C20E8A6B15264519ABF53280 /* RongCloudApplicationHandler.m */,
+				0C112D895FC046F59260453D /* RongCloudHybridAdapter.m */,
+				7099D8FE65D941CFAB507809 /* RongCloudLibPlugin.m */,
+				FCF8DCBFD2784F2F91854065 /* RongCloudModel.m */,
+				8D4835C52DF14FD09162087B /* RongCloudAppEventReceiver.h */,
+				4CE54D4C2F924A3BA2CBF137 /* RongCloudApplicationHandler.h */,
+				58285332242E473BB6E5F4C7 /* RongCloudHybridAdapter.h */,
+				BB308DF8DDF647A08C458095 /* RongCloudConstant.h */,
+				D6BFE7AC349A4663B3E06CB4 /* RongCloudLibPlugin.h */,
+				C8EC5F7348CC4C7D801AD826 /* RongCloudModel.h */,
+				E2D6D75560D74982B1AB8761 /* JPushPlugin.m */,
+				CD83797A36E74345B1617DC4 /* AppDelegate+JPush.m */,
+				1B1F9A48513A46AA90A938DB /* JPushDefine.h */,
+				CD69382583F4465BA615CD2E /* JPushPlugin.h */,
+				566ACC42BF674013B6266C33 /* AppDelegate+JPush.h */,
+				D76EA3CAAA404CB391DF61DF /* JPUSHService.h */,
 			);
 			name = Plugins;
 			path = "cfdk/Plugins";
@@ -430,8 +440,8 @@
 				3047A5141AB8059700498E2A /* build.xcconfig in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */,
-				2504CA5BB40F43FDBCB742A9 /* PushConfig.plist in Resources */,
-				672CDD6D2F6744659289912A /* RCConfig.plist in Resources */,
+				774A6927824F40BB84279EE8 /* RCConfig.plist in Resources */,
+				0390AAA8636841EEA54142F9 /* JPushConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,19 +473,19 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				6211F4152D57458B875FFA8F /* CDVLogger.m in Sources */,
-				98E5E296260A48E193FF32B0 /* CDVDevice.m in Sources */,
-				62D6C694C95C4409BFE7947F /* CDVSplashScreen.m in Sources */,
-				F389925FE6FC474E81A34FDD /* CDVViewController+SplashScreen.m in Sources */,
-				E8816824AD684D9981C93E56 /* CDVStatusBar.m in Sources */,
-				D7B60201B1B04EC5A7087FA5 /* IonicKeyboard.m in Sources */,
-				2328D672B3BE4E4D8200E5F8 /* JPushPlugin.m in Sources */,
-				03707A5C50E5435ABFBB2E5B /* AppDelegate+JPush.m in Sources */,
-				CCBD16F965E64E5D83E47839 /* RongCloudAppEventReceiver.m in Sources */,
-				7697733CDB0B44969F6161A9 /* RongCloudApplicationHandler.m in Sources */,
-				235524670C3C48D7BAFF2E3B /* RongCloudHybridAdapter.m in Sources */,
-				E9C4F23614C24B39A471A3F5 /* RongCloudLibPlugin.m in Sources */,
-				280EABFA9BC04577B2599B59 /* RongCloudModel.m in Sources */,
+				FD78A69D47B64E5DAC8E824F /* CDVLogger.m in Sources */,
+				2BAEB2B53B9C45F29502D9B6 /* CDVDevice.m in Sources */,
+				8FCBAC3394D644AA9DDD714B /* CDVSplashScreen.m in Sources */,
+				A331201806A14306A079DAD6 /* CDVViewController+SplashScreen.m in Sources */,
+				6DABEBC2C42A4D149394D43D /* CDVStatusBar.m in Sources */,
+				736497963A5C435B98BCB6DF /* IonicKeyboard.m in Sources */,
+				C1C05A9D3953449481006A20 /* RongCloudAppEventReceiver.m in Sources */,
+				4FF4E366F31E425CA3C2A790 /* RongCloudApplicationHandler.m in Sources */,
+				77115CC20A68443D95C7DAFC /* RongCloudHybridAdapter.m in Sources */,
+				3DE73166814744DE914E0EDC /* RongCloudLibPlugin.m in Sources */,
+				2A2920405F62492BBB8F69C2 /* RongCloudModel.m in Sources */,
+				E42820C90469484CA78290D2 /* JPushPlugin.m in Sources */,
+				4EFA65286AFF4F3A8F1E7803 /* AppDelegate+JPush.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,8 +521,9 @@
 				PRODUCT_NAME = "cfdk";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
 					"\"$(SRCROOT)/cfdk/Plugins/io.rong.imlib\"",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -539,8 +550,9 @@
 				PRODUCT_NAME = "cfdk";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
 					"\"$(SRCROOT)/cfdk/Plugins/io.rong.imlib\"",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,8 +587,9 @@
 				PRODUCT_NAME = "cfdk";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
 					"\"$(SRCROOT)/cfdk/Plugins/io.rong.imlib\"",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,8 +623,9 @@
 				PRODUCT_NAME = "cfdk";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
 					"\"$(SRCROOT)/cfdk/Plugins/io.rong.imlib\"",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
+					"\"$(SRCROOT)/cfdk/Plugins/jpush-phonegap-plugin\"",
 				);
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

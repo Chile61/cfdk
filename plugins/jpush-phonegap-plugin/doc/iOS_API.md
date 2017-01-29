@@ -1,5 +1,6 @@
 # iOS API
 
+- [延迟注册和启动推送通知服务](#延迟注册和启动推送通知服务)
 - [开始与停止推送服务](#开始与停止推送服务)
 - [获取 RegistrationID](#获取-registrationid)
 - [别名与标签](#别名与标签)
@@ -10,18 +11,46 @@
 - [获取自定义消息内容](#获取自定义消息内容)
 - [设置Badge](#设置badge)
 - [本地通知](#本地通知)
+- [获取本地通知内容](#获取本地通知内容)
 - [页面的统计](#页面的统计)
 - [日志等级设置](#日志等级设置)
 - [地理位置上报](#地理位置上报)
 - [设备平台判断](#设备平台判断)
 - [iOS 10 进阶推送特性](#ios-10-进阶推送特性)
 - [获取用户推送设置](#获取用户推送设置)
+- [监听事件统一说明](#监听事件统一说明)
+
+
+
+## 延迟注册和启动推送通知服务
+
+本插件默认在 App 启动完成之后，立即「注册苹果通知服务」+「启动 JPush SDK」，其中：
+
+- 「注册苹果通知服务」会弹出提示窗口向用户请求权限。
+- 「启动 JPush SDK」是使用 JPush 各项 API 的必要条件。
+
+开发者可以根据自己的需求，延迟注册和启动，需做以下操作：
+
+1. 查找并配置 `PushConfig.plist` 文件中的 `Delay` 字段为 `YES`，表明会延迟使用，此时插件不再自动注册、启动通知。
+2. 在需要注册并启动通知的地方调用 API - startJPushSDK。
+
+### API - startJPushSDK
+
+注册苹果通知服务，并启动 JPush SDK。
+
+#### 接口定义
+
+```
+window.plugins.jPushPlugin.startJPushSDK()
+```
+
+
 
 ## 开始与停止推送服务
 
 ### API - init
 
-调用此 API,用来开启 JPush SDK 提供的推送服务。
+调用此 API，用来开启 JPush SDK 提供的推送服务。
 
 开发者 App 可以通过调用停止推送服务 API 来停止极光推送服务，当又需要使用极光推送服务时，则必须要调用恢复推送服务 API。
 
@@ -35,8 +64,9 @@ JPush SDK 会恢复正常的默认行为。（因为保存在本地的状态数�
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.init()
-
+```
+window.plugins.jPushPlugin.init()
+```
 
 ### API - stopPush
 
@@ -45,8 +75,7 @@ JPush SDK 会恢复正常的默认行为。（因为保存在本地的状态数�
 
 #### 接口定义
 
-    window.plugins.jPushPlugin.stopPush()
-
+  window.plugins.jPushPlugin.stopPush()
 
 ### API - resumePush
 
@@ -54,7 +83,10 @@ JPush SDK 会恢复正常的默认行为。（因为保存在本地的状态数�
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.resumePush()
+```
+window.plugins.jPushPlugin.resumePush()
+```
+
 
 
 ### API - isPushStopped
@@ -63,23 +95,25 @@ iOS平台，检查推送服务是否停止。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.isPushStopped(callback)
-
+```
+window.plugins.jPushPlugin.isPushStopped(callback)
+```
 
 #### 参数说明
 
 - callback 回调函数，用来通知 JPush 的推送服务是否开启。
 
 #### 代码示例
-	window.plugins.jPushPlugin.isPushStopped(callback)
-	var callback = function(data) {
-		if(data > 0) {
-		    // 已关闭
-		} else {
-		    // 已开启
-		}
-	}
 
+```js
+window.plugins.jPushPlugin.isPushStopped(function(data) {
+	  if(data > 0) {
+	    // 已关闭
+	  } else {
+	    // 已开启
+	  }
+  })
+```
 
 ## 获取 RegistrationID
 
@@ -94,7 +128,9 @@ JPush SDK 会以广播的形式发送 RegistrationID 到应用程序。
 
 #### 接口定义
 
-	JPushPlugin.prototype.getRegistrationID(callback)
+```js
+JPushPlugin.prototype.getRegistrationID(callback)
+```
 
 #### 返回值
 
@@ -102,14 +138,13 @@ JPush SDK 会以广播的形式发送 RegistrationID 到应用程序。
 
 #### 调用示例
 
- 	window.plugins.jPushPlugin.getRegistrationID(onGetRegistradionID);
-	var onGetRegistradionID = function(data) {
-		try {
-			console.log("JPushPlugin:registrationID is " + data);
-		} catch(exception) {
-			console.log(exception);
-		}
-	}
+```js
+window.plugins.jPushPlugin.getRegistrationID(function(data) {
+	console.log("JPushPlugin:registrationID is " + data)
+})
+```
+
+
 
 ## 别名与标签
 
@@ -143,42 +178,43 @@ JPush SDK 会以广播的形式发送 RegistrationID 到应用程序。
 
 #### 接口定义
 
-	JPushPlugin.prototype.setTagsWithAlias(tags, alias)
-	JPushPlugin.prototype.setTags(tags)
-	JPushPlugin.prototype.setAlias(alias)
+```
+JPushPlugin.prototype.setTagsWithAlias(tags, alias)
+JPushPlugin.prototype.setTags(tags)
+JPushPlugin.prototype.setAlias(alias)
+```
 
 #### 参数说明
-* tags:
-  * 参数类型为数组。
-  * nil 此次调用不设置此值。
-  * 空集合表示取消之前的设置。
-  * 每次调用至少设置一个 tag，覆盖之前的设置，不是新增。
-  * 有效的标签组成：字母（区分大小写）、数字、下划线、汉字。
-  * 限制：每个 tag 命名长度限制为 40 字节，最多支持设置 100 个 tag，但总长度不得超过1K字节（判断长度需采用UTF-8编码）。
-  * 单个设备最多支持设置 100 个 tag，App 全局 tag 数量无限制。
-* alias:
-  * 参数类型为字符串。
-  * nil 此次调用不设置此值。
-  * 空字符串 （""）表示取消之前的设置。
-  * 有效的别名组成：字母（区分大小写）、数字、下划线、汉字。
-  * 限制：alias 命名长度限制为 40 字节（判断长度需采用 UTF-8 编码）。
+
+- tags:
+  - 参数类型为数组。
+  - nil 此次调用不设置此值。
+  - 空集合表示取消之前的设置。
+  - 每次调用至少设置一个 tag，覆盖之前的设置，不是新增。
+  - 有效的标签组成：字母（区分大小写）、数字、下划线、汉字。
+  - 限制：每个 tag 命名长度限制为 40 字节，最多支持设置 100 个 tag，但总长度不得超过1K字节（判断长度需采用UTF-8编码）。
+  - 单个设备最多支持设置 100 个 tag，App 全局 tag 数量无限制。
+- alias:
+  - 参数类型为字符串。
+  - nil 此次调用不设置此值。
+  - 空字符串 （""）表示取消之前的设置。
+  - 有效的别名组成：字母（区分大小写）、数字、下划线、汉字。
+  - 限制：alias 命名长度限制为 40 字节（判断长度需采用 UTF-8 编码）。
 
 #### 返回值说明
 
 函数本身无返回值，但需要注册 `jpush.setTagsWithAlias` 事件来监听设置结果。
 
-	document.addEventListener("jpush.setTagsWithAlias", onTagsWithAlias, false);
-	var onTagsWithAlias = function(event) {
-	    try {
-	       console.log("onTagsWithAlias");    
-	       var result = "result code:"+event.resultCode + " ";
-	       result += "tags:" + event.tags + " ";
-	       result += "alias:" + event.alias + " ";
-	       $("#tagAliasResult").html(result);
-	    } catch(exception) {
-	       console.log(exception)
-	    }
-   	}
+```js
+var onTagsWithAlias = function(event) {
+    console.log("onTagsWithAlias")
+    var result = "result code:"+event.resultCode + " "
+    result += "tags:" + event.tags + " "
+    result += "alias:" + event.alias + " "
+    $("#tagAliasResult").html(result)
+}
+document.addEventListener("jpush.setTagsWithAlias", onTagsWithAlias, false)
+```
 
 #### 错误码定义
 
@@ -194,7 +230,6 @@ JPush SDK 会以广播的形式发送 RegistrationID 到应用程序。
 | 6008 | tag/alias 超出总长度限制           | 总长度最多 1K 字节。                      |
 | 6011 | 10s内设置tag或alias大于3次         | 短时间内操作过于频繁。                       |
 
-
 ## 获取 APNS 推送内容
 
 ### 点击推送通知
@@ -207,28 +242,34 @@ JPush SDK 会以广播的形式发送 RegistrationID 到应用程序。
 
 - 在你需要接收通知的的 js 文件中加入:
 
-  	document.addEventListener("jpush.openNotification", onOpenNotification, false);
+  ```js
+  document.addEventListener("jpush.openNotification", onOpenNotification, false)
+  ```
 
 - onOpenNotification 需要这样写：
 
-  	var onOpenNotification = function(event) {
-  		var alertContent;
-  		alertContent = event.aps.alert;
-  		alert("open Notificaiton:" + alertContent);
-  	}
+  ```js
+  var onOpenNotification = function(event) {
+  	var alertContent
+  	alertContent = event.aps.alert
+  	alert("open Notificaiton:" + alertContent)
+  }
+  ```
 
 - event 举例:
 
-  	{
-  		"aps":{
-  			  "badge":1,
-  			  "sound":"default",
-  			  "alert":"今天去哪儿"
-  		},
-  		"key1":"value1",
-  		"key2":"value2",
-  		"_j_msgid":154604475
-  	}
+  ```json
+  {
+  	"aps":{
+  		  "badge":1,
+  		  "sound":"default",
+  		  "alert":"今天去哪儿"
+  	},
+  	"key1":"value1",
+  	"key2":"value2",
+  	"_j_msgid":154604475
+  }
+  ```
 
 ### 前台收到推送
 
@@ -240,140 +281,150 @@ JPush SDK 会以广播的形式发送 RegistrationID 到应用程序。
 
 - 在你需要接收通知的的 js 文件中加入:
 
-  	document.addEventListener("jpush.receiveNotification", onReceiveNotification, false);
+  ```js
+  document.addEventListener("jpush.receiveNotification", onReceiveNotification, false)
+  ```
 
 - onReceiveNotification 需要这样写：
 
-  	var onReceiveNotification = function(event) {
-  		var alertContent;
-  		alertContent = event.aps.alert;
-  		alert("open Notificaiton:" + alertContent);
-  	}
+  ```js
+  var onReceiveNotification = function(event) {
+  	var alertContent
+  	alertContent = event.aps.alert
+  	alert("open Notificaiton:" + alertContent)
+  }
+  ```
 
 - event 举例
 
-  	{
-  		"aps":{
-  			  "badge":1,
-  			  "sound":"default",
-  			  "alert":"今天去哪儿"
-  		},
-  		"key1":"value1",
-  		"key2":"value2",
-  		"_j_msgid":154604475
-  	}
+  ```json
+  {
+  	"aps":{
+  		  "badge":1,
+  		  "sound":"default",
+  		  "alert":"今天去哪儿"
+  	},
+  	"key1":"value1",
+  	"key2":"value2",
+  	"_j_msgid":154604475
+  }
+  ```
 
 ### 后台收到推送
 
 #### event - jpush.backgroundNotification
 
-应用程序处于后台时收到推送会触发该事件，可以在后台执行一段代码。具体配置参考 [iOS 7 Background Remote Notification](http://docs.jpush.io/client/ios_tutorials/#ios-7-background-remote-notification)
+应用程序处于后台时收到推送会触发该事件，可以在后台执行一段代码。具体配置参考 [iOS 7 Background Remote Notification](https://docs.jiguang.cn/jpush/client/iOS/ios_new_fetures/#ios-7-background-remote-notification)
 
 #### 代码示例
 
 - 在你需要接收通知的的 js 文件中加入:
 
-  	document.addEventListener("jpush.backgroundNotification", onBackgroundNotification, false);
+  ```js
+  document.addEventListener("jpush.backgroundNotification", onBackgroundNotification, false)
+  ```
 
 - onBackgroundNotification 需要这样写：
 
-  	var onBackgroundNotification = function(event) {
-  		var alertContent;
-  		alertContent = event.aps.alert;
-  		alert("open Notificaiton:" + alertContent);
-  	}
+  ```js
+  var onBackgroundNotification = function(event) {
+  	var alertContent
+  	alertContent = event.aps.alert
+  	alert("open Notificaiton:" + alertContent)
+  }
+  ```
 
-+ event 举例
 
-  	{
-  		"aps":{
-  			  "badge":1,
-  			  "sound":"default",
-  			  "alert":"今天去哪儿"
-  		},
-  		"key1":"value1",
-  		"key2":"value2",
-  		"_j_msgid":154604475
-  	}
+- event 举例
 
-#### API - receiveMessageIniOSCallback
+  ```json
+  {
+  	"aps":{
+  		  "badge":1,
+  		  "sound":"default",
+  		  "alert":"今天去哪儿"
+  	},
+  	"key1":"value1",
+  	"key2":"value2",
+  	"_j_msgid":154604475
+  }
+  ```
 
-用于 iOS 收到应用内消息的回调函数(请注意和通知的区别)，该函数不需要主动调用
-不推荐使用回调函数
 
-##### 接口定义
 
-	JPushPlugin.prototype.receiveMessageIniOSCallback(data)
-
-##### 参数说明
-
-- data: 是一个 js 字符串使用如下代码解析，js 具体 key 根据应用内消息来确定:
-
-  var bToObj = JSON.parse(data);
 
 
 ## 获取自定义消息内容
-
 
 ### event - jpush.receiveMessage
 
 收到应用内消息时触发这个事件, 推荐使用事件的方式传递，但同时保留了 receiveMessageIniOSCallback 的回调函数，兼容以前的代码。
 
-
 #### 代码示例
 
 - 在你需要接收通知的的 js 文件中加入:
 
-  	document.addEventListener("jpush.receiveMessage", onReceiveMessage, false);
+  ```js
+  document.addEventListener("jpush.receiveMessage", onReceiveMessage, false)
+  ```
 
 - onReceiveMessage 需要这样写：
 
-  	var onReceiveMessage = function(event) {
-  		try{
-  			var message;
-  			message = event.content;      
-  			$("#messageResult").html(message);
-  		}catch(exception) {
-  			console.log("JPushPlugin:onReceiveMessage-->" + exception);
-  		}
+  ```js
+  var onReceiveMessage = function(event) {
+  	try {
+  		var message = event.content
+  		$("#messageResult").html(message)
+  	} catch(exception) {
+  		console.log("JPushPlugin:onReceiveMessage-->" + exception);
   	}
-
+  }
+  ```
 
 - event 举例:
 
+  ```json
+  {
+  	"content":"今天去哪儿",
+  	"extras":
   	{
-  		"content":"今天去哪儿",
-  		"extras":
-  		{
-  			"key":"不填写没有"
-  		}
+  		"key":"不填写没有"
   	}
+  }
+  ```
 
 ## 设置Badge
+
 ### API - setBadge, resetBadge
 
- JPush 封装 badge 功能，允许应用上传 badge 值至 JPush 服务器，
- 由 JPush 后台帮助管理每个用户所对应的推送 badge 值，简化了设置推送 badge 的操作。
+JPush 封装 badge 功能，允许应用上传 badge 值至 JPush 服务器，由 JPush 后台帮助管理每个用户所对应的推送 badge 值，简化了设置推送 badge 的操作。
 （本接口不会直接改变应用本地的角标值. 要修改本地 badege 值，使用 setApplicationIconBadgeNumber）
 
 实际应用中，开发者可以直接对 badge 值做增减操作，无需自己维护用户与 badge 值之间的对应关系。
+
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.setBadge(value)
-	window.plugins.jPushPlugin.prototype.reSetBadge()
+```js
+window.plugins.jPushPlugin.prototype.setBadge(value)
+window.plugins.jPushPlugin.prototype.reSetBadge()
+```
 
-resetBadge相当于setBadge(0)。
+resetBadge 相当于 setBadge(0)。
 
 #### 参数说明
+
 value 取值范围：[0,99999]。
 
 #### 返回值
+
 无，控制台会有 log 打印设置结果。
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.setBadge(5);
-	window.plugins.jPushPlugin.reSetBadge();
+```js
+window.plugins.jPushPlugin.setBadge(5)
+window.plugins.jPushPlugin.reSetBadge()
+```
 
 ### API - setApplicationIconBadgeNumber
 
@@ -381,7 +432,9 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.setApplicationIconBadgeNumber(badge)
+```js
+window.plugins.jPushPlugin.prototype.setApplicationIconBadgeNumber(badge)
+```
 
 #### 参数说明
 
@@ -389,7 +442,9 @@ value 取值范围：[0,99999]。
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.setApplicationIconBadgeNumber(0);
+```
+window.plugins.jPushPlugin.setApplicationIconBadgeNumber(0)
+```
 
 ### API - getApplicationIconBadgeNumber
 
@@ -397,7 +452,9 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.getApplicationIconBadgeNumber(callback)
+```
+window.plugins.jPushPlugin.prototype.getApplicationIconBadgeNumber(callback)
+```
 
 #### 参数说明
 
@@ -405,10 +462,11 @@ value 取值范围：[0,99999]。
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.getApplicationIconBadgeNumber(function(data) {
-	     console.log(data);               
-	});
-
+```js
+window.plugins.jPushPlugin.getApplicationIconBadgeNumber(function(data) {
+  console.log(data)
+})
+```
 
 ## 本地通知
 
@@ -418,7 +476,9 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.addLocalNotificationForIOS(delayTime, content, badge, notificationID, extras)
+```js
+window.plugins.jPushPlugin.prototype.addLocalNotificationForIOS(delayTime, content, badge, notificationID, extras)
+```
 
 #### 参数说明
 
@@ -430,7 +490,9 @@ value 取值范围：[0,99999]。
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.addLocalNotificationForIOS(6*60*60, "本地推送内容", 1, "notiId", {"key":"value"});
+```js
+window.plugins.jPushPlugin.addLocalNotificationForIOS(24*60*60, "本地推送内容", 1, "notiId", {"key":"value"});
+```
 
 ### API - deleteLocalNotificationWithIdentifierKeyInIOS
 
@@ -438,7 +500,9 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.deleteLocalNotificationWithIdentifierKeyInIOS(identifierKey)
+```js
+window.plugins.jPushPlugin.prototype.deleteLocalNotificationWithIdentifierKeyInIOS(identifierKey)
+```
 
 #### 参数说明
 
@@ -446,7 +510,9 @@ value 取值范围：[0,99999]。
 
 #### 代码示例
 
-        window.plugins.jPushPlugin.deleteLocalNotificationWithIdentifierKeyInIOS("identifier");
+```
+window.plugins.jPushPlugin.deleteLocalNotificationWithIdentifierKeyInIOS("identifier")
+```
 
 ### API - clearAllLocalNotifications
 
@@ -454,11 +520,36 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.clearAllLocalNotifications()
+```
+window.plugins.jPushPlugin.prototype.clearAllLocalNotifications()
+```
 
 #### 代码示例
 
-    window.plugins.jPushPlugin.clearAllLocalNotifications();
+```
+window.plugins.jPushPlugin.clearAllLocalNotifications()
+```
+
+
+
+## 获取本地通知内容
+
+### iOS 10 before 收到本地通知
+
+监听 `jpush.receiveLocalNotification` 事件获取，「App 在后台时点击通知横幅」或「App 在前台时收到」均会触发该事件。
+
+
+
+### iOS 10 收到本地通知
+
+监听 [jpush.receiveNotification](#前台收到推送)、[jpush.openNotification](点击推送通知)，获取推送内容后，通过获取到的 `__JPUSHNotificationKey` 字段（[本地通知](#本地通知) 设置的 `notificationID`）来判断是本地通知，并处理。
+
+
+
+### 点击本地通知横幅启动 App
+
+监听 `jpush.startLocalNotification` 事件。
+
 
 
 ## 页面的统计
@@ -470,9 +561,11 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.startLogPageView(pageName)
-	window.plugins.jPushPlugin.prototype.stopLogPageView(pageName)
-	window.plugins.jPushPlugin.prototype.beginLogPageView(pageName, duration)
+```
+window.plugins.jPushPlugin.prototype.startLogPageView(pageName)
+window.plugins.jPushPlugin.prototype.stopLogPageView(pageName)
+window.plugins.jPushPlugin.prototype.beginLogPageView(pageName, duration)
+```
 
 #### 参数说明
 
@@ -480,16 +573,18 @@ value 取值范围：[0,99999]。
 - duration: 自定义的页面时间
 
 #### 调用说明
+
 应在所有的需要统计得页面得 viewWillAppear 和 viewWillDisappear 加入 startLogPageView 和 stopLogPageView 来统计当前页面的停留时间。
 
 或者直接使用 beginLogPageView 来自定义加入页面和时间信息。
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.beginLogPageView("newPage", 5);
-	window.plugins.jPushPlugin.startLogPageView("onePage");
-	window.plugins.jPushPlugin.stopLogPageView("onePage");
-
+```
+window.plugins.jPushPlugin.beginLogPageView("newPage", 5);
+window.plugins.jPushPlugin.startLogPageView("onePage");
+window.plugins.jPushPlugin.stopLogPageView("onePage");
+```
 
 ## 日志等级设置
 
@@ -501,11 +596,15 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.setDebugModeFromIos()
+```
+window.plugins.jPushPlugin.prototype.setDebugModeFromIos()
+```
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.setDebugModeFromIos();
+```
+window.plugins.jPushPlugin.setDebugModeFromIos();
+```
 
 ### API - setLogOFF
 
@@ -515,11 +614,15 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.setLogOFF()
+```
+window.plugins.jPushPlugin.prototype.setLogOFF()
+```
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.setLogOFF();
+```
+window.plugins.jPushPlugin.setLogOFF();
+```
 
 ### API - setCrashLogON
 
@@ -529,11 +632,15 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.setCrashLogON()
+```
+window.plugins.jPushPlugin.prototype.setCrashLogON()
+```
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.setCrashLogON();
+```
+window.plugins.jPushPlugin.setCrashLogON();
+```
 
 ## 地理位置上报
 
@@ -543,7 +650,9 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.setLocation(latitude, longitude)
+```
+window.plugins.jPushPlugin.prototype.setLocation(latitude, longitude)
+```
 
 #### 参数说明
 
@@ -552,7 +661,9 @@ value 取值范围：[0,99999]。
 
 #### 代码示例
 
-	window.plugins.jPushPlugin.setLocation(39.26,115.25);
+```
+window.plugins.jPushPlugin.setLocation(39.26,115.25);
+```
 
 ## 设备平台判断
 
@@ -562,15 +673,19 @@ value 取值范围：[0,99999]。
 
 #### 接口定义
 
-	window.plugins.jPushPlugin.prototype.isPlatformIOS()
+```
+window.plugins.jPushPlugin.prototype.isPlatformIOS()
+```
 
 #### 代码示例
 
-	if(window.plugins.jPushPlugin.isPlatformIOS()) {
-		// iOS
-	} else {
-		// Android
-	}
+```js
+if(window.plugins.jPushPlugin.isPlatformIOS()) {
+	// iOS
+} else {
+	// Android
+}
+```
 
 
 
@@ -611,7 +726,7 @@ window.plugins.jPushPlugin.prototype.addDismissActions(actions, categoryId);
 
 #### 代码示例
 
-```
+```js
 window.plugins.jPushPlugin.addDismissActions([{"title":"t1", "identifier":"id1", "option":"0"}, {"title":"t2", "identifier":"id2", "option":"3", "type":"textInput", "textInputButtonTitle":"回复", "textInputPlaceholder":"点此输入回复内容"}], "categoryId_t1_t2");
 ```
 
@@ -630,7 +745,7 @@ iPhone 6s 及以后设备且 iOS 9 以后系统支持 3d-touch。
 #### 接口定义
 
 ```
-window.plugins.jPushPlugin.prototype.addNotificationActions(actions, categoryId);
+window.plugins.jPushPlugin.prototype.addNotificationActions(actions, categoryId)
 ```
 
 #### 参数说明
@@ -683,8 +798,6 @@ window.plugins.jPushPlugin.prototype.addNotificationActions(actions, categoryId)
 
 7. 立即发送。
 
-
-
 ## 获取用户推送设置
 
 ### API - getUserNotificationSettings
@@ -694,7 +807,7 @@ window.plugins.jPushPlugin.prototype.addNotificationActions(actions, categoryId)
 #### 接口定义
 
 ```
-window.plugins.jPushPlugin.prototype.getUserNotificationSettings(callback);
+window.plugins.jPushPlugin.prototype.getUserNotificationSettings(callback)
 ```
 
 #### 返回值
@@ -715,7 +828,58 @@ window.plugins.jPushPlugin.prototype.getUserNotificationSettings(callback);
     - UNNotificationSettingDisabled = 1, The notification setting is turned off.
     - UNNotificationSettingEnabled = 2, The notification setting is turned on.
   - 字段 alertStyle，取值如下：
-    -  UNAlertStyleNone = 0
-    -  UNAlertStyleBanner = 1
-    -  UNAlertStyleAlert = 2
+    - UNAlertStyleNone = 0
+    - UNAlertStyleBanner = 1
+    - UNAlertStyleAlert = 2
+      ​
+
+
+
+## 监听事件统一说明
+
+可在 js 监听全部事件如下：
+
+##### jpush.receiveNotification
+
+> [前台收到远程通知](#前台收到推送)
+>
+> [iOS 10 前台收到本地通知](#ios-10-收到本地通知)
+
+
+
+##### jpush.openNotification
+
+> [点击远程通知横幅使 App「进入前台」或「启动」](#点击推送通知)
+>
+> [iOS 10 点击本地通知横幅使 App「进入前台」或「启动」](#ios-10-收到本地通知)
+
+
+
+##### jpush.backgroundNotification
+
+> [iOS 7 以后后台收到远程通知](#后台收到推送)
+
+
+
+##### jpush.setTagsWithAlias
+
+> [设置标签别名回调](#返回值说明)
+
+
+
+##### jpush.receiveMessage
+
+> [获取自定义消息内容](#获取自定义消息内容)
+
+
+
+##### jpush.startLocalNotification
+
+> [点击本地通知横幅启动 App](#点击本地通知横幅启动-app)
+
+
+
+##### jpush.receiveLocalNotification
+
+> [iOS 10 before 收到本地通知](#ios-10-before-收到本地通知)
 
