@@ -3,7 +3,7 @@ import { Headers, Http } from '@angular/http';
 import { NavController } from 'ionic-angular';
 import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
-import { videoPage } from '../video/video';
+import { videolistPage } from '../videolist/videolist';
 
 
 declare var $: any;
@@ -111,7 +111,7 @@ export class HomePage {
 
   //打开视频
   pushvideoPage(){
-    this.navCtrl.push(videoPage);
+    this.navCtrl.push(videolistPage);
   }
 
 
