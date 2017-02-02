@@ -12,6 +12,8 @@ import { toutiaoHotListPage } from '../pages/toutiaoHotList/toutiaoHotList';
 import { videoPage } from '../pages/video/video';
 import { videolistPage } from '../pages/videolist/videolist';
 
+import { RongCloudService } from '../pages/service/RongCloud.service';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +46,6 @@ import { videolistPage } from '../pages/videolist/videolist';
     videoPage,
     videolistPage,
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService]
 })
 export class AppModule {}

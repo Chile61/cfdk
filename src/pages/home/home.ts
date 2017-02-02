@@ -5,6 +5,8 @@ import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
 import { videolistPage } from '../videolist/videolist';
 
+import { RongCloudService } from '../service/RongCloud.service';
+
 
 declare var $: any;
 declare var Swiper: any;
@@ -12,7 +14,8 @@ declare var RongCloudLibPlugin: any;
 declare var SHA1: any;
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  
 })
 export class HomePage {
 
@@ -26,78 +29,12 @@ export class HomePage {
 
   public headers: Headers;
 
-  constructor(public navCtrl: NavController, public http: Http) {
-      
+  constructor(public navCtrl: NavController, public http: Http, public rongCloudService: RongCloudService) {
+      //this.RongCloudS.RongCloudLibPlugin_init();
+      this.rongCloudService.RongCloudLibPlugin_init();
   }
 
-  //初始化融云
-  RongCloudLibPlugin_init(){
-    var _that = this;
-    RongCloudLibPlugin.init({
-      appKey: "sfci50a7c59yi"},
-    function(ret, err){
-      if (ret.status == 'error'){
-        alert(err.code);
-      }else{
-        
-        _that.gettoken();
-      }
-        
-    });
-  }
-
-  //生成token
-  gettoken(){
-    
-    var time = (Date.now() / 1000);
-    
-		this.rand = Math.ceil(Math.random() * 10000000);
-    
-		this.now = parseInt(time.toString());
-    
-
-		this.headers = new Headers({
-			"Content-Type": "application/x-www-form-urlencoded",
-			"App-Key": "sfci50a7c59yi",
-			"Nonce": this.rand.toString(),
-			"Timestamp": this.now.toString(),
-			"Signature": SHA1("7yPJfy1ssm" + this.rand.toString() + this.now.toString())
-		});
-
-    
-
-    let url = "https://api.cn.rong.io/user/getToken.json";
-		this.http.post(url, "userId=1&name=root&portraitUri", {
-				headers: this.headers
-			})
-			.subscribe((res) => {
-				this.token = res.json()["token"];
-
-				
-				this.RCconnect();
-			});
-  }
-
-  //融云连接服务器
-	RCconnect() {
-    
-		RongCloudLibPlugin.connect({
-				token: this.token
-			},
-			(ret, err) => {
-				if(ret.status == 'success') {
-					alert(ret.result.userId);
-					this.RCsetOnReceiveMessageListener();
-				}
-			});
-	}
-
-  //设置融云监听
-	RCsetOnReceiveMessageListener() {
-		RongCloudLibPlugin.setOnReceiveMessageListener((ret, err) => {
-			alert(JSON.stringify(ret.result.message));
-		})
-	}
+  
 
   //打开养生头条
   pushtoutiaoPage(){
@@ -119,7 +56,8 @@ export class HomePage {
 
     if (this.oSwiper == null) {
 
-      this.RongCloudLibPlugin_init();
+      //this.RongCloudLibPlugin_init();
+
 
       this.oSwiper = new Swiper('.swiper-container', {
         loop: true,
