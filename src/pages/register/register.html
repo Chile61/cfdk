@@ -12,17 +12,17 @@
 
         <ion-item>
             <ion-label floating>用户</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>密码</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>确认密码</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-input type="password" [(ngModel)]="password2"></ion-input>
         </ion-item>
 
     </ion-list>
@@ -38,6 +38,6 @@
 
     </ion-list>
     <br/>
-    <button ion-button full color="secondary">注册</button>
+    <button ion-button full color="secondary" (click)="register();">注册</button>
 
 </ion-content>
