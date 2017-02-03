@@ -31,6 +31,16 @@
         "jpush-phonegap-plugin": {
             "APP_KEY": "771239dc9889d8453ddb859c",
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "cordova-plugin-qqsdk": {
+            "QQ_APP_ID": "1104885342",
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         }
     },
     "dependent_plugins": {}

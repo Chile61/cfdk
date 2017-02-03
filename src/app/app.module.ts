@@ -11,6 +11,8 @@ import { toutiaoPage } from '../pages/toutiao/toutiao';
 import { toutiaoHotListPage } from '../pages/toutiaoHotList/toutiaoHotList';
 import { videoPage } from '../pages/video/video';
 import { videolistPage } from '../pages/videolist/videolist';
+import { loginPage } from '../pages/login/login';
+import { registerPage } from '../pages/register/register';
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
 
@@ -27,6 +29,8 @@ import { RongCloudService } from '../pages/service/RongCloud.service';
     toutiaoHotListPage,
     videoPage,
     videolistPage,
+    loginPage,
+    registerPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -45,6 +49,8 @@ import { RongCloudService } from '../pages/service/RongCloud.service';
     toutiaoHotListPage,
     videoPage,
     videolistPage,
+    loginPage,
+    registerPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService]
 })

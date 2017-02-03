@@ -48,6 +48,49 @@ module.exports = [
         "clobbers": [
             "JPush"
         ]
+    },
+    {
+        "id": "cordova-plugin-nativestorage.mainHandle",
+        "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+        "pluginId": "cordova-plugin-nativestorage",
+        "clobbers": [
+            "NativeStorage"
+        ]
+    },
+    {
+        "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+        "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+        "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
+        "id": "cordova-plugin-nativestorage.NativeStorageError",
+        "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+        "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
+        "id": "cordova-plugin-network-information.network",
+        "file": "plugins/cordova-plugin-network-information/www/network.js",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "id": "cordova-plugin-network-information.Connection",
+        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "Connection"
+        ]
+    },
+    {
+        "id": "cordova-plugin-qqsdk.QQSDK",
+        "file": "plugins/cordova-plugin-qqsdk/www/qq.js",
+        "pluginId": "cordova-plugin-qqsdk",
+        "clobbers": [
+            "QQSDK"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -60,7 +103,10 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.1",
     "ionic-plugin-keyboard": "2.2.1",
     "io.rong.imlib": "2.3.7",
-    "jpush-phonegap-plugin": "3.0.3"
+    "jpush-phonegap-plugin": "3.0.3",
+    "cordova-plugin-nativestorage": "2.2.1",
+    "cordova-plugin-network-information": "1.3.1",
+    "cordova-plugin-qqsdk": "0.8.3"
 };
 // BOTTOM OF METADATA
 });

@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            登录
+        </ion-title>
+
+        <ion-buttons end (click)="pushregisterPage()">
+            <button ion-button icon-only>
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>用户</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>密码</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+    </ion-list>
+    <br/>
+    <button ion-button full color="secondary">登录</button>
+
+</ion-content>

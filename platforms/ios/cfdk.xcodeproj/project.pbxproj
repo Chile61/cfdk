@@ -61,6 +61,15 @@
 		38829FC6ABB04787A44BC231 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2660D598CD14EDB967F02A7 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3B685344603E4C349761D256 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01726E54AD3F4144AF6F65EE /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9CC3A925F3F4497A8994BF0E /* libresolv.tbd in Resources */ = {isa = PBXBuildFile; fileRef = C7BBCDB4F3EF41578410C688 /* libresolv.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5110B9273FB045D9B15DB0AA /* NativeStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D95BDD6440CD9C22F178 /* NativeStorage.m */; };
+		ECC7387868D244A4B109F28E /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 978563AE7C344F2D922DDDF5 /* CDVConnection.m */; };
+		FF6D95502AE841C8ABBA8C6A /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 24CED8E1E28A48C497906E8D /* CDVReachability.m */; };
+		9B9ACB97FA1E47E699A11FD3 /* CDVQQSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = F19F3070BA204BF58FBD6D36 /* CDVQQSDK.m */; };
+		2ABBAD24FEDA405B8FFE78B2 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C85C7AE3B6214C2FB2E539BC /* TencentOpenApi_IOS_Bundle.bundle */; };
+		E58157640AF64A7B96E1C568 /* libiconv.tbd in Resources */ = {isa = PBXBuildFile; fileRef = F2421F083C434E15B92C79C3 /* libiconv.tbd */; };
+		C92FB3B546BB409D96C80662 /* libsqlite3.tbd in Resources */ = {isa = PBXBuildFile; fileRef = 0C6F01D1C01C43F0A56C0E33 /* libsqlite3.tbd */; };
+		303DFD1C43D64FCD91C6FC4D /* libstdc++.tbd in Resources */ = {isa = PBXBuildFile; fileRef = D9DC680992094E7EA9D70268 /* libstdc++.tbd */; };
+		63F00861FE914A5FB03C97AB /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0E9FDBBD2D40E9AFB70341 /* TencentOpenAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +171,19 @@
 		D2660D598CD14EDB967F02A7 /* AdSupport.framework */ = {isa = PBXFileReference; name = "AdSupport.framework"; path = "System/Library/Frameworks/AdSupport.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		01726E54AD3F4144AF6F65EE /* UserNotifications.framework */ = {isa = PBXFileReference; name = "UserNotifications.framework"; path = "System/Library/Frameworks/UserNotifications.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		C7BBCDB4F3EF41578410C688 /* libresolv.tbd */ = {isa = PBXFileReference; name = "libresolv.tbd"; path = "libresolv.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		00B9D95BDD6440CD9C22F178 /* NativeStorage.m */ = {isa = PBXFileReference; name = "NativeStorage.m"; path = "cordova-plugin-nativestorage/NativeStorage.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		342A379EAEFA4B49A55F0D0E /* NativeStorage.h */ = {isa = PBXFileReference; name = "NativeStorage.h"; path = "cordova-plugin-nativestorage/NativeStorage.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		978563AE7C344F2D922DDDF5 /* CDVConnection.m */ = {isa = PBXFileReference; name = "CDVConnection.m"; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		24CED8E1E28A48C497906E8D /* CDVReachability.m */ = {isa = PBXFileReference; name = "CDVReachability.m"; path = "cordova-plugin-network-information/CDVReachability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E275BF9494854D979AFA52C6 /* CDVConnection.h */ = {isa = PBXFileReference; name = "CDVConnection.h"; path = "cordova-plugin-network-information/CDVConnection.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		7ABD9087A1AD4AAB9917F2F8 /* CDVReachability.h */ = {isa = PBXFileReference; name = "CDVReachability.h"; path = "cordova-plugin-network-information/CDVReachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F19F3070BA204BF58FBD6D36 /* CDVQQSDK.m */ = {isa = PBXFileReference; name = "CDVQQSDK.m"; path = "cordova-plugin-qqsdk/CDVQQSDK.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		443E2ABD11BD42A5A3E86E7C /* CDVQQSDK.h */ = {isa = PBXFileReference; name = "CDVQQSDK.h"; path = "cordova-plugin-qqsdk/CDVQQSDK.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C85C7AE3B6214C2FB2E539BC /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; name = "TencentOpenApi_IOS_Bundle.bundle"; path = "TencentOpenApi_IOS_Bundle.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		F2421F083C434E15B92C79C3 /* libiconv.tbd */ = {isa = PBXFileReference; name = "libiconv.tbd"; path = "libiconv.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0C6F01D1C01C43F0A56C0E33 /* libsqlite3.tbd */ = {isa = PBXFileReference; name = "libsqlite3.tbd"; path = "libsqlite3.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D9DC680992094E7EA9D70268 /* libstdc++.tbd */ = {isa = PBXFileReference; name = "libstdc++.tbd"; path = "libstdc++.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB0E9FDBBD2D40E9AFB70341 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; name = "TencentOpenAPI.framework"; path = "cfdk/Plugins/cordova-plugin-qqsdk/TencentOpenAPI.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +223,10 @@
 				38829FC6ABB04787A44BC231 /* AdSupport.framework in Frameworks */,
 				3B685344603E4C349761D256 /* UserNotifications.framework in Frameworks */,
 				9CC3A925F3F4497A8994BF0E /* libresolv.tbd in Resources */,
+				E58157640AF64A7B96E1C568 /* libiconv.tbd in Resources */,
+				C92FB3B546BB409D96C80662 /* libsqlite3.tbd in Resources */,
+				303DFD1C43D64FCD91C6FC4D /* libstdc++.tbd in Resources */,
+				63F00861FE914A5FB03C97AB /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +290,7 @@
 				8D1107310486CEB800E47090 /* cfdk-Info.plist */,
 				0D9BB49E3C5B40768235E6E1 /* RCConfig.plist */,
 				891485C09A984D59BBD481B5 /* JPushConfig.plist */,
+				C85C7AE3B6214C2FB2E539BC /* TencentOpenApi_IOS_Bundle.bundle */,
 			);
 			name = Resources;
 			path = "cfdk/Resources";
@@ -303,6 +330,10 @@
 				D2660D598CD14EDB967F02A7 /* AdSupport.framework */,
 				01726E54AD3F4144AF6F65EE /* UserNotifications.framework */,
 				C7BBCDB4F3EF41578410C688 /* libresolv.tbd */,
+				F2421F083C434E15B92C79C3 /* libiconv.tbd */,
+				0C6F01D1C01C43F0A56C0E33 /* libsqlite3.tbd */,
+				D9DC680992094E7EA9D70268 /* libstdc++.tbd */,
+				EB0E9FDBBD2D40E9AFB70341 /* TencentOpenAPI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -357,6 +388,14 @@
 				CD69382583F4465BA615CD2E /* JPushPlugin.h */,
 				566ACC42BF674013B6266C33 /* AppDelegate+JPush.h */,
 				D76EA3CAAA404CB391DF61DF /* JPUSHService.h */,
+				00B9D95BDD6440CD9C22F178 /* NativeStorage.m */,
+				342A379EAEFA4B49A55F0D0E /* NativeStorage.h */,
+				978563AE7C344F2D922DDDF5 /* CDVConnection.m */,
+				24CED8E1E28A48C497906E8D /* CDVReachability.m */,
+				E275BF9494854D979AFA52C6 /* CDVConnection.h */,
+				7ABD9087A1AD4AAB9917F2F8 /* CDVReachability.h */,
+				F19F3070BA204BF58FBD6D36 /* CDVQQSDK.m */,
+				443E2ABD11BD42A5A3E86E7C /* CDVQQSDK.h */,
 			);
 			name = Plugins;
 			path = "cfdk/Plugins";
@@ -442,6 +481,7 @@
 				3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */,
 				774A6927824F40BB84279EE8 /* RCConfig.plist in Resources */,
 				0390AAA8636841EEA54142F9 /* JPushConfig.plist in Resources */,
+				2ABBAD24FEDA405B8FFE78B2 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +526,10 @@
 				2A2920405F62492BBB8F69C2 /* RongCloudModel.m in Sources */,
 				E42820C90469484CA78290D2 /* JPushPlugin.m in Sources */,
 				4EFA65286AFF4F3A8F1E7803 /* AppDelegate+JPush.m in Sources */,
+				5110B9273FB045D9B15DB0AA /* NativeStorage.m in Sources */,
+				ECC7387868D244A4B109F28E /* CDVConnection.m in Sources */,
+				FF6D95502AE841C8ABBA8C6A /* CDVReachability.m in Sources */,
+				9B9ACB97FA1E47E699A11FD3 /* CDVQQSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +572,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"cfdk/Plugins/io.rong.imlib\"",
+					"\"cfdk/Plugins/cordova-plugin-qqsdk\"",
 				);
 			};
 			name = Debug;
@@ -557,6 +602,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"cfdk/Plugins/io.rong.imlib\"",
+					"\"cfdk/Plugins/cordova-plugin-qqsdk\"",
 				);
 			};
 			name = Release;
@@ -594,6 +640,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"cfdk/Plugins/io.rong.imlib\"",
+					"\"cfdk/Plugins/cordova-plugin-qqsdk\"",
 				);
 			};
 			name = Debug;
@@ -630,6 +677,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"cfdk/Plugins/io.rong.imlib\"",
+					"\"cfdk/Plugins/cordova-plugin-qqsdk\"",
 				);
 			};
 			name = Release;

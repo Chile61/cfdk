@@ -64,6 +64,49 @@ module.exports = [
         "clobbers": [
             "JPush"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+        "id": "cordova-plugin-nativestorage.mainHandle",
+        "pluginId": "cordova-plugin-nativestorage",
+        "clobbers": [
+            "NativeStorage"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+        "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+        "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
+        "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+        "id": "cordova-plugin-nativestorage.NativeStorageError",
+        "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/network.js",
+        "id": "cordova-plugin-network-information.network",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+        "id": "cordova-plugin-network-information.Connection",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "Connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-qqsdk/www/qq.js",
+        "id": "cordova-plugin-qqsdk.QQSDK",
+        "pluginId": "cordova-plugin-qqsdk",
+        "clobbers": [
+            "QQSDK"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -76,7 +119,10 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.1",
     "ionic-plugin-keyboard": "2.2.1",
     "io.rong.imlib": "2.3.7",
-    "jpush-phonegap-plugin": "3.0.3"
+    "jpush-phonegap-plugin": "3.0.3",
+    "cordova-plugin-nativestorage": "2.2.1",
+    "cordova-plugin-network-information": "1.3.1",
+    "cordova-plugin-qqsdk": "0.8.3"
 }
 // BOTTOM OF METADATA
 });

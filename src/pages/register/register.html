@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            注册
+        </ion-title>
+
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>用户</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>密码</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>确认密码</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+    </ion-list>
+    <ion-list>
+        <ion-item>
+            <ion-label>性别</ion-label>
+            <ion-select okText="确定" cancelText="取消" [(ngModel)]="sex">
+                <ion-option value="0">男</ion-option>
+                <ion-option value="1">女</ion-option>
+                <ion-option value="3">保密</ion-option>
+            </ion-select>
+        </ion-item>
+
+    </ion-list>
+    <br/>
+    <button ion-button full color="secondary">注册</button>
+
+</ion-content>
