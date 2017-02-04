@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
 import { videolistPage } from '../videolist/videolist';
 
-import { RongCloudService } from '../service/RongCloud.service';
 
 
 declare var $: any;
 declare var Swiper: any;
-declare var RongCloudLibPlugin: any;
-declare var SHA1: any;
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -22,19 +19,36 @@ export class HomePage {
   public oSwiper = null;
   public oUser = null;
 
-  //融云配置变量
-	public rand: any;
-	public now: any;
-	public token: any;
-
   public headers: Headers;
 
-  constructor(public navCtrl: NavController, public http: Http, public rongCloudService: RongCloudService) {
+  constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController) {
       //this.RongCloudS.RongCloudLibPlugin_init();
-      this.rongCloudService.RongCloudLibPlugin_init();
+      
   }
 
-  
+  //刷新视频
+  doRefresh(refresher) {
+
+    this.presentLoadingDefault();
+
+    setTimeout(() => {
+      
+      refresher.complete();
+    }, 3000);
+  }
+
+
+  presentLoadingDefault() {
+    let loading = this.loadingCtrl.create({
+      content: '请稍后...'
+    });
+
+    loading.present();
+
+    setTimeout(() => {
+      loading.dismiss();
+    }, 3000);
+  }
 
   //打开养生头条
   pushtoutiaoPage(){

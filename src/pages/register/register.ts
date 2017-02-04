@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, AlertController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
-import { NativeStorage } from 'ionic-native';
+import { UserService } from '../service/User.service';
 
-
+declare var SHA1: any;
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html'
@@ -17,7 +17,7 @@ export class registerPage {
 
   public headers: Headers;
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public http: Http, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public http: Http, public alertCtrl: AlertController, public userService: UserService) {
 
   }
 
@@ -25,7 +25,7 @@ export class registerPage {
   register(){
     
     let loading = this.loadingCtrl.create({
-      content: 'Please wait...'
+      content: '请稍后...'
     });
 
     loading.present();
@@ -35,7 +35,7 @@ export class registerPage {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
     
-		this.http.post(url, "uname="+this.name+"&usex="+this.sex+"&upas="+this.password, {
+		this.http.post(url, "uname="+this.name+"&usex="+this.sex+"&upas="+SHA1(this.password), {
       headers: headers
     })
 			.subscribe((res) => {
@@ -49,14 +49,11 @@ export class registerPage {
           alert.present();
           this.name = "";
         }else{
+          
           var datas = res.json()[0];
-          NativeStorage.clear();
-          NativeStorage.setItem('_user', datas)
-          .then(
-            () => this.getS(),
-            error => alert('Error storing item')
-          );
-
+          this.userService.update(datas);
+          this.userService.getStorage();
+          this.navCtrl.pop();
         }
 
         
@@ -65,14 +62,5 @@ export class registerPage {
 
   }
 
-  //
-  getS(){
-    NativeStorage.getItem('_user')
-    .then(
-      data => {alert(data._id+"--"+data.uname+"--"+data.usex),this.navCtrl.pop();},
-      error => console.error(error)
-    );
-  }
   
-
 }

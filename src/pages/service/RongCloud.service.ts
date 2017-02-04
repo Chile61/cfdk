@@ -17,12 +17,9 @@ export class RongCloudService {
       
   }
 
-	test(){
-        alert(2);
-    }
-
+	
     //初始化融云
-  RongCloudLibPlugin_init(){
+  RongCloudLibPlugin_init(_id:any,_name:any){
     var _that = this;
     RongCloudLibPlugin.init({
       appKey: "sfci50a7c59yi"},
@@ -31,14 +28,14 @@ export class RongCloudService {
         alert(err.code);
       }else{
         
-        _that.gettoken();
+        _that.gettoken(_id,_name);
       }
         
     });
   }
 
   //生成token
-  gettoken(){
+  gettoken(_id:any,_name:any){
     
     var time = (Date.now() / 1000);
     
@@ -58,7 +55,7 @@ export class RongCloudService {
     
 
     let url = "https://api.cn.rong.io/user/getToken.json";
-		this.http.post(url, "userId=1&name=root&portraitUri", {
+		this.http.post(url, "userId="+_id+"&name="+_name+"&portraitUri", {
 				headers: this.headers
 			})
 			.subscribe((res) => {
@@ -77,7 +74,7 @@ export class RongCloudService {
 			},
 			(ret, err) => {
 				if(ret.status == 'success') {
-					alert(ret.result.userId);
+					alert("融云id："+ret.result.userId);
 					this.RCsetOnReceiveMessageListener();
 				}
 			});

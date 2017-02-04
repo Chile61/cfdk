@@ -4,6 +4,7 @@ import { HomePage } from '../home/home';
 import { SharePage } from '../share/share';
 import { MePage } from '../me/me';
 import { ContactPage } from '../contact/contact';
+import { UserService } from '../service/User.service';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class TabsPage {
   tab3Root: any = ContactPage;
   tab4Root: any = MePage;
 
-  constructor() {
-      
+  constructor( public userService: UserService) {
+      this.userService.clear();
+      this.userService.getStorage();
   }
 }

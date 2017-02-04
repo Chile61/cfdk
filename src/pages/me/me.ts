@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
+import { UserService } from '../service/User.service';
 
 @Component({
   selector: 'page-me',
@@ -8,8 +8,20 @@ import { NavController } from 'ionic-angular';
 })
 export class MePage {
 
-  constructor(public navCtrl: NavController) {
+  public uname: any;
 
+  constructor(public navCtrl: NavController, public userService: UserService) {
+    
+    this.uname = this.userService._user.uname;
+    
+  }
+
+  ionViewDidEnter() {
+    
+    if( this.userService._user._is ){
+      this.uname = this.userService._user.uname;
+    }
+    
   }
 
 }

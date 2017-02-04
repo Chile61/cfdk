@@ -15,6 +15,7 @@ import { loginPage } from '../pages/login/login';
 import { registerPage } from '../pages/register/register';
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
+import { UserService } from '../pages/service/User.service';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { RongCloudService } from '../pages/service/RongCloud.service';
     videolistPage,
     loginPage,
     registerPage,
+    
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -51,7 +53,8 @@ import { RongCloudService } from '../pages/service/RongCloud.service';
     videolistPage,
     loginPage,
     registerPage,
+    
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService,UserService]
 })
 export class AppModule {}

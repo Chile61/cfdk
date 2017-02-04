@@ -14,6 +14,11 @@
     </ion-toolbar>
 </ion-header>
 <ion-content [ngSwitch]="pet">
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
     <section *ngSwitchCase="'new1'" id="qus_wrap">
         <div class="qus_list">
             <p class="qus_list_title">如何炸出kfc和m记的薯条？</p>
