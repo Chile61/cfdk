@@ -48,6 +48,9 @@
     <feature name="QQSDK">
         <param name="ios-package" value="CDVQQSDK" />
     </feature>
+    <feature name="ImagePicker">
+        <param name="ios-package" value="SOSPicker" />
+    </feature>
     <name>厨房大咖f</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>

@@ -41,6 +41,9 @@
         "cordova-plugin-qqsdk": {
             "QQ_APP_ID": "1104885342",
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         }
     },
     "dependent_plugins": {}

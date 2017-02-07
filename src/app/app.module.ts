@@ -13,6 +13,9 @@ import { videoPage } from '../pages/video/video';
 import { videolistPage } from '../pages/videolist/videolist';
 import { loginPage } from '../pages/login/login';
 import { registerPage } from '../pages/register/register';
+import { sendqusPage } from '../pages/sendqus/sendqus';
+import { sendchartPage } from '../pages/sendchart/sendchart';
+
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
 import { UserService } from '../pages/service/User.service';
@@ -32,7 +35,8 @@ import { UserService } from '../pages/service/User.service';
     videolistPage,
     loginPage,
     registerPage,
-    
+    sendqusPage,
+    sendchartPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -53,7 +57,8 @@ import { UserService } from '../pages/service/User.service';
     videolistPage,
     loginPage,
     registerPage,
-    
+    sendqusPage,
+    sendchartPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService,UserService]
 })

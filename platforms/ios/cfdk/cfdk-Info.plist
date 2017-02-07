@@ -86,5 +86,7 @@
       <string>mqzoneopensdkapi19</string>
       <string>mqzoneopensdkapi</string>
     </array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string/>
   </dict>
 </plist>

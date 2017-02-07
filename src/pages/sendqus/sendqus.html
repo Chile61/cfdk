@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            发表问题
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>标题</ion-label>
+            <ion-input type="text" [(ngModel)]="title"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <textarea id="textarea" [(ngModel)]="text" maxlength="80" placeholder="请输入问题的内容,最多80个字符..."></textarea>
+    <br/>
+    <br/>
+    <button ion-button full color="secondary" (click)="send();">提交问题</button>
+</ion-content>

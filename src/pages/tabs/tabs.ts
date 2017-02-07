@@ -19,7 +19,7 @@ export class TabsPage {
   tab4Root: any = MePage;
 
   constructor( public userService: UserService) {
-      this.userService.clear();
+      //this.userService.clear();
       this.userService.getStorage();
   }
 }

@@ -91,6 +91,14 @@ module.exports = [
         "clobbers": [
             "QQSDK"
         ]
+    },
+    {
+        "id": "com.synconset.imagepicker.ImagePicker",
+        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+        "pluginId": "com.synconset.imagepicker",
+        "clobbers": [
+            "plugins.imagePicker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -106,7 +114,8 @@ module.exports.metadata =
     "jpush-phonegap-plugin": "3.0.3",
     "cordova-plugin-nativestorage": "2.2.1",
     "cordova-plugin-network-information": "1.3.1",
-    "cordova-plugin-qqsdk": "0.8.3"
+    "cordova-plugin-qqsdk": "0.8.3",
+    "com.synconset.imagepicker": "2.1.7"
 };
 // BOTTOM OF METADATA
 });

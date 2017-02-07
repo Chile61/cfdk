@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            发布心情
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ul id="imageUl">
+        <li [hidden]="hideWhen" (click)="addImg();" style="background: url(assets/icon/public/camera.png) no-repeat center center;background-size: cover;"></li>
+        <li *ngFor="let img of images">
+            <img [src]="img" />
+        </li>
+    </ul>
+
+    <br/>
+    <br/>
+    <textarea id="textarea" [(ngModel)]="text" maxlength="40" placeholder="请输入问题的内容,最多40个字符..."></textarea>
+    <br/>
+    <br/>
+    <br/>
+    <button ion-button full color="secondary" (click)="send();">发布</button>
+</ion-content>

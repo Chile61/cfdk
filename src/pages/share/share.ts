@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { loginPage } from '../login/login';
+import { sendqusPage } from '../sendqus/sendqus';
+import { sendchartPage } from '../sendchart/sendchart';
+
 import { UserService } from '../service/User.service';
 
 @Component({
@@ -19,9 +22,9 @@ export class SharePage {
   sendQus(){
 
     if( this.userService._user._id ){
-
+      this.navCtrl.push(sendqusPage);
     }else{
-      this.navCtrl.push(loginPage)
+      this.navCtrl.push(loginPage);
     }
 
   }
@@ -31,9 +34,13 @@ export class SharePage {
 
   }
 
-  //发布厨房互动
-  sendPlay(){
-
+  //发布心情
+  sendchart(){
+    if( this.userService._user._id ){
+      this.navCtrl.push(sendchartPage);
+    }else{
+      this.navCtrl.push(loginPage);
+    }
   }
 
   //刷新视频

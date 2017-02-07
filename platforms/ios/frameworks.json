@@ -2,8 +2,8 @@
     "ImageIO.framework": 1,
     "MapKit.framework": 1,
     "CoreLocation.framework": 1,
-    "SystemConfiguration.framework": 4,
-    "QuartzCore.framework": 1,
+    "SystemConfiguration.framework": 5,
+    "QuartzCore.framework": 2,
     "OpenGLES.framework": 1,
     "CoreVideo.framework": 1,
     "CoreTelephony.framework": 4,
@@ -21,12 +21,14 @@
     "libc++abi.dylib": 1,
     "CoreFoundation.framework": 1,
     "Foundation.framework": 1,
-    "Security.framework": 2,
+    "Security.framework": 3,
     "libz.tbd": 2,
     "AdSupport.framework": 1,
     "UserNotifications.framework": 1,
     "libresolv.tbd": 1,
     "libiconv.tbd": 1,
     "libsqlite3.tbd": 1,
-    "libstdc++.tbd": 1
+    "libstdc++.tbd": 1,
+    "Accelerate.framework": 1,
+    "Photos.framework": 1
 }
