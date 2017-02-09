@@ -88,5 +88,9 @@
     </array>
     <key>NSPhotoLibraryUsageDescription</key>
     <string/>
+    <key>NSCameraUsageDescription</key>
+    <string/>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string/>
   </dict>
 </plist>

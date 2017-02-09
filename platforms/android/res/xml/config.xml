@@ -45,6 +45,9 @@
     <feature name="ImagePicker">
         <param name="android-package" value="com.synconset.ImagePicker" />
     </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
     <name>厨房大咖f</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>

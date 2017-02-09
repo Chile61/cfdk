@@ -115,6 +115,38 @@ module.exports = [
         "clobbers": [
             "plugins.imagePicker"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+        "id": "cordova-plugin-camera.Camera",
+        "pluginId": "cordova-plugin-camera",
+        "clobbers": [
+            "Camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+        "id": "cordova-plugin-camera.CameraPopoverOptions",
+        "pluginId": "cordova-plugin-camera",
+        "clobbers": [
+            "CameraPopoverOptions"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/Camera.js",
+        "id": "cordova-plugin-camera.camera",
+        "pluginId": "cordova-plugin-camera",
+        "clobbers": [
+            "navigator.camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/ios/CameraPopoverHandle.js",
+        "id": "cordova-plugin-camera.CameraPopoverHandle",
+        "pluginId": "cordova-plugin-camera",
+        "clobbers": [
+            "CameraPopoverHandle"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -131,7 +163,9 @@ module.exports.metadata =
     "cordova-plugin-nativestorage": "2.2.1",
     "cordova-plugin-network-information": "1.3.1",
     "cordova-plugin-qqsdk": "0.8.3",
-    "com.synconset.imagepicker": "2.1.7"
+    "com.synconset.imagepicker": "2.1.7",
+    "cordova-plugin-compat": "1.1.0",
+    "cordova-plugin-camera": "2.3.1"
 }
 // BOTTOM OF METADATA
 });

@@ -45,7 +45,16 @@
         "com.synconset.imagepicker": {
             "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        }
+    }
 }

@@ -3,6 +3,7 @@ import { NavController, LoadingController } from 'ionic-angular';
 import { loginPage } from '../login/login';
 import { sendqusPage } from '../sendqus/sendqus';
 import { sendchartPage } from '../sendchart/sendchart';
+import { sendworkPage } from '../sendwork/sendwork';
 
 import { UserService } from '../service/User.service';
 
@@ -31,7 +32,11 @@ export class SharePage {
 
   //发布厨房作品
   sendWork(){
-
+    if( this.userService._user._id ){
+        this.navCtrl.push(sendworkPage);
+      }else{
+        this.navCtrl.push(loginPage);
+      }
   }
 
   //发布心情

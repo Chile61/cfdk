@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            发表作品
+        </ion-title>
+        <ion-buttons end (click)="edit()">
+            <button ion-button icon-only>
+        <ion-icon name="reorder"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img [src]="banner" (click)="presentActionSheet();" />
+    </ion-card>
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>标题</ion-label>
+            <ion-input type="text" [(ngModel)]="title"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <textarea id="textarea" [(ngModel)]="text" maxlength="80" placeholder="请输入问题的内容,最多80个字符..."></textarea>
+    <br/>
+    <br/>
+
+    <ion-list>
+        <ion-list-header>作品步骤</ion-list-header>
+        <ion-item-group [reorder]="isReordering" (ionItemReorder)="reorderItems($event)">
+
+            <ion-item-sliding *ngFor="let item of items">
+                <ion-item>
+                    <ion-thumbnail item-left>
+                        <img src="assets/img2/user_4.jpeg">
+                    </ion-thumbnail>
+
+                    <p>This town ain't big enough for the two of us!This town ain't big enough for the two of us!This town ain't big enough for the two of us!</p>
+
+                </ion-item>
+                <ion-item-options side="left">
+                    <button ion-button color="primary">
+                    <ion-icon name="text"></ion-icon>
+                    删除步骤
+                </button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-item-group>
+    </ion-list>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <button ion-button full color="secondary" (click)="send();">发布作品</button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</ion-content>

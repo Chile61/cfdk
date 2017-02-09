@@ -15,6 +15,7 @@ import { loginPage } from '../pages/login/login';
 import { registerPage } from '../pages/register/register';
 import { sendqusPage } from '../pages/sendqus/sendqus';
 import { sendchartPage } from '../pages/sendchart/sendchart';
+import { sendworkPage } from '../pages/sendwork/sendwork';
 
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
@@ -37,6 +38,7 @@ import { UserService } from '../pages/service/User.service';
     registerPage,
     sendqusPage,
     sendchartPage,
+    sendworkPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -59,6 +61,7 @@ import { UserService } from '../pages/service/User.service';
     registerPage,
     sendqusPage,
     sendchartPage,
+    sendworkPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService,UserService]
 })
