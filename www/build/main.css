@@ -26444,6 +26444,12 @@ ion-list {
   height: 12rem;
 }
 
+#banner {
+  display: block;
+  width: 100%;
+  height: 29rem;
+}
+
 #textarea:focus {
   border: none;
   border-color: none;

@@ -13,13 +13,22 @@ export class sendworkPage {
 
   items = [];
 
-  banner = "assets/img2/home_work_3.jpeg";
+  banner = "assets/icon/public/camera.png";
 
   isReordering: boolean = false;
 
   constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController) {
-    for (let x = 0; x < 5; x++) {
-       this.items.push(x);
+    this.init();
+  }
+
+  //步骤初始化
+  init(){
+    for (let x = 0; x < 3; x++) {
+       let obj = {};
+       //obj["index"] = x;
+       obj["img"] = "assets/icon/public/camera.png";
+       obj["write"] = "点击输入详细步骤...";
+       this.items.push(obj);
      }
   }
 
@@ -33,7 +42,17 @@ export class sendworkPage {
     this.isReordering = !this.isReordering;
   }
 
-  presentActionSheet() {
+  //填写步骤
+  write(index){
+    alert(index);
+  }
+
+  //添加步骤图
+  addImg(index){
+    this.presentActionSheet(index);
+  }
+
+  presentActionSheet(index) {
     let actionSheet = this.actionSheetCtrl.create({
       title: '图片来源',
       buttons: [
@@ -41,15 +60,31 @@ export class sendworkPage {
           text: '相册',
           icon:  'images',
           handler: () => {
-           
-            this.workbanner(0);
+            switch (index) {
+              case -1:
+                this.workbanner(0);
+                break;
+              default:
+                alert(index);
+                this.itembanner(index,0);
+                break;
+            }
+            
           }
         },{
           text: '相机',
           icon:  'camera',
           handler: () => {
+            switch (index) {
+              case -1:
+                this.workbanner(1);
+                break;
+              default:
+                alert(index);
+                this.itembanner(index,1);
+                break;
+            }
             
-            this.workbanner(1);
           }
         },{
           text: '取消',
@@ -62,6 +97,21 @@ export class sendworkPage {
       ]
     });
     actionSheet.present();
+  }
+
+  //item
+  itembanner(index,type){
+    Camera.getPicture({
+      quality:90,
+      allowEdit:true,
+      sourceType:type,
+      correctOrientation:true,
+    }).then((imageData) => {
+      this.items[index]["img"] = imageData;
+      alert(imageData);
+    }, (err) => {
+    // Handle error
+    });
   }
 
   //成品图片
@@ -79,9 +129,23 @@ export class sendworkPage {
     });
   }
 
+  //添加步骤
+  additem(){
+    let obj = {};
+    //obj["index"] = x;
+    obj["img"] = "assets/icon/public/camera.png";
+    obj["write"] = "点击输入详细步骤...";
+    this.items.push(obj);
+  }
+
+  //删除步骤
+  deleitem(index){
+    alert(index);
+  }
+
   //发布问题
   send() {
-    
+    alert(JSON.stringify(this.items));
   }
 
 }
