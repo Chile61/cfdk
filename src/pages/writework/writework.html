@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            步骤详细
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <br/>
+    <br/>
+    <textarea id="textarea" [(ngModel)]="text" maxlength="80" placeholder="请输入问题的内容,最多80个字符..."></textarea>
+    <br/>
+    <br/>
+    <button ion-button full color="secondary" (click)="send();">确定</button>
+</ion-content>

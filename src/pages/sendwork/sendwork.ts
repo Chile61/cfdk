@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, ActionSheetController } from 'ionic-angular';
 import { Camera } from 'ionic-native';
+import { Work } from '../service/Work';
+import { writeworkPage } from '../writework/writework';
 
 @Component({
   selector: 'page-sendwork',
@@ -18,19 +20,13 @@ export class sendworkPage {
 
   isReordering: boolean = false;
 
-  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController) {
+  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController,public work: Work) {
     this.init();
   }
 
   //步骤初始化
   init(){
-    for (let x = 0; x < 3; x++) {
-       let obj = {};
-       //obj["index"] = x;
-       obj["img"] = "assets/icon/public/camera.png";
-       obj["write"] = "点击输入详细步骤...";
-       this.items.push(obj);
-     }
+     this.items = this.work._work;
      let obj = {};
      obj["fname"] = "";
      obj["fnum"] = "";
@@ -49,7 +45,11 @@ export class sendworkPage {
 
   //填写步骤
   write(index){
-    alert(index);
+    //alert(index);
+    this.navCtrl.push(writeworkPage,{
+      index: index,
+      write: this.items[index]["write"]=="点击输入详细步骤..."?"":this.items[index]["write"]
+    });
   }
 
   //添加步骤图
@@ -140,7 +140,7 @@ export class sendworkPage {
     //obj["index"] = x;
     obj["img"] = "assets/icon/public/camera.png";
     obj["write"] = "点击输入详细步骤...";
-    this.items.push(obj);
+    this.work._work.push(obj);
   }
 
   //添加食材
