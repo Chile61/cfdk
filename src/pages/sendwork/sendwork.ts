@@ -12,6 +12,7 @@ export class sendworkPage {
   text: string = "";
 
   items = [];
+  foods = [];
 
   banner = "assets/icon/public/camera.png";
 
@@ -30,6 +31,10 @@ export class sendworkPage {
        obj["write"] = "点击输入详细步骤...";
        this.items.push(obj);
      }
+     let obj = {};
+     obj["fname"] = "";
+     obj["fnum"] = "";
+     this.foods.push(obj);
   }
 
   reorderItems(indexes) {
@@ -136,6 +141,14 @@ export class sendworkPage {
     obj["img"] = "assets/icon/public/camera.png";
     obj["write"] = "点击输入详细步骤...";
     this.items.push(obj);
+  }
+
+  //添加食材
+  addfood(){
+    let obj = {};
+    obj["fname"] = "";
+    obj["fnum"] = "";
+    this.foods.push(obj);
   }
 
   //删除步骤

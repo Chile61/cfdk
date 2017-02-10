@@ -20,6 +20,7 @@ import { sendworkPage } from '../pages/sendwork/sendwork';
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
 import { UserService } from '../pages/service/User.service';
+import { slidesPage } from '../pages/slides/slides';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { UserService } from '../pages/service/User.service';
     sendqusPage,
     sendchartPage,
     sendworkPage,
+    slidesPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -62,6 +64,7 @@ import { UserService } from '../pages/service/User.service';
     sendqusPage,
     sendchartPage,
     sendworkPage,
+    slidesPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService,UserService]
 })

@@ -18,18 +18,37 @@
     <ion-list>
 
         <ion-item>
-            <ion-label floating>标题</ion-label>
+            <ion-label floating>菜名</ion-label>
             <ion-input type="text" [(ngModel)]="title"></ion-input>
         </ion-item>
 
     </ion-list>
 
-    <textarea id="textarea" [(ngModel)]="text" maxlength="80" placeholder="请输入问题的内容,最多80个字符..."></textarea>
+    <textarea id="textarea" [(ngModel)]="text" maxlength="80" placeholder="分享心得,最多80个字符...（选填）"></textarea>
     <br/>
     <br/>
+    <ion-list-header>食材：</ion-list-header>
+    <ion-grid>
+        <ion-row *ngFor="let food of foods; let i=index">
+            <ion-col width-50>
+                <ion-item>
+                    <ion-input type="text" placeholder="食材：如鸡蛋" [(ngModel)]="food.fname"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col width-50>
+                <ion-item>
+                    <ion-input type="text" placeholder="用量：如1只" [(ngModel)]="food.fnum"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
 
+    </ion-grid>
+    <br/>
+    <button ion-button full color="light" (click)="addfood();">添加食材</button>
+    <br/>
+    <br/>
     <ion-list>
-        <ion-list-header>作品步骤</ion-list-header>
+        <ion-list-header>作品步骤（点击右上角调整顺序，左滑删除）</ion-list-header>
         <ion-item-group [reorder]="isReordering" (ionItemReorder)="reorderItems($event)">
 
             <ion-item-sliding *ngFor="let item of items; let i=index">
@@ -55,9 +74,9 @@
     <button ion-button full color="light" (click)="additem();">添加步骤</button>
     <br/>
     <ion-list>
-        <ion-list-header>Tips (可选)</ion-list-header>
+        <ion-list-header>Tips：</ion-list-header>
     </ion-list>
-    <textarea id="textarea" [(ngModel)]="text" maxlength="40" placeholder="提示,最多40个字符..."></textarea>
+    <textarea id="textarea" [(ngModel)]="text" maxlength="40" placeholder="提示,最多40个字符...（选填）"></textarea>
     <br/>
     <button ion-button full color="secondary" (click)="send();">发布作品</button>
     <br/>

@@ -26603,6 +26603,25 @@ ion-fab[bottom] {
   height: 3.5rem;
 }
 
+page-slides {
+  background: #f1eee4;
+  height: auto;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 page-toutiao {
   width: 100%;
   background: #fff;
