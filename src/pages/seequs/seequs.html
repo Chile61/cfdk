@@ -1,0 +1,129 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            问题详情
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <section id="seequs_wrap">
+        <div class="seequs_list">
+            <p class="seequs_list_title">如何炸出kfc和m记的薯条？</p>
+            <div class="seequs_user_wrap">
+                <img src="assets/img2/user_2.jpeg" />
+                <p>毓玲珑</p>
+            </div>
+            <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就</p>
+            <p class="seequs_btm_wrap">
+                <span class="seequs_hd">0个回答</span>
+                <span class="seequs_time">10-26</span>
+            </p>
+        </div>
+    </section>
+
+    <ion-list>
+
+        <ion-list-header>回答／评论</ion-list-header>
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img2/user_4.jpeg">
+            </ion-avatar>
+            <h2>Woody</h2>
+            <p>This town ain't big enough for the two of us!</p>
+            <ion-note item-right>3:43 pm</ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img2/user_3.jpeg">
+            </ion-avatar>
+            <h2>Buzz Lightyear</h2>
+            <p>My eyeballs could have been sucked from their sockets!</p>
+            <ion-note item-right>1:12 pm</ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img2/user_2.jpeg">
+            </ion-avatar>
+            <h2>Jessie</h2>
+            <p>Well aren't you just the sweetest space toy I ever did meet!</p>
+            <ion-note item-right>10:03 am</ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img2/user_1.jpeg">
+            </ion-avatar>
+            <h2>Mr. Potato Head</h2>
+            <p>You're not turning me into a Mashed Potato.</p>
+            <ion-note item-right>5:47 am</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img2/user_4.jpeg">
+            </ion-avatar>
+            <h2>Woody</h2>
+            <p>This town ain't big enough for the two of us!</p>
+            <ion-note item-right>3:43 pm</ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img2/user_3.jpeg">
+            </ion-avatar>
+            <h2>Buzz Lightyear</h2>
+            <p>My eyeballs could have been sucked from their sockets!</p>
+            <ion-note item-right>1:12 pm</ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img2/user_2.jpeg">
+            </ion-avatar>
+            <h2>Jessie</h2>
+            <p>Well aren't you just the sweetest space toy I ever did meet!</p>
+            <ion-note item-right>10:03 am</ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-left>
+                <img src="assets/img2/user_1.jpeg">
+            </ion-avatar>
+            <h2>Mr. Potato Head</h2>
+            <p>You're not turning me into a Mashed Potato.</p>
+            <ion-note item-right>5:47 am</ion-note>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+    <!--向上滑动-->
+    <ion-fab right bottom edge #327eff>
+        <button ion-fab><ion-icon name="arrow-dropup"></ion-icon></button>
+    </ion-fab>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="secondary">
+        <button ion-button icon-only>
+            <ion-icon name="heart"></ion-icon>
+        </button>
+        <button ion-button icon-only>
+            <ion-icon name="share"></ion-icon>
+        </button>
+        <button ion-button icon-only>
+            <ion-icon name="eye-off"></ion-icon>
+        </button>
+        <button ion-button icon-only>
+            <ion-icon name="contact"></ion-icon>
+        </button>
+        <button ion-button icon-left>
+        <ion-icon name="clipboard"></ion-icon>
+        我要回答／评论
+        </button>
+    </ion-toolbar>
+</ion-footer>

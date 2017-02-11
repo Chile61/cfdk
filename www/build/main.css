@@ -26367,6 +26367,56 @@ ion-list {
   margin: 0;
 }
 
+#seequs_wrap {
+  width: 100%;
+  padding: 3%;
+  background: #fff;
+}
+
+.seequs_list {
+  width: 100%;
+  margin-bottom: 3.5%;
+}
+
+.seequs_list_title {
+  font-size: 1.8rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.seequs_user_wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.seequs_user_wrap p {
+  margin: 0;
+  line-height: 4rem;
+  color: #93928f;
+}
+
+.seequs_user_wrap img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 99999px;
+  float: left;
+  margin-right: 1.3rem;
+}
+
+.seequs_btm_wrap {
+  width: 100%;
+  overflow: hidden;
+  color: #93928f;
+}
+
+.seequs_hd {
+  float: left;
+}
+
+.seequs_time {
+  float: right;
+}
+
 #imageUl {
   width: 100%;
   display: block;

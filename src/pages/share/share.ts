@@ -4,6 +4,7 @@ import { loginPage } from '../login/login';
 import { sendqusPage } from '../sendqus/sendqus';
 import { sendchartPage } from '../sendchart/sendchart';
 import { sendworkPage } from '../sendwork/sendwork';
+import { seequsPage } from '../seequs/seequs';
 
 import { UserService } from '../service/User.service';
 
@@ -17,6 +18,11 @@ export class SharePage {
 
   constructor(public navCtrl: NavController, public userService: UserService, public loadingCtrl: LoadingController) {
 
+  }
+
+  //查看问题
+  openqus(){
+   this.navCtrl.push(seequsPage); 
   }
 
   //发布厨房问答

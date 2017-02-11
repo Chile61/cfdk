@@ -20,7 +20,7 @@
     </ion-refresher>
 
     <section *ngSwitchCase="'new1'" id="qus_wrap">
-        <div class="qus_list">
+        <div class="qus_list" (click)="openqus();">
             <p class="qus_list_title">如何炸出kfc和m记的薯条？</p>
             <div class="qus_user_wrap">
                 <img src="assets/img2/user_2.jpeg" />

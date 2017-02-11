@@ -11,7 +11,7 @@ import { UserService } from '../pages/service/User.service';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = slidesPage;
+  rootPage:any;
 
   constructor(platform: Platform,public userService: UserService) {
     NativeStorage.getItem('_onlyone')
