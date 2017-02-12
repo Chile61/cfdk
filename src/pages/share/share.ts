@@ -6,6 +6,7 @@ import { sendchartPage } from '../sendchart/sendchart';
 import { sendworkPage } from '../sendwork/sendwork';
 import { seequsPage } from '../seequs/seequs';
 import { seeworkPage } from '../seework/seework';
+import { seechartPage } from '../seechart/seechart';
 
 import { UserService } from '../service/User.service';
 
@@ -29,6 +30,11 @@ export class SharePage {
   //查看作品详情
   openwork(){
    this.navCtrl.push(seeworkPage); 
+  }
+
+  //查看分享闲聊
+  openchart(){
+   this.navCtrl.push(seechartPage); 
   }
 
   //发布厨房问答

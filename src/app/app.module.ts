@@ -19,7 +19,9 @@ import { sendworkPage } from '../pages/sendwork/sendwork';
 import { writeworkPage } from '../pages/writework/writework';
 import { seequsPage } from '../pages/seequs/seequs';
 import { seeworkPage } from '../pages/seework/seework';
+import { seechartPage } from '../pages/seechart/seechart';
 import { searchPage } from '../pages/search/search';
+
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
 import { UserService } from '../pages/service/User.service';
@@ -51,6 +53,7 @@ import { rankingPage } from '../pages/ranking/ranking';
     seeworkPage,
     searchPage,
     rankingPage,
+    seechartPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -80,6 +83,7 @@ import { rankingPage } from '../pages/ranking/ranking';
     seeworkPage,
     searchPage,
     rankingPage,
+    seechartPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService,UserService,Work]
 })
