@@ -27,7 +27,7 @@
         </div>
         <!--顶部分类导航-->
         <section id="home_menu">
-            <div class="home_menu_list">
+            <div class="home_menu_list" (click)="pushsearchPage()">
                 <img src="assets/icon/home/m1.png" />
                 <p>菜谱分类</p>
             </div>
@@ -35,13 +35,13 @@
                 <img src="assets/icon/home/m2.png" />
                 <p>视频</p>
             </div>
-            <div class="home_menu_list">
+            <div class="home_menu_list" (click)="pushtoutiaoHotListPage()">
                 <img src="assets/icon/home/m3.png" />
                 <p>养生头条</p>
             </div>
-            <div class="home_menu_list">
+            <div class="home_menu_list" (click)="pushrankingPage();">
                 <img src="assets/icon/home/m4.png" />
-                <p>工具分类</p>
+                <p>排名</p>
             </div>
         </section>
         <!--养生头条-->

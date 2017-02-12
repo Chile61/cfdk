@@ -4,7 +4,8 @@ import { NavController, LoadingController } from 'ionic-angular';
 import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
 import { videolistPage } from '../videolist/videolist';
-
+import { searchPage } from '../search/search';
+import { rankingPage } from '../ranking/ranking';
 
 
 declare var $: any;
@@ -50,9 +51,19 @@ export class HomePage {
     }, 3000);
   }
 
+  //打开菜谱分类／搜索
+  pushsearchPage(){
+    this.navCtrl.push(searchPage);
+  }
+
   //打开养生头条
   pushtoutiaoPage(){
     this.navCtrl.push(toutiaoPage);
+  }
+
+  //打开排名
+  pushrankingPage(){
+    this.navCtrl.push(rankingPage);
   }
 
   //打开热门养生头条

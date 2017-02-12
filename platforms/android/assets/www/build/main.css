@@ -26367,6 +26367,22 @@ ion-list {
   margin: 0;
 }
 
+page-ranking {
+  width: 100%;
+  background: #fff;
+}
+
+page-search {
+  width: 100%;
+  background: #fff;
+}
+
+.search-ban {
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
 #seequs_wrap {
   width: 100%;
   padding: 3%;
