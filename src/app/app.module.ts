@@ -21,13 +21,14 @@ import { seequsPage } from '../pages/seequs/seequs';
 import { seeworkPage } from '../pages/seework/seework';
 import { seechartPage } from '../pages/seechart/seechart';
 import { searchPage } from '../pages/search/search';
+import { slidesPage } from '../pages/slides/slides';
+import { rankingPage } from '../pages/ranking/ranking';
 
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
 import { UserService } from '../pages/service/User.service';
 import { Work } from '../pages/service/Work';
-import { slidesPage } from '../pages/slides/slides';
-import { rankingPage } from '../pages/ranking/ranking';
+import { ContactData } from '../pages/service/ContactData';
 
 
 @NgModule({
@@ -85,6 +86,6 @@ import { rankingPage } from '../pages/ranking/ranking';
     rankingPage,
     seechartPage,
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},RongCloudService,UserService,Work]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, RongCloudService, UserService, Work, ContactData]
 })
 export class AppModule {}
