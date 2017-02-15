@@ -9,6 +9,7 @@ import { seeworkPage } from '../seework/seework';
 import { seechartPage } from '../seechart/seechart';
 
 import { UserService } from '../service/User.service';
+import { Work } from '../service/Work';
 
 @Component({
   selector: 'page-share',
@@ -18,7 +19,7 @@ export class SharePage {
 
   pet: string = "new1";
 
-  constructor(public navCtrl: NavController, public userService: UserService, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public userService: UserService, public loadingCtrl: LoadingController, public work: Work) {
 
   }
 
@@ -88,6 +89,12 @@ export class SharePage {
     setTimeout(() => {
       loading.dismiss();
     }, 3000);
+  }
+
+  ionViewDidEnter() {
+    
+    this.work.init();
+    
   }
 
 }
