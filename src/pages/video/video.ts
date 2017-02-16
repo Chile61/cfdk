@@ -10,7 +10,7 @@ import { NavController } from 'ionic-angular';
 export class videoPage {
 
   constructor(public navCtrl: NavController) {
-    
+
   }
 
 }

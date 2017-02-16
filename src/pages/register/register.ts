@@ -22,8 +22,8 @@ export class registerPage {
   }
 
   //注册
-  register(){
-    
+  register() {
+
     let loading = this.loadingCtrl.create({
       content: '请稍后...'
     });
@@ -34,13 +34,13 @@ export class registerPage {
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    
-		this.http.post(url, "uname="+this.name+"&usex="+this.sex+"&upas="+SHA1(this.password), {
+
+    this.http.post(url, "uname=" + this.name + "&usex=" + this.sex + "&upas=" + SHA1(this.password), {
       headers: headers
     })
-			.subscribe((res) => {
-				
-        if( res.json() == "0" ){
+      .subscribe((res) => {
+
+        if (res.json() == "0") {
           let alert = this.alertCtrl.create({
             title: '提示!',
             subTitle: '用户名已存在，请重新填写!',
@@ -48,19 +48,19 @@ export class registerPage {
           });
           alert.present();
           this.name = "";
-        }else{
-          
+        } else {
+
           var datas = res.json()[0];
           this.userService.update(datas);
           this.userService.getStorage();
           this.navCtrl.pop();
         }
 
-        
+
         loading.dismiss();
-			});
+      });
 
   }
 
-  
+
 }

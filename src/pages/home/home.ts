@@ -13,7 +13,7 @@ declare var Swiper: any;
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  
+
 })
 export class HomePage {
 
@@ -23,8 +23,8 @@ export class HomePage {
   public headers: Headers;
 
   constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController) {
-      //this.RongCloudS.RongCloudLibPlugin_init();
-      
+    //this.RongCloudS.RongCloudLibPlugin_init();
+
   }
 
   //刷新视频
@@ -33,7 +33,7 @@ export class HomePage {
     this.presentLoadingDefault();
 
     setTimeout(() => {
-      
+
       refresher.complete();
     }, 3000);
   }
@@ -52,27 +52,27 @@ export class HomePage {
   }
 
   //打开菜谱分类／搜索
-  pushsearchPage(){
+  pushsearchPage() {
     this.navCtrl.push(searchPage);
   }
 
   //打开养生头条
-  pushtoutiaoPage(){
+  pushtoutiaoPage() {
     this.navCtrl.push(toutiaoPage);
   }
 
   //打开排名
-  pushrankingPage(){
+  pushrankingPage() {
     this.navCtrl.push(rankingPage);
   }
 
   //打开热门养生头条
-  pushtoutiaoHotListPage(){
+  pushtoutiaoHotListPage() {
     this.navCtrl.push(toutiaoHotListPage);
   }
 
   //打开视频
-  pushvideoPage(){
+  pushvideoPage() {
     this.navCtrl.push(videolistPage);
   }
 
@@ -99,7 +99,7 @@ export class HomePage {
         spaceBetween: 6
       });
 
-      
+
     }
 
   }

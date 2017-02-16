@@ -11,7 +11,7 @@ export class Work {
   }
 
   init() {
-    
+
     this._work = [];
 
     for (let x = 0; x < 3; x++) {
@@ -20,6 +20,7 @@ export class Work {
       obj["img"] = "assets/icon/public/camera.png";
       obj["write"] = "点击输入详细步骤...";
       obj["ishasimg"] = false;
+      obj["isupload"] = false;
       this._work.push(obj);
     }
   }

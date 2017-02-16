@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController, LoadingController } from 'ionic-angular';
+import { NavController, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, Transfer } from 'ionic-native';
 import { Work } from '../service/Work';
 import { writeworkPage } from '../writework/writework';
@@ -18,14 +18,17 @@ export class sendworkPage {
 
   url = "http://www.devonhello.com/cfdk/upload";
 
+  fileTransfer = new Transfer();
+
   items = [];
   foods = [];
 
   banner = "assets/icon/public/camera.png";
+  bannerisup = false;
 
   isReordering: boolean = false;
 
-  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController, public work: Work, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController, public work: Work, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
     this.init();
   }
 
@@ -120,10 +123,11 @@ export class sendworkPage {
       sourceType: type,
       correctOrientation: true,
     }).then((imageData) => {
-      this.items[index]["img"] = imageData;
-      this.items[index]["ishasimg"] = true;
-      this.upload(imageData, this.items[index]["img"]);
-      //alert(imageData);
+      this.work._work[index]["img"] = imageData;
+      this.work._work[index]["ishasimg"] = true;
+      this.upload(imageData, index);
+
+      alert(this.work._work);
     }, (err) => {
       // Handle error
     });
@@ -138,7 +142,7 @@ export class sendworkPage {
       correctOrientation: true,
     }).then((imageData) => {
       this.banner = imageData;
-      this.upload(imageData, this.banner);
+      this.upload(imageData, -1);
     }, (err) => {
       // Handle error
     });
@@ -169,19 +173,67 @@ export class sendworkPage {
   //发布问题
   send() {
 
+    this.checkup();
 
     //alert(JSON.stringify(this.items));
   }
 
-  upload(dataurl, obj) {
+  //j检测图片是否全部上传
+  checkup() {
+
+    if (!this.bannerisup && this.banner != "assets/icon/public/camera.png") {
+      let alert = this.alertCtrl.create({
+        title: '提示!',
+        subTitle: "成品图上传失败，请重新选择",
+        buttons: ['确定']
+      });
+      alert.present();
+      return true;
+    }
+
+    if (!this.foods[0]["fname"] || !this.foods[0]["fnum"]) {
+      let alert = this.alertCtrl.create({
+        title: '提示!',
+        subTitle: "食材填写完整，至少一种食材",
+        buttons: ['确定']
+      });
+      alert.present();
+      return true;
+    }
+
+    for (let i = 0; i < this.items.length; i++) {
+      if (!this.work._work[i]["isupload"] && this.work._work[i]["ishasimg"]) {
+        let alert = this.alertCtrl.create({
+          title: '提示!',
+          subTitle: "步骤图第 " + i + 1 + " 张上传失败，请重新选择",
+          buttons: ['确定']
+        });
+        alert.present();
+        break;
+      }
+    }
+
+
+  }
+
+  upload(dataurl, index) {
 
     this.loading.present();
 
-    const fileTransfer = new Transfer();
 
-    fileTransfer.upload(dataurl, this.url, {}).then((data) => {
+
+    this.fileTransfer.upload(dataurl, this.url, {}).then((data) => {
       //alert(data["response"]);
-      obj = "http://7xp2ia.com1.z0.glb.clouddn.com/" + data["response"];
+      alert(index);
+      if (index != -1) {
+        this.work._work[index]["img"] = "http://7xp2ia.com1.z0.glb.clouddn.com/" + data["response"];
+        this.work._work[index]["isupload"] = true;
+      } else {
+        this.banner = "http://7xp2ia.com1.z0.glb.clouddn.com/" + data["response"];
+        this.bannerisup = true;
+      }
+
+      alert(JSON.stringify(this.items));
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();

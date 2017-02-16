@@ -14,7 +14,7 @@ export class rankingPage {
   }
 
   //打开养生头条
-  pushtoutiaoPage(){
+  pushtoutiaoPage() {
     this.navCtrl.push(toutiaoPage);
   }
 

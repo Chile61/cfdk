@@ -18,8 +18,8 @@ export class TabsPage {
   tab3Root: any = ContactPage;
   tab4Root: any = MePage;
 
-  constructor( public userService: UserService) {
-      //this.userService.clear();
-      this.userService.getStorage();
+  constructor(public userService: UserService) {
+    //this.userService.clear();
+    this.userService.getStorage();
   }
 }

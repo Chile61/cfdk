@@ -21,12 +21,12 @@ export class searchPage {
   }
 
   //
-  ionInput(ev: any){
+  ionInput(ev: any) {
     alert(ev.target.value);
   }
 
   //查看菜谱
-  openwork(){
-    this.navCtrl.push(seeworkPage); 
+  openwork() {
+    this.navCtrl.push(seeworkPage);
   }
 }

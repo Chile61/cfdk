@@ -12,9 +12,9 @@ export class seeworkPage {
   }
 
   doInfinite(infiniteScroll) {
-    
+
     setTimeout(() => {
-      
+
       infiniteScroll.complete();
     }, 500);
   }

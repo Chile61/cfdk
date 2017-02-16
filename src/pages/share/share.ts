@@ -24,45 +24,45 @@ export class SharePage {
   }
 
   //查看问题
-  openqus(){
-   this.navCtrl.push(seequsPage); 
+  openqus() {
+    this.navCtrl.push(seequsPage);
   }
 
   //查看作品详情
-  openwork(){
-   this.navCtrl.push(seeworkPage); 
+  openwork() {
+    this.navCtrl.push(seeworkPage);
   }
 
   //查看分享闲聊
-  openchart(){
-   this.navCtrl.push(seechartPage); 
+  openchart() {
+    this.navCtrl.push(seechartPage);
   }
 
   //发布厨房问答
-  sendQus(){
+  sendQus() {
 
-    if( this.userService._user._id ){
+    if (this.userService._user._id) {
       this.navCtrl.push(sendqusPage);
-    }else{
+    } else {
       this.navCtrl.push(loginPage);
     }
 
   }
 
   //发布厨房作品
-  sendWork(){
-    if( this.userService._user._id ){
-        this.navCtrl.push(sendworkPage);
-      }else{
-        this.navCtrl.push(loginPage);
-      }
+  sendWork() {
+    if (this.userService._user._id) {
+      this.navCtrl.push(sendworkPage);
+    } else {
+      this.navCtrl.push(loginPage);
+    }
   }
 
   //发布心情
-  sendchart(){
-    if( this.userService._user._id ){
+  sendchart() {
+    if (this.userService._user._id) {
       this.navCtrl.push(sendchartPage);
-    }else{
+    } else {
       this.navCtrl.push(loginPage);
     }
   }
@@ -73,7 +73,7 @@ export class SharePage {
     this.presentLoadingDefault();
 
     setTimeout(() => {
-      
+
       refresher.complete();
     }, 3000);
   }
@@ -92,9 +92,9 @@ export class SharePage {
   }
 
   ionViewDidEnter() {
-    
+
     this.work.init();
-    
+
   }
 
 }

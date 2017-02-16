@@ -13,20 +13,20 @@ export class slidesPage {
   public banner = null;
 
   constructor(public navCtrl: NavController) {
-    
+
   }
   ionViewDidEnter() {
 
-    if (this.banner == null){
+    if (this.banner == null) {
       this.banner = new Swiper('.swiper-container', {
-          // 如果需要分页器
-          pagination: '.swiper-pagination',
-        });
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+      });
     }
   }
 
   //跳转tab页面
-  push(){
+  push() {
     this.navCtrl.push(TabsPage);
   }
 }

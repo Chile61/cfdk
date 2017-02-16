@@ -30,16 +30,16 @@ export class sendqusPage {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "uid="+this.userService._user._id+"&uhead="+"https://avatars0.githubusercontent.com/u/11835988?v=3&s=460"+"&uname="+this.userService._user.uname+"&utitle="+this.title+"&uquestion="+this.text, {
-        headers: headers
-      })
-        .subscribe((res) => {
-          
-          if(res.json()["ops"][0]["_id"]){
-            this.navCtrl.pop();
-          }
-          loading.dismiss();
-        });
+    this.http.post(url, "uid=" + this.userService._user._id + "&uhead=" + "https://avatars0.githubusercontent.com/u/11835988?v=3&s=460" + "&uname=" + this.userService._user.uname + "&utitle=" + this.title + "&uquestion=" + this.text, {
+      headers: headers
+    })
+      .subscribe((res) => {
+
+        if (res.json()["ops"][0]["_id"]) {
+          this.navCtrl.pop();
+        }
+        loading.dismiss();
+      });
 
   }
 

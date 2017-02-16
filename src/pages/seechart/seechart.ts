@@ -12,9 +12,9 @@ export class seechartPage {
   }
 
   doInfinite(infiniteScroll) {
-    
+
     setTimeout(() => {
-      
+
       infiniteScroll.complete();
     }, 500);
   }

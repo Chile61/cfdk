@@ -12,9 +12,9 @@ export class seequsPage {
   }
 
   doInfinite(infiniteScroll) {
-    
+
     setTimeout(() => {
-      
+
       infiniteScroll.complete();
     }, 500);
   }

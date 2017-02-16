@@ -11,17 +11,17 @@ export class MePage {
   public uname: any;
 
   constructor(public navCtrl: NavController, public userService: UserService) {
-    
+
     this.uname = this.userService._user.uname;
-    
+
   }
 
   ionViewDidEnter() {
-    
-    if( this.userService._user._is ){
+
+    if (this.userService._user._is) {
       this.uname = this.userService._user.uname;
     }
-    
+
   }
 
 }

@@ -5,8 +5,8 @@ export class ContactData {
 
 	public _data = [];
 
-    constructor() {
-      
-  	}
+	constructor() {
+
+	}
 
 }

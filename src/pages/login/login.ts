@@ -16,51 +16,51 @@ export class loginPage {
   password: string = "";
 
   constructor(public navCtrl: NavController, public http: Http, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public userService: UserService) {
-    
+
   }
 
   ionViewDidEnter() {
-    
-    if( this.userService._user._id ){
-      
+
+    if (this.userService._user._id) {
+
       this.navCtrl.pop();
     }
-    
+
   }
 
   //跳转注册界面
-  pushregisterPage(){
+  pushregisterPage() {
     this.navCtrl.push(registerPage)
   }
 
   //登录
-  logIn(){
+  logIn() {
     let loading = this.loadingCtrl.create({
       content: '请稍后...'
     });
 
-    if( $.trim( this.name ).length >= 4 && $.trim( this.password ).length >= 6 ){
+    if ($.trim(this.name).length >= 4 && $.trim(this.password).length >= 6) {
       loading.present();
 
       let url = "http://www.devonhello.com/cfdk/login";
 
       var headers = new Headers();
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
-      
-      this.http.post(url, "uname="+this.name+"&upas="+SHA1(this.password), {
+
+      this.http.post(url, "uname=" + this.name + "&upas=" + SHA1(this.password), {
         headers: headers
       })
         .subscribe((res) => {
-          
-          if( res.json() == "0" ){
+
+          if (res.json() == "0") {
             let alert = this.alertCtrl.create({
               title: '提示!',
               subTitle: '输入有误!',
               buttons: ['确定']
             });
             alert.present();
-            
-          }else{
+
+          } else {
             var datas = res.json()[0];
             alert(datas);
             this.userService.update(datas);
@@ -68,23 +68,23 @@ export class loginPage {
             this.navCtrl.pop();
           }
 
-          
+
           loading.dismiss();
         });
-    }else{
+    } else {
       let alert = this.alertCtrl.create({
-              title: '提示!',
-              subTitle: '输入有误!',
-              buttons: ['确定']
-            });
-            alert.present();
-            this.name = "";
-            this.password = "";
+        title: '提示!',
+        subTitle: '输入有误!',
+        buttons: ['确定']
+      });
+      alert.present();
+      this.name = "";
+      this.password = "";
     }
 
-    
+
   }
 
-  
+
 
 }
