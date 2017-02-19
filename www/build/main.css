@@ -26126,6 +26126,10 @@ sub {
   }
 }
 
+.chart_p_left {
+  text-align: right;
+}
+
 .home-page {
   background: #f1eee4;
   height: auto;

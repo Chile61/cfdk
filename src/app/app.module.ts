@@ -23,6 +23,7 @@ import { seechartPage } from '../pages/seechart/seechart';
 import { searchPage } from '../pages/search/search';
 import { slidesPage } from '../pages/slides/slides';
 import { rankingPage } from '../pages/ranking/ranking';
+import { chartPage } from '../pages/chart/chart';
 
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
@@ -55,6 +56,7 @@ import { ContactData } from '../pages/service/ContactData';
     searchPage,
     rankingPage,
     seechartPage,
+    chartPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -85,6 +87,7 @@ import { ContactData } from '../pages/service/ContactData';
     searchPage,
     rankingPage,
     seechartPage,
+    chartPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, RongCloudService, UserService, Work, ContactData]
 })

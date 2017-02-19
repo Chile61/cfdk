@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
 import { Camera, Transfer } from 'ionic-native';
+import { Headers, Http } from '@angular/http';
 import { Work } from '../service/Work';
 import { writeworkPage } from '../writework/writework';
+import { UserService } from '../service/User.service';
 
 @Component({
   selector: 'page-sendwork',
@@ -13,6 +15,7 @@ export class sendworkPage {
 
   title: string = "";
   text: string = "";
+  tip: string = "";
 
   loading = null;
 
@@ -28,7 +31,7 @@ export class sendworkPage {
 
   isReordering: boolean = false;
 
-  constructor(public navCtrl: NavController, public actionSheetCtrl: ActionSheetController, public work: Work, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public userService: UserService, public http: Http, public actionSheetCtrl: ActionSheetController, public work: Work, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
     this.init();
   }
 
@@ -209,10 +212,33 @@ export class sendworkPage {
           buttons: ['确定']
         });
         alert.present();
-        break;
+        return true;
       }
     }
+    
+    this.tohttp();
 
+  }
+
+  //提交作品数据
+  tohttp(){
+
+    let url = "http://www.devonhello.com/cfdk/post_work";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "uid=" + this.userService._user._id + "&uhead=" + "https://avatars0.githubusercontent.com/u/11835988?v=3&s=460" + "&uname=" + this.userService._user.uname + "&utitle=" + this.title + "&ubanner=" + this.banner+"&utext="+this.text+"&ueat="+this.foods+"&uimg="+this.work._work+"&utip="+this.tip, {
+      headers: headers
+    })
+      .subscribe((res) => {
+
+        alert(JSON.stringify(res.json()));
+        if (res.json()["ops"][0]["_id"]) {
+          this.navCtrl.pop();
+        }
+        this.loading.dismiss();
+      });
 
   }
 
