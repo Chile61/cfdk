@@ -96,7 +96,7 @@ export class sendchartPage {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "uid=" + this.userService._user._id + "&uhead=" + "https://avatars0.githubusercontent.com/u/11835988?v=3&s=460" + "&uname=" + this.userService._user.uname + "&utext=" + this.text + "&uimg=" + this.upimages, {
+    this.http.post(url, "uid=" + this.userService._user._id + "&uhead=" + "https://avatars0.githubusercontent.com/u/11835988?v=3&s=460" + "&uname=" + this.userService._user.uname + "&utext=" + this.text + "&uimg=" + JSON.stringify(this.upimages), {
       headers: headers
     })
       .subscribe((res) => {

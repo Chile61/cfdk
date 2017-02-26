@@ -24,4 +24,8 @@ export class MePage {
 
   }
 
+  clear(){
+    this.userService.clear();
+  }
+
 }

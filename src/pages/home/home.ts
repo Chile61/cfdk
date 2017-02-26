@@ -3,6 +3,7 @@ import { Headers, Http } from '@angular/http';
 import { NavController, LoadingController } from 'ionic-angular';
 import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
+import { toutiaoListPage } from '../toutiaoList/toutiaoList';
 import { videolistPage } from '../videolist/videolist';
 import { searchPage } from '../search/search';
 import { rankingPage } from '../ranking/ranking';
@@ -69,6 +70,11 @@ export class HomePage {
   //打开热门养生头条
   pushtoutiaoHotListPage() {
     this.navCtrl.push(toutiaoHotListPage);
+  }
+
+  //打开养生头条
+  pushtoutiaoListPage() {
+    this.navCtrl.push(toutiaoListPage);
   }
 
   //打开视频

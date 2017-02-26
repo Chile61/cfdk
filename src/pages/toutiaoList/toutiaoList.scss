@@ -1,0 +1,47 @@
+page-toutiaoList {
+    width: 100%;
+    background: #fff;
+}
+
+#toutiaoHotList {
+    width: 100%;
+    padding: 4%;
+    background: #fff;
+}
+
+.home_hot_list {
+    width: 100%;
+    display: flex;
+    -webkit-display: flex;
+    padding: 8px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.home_hot_item_img {
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.home_hot_item {
+    flex: 2;
+    -webkit-flex: 2;
+    padding-left: 8px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+}
+
+.home_hot_list .home_hot_item .home_hot_item_title {
+    font-size: 1.7rem;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+    display: block;
+    width: 100%;
+}

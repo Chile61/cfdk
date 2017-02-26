@@ -9,6 +9,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { MePage } from '../pages/me/me';
 import { toutiaoPage } from '../pages/toutiao/toutiao';
 import { toutiaoHotListPage } from '../pages/toutiaoHotList/toutiaoHotList';
+import { toutiaoListPage } from '../pages/toutiaoList/toutiaoList';
 import { videoPage } from '../pages/video/video';
 import { videolistPage } from '../pages/videolist/videolist';
 import { loginPage } from '../pages/login/login';
@@ -57,6 +58,7 @@ import { ContactData } from '../pages/service/ContactData';
     rankingPage,
     seechartPage,
     chartPage,
+    toutiaoListPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -88,6 +90,7 @@ import { ContactData } from '../pages/service/ContactData';
     rankingPage,
     seechartPage,
     chartPage,
+    toutiaoListPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, RongCloudService, UserService, Work, ContactData]
 })

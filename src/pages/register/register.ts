@@ -35,7 +35,7 @@ export class registerPage {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "uname=" + this.name + "&usex=" + this.sex + "&upas=" + SHA1(this.password), {
+    this.http.post(url, "uname=" + this.name + "&usex=" + this.sex + "&upas=" + SHA1(this.password) + "&ufrom=APP", {
       headers: headers
     })
       .subscribe((res) => {
