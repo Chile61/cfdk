@@ -125,6 +125,8 @@ export class sendworkPage {
       allowEdit: true,
       sourceType: type,
       correctOrientation: true,
+      targetWidth: 630,
+      targetHeight:400,
     }).then((imageData) => {
       this.work._work[index]["img"] = imageData;
       this.work._work[index]["ishasimg"] = true;
@@ -143,6 +145,8 @@ export class sendworkPage {
       allowEdit: true,
       sourceType: type,
       correctOrientation: true,
+      targetWidth: 630,
+      targetHeight:400,
     }).then((imageData) => {
       this.banner = imageData;
       this.upload(imageData, -1);
@@ -157,6 +161,10 @@ export class sendworkPage {
     //obj["index"] = x;
     obj["img"] = "assets/icon/public/camera.png";
     obj["write"] = "点击输入详细步骤...";
+    obj["ishasimg"] = false;
+    obj["isupload"] = false;
+    obj["width"] = 0;
+    obj["height"] = 0;
     this.work._work.push(obj);
   }
 
@@ -249,13 +257,24 @@ export class sendworkPage {
 
 
     this.fileTransfer.upload(dataurl, this.url, {}).then((data) => {
-      //alert(data["response"]);
+      data = JSON.parse(data["response"]);
+      alert(data["width"]);
+      alert(data["height"]);
+      alert(data["img"]);
       alert(index);
       if (index != -1) {
-        this.work._work[index]["img"] = "http://7xp2ia.com1.z0.glb.clouddn.com/" + data["response"];
+        this.work._work[index]["img"] = "http://7xp2ia.com1.z0.glb.clouddn.com/" + data["img"];
         this.work._work[index]["isupload"] = true;
+        this.work._work[index]["width"] = data["width"];
+        this.work._work[index]["height"] = data["height"];
       } else {
-        this.banner = "http://7xp2ia.com1.z0.glb.clouddn.com/" + data["response"];
+
+        var banobj = {};
+        banobj["img"] = "http://7xp2ia.com1.z0.glb.clouddn.com/" + data["img"];
+        banobj["width"] = data["width"];
+        banobj["height"] = data["height"];
+
+        this.banner = JSON.stringify(banobj);
         this.bannerisup = true;
       }
 

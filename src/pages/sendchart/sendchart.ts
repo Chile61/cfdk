@@ -74,12 +74,13 @@ export class sendchartPage {
 
     fileTransfer.upload(dataurl, this.url, {}).then((data) => {
       //alert(data["response"]);
-      this.upimages.push("http://7xp2ia.com1.z0.glb.clouddn.com/" + data["response"]);
+      
+      this.upimages.push(JSON.parse(data["response"]));
       if (this.upimages.length != this.images.length) {
         this.upload(this.images[this.upimages.length]);
       } else {
 
-        alert(this.upimages);
+        //alert(this.upimages);
         this.tohttp();
       }
     }, (err) => {

@@ -8,16 +8,16 @@
 <ion-content>
     <section class="home_works">
         <div class="home_work_list">
-            <img src="assets/img2/home_work_1.jpeg" />
+            <img [src]="banner" (click)="pswpElementInit(0);" />
             <div class="home_work_cont">
                 <div class="home_work_cont_left">
-                    <p class="home_work_cont_left_title">蚝油鸡胸肉</p>
-                    <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用,这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
-                    <p>10-22</p>
+                    <p class="home_work_cont_left_title">{{datas.utitle}}</p>
+                    <p>{{datas.utext}}</p>
+                    <p>{{datas.utime | date:"yyyy-MM-dd"}}</p>
                 </div>
                 <div class="home_work_cont_right">
-                    <img src="assets/img2/user_4.jpeg" />
-                    <p>春燕_Lsg6</p>
+                    <img [src]="datas.uhead" />
+                    <p>{{datas.uname}}</p>
                 </div>
             </div>
         </div>
@@ -25,113 +25,46 @@
     </section>
     <ion-list-header>食材：</ion-list-header>
     <ion-grid>
-        <ion-row>
+
+        <ion-row *ngFor="let item of datas.ueat; let i=index">
             <ion-col width-70>
                 <ion-item>
-                    广东省中山市农村的鸡蛋
+                    {{item.fname}}
                 </ion-item>
             </ion-col>
             <ion-col width-30>
                 <ion-item>
-                    1只
+                    {{item.fnum}}
                 </ion-item>
             </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col width-70>
-                <ion-item>
-                    鸡蛋
-                </ion-item>
-            </ion-col>
-            <ion-col width-30>
-                <ion-item>
-                    1只
-                </ion-item>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col width-70>
-                <ion-item>
-                    鸡蛋
-                </ion-item>
-            </ion-col>
-            <ion-col width-30>
-                <ion-item>
-                    1只
-                </ion-item>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col width-70>
-                <ion-item>
-                    鸡蛋
-                </ion-item>
-            </ion-col>
-            <ion-col width-30>
-                <ion-item>
-                    1只
-                </ion-item>
-            </ion-col>
-        </ion-row>
+
     </ion-grid>
     <br/>
     <br/>
     <br/>
     <ion-list-header>步骤：</ion-list-header>
-    <ion-card>
-        <img src="assets/img2/home_work_3.jpeg" />
+
+    <ion-card *ngFor="let item of datas.uimg; let i=index">
+
+        <img (click)="pswpElementInit(i+1);" [src]="item.img" class='ishiden-{{item.ishasimg}}' />
+
         <ion-card-content>
             <ion-card-title>
-                Nine Inch Nails Live
+                步骤 {{i+1}}
             </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </p>
+            <p>{{item.write}}</p>
         </ion-card-content>
     </ion-card>
 
-    <ion-card>
-        <img src="assets/img2/home_work_1.jpeg" />
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
 
-    <ion-card>
-        <img src="assets/img2/home_work_2.jpeg" />
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-        <img src="assets/img2/home_work_3.jpeg" />
-        <ion-card-content>
-            <ion-card-title>
-                Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-                The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
-            </p>
-        </ion-card-content>
-    </ion-card>
     <br/>
     <ion-card>
         <ion-card-header>
             提示：
         </ion-card-header>
         <ion-card-content>
-            The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+            {{datas.utip}}
         </ion-card-content>
     </ion-card>
     <br/>
@@ -220,3 +153,67 @@
         </button>
     </ion-toolbar>
 </ion-footer>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

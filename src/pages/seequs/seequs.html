@@ -8,15 +8,15 @@
 <ion-content>
     <section id="seequs_wrap">
         <div class="seequs_list">
-            <p class="seequs_list_title">如何炸出kfc和m记的薯条？</p>
+            <p class="seequs_list_title">{{datas.utitle}}</p>
             <div class="seequs_user_wrap">
-                <img src="assets/img2/user_2.jpeg" />
-                <p>毓玲珑</p>
+                <img [src]="datas.uhead" />
+                <p>{{datas.uname}}</p>
             </div>
-            <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用这是一个简单的菜。闲时腌，忙时十分钟就</p>
+            <p>{{datas.uquestion}}</p>
             <p class="seequs_btm_wrap">
-                <span class="seequs_hd">0个回答</span>
-                <span class="seequs_time">10-26</span>
+                <span class="seequs_hd">{{datas.ucomment}}个回答</span>
+                <span class="seequs_time">{{datas.utime | date:"yyyy-MM-dd"}}</span>
             </p>
         </div>
     </section>

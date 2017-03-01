@@ -21,6 +21,8 @@ export class Work {
       obj["write"] = "点击输入详细步骤...";
       obj["ishasimg"] = false;
       obj["isupload"] = false;
+      obj["width"] = 0;
+      obj["height"] = 0;
       this._work.push(obj);
     }
   }

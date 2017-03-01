@@ -9,7 +9,7 @@
 
     <section id="toutiao_wrap">
         <p class="toutiao_title">{{content.utitle}}</p>
-        <p>2016-10-27</p>
+        <p>{{content.utime | date:"yyyy-MM-dd"}}</p>
 
         <div class="toutiao_cont" [innerHTML]=content.utext>
 

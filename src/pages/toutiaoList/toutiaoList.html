@@ -16,7 +16,7 @@
             <div class="home_hot_item" (click)="pushtoutiaoPage(i)">
                 <p class="home_hot_item_title">{{item.utitle}}</p>
                 <p>浏览数：{{item.usee}}</p>
-                <p>10-22</p>
+                <p>{{item.utime | date:"yyyy-MM-dd"}}</p>
             </div>
 
         </div>
