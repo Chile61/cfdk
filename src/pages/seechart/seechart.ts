@@ -15,6 +15,7 @@ export class seechartPage {
   };
 
   gallery:any;
+  pswpElement:any = null;
 
   constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams) {
     this.getchart();
@@ -31,9 +32,8 @@ export class seechartPage {
       headers: headers
     })
       .subscribe((res) => {
-        alert(JSON.stringify(res.json()));
         this.datas = res.json()[0];
-        this.pswpElementInit();
+        //alert(JSON.stringify(res.json()));
       });
 
 
@@ -47,33 +47,34 @@ export class seechartPage {
     }, 500);
   }
 
-  pswpElementInit() {
-    var pswpElement = document.querySelectorAll('.pswp')[0];
+  pswpElementInit(ind) {
+    
+    if(this.pswpElement==null){
+      this.pswpElement = document.querySelectorAll('.pswp')[0];
+    }
 
     // build items array
-    var items = [
-      {
-        src: 'https://placekitten.com/600/400',
-        w: 600,
-        h: 400
-      },
-      {
-        src: 'https://placekitten.com/1200/900',
-        w: 1200,
-        h: 900
-      }
-    ];
+    var items:any = [];
+    var len = this.datas["uimg"].length;
+    for(var i=0; i<len; i++){
+        var objs = {};
+        objs["src"] = "http://7xp2ia.com1.z0.glb.clouddn.com/"+this.datas["uimg"][i]["img"];
+        objs["w"] = this.datas["uimg"][i]["width"];
+        objs["h"] = this.datas["uimg"][i]["height"];
+        objs["title"] = this.datas["utext"];
+       items.push(objs); 
+    }
 
     // define options (if needed)
     var options = {
       // optionName: 'option value'
       // for example:
-      index: 0 // start at first slide
+      index: ind*1 // start at first slide
     };
 
     // Initializes and opens PhotoSwipe
-    this.gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-    
+    this.gallery = new PhotoSwipe(this.pswpElement, PhotoSwipeUI_Default, items, options);
+    this.gallery.init();
   }
 
 }

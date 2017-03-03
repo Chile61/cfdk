@@ -131,20 +131,38 @@ ion-fab[bottom] {
 .share-chart-img-3 {
     display: block;
     height: 15rem;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 }
 
 .share-chart-img-2 {
     display: block;
     height: 18rem;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 }
 
 .share-chart-img-1 {
     display: block;
     height: 22rem;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 }
 
 .home_works_hd {
     background: transparent;
+}
+
+.share-work-banner {
+    display: block;
+    height: 23rem;
+    width: 100%;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 }
 
 .home_works_hd .home_work_list {

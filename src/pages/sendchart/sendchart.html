@@ -10,7 +10,7 @@
     <ul id="imageUl">
 
         <li *ngFor="let img of images">
-            <img src="{{img.img}}" />
+            <img [src]="img" />
         </li>
         <li [hidden]="hideWhen" (click)="addImg();" style="background: url(assets/icon/public/camera.png) no-repeat center center;background-size: cover;"></li>
 

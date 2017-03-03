@@ -125,8 +125,6 @@ export class sendworkPage {
       allowEdit: true,
       sourceType: type,
       correctOrientation: true,
-      targetWidth: 630,
-      targetHeight:400,
     }).then((imageData) => {
       this.work._work[index]["img"] = imageData;
       this.work._work[index]["ishasimg"] = true;
@@ -145,8 +143,6 @@ export class sendworkPage {
       allowEdit: true,
       sourceType: type,
       correctOrientation: true,
-      targetWidth: 630,
-      targetHeight:400,
     }).then((imageData) => {
       this.banner = imageData;
       this.upload(imageData, -1);

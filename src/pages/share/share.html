@@ -38,7 +38,8 @@
     <section *ngSwitchCase="'new2'" class="home_works">
 
         <div class="home_work_list" *ngFor="let item of workarr; let i=index" (click)="openwork(item._id);">
-            <img [src]="item.ubanner.img" />
+            <div class="share-work-banner" [style.background]="'url('+item.ubanner.img+')'"></div>
+            <!--<img [src]="item.ubanner.img" />-->
             <div class="home_work_cont">
                 <div class="home_work_cont_left">
                     <p class="home_work_cont_left_title">{{item.utitle}}</p>
@@ -58,7 +59,7 @@
         <div class="home_work_list" *ngFor="let item of chartarr; let i=index" (click)="openchart(item._id);">
             <div class="home_work_list_imgs">
                 <div class="list_imgs" *ngFor="let imgs of item.uimg;">
-                    <img class="share-chart-img-{{item.uimg.length}}" src="http://7xp2ia.com1.z0.glb.clouddn.com/{{imgs.img}}" />
+                    <div class="share-chart-img-{{item.uimg.length}}" [style.background]="'url(http://7xp2ia.com1.z0.glb.clouddn.com/' +imgs.img + ')'"></div>
                 </div>
 
             </div>

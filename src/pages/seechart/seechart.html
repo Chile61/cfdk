@@ -15,8 +15,9 @@
             <br/>
             <div class="home_work_list">
                 <div class="home_work_list_imgs">
-                    <div *ngFor="let imgs of datas.uimg;" class="list_imgs">
-                        <img src="http://7xp2ia.com1.z0.glb.clouddn.com/{{imgs.img}}" />
+                    <div *ngFor="let imgs of datas.uimg; let i=index" class="list_imgs">
+                        <div (click)="pswpElementInit(i);" class="share-chart-img-{{datas.uimg.length}}" [style.background]="'url(http://7xp2ia.com1.z0.glb.clouddn.com/' +imgs.img + ')'"></div>
+
                     </div>
                 </div>
             </div>

@@ -8,7 +8,8 @@
 <ion-content>
     <section class="home_works">
         <div class="home_work_list">
-            <img [src]="banner" (click)="pswpElementInit(0);" />
+            <div class="see-work-banner" [style.background]="'url('+banner+')'" (click)="pswpElementInit(0);"></div>
+
             <div class="home_work_cont">
                 <div class="home_work_cont_left">
                     <p class="home_work_cont_left_title">{{datas.utitle}}</p>
@@ -47,8 +48,8 @@
 
     <ion-card *ngFor="let item of datas.uimg; let i=index">
 
-        <img (click)="pswpElementInit(i+1);" [src]="item.img" class='ishiden-{{item.ishasimg}}' />
-
+        <!--<img (click)="pswpElementInit(i+1);" [src]="item.img" class='ishiden-{{item.ishasimg}}' />-->
+        <div class='ishiden-{{item.ishasimg}} see-work-banner' [style.background]="'url('+item.img+')'" (click)="pswpElementInit(i+1);"></div>
         <ion-card-content>
             <ion-card-title>
                 步骤 {{i+1}}

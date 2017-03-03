@@ -13,7 +13,7 @@
 
 <ion-content>
     <ion-card>
-        <img id="banner" [src]="banner" (click)="presentActionSheet(-1);" />
+        <div id="banner" [style.background]="'url('+banner+')'" (click)="presentActionSheet(-1);"></div>
     </ion-card>
     <ion-list>
 

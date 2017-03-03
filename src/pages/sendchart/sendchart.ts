@@ -33,8 +33,6 @@ export class sendchartPage {
     ImagePicker.getPictures({
       maximumImagesCount: 3 - _that.images.length,
       quality: 90,
-      width: 880,
-      height: 880
     }).then((results) => {
 
       for (var i = 0; i < results.length; i++) {
