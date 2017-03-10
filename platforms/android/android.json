@@ -33,10 +33,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"JPushPlugin\"><param name=\"android-package\" value=\"cn.jpush.phonegap.JPushPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"NativeStorage\"><param name=\"android-package\" value=\"NativeStorage\" /></feature>",
                             "count": 1
                         },
@@ -103,6 +99,10 @@
                         {
                             "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"JPushPlugin\"><param name=\"android-package\" value=\"cn.jpush.phonegap.JPushPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -159,7 +159,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"com.ionicframework.cfdk892220.permission.JPUSH_MESSAGE\" />",
+                            "xml": "<uses-permission android:name=\"com.cfdk.permission.JPUSH_MESSAGE\" />",
                             "count": 1
                         },
                         {
@@ -183,7 +183,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<permission android:name=\"com.ionicframework.cfdk892220.permission.JPUSH_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "xml": "<permission android:name=\"com.cfdk.permission.JPUSH_MESSAGE\" android:protectionLevel=\"signature\" />",
                             "count": 1
                         }
                     ],
@@ -217,7 +217,19 @@
                             "count": 1
                         },
                         {
-                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"cn.jpush.android.ui.PushActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"><intent-filter><action android:name=\"cn.jpush.android.ui.PushActivity\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"com.ionicframework.cfdk892220\" /></intent-filter></activity>",
+                            "xml": "<activity android:launchMode=\"singleTask\" android:name=\"com.tencent.tauth.AuthActivity\" android:noHistory=\"true\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:scheme=\"tencent1104885342\" /></intent-filter></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"com.tencent.connect.common.AssistActivity\" android:screenOrientation=\"portrait\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:label=\"@string/multi_app_name\" android:name=\"com.synconset.MultiImageChooserActivity\" android:theme=\"@style/Theme.AppCompat.Light\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"cn.jpush.android.ui.PushActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"><intent-filter><action android:name=\"cn.jpush.android.ui.PushActivity\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"com.cfdk\" /></intent-filter></activity>",
                             "count": 1
                         },
                         {
@@ -233,15 +245,15 @@
                             "count": 1
                         },
                         {
-                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.android.service.PushReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"com.ionicframework.cfdk892220\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.USER_PRESENT\" /><action android:name=\"android.net.conn.CONNECTIVITY_CHANGE\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.PACKAGE_ADDED\" /><action android:name=\"android.intent.action.PACKAGE_REMOVED\" /></intent-filter></receiver>",
+                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.android.service.PushReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"com.cfdk\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.USER_PRESENT\" /><action android:name=\"android.net.conn.CONNECTIVITY_CHANGE\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.PACKAGE_ADDED\" /><action android:name=\"android.intent.action.PACKAGE_REMOVED\" /></intent-filter></receiver>",
                             "count": 1
                         },
                         {
-                            "xml": "<service android:enabled=\"true\" android:exported=\"true\" android:name=\"cn.jpush.android.service.DaemonService\"><intent-filter><action android:name=\"cn.jpush.android.intent.DaemonService\" /><category android:name=\"com.ionicframework.cfdk892220\" /></intent-filter></service>",
+                            "xml": "<service android:enabled=\"true\" android:exported=\"true\" android:name=\"cn.jpush.android.service.DaemonService\"><intent-filter><action android:name=\"cn.jpush.android.intent.DaemonService\" /><category android:name=\"com.cfdk\" /></intent-filter></service>",
                             "count": 1
                         },
                         {
-                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.phonegap.MyReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"com.ionicframework.cfdk892220\" /></intent-filter><intent-filter><action android:name=\"cn.jpush.android.intent.REGISTRATION\" /><action android:name=\"cn.jpush.android.intent.UNREGISTRATION\" /><action android:name=\"cn.jpush.android.intent.MESSAGE_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_OPENED\" /><action android:name=\"cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK\" /><category android:name=\"com.ionicframework.cfdk892220\" /></intent-filter></receiver>",
+                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.phonegap.MyReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"com.cfdk\" /></intent-filter><intent-filter><action android:name=\"cn.jpush.android.intent.REGISTRATION\" /><action android:name=\"cn.jpush.android.intent.UNREGISTRATION\" /><action android:name=\"cn.jpush.android.intent.MESSAGE_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_OPENED\" /><action android:name=\"cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK\" /><category android:name=\"com.cfdk\" /></intent-filter></receiver>",
                             "count": 1
                         },
                         {
@@ -253,19 +265,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<meta-data android:name=\"JPUSH_APPKEY\" android:value=\"771239dc9889d8453ddb859c\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<activity android:launchMode=\"singleTask\" android:name=\"com.tencent.tauth.AuthActivity\" android:noHistory=\"true\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:scheme=\"tencent1104885342\" /></intent-filter></activity>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"com.tencent.connect.common.AssistActivity\" android:screenOrientation=\"portrait\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"></activity>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<activity android:label=\"@string/multi_app_name\" android:name=\"com.synconset.MultiImageChooserActivity\" android:theme=\"@style/Theme.AppCompat.Light\"></activity>",
+                            "xml": "<meta-data android:name=\"JPUSH_APPKEY\" android:value=\"520865321813385a601043b3\" />",
                             "count": 1
                         }
                     ],
@@ -311,10 +311,6 @@
         "io.rong.imlib": {
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
-        "jpush-phonegap-plugin": {
-            "APP_KEY": "771239dc9889d8453ddb859c",
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
-        },
         "cordova-plugin-nativestorage": {
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
@@ -339,6 +335,13 @@
         },
         "cordova-plugin-file-transfer": {
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "cordova-plugin-jcore": {
+            "PACKAGE_NAME": "com.cfdk"
+        },
+        "jpush-phonegap-plugin": {
+            "APP_KEY": "520865321813385a601043b3",
+            "PACKAGE_NAME": "com.cfdk"
         }
     },
     "dependent_plugins": {},
@@ -382,14 +385,6 @@
             "pluginId": "io.rong.imlib",
             "clobbers": [
                 "RongCloudLibPlugin"
-            ]
-        },
-        {
-            "id": "jpush-phonegap-plugin.JPushPlugin",
-            "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
-            "pluginId": "jpush-phonegap-plugin",
-            "clobbers": [
-                "JPush"
             ]
         },
         {
@@ -663,6 +658,14 @@
             "clobbers": [
                 "window.FileTransfer"
             ]
+        },
+        {
+            "id": "jpush-phonegap-plugin.JPushPlugin",
+            "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+            "pluginId": "jpush-phonegap-plugin",
+            "clobbers": [
+                "JPush"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -673,7 +676,6 @@
         "cordova-plugin-whitelist": "1.3.1",
         "ionic-plugin-keyboard": "2.2.1",
         "io.rong.imlib": "2.3.7",
-        "jpush-phonegap-plugin": "3.0.3",
         "cordova-plugin-nativestorage": "2.2.1",
         "cordova-plugin-network-information": "1.3.1",
         "cordova-plugin-qqsdk": "0.8.3",
@@ -681,6 +683,8 @@
         "cordova-plugin-compat": "1.1.0",
         "cordova-plugin-camera": "2.3.1",
         "cordova-plugin-file": "4.3.1",
-        "cordova-plugin-file-transfer": "1.6.1"
+        "cordova-plugin-file-transfer": "1.6.1",
+        "cordova-plugin-jcore": "1.1.0",
+        "jpush-phonegap-plugin": "3.1.0"
     }
 }

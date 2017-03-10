@@ -42,14 +42,6 @@ module.exports = [
         ]
     },
     {
-        "id": "jpush-phonegap-plugin.JPushPlugin",
-        "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
-        "pluginId": "jpush-phonegap-plugin",
-        "clobbers": [
-            "JPush"
-        ]
-    },
-    {
         "id": "cordova-plugin-nativestorage.mainHandle",
         "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
         "pluginId": "cordova-plugin-nativestorage",
@@ -320,6 +312,14 @@ module.exports = [
         "clobbers": [
             "window.FileTransfer"
         ]
+    },
+    {
+        "id": "jpush-phonegap-plugin.JPushPlugin",
+        "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+        "pluginId": "jpush-phonegap-plugin",
+        "clobbers": [
+            "JPush"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -332,7 +332,6 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.1",
     "ionic-plugin-keyboard": "2.2.1",
     "io.rong.imlib": "2.3.7",
-    "jpush-phonegap-plugin": "3.0.3",
     "cordova-plugin-nativestorage": "2.2.1",
     "cordova-plugin-network-information": "1.3.1",
     "cordova-plugin-qqsdk": "0.8.3",
@@ -340,7 +339,9 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-camera": "2.3.1",
     "cordova-plugin-file": "4.3.1",
-    "cordova-plugin-file-transfer": "1.6.1"
+    "cordova-plugin-file-transfer": "1.6.1",
+    "cordova-plugin-jcore": "1.1.0",
+    "jpush-phonegap-plugin": "3.1.0"
 };
 // BOTTOM OF METADATA
 });
