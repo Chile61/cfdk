@@ -12,7 +12,7 @@ export class MePage {
   public uname: any;
 
   constructor(public navCtrl: NavController, public userService: UserService, private navParams: NavParams) {
-
+    userService.setnav(this.navCtrl);
     this.uname = this.userService._user.uname;
 
   }

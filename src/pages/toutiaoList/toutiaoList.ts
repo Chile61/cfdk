@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { toutiaoPage } from '../toutiao/toutiao';
+import { UserService } from '../service/User.service';
 
 @Component({
   selector: 'page-toutiaoList',
@@ -11,7 +12,8 @@ export class toutiaoListPage {
 
   items = [];
 
-  constructor(public navCtrl: NavController, public http: Http) {
+  constructor(public navCtrl: NavController, public http: Http, public userService: UserService) {
+    userService.setnav(this.navCtrl);
     this.getData();
   }
 

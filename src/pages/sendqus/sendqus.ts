@@ -13,7 +13,7 @@ export class sendqusPage {
   text: string = "";
 
   constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController, public userService: UserService, public alertCtrl: AlertController) {
-
+    userService.setnav(this.navCtrl);
   }
 
   //发布问题

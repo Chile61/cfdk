@@ -28,7 +28,7 @@ export class SharePage {
 
   constructor(public navCtrl: NavController, public userService: UserService, public loadingCtrl: LoadingController, public work: Work, public http: Http) {
     this.getque();
-
+    userService.setnav(this.navCtrl);
   }
 
   //获取作品数据

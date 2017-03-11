@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
+import { UserService } from '../service/User.service';
 
 @Component({
   selector: 'page-seequs',
@@ -15,7 +16,8 @@ export class seequsPage {
 
   comment:any = [];
 
-  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams) {
+  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService) {
+    userService.setnav(this.navCtrl);
     this.getque();
   }
 

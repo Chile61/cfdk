@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { seeworkPage } from '../seework/seework';
+import { UserService } from '../service/User.service';
 
 @Component({
   selector: 'page-search',
@@ -10,7 +11,8 @@ export class searchPage {
 
   items: string[];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public userService: UserService) {
+    userService.setnav(this.navCtrl);
     this.items = [
       '搜索结果',
       '搜索结果',

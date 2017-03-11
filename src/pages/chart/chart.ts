@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { UserService } from '../service/User.service';
+
 
 @Component({
   selector: 'page-chart',
@@ -9,8 +11,8 @@ export class chartPage {
 
   text:string = '';
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public userService: UserService) {
+    userService.setnav(this.navCtrl);
   }
 
   send(){

@@ -21,6 +21,7 @@ export class mysendPage {
   charthideWhen: any = true;
 
   constructor(public navCtrl: NavController, private navParams: NavParams, public userService: UserService, public http: Http) {
+    userService.setnav(this.navCtrl);
     this.type = navParams.get('type');
     switch (this.type) {
       case "work":

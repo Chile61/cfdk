@@ -32,6 +32,7 @@ export class sendworkPage {
   isReordering: boolean = false;
 
   constructor(public navCtrl: NavController, public userService: UserService, public http: Http, public actionSheetCtrl: ActionSheetController, public work: Work, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+    userService.setnav(this.navCtrl);
     this.init();
   }
 

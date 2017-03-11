@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { UserService } from '../service/User.service';
 import { NavController } from 'ionic-angular';
 
 
@@ -9,8 +9,8 @@ import { NavController } from 'ionic-angular';
 })
 export class videoPage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public userService: UserService) {
+    userService.setnav(this.navCtrl);
   }
 
 }

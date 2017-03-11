@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            {{title}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list-header>评论:</ion-list-header>
+    <ion-card *ngFor="let item of comment; let i=index">
+
+        <ion-item>
+            <ion-avatar item-left>
+                <img [src]="item.uhead">
+            </ion-avatar>
+            <h2>{{item.uname}}</h2>
+
+        </ion-item>
+
+        <ion-card-content>
+            <p class="comt_fork comt_fork_{{item.nid}}">回复 {{item.fname}} ：{{item.ftext}}</p>
+            <p>{{item.utext}}</p>
+        </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small (click)="opencomment(item._id,i);">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>回复</div>
+                    </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                        <ion-icon name="text"></ion-icon>
+                        <div>举报</div>
+                    </button>
+            </ion-col>
+            <ion-col center text-center>
+                <ion-note>
+                    {{item.utime | date:"yyyy-MM-dd"}}
+                </ion-note>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

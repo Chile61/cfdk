@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 import { videoPage } from '../video/video';
+import { UserService } from '../service/User.service';
 
 @Component({
   selector: 'page-videolist',
@@ -8,8 +9,8 @@ import { videoPage } from '../video/video';
 })
 export class videolistPage {
 
-  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
-
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public userService: UserService) {
+    userService.setnav(this.navCtrl);
   }
 
   //打开视频

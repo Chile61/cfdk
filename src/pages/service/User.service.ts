@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { NativeStorage } from 'ionic-native';
+import { NavController } from 'ionic-angular';
 import { RongCloudService } from '../service/RongCloud.service';
+import { seecontPage } from '../seecont/seecont';
 
 declare var window;
 declare var JPushPlugin;
@@ -12,9 +14,15 @@ export class UserService {
 	};
 
 	isInitJP = false;
+	nav: NavController;
 
 	constructor(public rongCloudService: RongCloudService) {
 
+	}
+
+	setnav(nav) {
+		this.nav = nav;
+		//alert(this.nav);
 	}
 
 	//设置缓存
@@ -49,36 +57,47 @@ export class UserService {
 	clear() {
 		NativeStorage.clear();
 	}
-initJPush(id) {
+	initJPush(id) {
 
+		var _that = this;
 
-//启动极光推送
-    if (window.plugins && window.plugins.jPushPlugin && !this.isInitJP) {
+		//启动极光推送
+		if (window.plugins && window.plugins.jPushPlugin && !this.isInitJP) {
 			this.isInitJP = true;
-      window.plugins.jPushPlugin.init();
-      window.plugins.jPushPlugin.isPushStopped(function (result) {
-        if (result == 0) {
-          // 开启
-          alert("开启");
+			window.plugins.jPushPlugin.init();
+			window.plugins.jPushPlugin.isPushStopped(function (result) {
+				if (result == 0) {
+					// 开启
+					//alert("开启");
 
-          window.plugins.jPushPlugin.setAlias(id+"");
+					window.plugins.jPushPlugin.setAlias(id + "");
+
+					//监听点击状态栏通知
+					document.addEventListener("jpush.openNotification", (event) => {
+						//alert(JSON.stringify(event));
+						//alert(event["extras"]["cn.jpush.android.EXTRA"]);
+						var jpdata = event["extras"]["cn.jpush.android.EXTRA"];
+
+						_that.nav.push(seecontPage, {
+							type: jpdata["type"],
+							_id: jpdata["_id"],
+							artid: jpdata["artid"],
+						});
 
 
-          document.addEventListener("jpush.openNotification", (event) => {
-            alert(JSON.stringify(event));
-          }, false)
+					}, false)
 
-        } else {
-          // 关闭
-          alert("关闭");
-        }
-      })
+				} else {
+					// 关闭
+					alert("关闭");
+				}
+			})
 
-    }
+		}
 
-    
 
-  }
+
+	}
 
 
 

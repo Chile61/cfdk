@@ -18,7 +18,7 @@ export class sendchartPage {
   loading = null;
 
   constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController, public userService: UserService, public alertCtrl: AlertController) {
-
+    userService.setnav(this.navCtrl);
     this.loading = this.loadingCtrl.create({
       content: '请稍后...'
     });

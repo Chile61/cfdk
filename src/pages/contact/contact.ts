@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { chartPage } from '../chart/chart';
+import { UserService } from '../service/User.service';
 
 @Component({
   selector: 'page-contact',
@@ -8,8 +9,8 @@ import { chartPage } from '../chart/chart';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public userService: UserService) {
+    userService.setnav(this.navCtrl);
   }
 
   chart(){

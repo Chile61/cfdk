@@ -35,6 +35,7 @@ export class HomePage {
     //this.RongCloudS.RongCloudLibPlugin_init();
     //this.initJPush();
     this.gethotart();
+    userService.setnav(this.navCtrl);
   }
 
   //获取最热头条

@@ -21,6 +21,7 @@ export class writecommentPage {
   text: any = "";
 
   constructor(public navCtrl: NavController, private navParams: NavParams,public work: Work, public userService: UserService, public http: Http) {
+    userService.setnav(this.navCtrl);
     this.type = navParams.get('type');
     this.fid = navParams.get('fid');
     this.fhead = navParams.get('fhead');
@@ -50,7 +51,7 @@ export class writecommentPage {
         headers: headers
       })
       .subscribe((res) => {
-          alert(JSON.stringify(res));
+          //alert(JSON.stringify(res));
           if (res.json()["ops"][0]["_id"]) {
             this.navCtrl.pop();
           }
