@@ -55,16 +55,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "jpush-phonegap-plugin": {
-        "source": {
-            "type": "registry",
-            "id": "jpush-phonegap-plugin"
-        },
-        "is_top_level": true,
-        "variables": {
-            "APP_KEY": "771239dc9889d8453ddb859c"
-        }
-    },
     "cordova-plugin-nativestorage": {
         "source": {
             "type": "registry",
@@ -128,6 +118,24 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "jpush-phonegap-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "jpush-phonegap-plugin"
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_KEY": "520865321813385a601043b3"
+        }
+    },
+    "cordova-plugin-jcore": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-jcore"
         },
         "is_top_level": false,
         "variables": {}

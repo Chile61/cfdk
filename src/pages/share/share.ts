@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, LoadingController, Content } from 'ionic-angular';
 import { loginPage } from '../login/login';
 import { sendqusPage } from '../sendqus/sendqus';
 import { sendchartPage } from '../sendchart/sendchart';
@@ -16,96 +16,104 @@ import { Work } from '../service/Work';
   templateUrl: 'share.html'
 })
 export class SharePage {
-
+  @ViewChild(Content) content: Content;
   pet: string = "new1";
   workarr = [];
   qusarr = [];
   chartarr = [];
 
+  loading: any;
+  infiniteScroll: any;
+
+
   constructor(public navCtrl: NavController, public userService: UserService, public loadingCtrl: LoadingController, public work: Work, public http: Http) {
-    this.getwork(0);
-    
+    this.getque();
+
   }
 
   //获取作品数据
-  getwork(type){
+  getwork() {
     let url = "http://www.devonhello.com/cfdk/workdata";
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "len="+this.workarr.length, {
+    this.http.post(url, "len=" + this.workarr.length, {
       headers: headers
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.workarr = this.workarr.concat(res.json());
-        if(type==0){
-          this.getque(0);
-        }
-        
+
+        this.infiniteScroll.complete();
+        this.loading.dismiss();
+
       });
 
-      
+
   }
 
   //获取问答数据
-  getque(type){
+  getque() {
     let url = "http://www.devonhello.com/cfdk/quedata";
+
+    //alert(this.qusarr.length);
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "len="+this.qusarr.length, {
+    this.http.post(url, "len=" + this.qusarr.length, {
       headers: headers
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.qusarr = this.qusarr.concat(res.json());
-        if(type==0){
-          this.getchart();
-        }
-        
+
+        this.infiniteScroll.complete();
+        this.loading.dismiss();
+
+
       });
 
-      
+
   }
 
   //分享心情数据
-  getchart(){
+  getchart() {
     let url = "http://www.devonhello.com/cfdk/chartdata";
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "len="+this.chartarr.length, {
+    this.http.post(url, "len=" + this.chartarr.length, {
       headers: headers
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.chartarr = this.chartarr.concat(res.json());
-        
+        this.loading.dismiss();
+        this.infiniteScroll.complete();
       });
   }
 
   //查看问题
   openqus(id) {
-    this.navCtrl.push(seequsPage,{
-      id:id
+    this.navCtrl.push(seequsPage, {
+      id: id
     });
   }
 
   //查看作品详情
   openwork(id) {
-    this.navCtrl.push(seeworkPage,{
-      id:id
+    this.navCtrl.push(seeworkPage, {
+      id: id
     });
   }
 
   //查看分享闲聊
   openchart(id) {
-    this.navCtrl.push(seechartPage,{
-      id:id
+    this.navCtrl.push(seechartPage, {
+      id: id
     });
   }
 
@@ -143,36 +151,67 @@ export class SharePage {
     this.presentLoadingDefault();
     switch (this.pet) {
       case "new1":
-        this.getque(1);
+        this.getque();
         break;
-    case "new2":
-        this.getwork(1);
+      case "new2":
+        this.getwork();
         break;
-    case "new3":
+      case "new3":
         this.getchart();
         break;
     }
     refresher.complete();
-    
+
   }
 
 
   presentLoadingDefault() {
-    let loading = this.loadingCtrl.create({
+    this.loading = this.loadingCtrl.create({
       content: '请稍后...'
     });
 
-    loading.present();
+    this.loading.present();
 
-    setTimeout(() => {
-      loading.dismiss();
-    }, 3000);
   }
 
   ionViewDidEnter() {
 
     this.work.init();
 
+  }
+
+  doInfinite(infiniteScroll) {
+
+    this.infiniteScroll = infiniteScroll;
+    this.presentLoadingDefault();
+    switch (this.pet) {
+      case "new1":
+        this.getque();
+        break;
+      case "new2":
+        this.getwork();
+        break;
+      case "new3":
+        this.getchart();
+        break;
+    }
+
+
+  }
+
+  totop() {
+    this.content.scrollToTop();
+    switch (this.pet) {
+      case "new1":
+        this.getque();
+        break;
+      case "new2":
+        this.getwork();
+        break;
+      case "new3":
+        this.getchart();
+        break;
+    }
   }
 
 }

@@ -50,36 +50,17 @@
                 <p>最热头条</p>
                 <img src="assets/icon/home/hot_more.png" />
             </div>
-            <div class="home_hot_list" (click)="pushtoutiaoPage()">
+            <div class="home_hot_list" *ngFor="let item of art; let i=index" (click)="pushtoutiaoPage(i)">
                 <div class="home_hot_item_img">
-                    <img src="assets/img2/hot_1.jpeg" />
+                    <img src="http://7xp2ia.com1.z0.glb.clouddn.com/{{item.uimg}}" />
                 </div>
                 <div class="home_hot_item">
-                    <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                    <p>浏览数：100</p>
-                    <p>10-22</p>
+                    <p class="home_hot_item_title">{{item.utitle}}</p>
+                    <p>浏览数：{{item.usee}}</p>
+                    <p>{{item.utime | date:"yyyy-MM-dd"}}</p>
                 </div>
             </div>
-            <div class="home_hot_list" (click)="pushtoutiaoPage()">
-                <div class="home_hot_item_img">
-                    <img src="assets/img2/hot_2.jpeg" />
-                </div>
-                <div class="home_hot_item">
-                    <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                    <p>浏览数：100</p>
-                    <p>10-22</p>
-                </div>
-            </div>
-            <div class="home_hot_list" (click)="pushtoutiaoPage()">
-                <div class="home_hot_item_img">
-                    <img src="assets/img2/hot_3.jpeg" />
-                </div>
-                <div class="home_hot_item">
-                    <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                    <p>浏览数：100</p>
-                    <p>10-22</p>
-                </div>
-            </div>
+
         </section>
         <!--人气推荐-->
         <section class="home_hot_man">
@@ -141,62 +122,21 @@
                 <p>最新佳作</p>
             </div>
             <!--作品列表-->
-            <div class="home_work_list">
-                <div class="share-work-banner" [style.background]="'url(assets/img2/home_work_1.jpeg)'"></div>
+            <div class="home_work_list" *ngFor="let item of work; let i=index" (click)="openwork(item._id);">
+                <div class="share-work-banner" [style.background]="'url('+item.ubanner.img+')'"></div>
                 <div class="home_work_cont">
                     <div class="home_work_cont_left">
-                        <p class="home_work_cont_left_title">蚝油鸡胸肉</p>
-                        <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
-                        <p>10-22</p>
+                        <p class="home_work_cont_left_title">{{item.utitle}}</p>
+                        <p>{{item.utext}}</p>
+                        <p>{{item.utime | date:"yyyy-MM-dd"}}</p>
                     </div>
                     <div class="home_work_cont_right">
-                        <img src="assets/img2/user_4.jpeg" />
-                        <p>春燕_Lsg6</p>
+                        <img [src]="item.uhead" />
+                        <p>{{item.uname}}</p>
                     </div>
                 </div>
             </div>
-            <div class="home_work_list">
-                <img src="assets/img2/home_work_2.jpeg" />
-                <div class="home_work_cont">
-                    <div class="home_work_cont_left">
-                        <p class="home_work_cont_left_title">蚝油鸡胸肉</p>
-                        <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
-                        <p>10-22</p>
-                    </div>
-                    <div class="home_work_cont_right">
-                        <img src="assets/img2/user_3.jpeg" />
-                        <p>徐徐徐萌萌</p>
-                    </div>
-                </div>
-            </div>
-            <div class="home_work_list">
-                <img src="assets/img2/home_work_3.jpeg" />
-                <div class="home_work_cont">
-                    <div class="home_work_cont_left">
-                        <p class="home_work_cont_left_title">蚝油鸡胸肉</p>
-                        <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
-                        <p>10-22</p>
-                    </div>
-                    <div class="home_work_cont_right">
-                        <img src="assets/img2/user_2.jpeg" />
-                        <p>毓玲珑</p>
-                    </div>
-                </div>
-            </div>
-            <div class="home_work_list">
-                <img src="assets/img2/home_work_1.jpeg" />
-                <div class="home_work_cont">
-                    <div class="home_work_cont_left">
-                        <p class="home_work_cont_left_title">蚝油鸡胸肉</p>
-                        <p>这是一个简单的菜。闲时腌，忙时十分钟就可以吃，而且不用...</p>
-                        <p>10-22</p>
-                    </div>
-                    <div class="home_work_cont_right">
-                        <img src="assets/img2/user_1.jpeg" />
-                        <p>萧冰xiaobing</p>
-                    </div>
-                </div>
-            </div>
+
         </section>
     </section>
 </ion-content>

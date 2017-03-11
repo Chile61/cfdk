@@ -28,10 +28,6 @@
         "io.rong.imlib": {
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
-        "jpush-phonegap-plugin": {
-            "APP_KEY": "771239dc9889d8453ddb859c",
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
-        },
         "cordova-plugin-nativestorage": {
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
         },
@@ -50,6 +46,10 @@
         },
         "cordova-plugin-file-transfer": {
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "jpush-phonegap-plugin": {
+            "APP_KEY": "520865321813385a601043b3",
+            "PACKAGE_NAME": "com.cfdk"
         }
     },
     "dependent_plugins": {
@@ -58,6 +58,9 @@
         },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+        },
+        "cordova-plugin-jcore": {
+            "PACKAGE_NAME": "com.cfdk"
         }
     }
 }

@@ -1,13 +1,13 @@
 <ion-header>
     <ion-toolbar color="secondary">
         <ion-segment [(ngModel)]="pet" color="fff">
-            <ion-segment-button value="new1">
+            <ion-segment-button (click)="totop();" value="new1">
                 厨房问答
             </ion-segment-button>
-            <ion-segment-button value="new2">
+            <ion-segment-button (click)="totop();" value="new2">
                 厨房新作
             </ion-segment-button>
-            <ion-segment-button value="new3">
+            <ion-segment-button (click)="totop();" value="new3">
                 厨房心情
             </ion-segment-button>
         </ion-segment>
@@ -76,6 +76,10 @@
         </div>
 
     </section>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
     <!--发布按钮-->
     <ion-fab right bottom edge #327eff>
         <button ion-fab><ion-icon name="arrow-dropup"></ion-icon></button>

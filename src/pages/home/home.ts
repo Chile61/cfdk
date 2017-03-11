@@ -7,10 +7,14 @@ import { toutiaoListPage } from '../toutiaoList/toutiaoList';
 import { videolistPage } from '../videolist/videolist';
 import { searchPage } from '../search/search';
 import { rankingPage } from '../ranking/ranking';
+import { UserService } from '../service/User.service';
+import { seeworkPage } from '../seework/seework';
 
 
 declare var $: any;
 declare var Swiper: any;
+declare var window;
+declare var JPushPlugin;
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -20,13 +24,58 @@ export class HomePage {
 
   public oSwiper = null;
   public oUser = null;
+  alias: string = '111';
+  msgList: Array<any> = [];
+  work:any = [];
+  art:any = [];
 
   public headers: Headers;
 
-  constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController, public userService: UserService) {
     //this.RongCloudS.RongCloudLibPlugin_init();
-
+    //this.initJPush();
+    this.gethotart();
   }
+
+  //获取最热头条
+  gethotart(){
+    let url = "http://www.devonhello.com/cfdk/indexarticlelist";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "", {
+      headers: headers
+    })
+      .subscribe((res) => {
+        //alert(JSON.stringify(res.json()));
+        this.art = res.json();
+        //this.getquecomment();
+        this.getwork();
+      });
+
+      
+  }
+
+  //获取最热作品
+  getwork(){
+    let url = "http://www.devonhello.com/cfdk/indexworklist";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "len="+this.work.length, {
+      headers: headers
+    })
+      .subscribe((res) => {
+        //alert(JSON.stringify(res.json()));
+        this.work = this.work.concat(res.json());
+        //this.getquecomment();
+      });
+
+      
+  }
+
 
   //刷新视频
   doRefresh(refresher) {
@@ -34,7 +83,6 @@ export class HomePage {
     this.presentLoadingDefault();
 
     setTimeout(() => {
-
       refresher.complete();
     }, 3000);
   }
@@ -57,9 +105,20 @@ export class HomePage {
     this.navCtrl.push(searchPage);
   }
 
+  //查看作品详情
+  openwork(id) {
+    this.navCtrl.push(seeworkPage,{
+      id:id
+    });
+  }
+
   //打开养生头条
-  pushtoutiaoPage() {
-    this.navCtrl.push(toutiaoPage);
+  pushtoutiaoPage(index) {
+    alert(index);
+    alert(this.art[index]["_id"]);
+    this.navCtrl.push(toutiaoPage,{
+      id:this.art[index]["_id"]
+    });
   }
 
   //打开排名

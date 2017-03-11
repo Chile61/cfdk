@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
+import { writecommentPage } from '../writecomment/writecomment';
 
 declare var PhotoSwipe: any;
 declare var PhotoSwipeUI_Default: any;
@@ -16,6 +17,7 @@ export class seechartPage {
 
   gallery:any;
   pswpElement:any = null;
+  comment:any = [];
 
   constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams) {
     this.getchart();
@@ -34,18 +36,12 @@ export class seechartPage {
       .subscribe((res) => {
         this.datas = res.json()[0];
         //alert(JSON.stringify(res.json()));
+        this.getquecomment();
       });
 
 
   }
 
-  doInfinite(infiniteScroll) {
-    this.gallery.init();
-    setTimeout(() => {
-
-      infiniteScroll.complete();
-    }, 500);
-  }
 
   pswpElementInit(ind) {
     
@@ -75,6 +71,56 @@ export class seechartPage {
     // Initializes and opens PhotoSwipe
     this.gallery = new PhotoSwipe(this.pswpElement, PhotoSwipeUI_Default, items, options);
     this.gallery.init();
+  }
+
+  //获取问答数据
+  getquecomment(){
+    let url = "http://www.devonhello.com/cfdk/see_comment_chart";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "id="+this.navParams.get('id')+"&type=3", {
+      headers: headers
+    })
+      .subscribe((res) => {
+        //alert(JSON.stringify(res.json()));
+        this.comment = res.json();
+      });
+
+      
+  }
+
+
+
+
+
+  //我要留言
+  writecom(){
+    this.navCtrl.push(writecommentPage, {
+      type: 3+'',
+      fid:this.datas['uid'],
+      fhead:this.datas['uhead'],
+      fname:this.datas['uname'],
+      ftext:this.datas['utitle'],
+      artid: this.datas['_id'],
+      utid:this.datas['uid'],
+      nid:0
+    });
+  }
+
+  opencomment(id,index){
+    
+    this.navCtrl.push(writecommentPage, {
+      type: 3+'',
+      fid:this.comment[index]['uid'],
+      fhead:this.comment[index]['uhead'],
+      fname:this.comment[index]['uname'],
+      ftext:this.comment[index]['utext'],
+      artid: this.datas['_id'],
+      utid:this.comment[index]['uid'],
+      nid:id
+    });
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
+import { writecommentPage } from '../writecomment/writecomment';
 
 declare var PhotoSwipe: any;
 declare var PhotoSwipeUI_Default: any;
@@ -14,6 +15,7 @@ export class seeworkPage {
   banner = '';
   gallery:any = null;
   pswpElement:any = null;
+  comment:any = [];
 
   constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams) {
     this.getwork();
@@ -36,6 +38,7 @@ export class seeworkPage {
         //alert(this.datas["ubanner"].img);
         //this.pswpElementInit();
         //this.gallery.init();
+        this.getquecomment();
       });
 
       
@@ -84,6 +87,56 @@ export class seeworkPage {
     // Initializes and opens PhotoSwipe
     this.gallery = new PhotoSwipe(this.pswpElement, PhotoSwipeUI_Default, items, options);
     this.gallery.init();
+  }
+
+  //获取问答数据
+  getquecomment(){
+    let url = "http://www.devonhello.com/cfdk/see_comment_chart";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "id="+this.navParams.get('id')+"&type=2", {
+      headers: headers
+    })
+      .subscribe((res) => {
+        //alert(JSON.stringify(res.json()));
+        this.comment = res.json();
+      });
+
+      
+  }
+
+
+
+
+
+  //我要留言
+  writecom(){
+    this.navCtrl.push(writecommentPage, {
+      type: 2+'',
+      fid:this.datas['uid'],
+      fhead:this.datas['uhead'],
+      fname:this.datas['uname'],
+      ftext:this.datas['utitle'],
+      artid: this.datas['_id'],
+      utid:this.datas['uid'],
+      nid:0
+    });
+  }
+
+  opencomment(id,index){
+    
+    this.navCtrl.push(writecommentPage, {
+      type: 2+'',
+      fid:this.comment[index]['uid'],
+      fhead:this.comment[index]['uhead'],
+      fname:this.comment[index]['uname'],
+      ftext:this.comment[index]['utext'],
+      artid: this.datas['_id'],
+      utid:this.comment[index]['uid'],
+      nid:id
+    });
   }
 
 }

@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            我的发布
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <section id="qus_wrap" [hidden]="quehideWhen">
+
+        <div class="qus_list" *ngFor="let item of que; let i=index" (click)="openqus(item._id);">
+            <p class="qus_list_title">{{item.utitle}}？</p>
+            <div class="qus_user_wrap">
+                <img [src]="item.uhead" />
+                <p>{{item.uname}}</p>
+            </div>
+            <p>{{item.uquestion}}</p>
+            <p class="qus_btm_wrap">
+                <span class="qus_hd">{{item.ucomment}}个回答</span>
+                <span class="qus_time">{{item.utime | date:"yyyy-MM-dd"}}</span>
+            </p>
+        </div>
+
+    </section>
+    <section class="home_works" [hidden]="workhideWhen">
+
+        <div class="home_work_list" *ngFor="let item of work; let i=index" (click)="openwork(item._id);">
+            <div class="share-work-banner" [style.background]="'url('+item.ubanner.img+')'"></div>
+            <!--<img [src]="item.ubanner.img" />-->
+            <div class="home_work_cont">
+                <div class="home_work_cont_left">
+                    <p class="home_work_cont_left_title">{{item.utitle}}</p>
+                    <p>{{item.utext}}</p>
+                    <p>{{item.utime | date:"yyyy-MM-dd"}}</p>
+                </div>
+                <div class="home_work_cont_right">
+                    <img [src]="item.uhead" />
+                    <p>{{item.uname}}</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="home_works home_works_hd" [hidden]="charthideWhen">
+
+        <div class="home_work_list" *ngFor="let item of chart; let i=index" (click)="openchart(item._id);">
+            <div class="home_work_list_imgs">
+                <div class="list_imgs" *ngFor="let imgs of item.uimg;">
+                    <div class="share-chart-img-{{item.uimg.length}}" [style.background]="'url(http://7xp2ia.com1.z0.glb.clouddn.com/' +imgs.img + ')'"></div>
+                </div>
+
+            </div>
+            <div class="home_work_cont">
+                <div class="home_work_cont_left">
+                    <p>{{item.utext}}</p>
+                    <p>{{item.utime | date:"yyyy-MM-dd"}}</p>
+                </div>
+                <div class="home_work_cont_right">
+                    <img [src]="item.uhead" />
+                    <p>{{item.uname}}</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</ion-content>

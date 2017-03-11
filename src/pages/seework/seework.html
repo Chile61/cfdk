@@ -71,58 +71,42 @@
     <br/>
     <br/>
     <ion-list-header>评论</ion-list-header>
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_4.jpeg">
-        </ion-avatar>
-        <h2>Woody</h2>
-        <p>This town ain't big enough for the two of us!</p>
-        <ion-note item-right>3:43 pm</ion-note>
-    </ion-item>
+    <ion-card *ngFor="let item of comment; let i=index">
 
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_3.jpeg">
-        </ion-avatar>
-        <h2>Buzz Lightyear</h2>
-        <p>My eyeballs could have been sucked from their sockets!</p>
-        <ion-note item-right>1:12 pm</ion-note>
-    </ion-item>
+        <ion-item>
+            <ion-avatar item-left>
+                <img [src]="item.uhead">
+            </ion-avatar>
+            <h2>{{item.uname}}</h2>
 
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_2.jpeg">
-        </ion-avatar>
-        <h2>Jessie</h2>
-        <p>Well aren't you just the sweetest space toy I ever did meet!</p>
-        <ion-note item-right>10:03 am</ion-note>
-    </ion-item>
+        </ion-item>
 
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_1.jpeg">
-        </ion-avatar>
-        <h2>Mr. Potato Head</h2>
-        <p>You're not turning me into a Mashed Potato.</p>
-        <ion-note item-right>5:47 am</ion-note>
-    </ion-item>
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_4.jpeg">
-        </ion-avatar>
-        <h2>Woody</h2>
-        <p>This town ain't big enough for the two of us!</p>
-        <ion-note item-right>3:43 pm</ion-note>
-    </ion-item>
+        <ion-card-content>
+            <p class="comt_fork comt_fork_{{item.nid}}">回复 {{item.fname}} ：{{item.ftext}}</p>
+            <p>{{item.utext}}</p>
+        </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small (click)="opencomment(item._id,i);">
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    <div>回复</div>
+                    </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                        <ion-icon name="text"></ion-icon>
+                        <div>举报</div>
+                    </button>
+            </ion-col>
+            <ion-col center text-center>
+                <ion-note>
+                    {{item.utime | date:"yyyy-MM-dd"}}
+                </ion-note>
+            </ion-col>
+        </ion-row>
+    </ion-card>
 
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_3.jpeg">
-        </ion-avatar>
-        <h2>Buzz Lightyear</h2>
-        <p>My eyeballs could have been sucked from their sockets!</p>
-        <ion-note item-right>1:12 pm</ion-note>
-    </ion-item>
+
     <br/>
     <br/>
     <br/>
@@ -148,9 +132,9 @@
         <button ion-button icon-only>
             <ion-icon name="contact"></ion-icon>
         </button>
-        <button ion-button icon-left>
+        <button ion-button icon-left (click)="writecom();">
         <ion-icon name="clipboard"></ion-icon>
-        我要回答／评论
+        评论
         </button>
     </ion-toolbar>
 </ion-footer>

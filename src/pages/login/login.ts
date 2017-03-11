@@ -15,6 +15,7 @@ export class loginPage {
   name: string = "";
   password: string = "";
 
+
   constructor(public navCtrl: NavController, public http: Http, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public userService: UserService) {
 
   }
@@ -33,25 +34,55 @@ export class loginPage {
     this.navCtrl.push(registerPage)
   }
 
+  login() {
+    alert(3);
+
+
+    var mupas = SHA1(this.password);
+    var url = "http://www.devonhello.com/cfdk/applogins";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    alert(mupas);
+    this.http.post(url, "uname=" + this.name + "&upas=" + mupas, {
+      headers: headers
+    })
+      .subscribe((res) => {
+        alert(JSON.stringify(res.json()));
+        if (res.json() == "0") {
+          alert("用户名或密码错误");
+        } else {
+          var datas = res.json()[0];
+          alert(datas);
+          this.userService.update(datas);
+          this.userService.getStorage();
+          this.navCtrl.pop();
+        }
+      });
+
+
+  }
+
   //登录
   logIn() {
+    alert(0);
     let loading = this.loadingCtrl.create({
       content: '请稍后...'
     });
-
+    alert(1);
     if ($.trim(this.name).length >= 4 && $.trim(this.password).length >= 6) {
       loading.present();
-
-      let url = "http://www.devonhello.com/cfdk/login";
+      alert(2);
+      let url = "http://www.devonhello.com/cfdk/applogins";
 
       var headers = new Headers();
-      headers.append('Content-Type', 'application/x-www-form-urlencoded');
-
-      this.http.post(url, "uname=" + this.name + "&upas=" + SHA1(this.password), {
+      headers.append('Content-Type', 'application/json');
+      var upas = SHA1(this.password);
+      this.http.post(url, "uname=" + this.name + "&upas=" + upas, {
         headers: headers
       })
         .subscribe((res) => {
-
+          alert(JSON.stringify(res));
           if (res.json() == "0") {
             let alert = this.alertCtrl.create({
               title: '提示!',

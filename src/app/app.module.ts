@@ -25,6 +25,9 @@ import { searchPage } from '../pages/search/search';
 import { slidesPage } from '../pages/slides/slides';
 import { rankingPage } from '../pages/ranking/ranking';
 import { chartPage } from '../pages/chart/chart';
+import { seecommentPage } from '../pages/seecomment/seecomment';
+import { writecommentPage } from '../pages/writecomment/writecomment';
+import { mysendPage } from '../pages/mysend/mysend';
 
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
@@ -59,6 +62,9 @@ import { ContactData } from '../pages/service/ContactData';
     seechartPage,
     chartPage,
     toutiaoListPage,
+    seecommentPage,
+    writecommentPage,
+    mysendPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -91,6 +97,9 @@ import { ContactData } from '../pages/service/ContactData';
     seechartPage,
     chartPage,
     toutiaoListPage,
+    seecommentPage,
+    writecommentPage,
+    mysendPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, RongCloudService, UserService, Work, ContactData]
 })
