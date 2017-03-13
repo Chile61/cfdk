@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { NativeStorage } from 'ionic-native';
 import { NavController } from 'ionic-angular';
 import { RongCloudService } from '../service/RongCloud.service';
-import { seecontPage } from '../seecont/seecont';
+
 
 declare var window;
 declare var JPushPlugin;
@@ -15,9 +15,17 @@ export class UserService {
 
 	isInitJP = false;
 	nav: NavController;
+	
+	seecontPage:any;
+	
 
 	constructor(public rongCloudService: RongCloudService) {
+		
+	}
 
+	setpage(page) {
+		this.seecontPage = page;
+		//alert(this.seecontPage);
 	}
 
 	setnav(nav) {
@@ -27,14 +35,14 @@ export class UserService {
 
 	//设置缓存
 	getStorage() {
-
+		alert("获取缓存");
 		NativeStorage.getItem('_user')
 			.then(
 			data => {
 				alert("缓存：" + data._id + "--" + data.uname + "--" + data.usex);
 				this._user = data;
 
-				this.rongCloudService.RongCloudLibPlugin_init(this._user._id, this._user._name);
+				this.rongCloudService.RongCloudLibPlugin_init(this._user._id, this._user.uname);
 				this.initJPush(this._user._id);
 			},
 			error => { }
@@ -47,7 +55,8 @@ export class UserService {
 			.then(
 			() => {
 				//alert("设置成功");
-				this.initJPush(this._user._id);
+				//this.initJPush(this._user._id);
+				this.getStorage();
 			},
 			error => alert('Error storing item')
 			);
@@ -74,16 +83,17 @@ export class UserService {
 
 					//监听点击状态栏通知
 					document.addEventListener("jpush.openNotification", (event) => {
-						//alert(JSON.stringify(event));
+						alert(JSON.stringify(event));
 						//alert(event["extras"]["cn.jpush.android.EXTRA"]);
-						var jpdata = event["extras"]["cn.jpush.android.EXTRA"];
-
-						_that.nav.push(seecontPage, {
-							type: jpdata["type"],
-							_id: jpdata["_id"],
-							artid: jpdata["artid"],
-						});
-
+						//var jpdata = event["extras"]["cn.jpush.android.EXTRA"];
+						
+						
+							_that.nav.push(_that.seecontPage, {
+								type: event["extras"]["cn.jpush.android.EXTRA"]["type"],
+								_id: event["extras"]["cn.jpush.android.EXTRA"]["_id"],
+								artid: event["extras"]["cn.jpush.android.EXTRA"]["artid"],
+							});
+						
 
 					}, false)
 

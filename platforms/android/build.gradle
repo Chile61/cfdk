@@ -88,8 +88,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "com.synconset.imagepicker/cfdk892220-ignorelinterrors.gradle"
-apply from: "com.synconset.imagepicker/cfdk892220-androidtarget.gradle"
+apply from: "com.synconset.imagepicker/cfdk2866067-ignorelinterrors.gradle"
+apply from: "com.synconset.imagepicker/cfdk2866067-androidtarget.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -251,8 +251,8 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile(project(path: "CordovaLib", configuration: "debug"))
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
-    compile "com.android.support:support-v4:24.1.1+"
     compile "com.android.support:appcompat-v7:23+"
+    compile "com.android.support:support-v4:24.1.1+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

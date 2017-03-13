@@ -6,15 +6,16 @@ declare var SHA1: any;
 @Injectable()
 export class RongCloudService {
 
-	public headers: Headers;
+	headers: Headers;
 
 	//融云配置变量
-	public rand: any;
-	public now: any;
-	public token: any;
+	rand: any;
+	now: any;
+	token: any;
+	Signature:any;
 
 	constructor(public http: Http) {
-
+		//alert(SHA1);
 	}
 
 
@@ -22,9 +23,8 @@ export class RongCloudService {
 	RongCloudLibPlugin_init(_id: any, _name: any) {
 		var _that = this;
 		RongCloudLibPlugin.init({
-			appKey: "sfci50a7c59yi"
-		},
-			function (ret, err) {
+			appKey: "sfci50a7sqzqi"
+		}, (ret, err)=> {
 				if (ret.status == 'error') {
 					alert(err.code);
 				} else {
@@ -43,42 +43,54 @@ export class RongCloudService {
 		this.rand = Math.ceil(Math.random() * 10000000);
 
 		this.now = parseInt(time.toString());
-
-
+		this.Signature = SHA1("c8cPwRTTPpl" + this.rand.toString() + this.now.toString());
+		alert(this.Signature);
+		alert(this.rand.toString());
+		alert(this.now.toString());
+		var _that = this;
 		this.headers = new Headers({
-			"Content-Type": "application/x-www-form-urlencoded",
-			"App-Key": "sfci50a7c59yi",
+			"Content-Type": 'application/x-www-form-urlencoded',
+			"App-Key": "sfci50a7sqzqi",
 			"Nonce": this.rand.toString(),
 			"Timestamp": this.now.toString(),
-			"Signature": SHA1("7yPJfy1ssm" + this.rand.toString() + this.now.toString())
+			"Signature": this.Signature
 		});
 
 
 
 		let url = "https://api.cn.rong.io/user/getToken.json";
-		this.http.post(url, "userId=" + _id + "&name=" + _name + "&portraitUri", {
+		alert(_id.toString());
+		alert(_name.toString());
+		this.http.post(url, "userId=" + _id.toString() + "&name=" + _name.toString() + "&portraitUri=" + 'http://www.rongcloud.cn/images/logo.png', {
 			headers: this.headers
 		})
 			.subscribe((res) => {
-				this.token = res.json()["token"];
+				alert("token-res:"+JSON.stringify(res));
+				_that.token = res.json()["token"];
 
 
-				this.RCconnect();
+				_that.mRCconnect();
 			});
 	}
 
 	//融云连接服务器
-	RCconnect() {
-
+	mRCconnect() {
+		alert(RongCloudLibPlugin.connect);
+		var tk = this.token + '';
+		var _that = this;
+		alert(tk);
 		RongCloudLibPlugin.connect({
-			token: this.token
-		},
-			(ret, err) => {
-				if (ret.status == 'success') {
-					alert("融云id：" + ret.result.userId);
-					this.RCsetOnReceiveMessageListener();
-				}
-			});
+			token: tk
+		}, function(ret, err) {
+			alert(ret + "-ret");
+			alert(err + "-err");
+
+			if (ret.status == 'success') {
+				alert("融云id：" + ret.result.userId);
+				_that.RCsetOnReceiveMessageListener();
+			}
+		});
+		
 	}
 
 	//设置融云监听

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { UserService } from '../service/User.service';
 import { mysendPage } from '../mysend/mysend';
+
 
 @Component({
   selector: 'page-me',
@@ -11,7 +12,7 @@ export class MePage {
 
   public uname: any;
 
-  constructor(public navCtrl: NavController, public userService: UserService, private navParams: NavParams) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public userService: UserService, private navParams: NavParams) {
     userService.setnav(this.navCtrl);
     this.uname = this.userService._user.uname;
 
@@ -23,6 +24,12 @@ export class MePage {
       this.uname = this.userService._user.uname;
     }
 
+  }
+
+  //我的资料
+  openme(){
+    //let modal = this.modalCtrl.create(MedataPage);
+    //modal.present();
   }
 
   //我的作品

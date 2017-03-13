@@ -55,7 +55,7 @@ export class loginPage {
           var datas = res.json()[0];
           alert(datas);
           this.userService.update(datas);
-          this.userService.getStorage();
+          //this.userService.getStorage();
           this.navCtrl.pop();
         }
       });

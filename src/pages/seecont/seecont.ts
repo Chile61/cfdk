@@ -33,7 +33,7 @@ export class seecontPage {
         this.getdata();
         break;
       case "1":
-        this.url = "http://www.devonhello.com/cfdk/getmyquestion_jpush";
+        this.url = "http://www.devonhello.com/cfdk/getmyque_jpush";
         this.title = "我的问答评论";
         this.getdata();
         break;

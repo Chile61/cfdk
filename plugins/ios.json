@@ -25,30 +25,36 @@
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "io.ionic.starter"
         },
-        "io.rong.imlib": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
-        },
-        "cordova-plugin-nativestorage": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
-        },
-        "cordova-plugin-qqsdk": {
-            "QQ_APP_ID": "1104885342",
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
-        },
         "com.synconset.imagepicker": {
             "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+            "PACKAGE_NAME": "io.ionic.starter"
         },
         "cordova-plugin-camera": {
             "CAMERA_USAGE_DESCRIPTION": " ",
             "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+            "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
         },
         "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
+            "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
+        },
+        "cordova-plugin-jcore": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
+        },
+        "cordova-plugin-qqsdk": {
+            "QQ_APP_ID": "nLrV5ErJp1muglzw",
+            "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
+        },
+        "io.rong.imlib": {
+            "PACKAGE_NAME": "com.cfdk"
         },
         "jpush-phonegap-plugin": {
             "APP_KEY": "520865321813385a601043b3",
@@ -57,13 +63,7 @@
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.ionicframework.cfdk892220"
-        },
-        "cordova-plugin-jcore": {
-            "PACKAGE_NAME": "com.cfdk"
+            "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
         }
     }
 }

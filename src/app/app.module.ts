@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { MePage } from '../pages/me/me';
+import { MedataPage } from '../pages/medata/medata';
 import { toutiaoPage } from '../pages/toutiao/toutiao';
 import { toutiaoHotListPage } from '../pages/toutiaoHotList/toutiaoHotList';
 import { toutiaoListPage } from '../pages/toutiaoList/toutiaoList';
@@ -67,6 +68,7 @@ import { ContactData } from '../pages/service/ContactData';
     writecommentPage,
     mysendPage,
     seecontPage,
+    MedataPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -103,6 +105,7 @@ import { ContactData } from '../pages/service/ContactData';
     writecommentPage,
     mysendPage,
     seecontPage,
+    MedataPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, RongCloudService, UserService, Work, ContactData]
 })

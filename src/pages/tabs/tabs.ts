@@ -20,6 +20,10 @@ export class TabsPage {
 
   constructor(public userService: UserService) {
     //this.userService.clear();
-    this.userService.getStorage();
+    var _that = this;
+    setTimeout(() => {
+      _that.userService.getStorage();
+    }, 2000);
+    
   }
 }

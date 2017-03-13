@@ -34,57 +34,6 @@ module.exports = [
         "runs": true
     },
     {
-        "id": "io.rong.imlib.RongCloudLibPlugin",
-        "file": "plugins/io.rong.imlib/www/RongCloudLibPlugin.js",
-        "pluginId": "io.rong.imlib",
-        "clobbers": [
-            "RongCloudLibPlugin"
-        ]
-    },
-    {
-        "id": "cordova-plugin-nativestorage.mainHandle",
-        "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
-        "pluginId": "cordova-plugin-nativestorage",
-        "clobbers": [
-            "NativeStorage"
-        ]
-    },
-    {
-        "id": "cordova-plugin-nativestorage.LocalStorageHandle",
-        "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
-        "pluginId": "cordova-plugin-nativestorage"
-    },
-    {
-        "id": "cordova-plugin-nativestorage.NativeStorageError",
-        "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
-        "pluginId": "cordova-plugin-nativestorage"
-    },
-    {
-        "id": "cordova-plugin-network-information.network",
-        "file": "plugins/cordova-plugin-network-information/www/network.js",
-        "pluginId": "cordova-plugin-network-information",
-        "clobbers": [
-            "navigator.connection",
-            "navigator.network.connection"
-        ]
-    },
-    {
-        "id": "cordova-plugin-network-information.Connection",
-        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
-        "pluginId": "cordova-plugin-network-information",
-        "clobbers": [
-            "Connection"
-        ]
-    },
-    {
-        "id": "cordova-plugin-qqsdk.QQSDK",
-        "file": "plugins/cordova-plugin-qqsdk/www/qq.js",
-        "pluginId": "cordova-plugin-qqsdk",
-        "clobbers": [
-            "QQSDK"
-        ]
-    },
-    {
         "id": "com.synconset.imagepicker.ImagePicker",
         "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
         "pluginId": "com.synconset.imagepicker",
@@ -123,6 +72,24 @@ module.exports = [
         "clobbers": [
             "CameraPopoverHandle"
         ]
+    },
+    {
+        "id": "cordova-plugin-nativestorage.mainHandle",
+        "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+        "pluginId": "cordova-plugin-nativestorage",
+        "clobbers": [
+            "NativeStorage"
+        ]
+    },
+    {
+        "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+        "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+        "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
+        "id": "cordova-plugin-nativestorage.NativeStorageError",
+        "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+        "pluginId": "cordova-plugin-nativestorage"
     },
     {
         "id": "cordova-plugin-file.DirectoryEntry",
@@ -314,11 +281,44 @@ module.exports = [
         ]
     },
     {
+        "id": "cordova-plugin-network-information.network",
+        "file": "plugins/cordova-plugin-network-information/www/network.js",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "id": "cordova-plugin-network-information.Connection",
+        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "Connection"
+        ]
+    },
+    {
+        "id": "cordova-plugin-qqsdk.QQSDK",
+        "file": "plugins/cordova-plugin-qqsdk/www/qq.js",
+        "pluginId": "cordova-plugin-qqsdk",
+        "clobbers": [
+            "QQSDK"
+        ]
+    },
+    {
         "id": "jpush-phonegap-plugin.JPushPlugin",
         "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
         "pluginId": "jpush-phonegap-plugin",
         "clobbers": [
             "JPush"
+        ]
+    },
+    {
+        "id": "io.rong.imlib.RongCloudLibPlugin",
+        "file": "plugins/io.rong.imlib/www/RongCloudLibPlugin.js",
+        "pluginId": "io.rong.imlib",
+        "clobbers": [
+            "RongCloudLibPlugin"
         ]
     }
 ];
@@ -327,21 +327,21 @@ module.exports.metadata =
 {
     "cordova-plugin-console": "1.0.5",
     "cordova-plugin-device": "1.1.4",
-    "cordova-plugin-splashscreen": "4.0.1",
+    "cordova-plugin-splashscreen": "4.0.2",
     "cordova-plugin-statusbar": "2.2.1",
     "cordova-plugin-whitelist": "1.3.1",
     "ionic-plugin-keyboard": "2.2.1",
-    "io.rong.imlib": "2.3.7",
-    "cordova-plugin-nativestorage": "2.2.1",
-    "cordova-plugin-network-information": "1.3.1",
-    "cordova-plugin-qqsdk": "0.8.3",
     "com.synconset.imagepicker": "2.1.7",
     "cordova-plugin-compat": "1.1.0",
-    "cordova-plugin-camera": "2.3.1",
-    "cordova-plugin-file": "4.3.1",
-    "cordova-plugin-file-transfer": "1.6.1",
+    "cordova-plugin-camera": "2.4.1-dev",
+    "cordova-plugin-nativestorage": "2.2.1",
+    "cordova-plugin-file": "4.3.2",
+    "cordova-plugin-file-transfer": "1.6.2",
     "cordova-plugin-jcore": "1.1.0",
-    "jpush-phonegap-plugin": "3.1.0"
+    "cordova-plugin-network-information": "1.3.2",
+    "cordova-plugin-qqsdk": "0.8.5",
+    "jpush-phonegap-plugin": "3.1.0",
+    "io.rong.imlib": "2.3.7"
 };
 // BOTTOM OF METADATA
 });

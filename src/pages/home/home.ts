@@ -9,6 +9,7 @@ import { searchPage } from '../search/search';
 import { rankingPage } from '../ranking/ranking';
 import { UserService } from '../service/User.service';
 import { seeworkPage } from '../seework/seework';
+import { seecontPage } from '../seecont/seecont';
 
 
 declare var $: any;
@@ -35,6 +36,7 @@ export class HomePage {
     //this.RongCloudS.RongCloudLibPlugin_init();
     //this.initJPush();
     this.gethotart();
+    userService.setpage(seecontPage);
     userService.setnav(this.navCtrl);
   }
 
