@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, LoadingController, ModalController } from 'ionic-angular';
 import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
 import { toutiaoListPage } from '../toutiaoList/toutiaoList';
@@ -10,6 +10,7 @@ import { rankingPage } from '../ranking/ranking';
 import { UserService } from '../service/User.service';
 import { seeworkPage } from '../seework/seework';
 import { seecontPage } from '../seecont/seecont';
+import { MedataPage } from '../medata/medata';
 
 
 declare var $: any;
@@ -29,10 +30,11 @@ export class HomePage {
   msgList: Array<any> = [];
   work:any = [];
   art:any = [];
+  user:any = [];
 
   public headers: Headers;
 
-  constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController, public userService: UserService) {
+  constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, public loadingCtrl: LoadingController, public userService: UserService) {
     //this.RongCloudS.RongCloudLibPlugin_init();
     //this.initJPush();
     this.gethotart();
@@ -53,6 +55,36 @@ export class HomePage {
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.art = res.json();
+        //this.getquecomment();
+        this.getuser();
+      });
+
+      
+  }
+
+  //获取人气推荐
+  getuser(){
+    let url = "http://www.devonhello.com/cfdk/indexuserlist";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "", {
+      headers: headers
+    })
+      .subscribe((res) => {
+        //alert(JSON.stringify(res.json()));
+        this.user = res.json();
+
+        setTimeout(()=>{
+          this.oUser = new Swiper('.swiper-container-user', {
+            slidesPerView: 4,
+            paginationClickable: true,
+            slidesPerGroup: 4,
+            spaceBetween: 6
+          });
+        },1800);
+
         //this.getquecomment();
         this.getwork();
       });
@@ -144,6 +176,14 @@ export class HomePage {
     this.navCtrl.push(videolistPage);
   }
 
+  //打开ta资料
+  openTA(index){
+    let modal = this.modalCtrl.create(MedataPage,{
+      id:this.user[index]["_id"]
+    });
+    modal.present();
+  }
+
 
   ionViewDidEnter() {
 
@@ -160,12 +200,7 @@ export class HomePage {
         pagination: '.swiper-pagination',
       });
 
-      this.oUser = new Swiper('.swiper-container-user', {
-        slidesPerView: 4,
-        paginationClickable: true,
-        slidesPerGroup: 4,
-        spaceBetween: 6
-      });
+      
 
 
     }

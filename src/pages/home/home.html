@@ -72,37 +72,9 @@
             <div class="swiper-container-user">
                 <div class="swiper-wrapper">
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" *ngFor="let item of user; let i=index" (click)="openTA(i);">
                         <img src="assets/img2/user_1.jpeg" />
-                        <p>萧冰xiaobing</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img2/user_2.jpeg" />
-                        <p>毓玲珑</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img2/user_3.jpeg" />
-                        <p>徐徐徐萌萌</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img2/user_4.jpeg" />
-                        <p>春燕_Lsg6</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img2/user_1.jpeg" />
-                        <p>萧冰xiaobing</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img2/user_2.jpeg" />
-                        <p>毓玲珑</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img2/user_3.jpeg" />
-                        <p>徐徐徐萌萌</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img2/user_4.jpeg" />
-                        <p>春燕_Lsg6</p>
+                        <p>{{item.uname}}</p>
                     </div>
 
                 </div>

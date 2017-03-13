@@ -3,6 +3,8 @@ import { Headers, Http } from '@angular/http';
 
 declare var RongCloudLibPlugin: any;
 declare var SHA1: any;
+declare var RongIMClient: any;
+declare var RongIMLib: any;
 @Injectable()
 export class RongCloudService {
 
@@ -12,27 +14,68 @@ export class RongCloudService {
 	rand: any;
 	now: any;
 	token: any;
-	Signature:any;
+	Signature: any;
 
 	constructor(public http: Http) {
 		//alert(SHA1);
+		//alert(RongIMClient);
+		//alert(RongIMLib);
+		//this.webRongIMClient();
 	}
+
+
+	webRongIMClient() {
+		RongIMClient.init("sfci50a7sqzqi");
+
+		RongIMClient.setConnectionStatusListener({
+			onChanged: function (status) {
+				switch (status) {
+					//链接成功
+					case RongIMLib.ConnectionStatus.CONNECTED:
+						alert('链接成功');
+						break;
+					//正在链接
+					case RongIMLib.ConnectionStatus.CONNECTING:
+						alert('正在链接');
+						break;
+					//重新链接
+					case RongIMLib.ConnectionStatus.DISCONNECTED:
+						alert('断开连接');
+						break;
+					//其他设备登录
+					case RongIMLib.ConnectionStatus.KICKED_OFFLINE_BY_OTHER_CLIENT:
+						alert('其他设备登录');
+						break;
+					//网络不可用
+					case RongIMLib.ConnectionStatus.NETWORK_UNAVAILABLE:
+						alert('网络不可用');
+						break;
+				}
+			}
+		});
+
+
+		// 消息监听器
+		RongIMClient.setOnReceiveMessageListener({
+			// 接收到的消息
+			onReceived: function (message) {
+				// 判断消息类型
+				switch (message.messageType) {
+					case RongIMClient.MessageType.TextMessage:
+						// 发送的消息内容将会被打印
+						alert(message.content.content);
+						break;
+				}
+			}
+		});
+	};
 
 
 	//初始化融云
 	RongCloudLibPlugin_init(_id: any, _name: any) {
-		var _that = this;
-		RongCloudLibPlugin.init({
-			appKey: "sfci50a7sqzqi"
-		}, (ret, err)=> {
-				if (ret.status == 'error') {
-					alert(err.code);
-				} else {
 
-					_that.gettoken(_id, _name);
-				}
-
-			});
+		this.webRongIMClient();
+		this.gettoken(_id, _name);
 	}
 
 	//生成token
@@ -44,9 +87,9 @@ export class RongCloudService {
 
 		this.now = parseInt(time.toString());
 		this.Signature = SHA1("c8cPwRTTPpl" + this.rand.toString() + this.now.toString());
-		alert(this.Signature);
-		alert(this.rand.toString());
-		alert(this.now.toString());
+		//alert(this.Signature);
+		//alert(this.rand.toString());
+		//alert(this.now.toString());
 		var _that = this;
 		this.headers = new Headers({
 			"Content-Type": 'application/x-www-form-urlencoded',
@@ -59,45 +102,57 @@ export class RongCloudService {
 
 
 		let url = "https://api.cn.rong.io/user/getToken.json";
+		var postdata = "userId=" + _id.toString() + "&name=" + _name.toString() + "&portraitUri=" + "http://www.rongcloud.cn/images/logo.png";
 		alert(_id.toString());
 		alert(_name.toString());
-		this.http.post(url, "userId=" + _id.toString() + "&name=" + _name.toString() + "&portraitUri=" + 'http://www.rongcloud.cn/images/logo.png', {
+		alert(postdata);
+		this.http.post(url, postdata, {
 			headers: this.headers
 		})
 			.subscribe((res) => {
-				alert("token-res:"+JSON.stringify(res));
+				//alert("token-res:" + JSON.stringify(res));
 				_that.token = res.json()["token"];
+				//alert("token:" + _that.token);
 
-
-				_that.mRCconnect();
+				_that.mRCconnect(_that.token);
+				//_that.RCsetOnReceiveMessageListener();
 			});
 	}
 
 	//融云连接服务器
-	mRCconnect() {
-		alert(RongCloudLibPlugin.connect);
-		var tk = this.token + '';
-		var _that = this;
-		alert(tk);
-		RongCloudLibPlugin.connect({
-			token: tk
-		}, function(ret, err) {
-			alert(ret + "-ret");
-			alert(err + "-err");
-
-			if (ret.status == 'success') {
-				alert("融云id：" + ret.result.userId);
-				_that.RCsetOnReceiveMessageListener();
+	mRCconnect(token) {
+		//alert("token-2:" + token);
+		// 连接融云服务器。
+		RongIMClient.connect(token, {
+			onSuccess: function (userId) {
+				alert("Login successfully." + userId);
+			},
+			onTokenIncorrect: function () {
+				alert('token无效');
+			},
+			onError: function (errorCode) {
+				var info = '';
+				switch (errorCode) {
+					case RongIMLib.ErrorCode.TIMEOUT:
+						info = '超时';
+						break;
+					case RongIMLib.ErrorCode.UNKNOWN_ERROR:
+						info = '未知错误';
+						break;
+					case RongIMLib.ErrorCode.UNACCEPTABLE_PaROTOCOL_VERSION:
+						info = '不可接受的协议版本';
+						break;
+					case RongIMLib.ErrorCode.IDENTIFIER_REJECTED:
+						info = 'appkey不正确';
+						break;
+					case RongIMLib.ErrorCode.SERVER_UNAVAILABLE:
+						info = '服务器不可用';
+						break;
+				}
+				alert(errorCode);
 			}
 		});
-		
 	}
 
-	//设置融云监听
-	RCsetOnReceiveMessageListener() {
-		RongCloudLibPlugin.setOnReceiveMessageListener((ret, err) => {
-			alert(JSON.stringify(ret.result.message));
-		})
-	}
 
 }

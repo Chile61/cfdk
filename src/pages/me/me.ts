@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { UserService } from '../service/User.service';
 import { mysendPage } from '../mysend/mysend';
+import { MedataPage } from '../medata/medata';
 
 
 @Component({
@@ -28,8 +29,8 @@ export class MePage {
 
   //我的资料
   openme(){
-    //let modal = this.modalCtrl.create(MedataPage);
-    //modal.present();
+    let modal = this.modalCtrl.create(MedataPage);
+    modal.present();
   }
 
   //我的作品

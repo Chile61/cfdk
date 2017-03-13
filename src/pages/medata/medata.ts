@@ -17,6 +17,7 @@ export class MedataPage {
     userService.setnav(this.navCtrl);
     this.header = "assets/img2/user_1.jpeg";
     this.name = userService._user.uname;
+    alert(params.get('id'));
   }
 
   dismiss() {
