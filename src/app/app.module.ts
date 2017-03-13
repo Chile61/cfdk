@@ -30,6 +30,7 @@ import { seecommentPage } from '../pages/seecomment/seecomment';
 import { writecommentPage } from '../pages/writecomment/writecomment';
 import { mysendPage } from '../pages/mysend/mysend';
 import { seecontPage } from '../pages/seecont/seecont';
+import { PopoverPage } from '../pages/PopoverPage/PopoverPage';
 
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
@@ -69,6 +70,7 @@ import { ContactData } from '../pages/service/ContactData';
     mysendPage,
     seecontPage,
     MedataPage,
+    PopoverPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -106,6 +108,7 @@ import { ContactData } from '../pages/service/ContactData';
     mysendPage,
     seecontPage,
     MedataPage,
+    PopoverPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, RongCloudService, UserService, Work, ContactData]
 })

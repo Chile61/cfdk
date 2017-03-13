@@ -3,6 +3,12 @@
         <ion-title>
             问题详情
         </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+        </ion-buttons>
+
     </ion-navbar>
 </ion-header>
 <ion-content>
@@ -88,26 +94,7 @@
 
 </ion-content>
 
-<ion-footer>
-    <ion-toolbar color="secondary">
-        <button ion-button icon-only>
-            <ion-icon name="heart"></ion-icon>
-        </button>
-        <button ion-button icon-only>
-            <ion-icon name="share"></ion-icon>
-        </button>
-        <button ion-button icon-only>
-            <ion-icon name="eye-off"></ion-icon>
-        </button>
-        <button ion-button icon-only>
-            <ion-icon name="contact"></ion-icon>
-        </button>
-        <button ion-button icon-left (click)="writecom();">
-        <ion-icon name="clipboard"></ion-icon>
-        评论
-        </button>
-    </ion-toolbar>
-</ion-footer>
+
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

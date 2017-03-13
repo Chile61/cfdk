@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, PopoverController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
+import { PopoverPage } from '../PopoverPage/PopoverPage';
 
 declare var PhotoSwipe: any;
 declare var PhotoSwipeUI_Default: any;
@@ -20,9 +21,21 @@ export class seechartPage {
   pswpElement:any = null;
   comment:any = [];
 
-  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService) {
+  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
     userService.setnav(this.navCtrl);
     this.getchart();
+  }
+
+  presentPopover(ev) {
+
+    let popover = this.popoverCtrl.create(PopoverPage,{
+      datas: this.datas,
+      type:3+''
+    });
+
+    popover.present({
+      ev: ev
+    });
   }
 
   //获取问答数据
@@ -93,23 +106,6 @@ export class seechartPage {
       
   }
 
-
-
-
-
-  //我要留言
-  writecom(){
-    this.navCtrl.push(writecommentPage, {
-      type: 3+'',
-      fid:this.datas['uid'],
-      fhead:this.datas['uhead'],
-      fname:this.datas['uname'],
-      ftext:this.datas['utitle'],
-      artid: this.datas['_id'],
-      utid:this.datas['uid'],
-      nid:0
-    });
-  }
 
   opencomment(id,index){
     

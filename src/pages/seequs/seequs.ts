@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, PopoverController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
+import { PopoverPage } from '../PopoverPage/PopoverPage';
 
 @Component({
   selector: 'page-seequs',
@@ -16,7 +17,7 @@ export class seequsPage {
 
   comment:any = [];
 
-  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService) {
+  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
     userService.setnav(this.navCtrl);
     this.getque();
   }
@@ -58,22 +59,15 @@ export class seequsPage {
       
   }
 
+  presentPopover(ev) {
 
+    let popover = this.popoverCtrl.create(PopoverPage,{
+      datas: this.datas,
+      type:1+''
+    });
 
-
-
-  //我要留言
-  writecom(){
-
-    this.navCtrl.push(writecommentPage, {
-      type: 1+'',
-      fid:this.datas['uid'],
-      fhead:this.datas['uhead'],
-      fname:this.datas['uname'],
-      ftext:this.datas['utitle'],
-      artid: this.datas['_id'],
-      utid:this.datas['uid'],
-      nid:0
+    popover.present({
+      ev: ev
     });
   }
 

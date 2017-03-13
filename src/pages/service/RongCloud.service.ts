@@ -26,13 +26,15 @@ export class RongCloudService {
 
 	webRongIMClient() {
 		RongIMClient.init("sfci50a7sqzqi");
-
+		var _that = this;
 		RongIMClient.setConnectionStatusListener({
 			onChanged: function (status) {
 				switch (status) {
 					//链接成功
 					case RongIMLib.ConnectionStatus.CONNECTED:
 						alert('链接成功');
+						_that.webgetTotalUnreadCount();
+						_that.webgetRemoteConversationList();
 						break;
 					//正在链接
 					case RongIMLib.ConnectionStatus.CONNECTING:
@@ -64,11 +66,108 @@ export class RongCloudService {
 					case RongIMClient.MessageType.TextMessage:
 						// 发送的消息内容将会被打印
 						alert(message.content.content);
+						_that.webgetTotalUnreadCount();
+						_that.webgetRemoteConversationList();
 						break;
 				}
 			}
 		});
 	};
+
+	//获取某回话的未读数
+	webgetUnreadCount(targetId) {
+		RongIMClient.getInstance().getUnreadCount(0, targetId, {
+			onSuccess: function (count) {
+				alert("count:" + count);
+			},
+			onError: function (error) {
+			}
+		});
+	}
+
+	//获取历史信息
+	webgetRemoteHistoryMessages(targetId, count) {
+		RongIMLib.RongIMClient.getInstance().getRemoteHistoryMessages(0, targetId, null, count, {
+			onSuccess: function (list, hasMsg) {
+				alert(list);
+				//list 历史消息数组，hasMsg为boolean值，如果为true则表示还有剩余历史消息可拉取，为false的话表示没有剩余历史消息可供拉取。
+			},
+			onError: function (error) {
+				//getRemoteHistoryMessages error
+			}
+		});
+	}
+
+	//获取会话列表
+	webgetRemoteConversationList() {
+		RongIMClient.getInstance().getRemoteConversationList({
+			onSuccess: function (list) {
+				//list 会话列表
+				alert("会话列表:" + list);
+			},
+			onError: function (error) {
+				//getRemoteConversationList error
+			}
+		}, null);
+	}
+
+	//发送信息
+	websendMessage(targetId, content, extra) {
+		// 定义消息类型,文字消息使用 RongIMLib.TextMessage
+		var msg = new RongIMLib.TextMessage({ content: content, extra: extra });
+		//或者使用RongIMLib.TextMessage.obtain 方法.具体使用请参见文档
+		//var msg = RongIMLib.TextMessage.obtain("hello");
+		var conversationtype = '0' //RongIMLib.ConversationType.PRIVATE; // 私聊
+		//var targetId = "xxx"; // 目标 Id
+		RongIMClient.getInstance().sendMessage(conversationtype, targetId, msg, {
+			// 发送消息成功
+			onSuccess: function (message) {
+				//message 为发送的消息对象并且包含服务器返回的消息唯一Id和发送消息时间戳
+				alert("Send successfully");
+			},
+			onError: function (errorCode, message) {
+				var info = '';
+				switch (errorCode) {
+					case RongIMLib.ErrorCode.TIMEOUT:
+						info = '超时';
+						break;
+					case RongIMLib.ErrorCode.UNKNOWN_ERROR:
+						info = '未知错误';
+						break;
+					case RongIMLib.ErrorCode.REJECTED_BY_BLACKLIST:
+						info = '在黑名单中，无法向对方发送消息';
+						break;
+					case RongIMLib.ErrorCode.NOT_IN_DISCUSSION:
+						info = '不在讨论组中';
+						break;
+					case RongIMLib.ErrorCode.NOT_IN_GROUP:
+						info = '不在群组中';
+						break;
+					case RongIMLib.ErrorCode.NOT_IN_CHATROOM:
+						info = '不在聊天室中';
+						break;
+					default:
+						//info = x;
+						break;
+				}
+				alert('发送失败:' + info);
+			}
+		}
+		);
+	}
+
+	//获取未读数
+	webgetTotalUnreadCount() {
+
+		RongIMClient.getInstance().getTotalUnreadCount({
+			onSuccess: function (count) {
+				alert("count:" + count);
+			},
+			onError: function (error) {
+			}
+		});
+
+	}
 
 
 	//初始化融云
@@ -77,6 +176,7 @@ export class RongCloudService {
 		this.webRongIMClient();
 		this.gettoken(_id, _name);
 	}
+
 
 	//生成token
 	gettoken(_id: any, _name: any) {
@@ -103,9 +203,9 @@ export class RongCloudService {
 
 		let url = "https://api.cn.rong.io/user/getToken.json";
 		var postdata = "userId=" + _id.toString() + "&name=" + _name.toString() + "&portraitUri=" + "http://www.rongcloud.cn/images/logo.png";
-		alert(_id.toString());
-		alert(_name.toString());
-		alert(postdata);
+		//alert(_id.toString());
+		//alert(_name.toString());
+		//alert(postdata);
 		this.http.post(url, postdata, {
 			headers: this.headers
 		})
@@ -154,5 +254,5 @@ export class RongCloudService {
 		});
 	}
 
-
+	
 }
