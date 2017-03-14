@@ -4,6 +4,7 @@ import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
 import { PopoverPage } from '../PopoverPage/PopoverPage';
+import { loginPage } from '../login/login';
 
 @Component({
   selector: 'page-seequs',
@@ -15,27 +16,27 @@ export class seequsPage {
   datas = {
 
   };
-  loading:any;
+  loading: any;
 
-  comment:any = [];
+  comment: any = [];
 
-  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService, public popoverCtrl: PopoverController) {
     userService.setnav(this.navCtrl);
     this.loading = this.loadingCtrl.create({
-			content: '加载中，稍等...'
-		});
+      content: '加载中，稍等...'
+    });
     this.getque();
   }
 
   //获取问答数据
-  getque(){
+  getque() {
     this.loading.present();
     let url = "http://www.devonhello.com/cfdk/seequedata";
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "id="+this.navParams.get('id'), {
+    this.http.post(url, "id=" + this.navParams.get('id'), {
       headers: headers
     })
       .subscribe((res) => {
@@ -44,33 +45,35 @@ export class seequsPage {
         this.getquecomment();
       });
 
-      
+
   }
 
   //获取问答数据
-  getquecomment(){
+  getquecomment() {
     let url = "http://www.devonhello.com/cfdk/see_comment_chart";
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "id="+this.navParams.get('id')+"&type=1", {
+    this.http.post(url, "id=" + this.navParams.get('id') + "&type=1", {
       headers: headers
     })
       .subscribe((res) => {
-        //alert(JSON.stringify(res.json()));
-        this.comment = res.json();
+
+        if (res.json() != "0") {
+          this.comment = res.json();
+        }
         this.loading.dismiss();
       });
 
-      
+
   }
 
   presentPopover(ev) {
 
-    let popover = this.popoverCtrl.create(PopoverPage,{
+    let popover = this.popoverCtrl.create(PopoverPage, {
       datas: this.datas,
-      type:1+''
+      type: 1 + ''
     });
 
     popover.present({
@@ -83,19 +86,22 @@ export class seequsPage {
     this.content.scrollToTop();
   }
 
-  opencomment(id,index){
-    
-    this.navCtrl.push(writecommentPage, {
-      type: 1+'',
-      fid:this.comment[index]['uid'],
-      fhead:this.comment[index]['uhead'],
-      fname:this.comment[index]['uname'],
-      ftext:this.comment[index]['utext'],
-      artid: this.datas['_id'],
-      utid:this.comment[index]['uid'],
-      nid:id
-    });
+  opencomment(id, index) {
+    if (this.userService._user._id) {
+      this.navCtrl.push(writecommentPage, {
+        type: 1 + '',
+        fid: this.comment[index]['uid'],
+        fhead: this.comment[index]['uhead'],
+        fname: this.comment[index]['uname'],
+        ftext: this.comment[index]['utext'],
+        artid: this.datas['_id'],
+        utid: this.comment[index]['uid'],
+        nid: id
+      });
+    } else {
+      this.navCtrl.push(loginPage);
+    }
   }
 
-  
+
 }

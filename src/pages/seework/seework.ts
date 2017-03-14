@@ -4,6 +4,7 @@ import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
 import { PopoverPage } from '../PopoverPage/PopoverPage';
+import { loginPage } from '../login/login';
 
 declare var PhotoSwipe: any;
 declare var PhotoSwipeUI_Default: any;
@@ -15,30 +16,30 @@ export class seeworkPage {
   @ViewChild(Content) content: Content;
   datas = {};
   banner = '';
-  gallery:any = null;
-  pswpElement:any = null;
-  comment:any = [];
-  loading:any;
+  gallery: any = null;
+  pswpElement: any = null;
+  comment: any = [];
+  loading: any;
 
-  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService, public popoverCtrl: PopoverController) {
     userService.setnav(this.navCtrl);
     this.loading = this.loadingCtrl.create({
-			content: '加载中，稍等...'
-		});
+      content: '加载中，稍等...'
+    });
     this.getwork();
   }
 
   //获取作品数据
-  getwork(){
+  getwork() {
 
     this.loading.present();
-    
+
     let url = "http://www.devonhello.com/cfdk/seeworkdata";
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "id="+this.navParams.get('id'), {
+    this.http.post(url, "id=" + this.navParams.get('id'), {
       headers: headers
     })
       .subscribe((res) => {
@@ -51,7 +52,7 @@ export class seeworkPage {
         this.getquecomment();
       });
 
-      
+
   }
 
   doInfinite(infiniteScroll) {
@@ -63,35 +64,35 @@ export class seeworkPage {
   }
 
   pswpElementInit(ind) {
-    
-    if(this.pswpElement==null){
+
+    if (this.pswpElement == null) {
       this.pswpElement = document.querySelectorAll('.pswp')[0];
     }
 
     // build items array
-    var items:any = [
+    var items: any = [
       {
         src: this.banner,
         w: this.datas["ubanner"].width,
         h: this.datas["ubanner"].height,
-        title:this.datas["utitle"]
+        title: this.datas["utitle"]
       }
     ];
     var len = this.datas["uimg"].length;
-    for(var i=0; i<len; i++){
-        var objs = {};
-        objs["src"] = this.datas["uimg"][i]["img"];
-        objs["w"] = this.datas["uimg"][i]["width"];
-        objs["h"] = this.datas["uimg"][i]["height"];
-        objs["title"] = "步骤 "+(i+1)+"："+this.datas["uimg"][i]["write"];
-       items.push(objs); 
+    for (var i = 0; i < len; i++) {
+      var objs = {};
+      objs["src"] = this.datas["uimg"][i]["img"];
+      objs["w"] = this.datas["uimg"][i]["width"];
+      objs["h"] = this.datas["uimg"][i]["height"];
+      objs["title"] = "步骤 " + (i + 1) + "：" + this.datas["uimg"][i]["write"];
+      items.push(objs);
     }
 
     // define options (if needed)
     var options = {
       // optionName: 'option value'
       // for example:
-      index: ind*1 // start at first slide
+      index: ind * 1 // start at first slide
     };
 
     // Initializes and opens PhotoSwipe
@@ -100,30 +101,33 @@ export class seeworkPage {
   }
 
   //获取问答数据
-  getquecomment(){
+  getquecomment() {
     let url = "http://www.devonhello.com/cfdk/see_comment_chart";
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "id="+this.navParams.get('id')+"&type=2", {
+    this.http.post(url, "id=" + this.navParams.get('id') + "&type=2", {
       headers: headers
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
-        this.comment = res.json();
+        if (res.json() != "0") {
+          this.comment = res.json();
+        }
+
         this.loading.dismiss();
       });
 
-      
+
   }
 
 
   presentPopover(ev) {
 
-    let popover = this.popoverCtrl.create(PopoverPage,{
+    let popover = this.popoverCtrl.create(PopoverPage, {
       datas: this.datas,
-      type:2+''
+      type: 2 + ''
     });
 
     popover.present({
@@ -136,18 +140,21 @@ export class seeworkPage {
     this.content.scrollToTop();
   }
 
-  opencomment(id,index){
-    
-    this.navCtrl.push(writecommentPage, {
-      type: 2+'',
-      fid:this.comment[index]['uid'],
-      fhead:this.comment[index]['uhead'],
-      fname:this.comment[index]['uname'],
-      ftext:this.comment[index]['utext'],
-      artid: this.datas['_id'],
-      utid:this.comment[index]['uid'],
-      nid:id
-    });
+  opencomment(id, index) {
+    if (this.userService._user._id) {
+      this.navCtrl.push(writecommentPage, {
+        type: 2 + '',
+        fid: this.comment[index]['uid'],
+        fhead: this.comment[index]['uhead'],
+        fname: this.comment[index]['uname'],
+        ftext: this.comment[index]['utext'],
+        artid: this.datas['_id'],
+        utid: this.comment[index]['uid'],
+        nid: id
+      });
+    } else {
+      this.navCtrl.push(loginPage);
+    }
   }
 
 }

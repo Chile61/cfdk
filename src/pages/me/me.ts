@@ -3,7 +3,7 @@ import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { UserService } from '../service/User.service';
 import { mysendPage } from '../mysend/mysend';
 import { MedataPage } from '../medata/medata';
-
+import { loginPage } from '../login/login';
 
 @Component({
   selector: 'page-me',
@@ -28,34 +28,50 @@ export class MePage {
   }
 
   //我的资料
-  openme(){
-    let modal = this.modalCtrl.create(MedataPage);
-    modal.present();
+  openme() {
+    if (this.userService._user._id) {
+      let modal = this.modalCtrl.create(MedataPage);
+      modal.present();
+    } else {
+      this.navCtrl.push(loginPage);
+    }
   }
 
   //我的作品
-  getwork(){
-    this.navCtrl.push(mysendPage, {
-      type: 'work',
-    });
+  getwork() {
+    if (this.userService._user._id) {
+      this.navCtrl.push(mysendPage, {
+        type: 'work',
+      });
+    } else {
+      this.navCtrl.push(loginPage);
+    }
   }
 
   //我的提问
-  getque(){
-    this.navCtrl.push(mysendPage, {
-      type: 'que',
-    });
+  getque() {
+    if (this.userService._user._id) {
+      this.navCtrl.push(mysendPage, {
+        type: 'que',
+      });
+    } else {
+      this.navCtrl.push(loginPage);
+    }
   }
 
   //我的分享闲聊
-  getchart(){
-    this.navCtrl.push(mysendPage, {
-      type: 'chart',
-    });
+  getchart() {
+    if (this.userService._user._id) {
+      this.navCtrl.push(mysendPage, {
+        type: 'chart',
+      });
+    } else {
+      this.navCtrl.push(loginPage);
+    }
   }
 
 
-  clear(){
+  clear() {
     this.userService.clear();
   }
 

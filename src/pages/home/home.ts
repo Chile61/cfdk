@@ -32,6 +32,7 @@ export class HomePage {
   art:any = [];
   user:any = [];
   loading:any;
+  myinfiniteScroll = true;
 
   public headers: Headers;
 
@@ -103,6 +104,12 @@ export class HomePage {
 
   //获取最热作品
   getwork(){
+
+    if(!this.myinfiniteScroll){
+      this.loading.dismiss();
+      return true;
+    }
+
     let url = "http://www.devonhello.com/cfdk/indexworklist";
 
     var headers = new Headers();
@@ -113,8 +120,12 @@ export class HomePage {
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
-        this.work = this.work.concat(res.json());
-        //this.getquecomment();
+        if(res.json()!="0"){
+          this.work = this.work.concat(res.json());
+        }else{
+          this.myinfiniteScroll = false;
+          alert("到底了...");
+        }
         
         this.loading.dismiss();
         
@@ -190,11 +201,15 @@ export class HomePage {
         pagination: '.swiper-pagination',
       });
 
-      
-
-
     }
 
+  }
+
+  doInfinite(infiniteScroll) {
+    
+    this.loading.present();
+    this.getwork();
+    infiniteScroll.complete();
   }
 
 }

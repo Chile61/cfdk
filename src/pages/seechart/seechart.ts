@@ -4,6 +4,7 @@ import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
 import { PopoverPage } from '../PopoverPage/PopoverPage';
+import { loginPage } from '../login/login';
 
 declare var PhotoSwipe: any;
 declare var PhotoSwipeUI_Default: any;
@@ -16,25 +17,25 @@ export class seechartPage {
   datas = {
 
   };
-  loading:any;
+  loading: any;
 
-  gallery:any;
-  pswpElement:any = null;
-  comment:any = [];
+  gallery: any;
+  pswpElement: any = null;
+  comment: any = [];
 
-  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService, public popoverCtrl: PopoverController) {
     userService.setnav(this.navCtrl);
     this.loading = this.loadingCtrl.create({
-			content: '加载中，稍等...'
-		});
+      content: '加载中，稍等...'
+    });
     this.getchart();
   }
 
   presentPopover(ev) {
 
-    let popover = this.popoverCtrl.create(PopoverPage,{
+    let popover = this.popoverCtrl.create(PopoverPage, {
       datas: this.datas,
-      type:3+''
+      type: 3 + ''
     });
 
     popover.present({
@@ -66,28 +67,28 @@ export class seechartPage {
 
 
   pswpElementInit(ind) {
-    
-    if(this.pswpElement==null){
+
+    if (this.pswpElement == null) {
       this.pswpElement = document.querySelectorAll('.pswp')[0];
     }
 
     // build items array
-    var items:any = [];
+    var items: any = [];
     var len = this.datas["uimg"].length;
-    for(var i=0; i<len; i++){
-        var objs = {};
-        objs["src"] = "http://7xp2ia.com1.z0.glb.clouddn.com/"+this.datas["uimg"][i]["img"];
-        objs["w"] = this.datas["uimg"][i]["width"];
-        objs["h"] = this.datas["uimg"][i]["height"];
-        objs["title"] = this.datas["utext"];
-       items.push(objs); 
+    for (var i = 0; i < len; i++) {
+      var objs = {};
+      objs["src"] = "http://7xp2ia.com1.z0.glb.clouddn.com/" + this.datas["uimg"][i]["img"];
+      objs["w"] = this.datas["uimg"][i]["width"];
+      objs["h"] = this.datas["uimg"][i]["height"];
+      objs["title"] = this.datas["utext"];
+      items.push(objs);
     }
 
     // define options (if needed)
     var options = {
       // optionName: 'option value'
       // for example:
-      index: ind*1 // start at first slide
+      index: ind * 1 // start at first slide
     };
 
     // Initializes and opens PhotoSwipe
@@ -96,22 +97,25 @@ export class seechartPage {
   }
 
   //获取问答数据
-  getquecomment(){
+  getquecomment() {
     let url = "http://www.devonhello.com/cfdk/see_comment_chart";
 
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "id="+this.navParams.get('id')+"&type=3", {
+    this.http.post(url, "id=" + this.navParams.get('id') + "&type=3", {
       headers: headers
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
-        this.comment = res.json();
+        if (res.json() != "0") {
+          this.comment = res.json();
+        }
+
         this.loading.dismiss();
       });
 
-      
+
   }
 
   //点击到顶部
@@ -119,18 +123,21 @@ export class seechartPage {
     this.content.scrollToTop();
   }
 
-  opencomment(id,index){
-    
-    this.navCtrl.push(writecommentPage, {
-      type: 3+'',
-      fid:this.comment[index]['uid'],
-      fhead:this.comment[index]['uhead'],
-      fname:this.comment[index]['uname'],
-      ftext:this.comment[index]['utext'],
-      artid: this.datas['_id'],
-      utid:this.comment[index]['uid'],
-      nid:id
-    });
+  opencomment(id, index) {
+    if (this.userService._user._id) {
+      this.navCtrl.push(writecommentPage, {
+        type: 3 + '',
+        fid: this.comment[index]['uid'],
+        fhead: this.comment[index]['uhead'],
+        fname: this.comment[index]['uname'],
+        ftext: this.comment[index]['utext'],
+        artid: this.datas['_id'],
+        utid: this.comment[index]['uid'],
+        nid: id
+      });
+    } else {
+      this.navCtrl.push(loginPage);
+    }
   }
 
 }

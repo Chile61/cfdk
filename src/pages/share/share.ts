@@ -48,7 +48,10 @@ export class SharePage {
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
-        this.workarr = this.workarr.concat(res.json());
+        if (res.json() != "0") {
+          this.workarr = this.workarr.concat(res.json());
+        }
+        
         this.loading.dismiss();
         this.infiniteScroll.complete();
         
@@ -75,7 +78,10 @@ export class SharePage {
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
-        this.qusarr = this.qusarr.concat(res.json());
+        if (res.json() != "0") {
+          this.qusarr = this.qusarr.concat(res.json());
+        }
+        
         this.loading.dismiss();
         this.infiniteScroll.complete();
 
@@ -100,7 +106,10 @@ export class SharePage {
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
-        this.chartarr = this.chartarr.concat(res.json());
+        if (res.json() != "0") {
+          this.chartarr = this.chartarr.concat(res.json());
+        }
+        
         this.loading.dismiss();
         this.infiniteScroll.complete();
       });
@@ -161,12 +170,15 @@ export class SharePage {
     
     switch (this.pet) {
       case "new1":
+        this.qusarr = [];
         this.getque();
         break;
       case "new2":
+        this.workarr = [];
         this.getwork();
         break;
       case "new3":
+        this.chartarr = [];
         this.getchart();
         break;
     }
@@ -186,12 +198,15 @@ export class SharePage {
     
     switch (this.pet) {
       case "new1":
+        
         this.getque();
         break;
       case "new2":
+        
         this.getwork();
         break;
       case "new3":
+        
         this.getchart();
         break;
     }
