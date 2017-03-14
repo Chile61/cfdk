@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { UserService } from '../service/User.service';
-import { NavController } from 'ionic-angular';
+import { NavController, Content } from 'ionic-angular';
 
 
 @Component({
@@ -8,9 +8,14 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'video.html'
 })
 export class videoPage {
-
+  @ViewChild(Content) content: Content;
   constructor(public navCtrl: NavController, public userService: UserService) {
     userService.setnav(this.navCtrl);
+  }
+
+  //点击到顶部
+  tapEvent(e) {
+    this.content.scrollToTop();
   }
 
 }

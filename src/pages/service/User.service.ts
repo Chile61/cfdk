@@ -23,6 +23,7 @@ export class UserService {
 		
 	}
 
+
 	setpage(page) {
 		this.seecontPage = page;
 		//alert(this.seecontPage);

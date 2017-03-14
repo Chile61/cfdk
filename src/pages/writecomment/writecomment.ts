@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Work } from '../service/Work';
 import { UserService } from '../service/User.service';
 import { Headers, Http } from '@angular/http';
@@ -19,8 +19,9 @@ export class writecommentPage {
   utid: any = "";
   nid: any = "";
   text: any = "";
+  loading:any;
 
-  constructor(public navCtrl: NavController, private navParams: NavParams,public work: Work, public userService: UserService, public http: Http) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, private navParams: NavParams,public work: Work, public userService: UserService, public http: Http) {
     userService.setnav(this.navCtrl);
     this.type = navParams.get('type');
     this.fid = navParams.get('fid');
@@ -30,6 +31,9 @@ export class writecommentPage {
     this.ftext = navParams.get('ftext');
     this.utid = navParams.get('utid');
     this.nid = navParams.get('nid');
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
   }
 
   //发布问题
@@ -42,6 +46,7 @@ export class writecommentPage {
 
   //提交问答评论
   quesend(){
+    this.loading.present();
     let url = "http://www.devonhello.com/cfdk/comment_chart";
 
       var headers = new Headers();
@@ -53,6 +58,7 @@ export class writecommentPage {
       .subscribe((res) => {
           //alert(JSON.stringify(res));
           if (res.json()["ops"][0]["_id"]) {
+            this.loading.dismiss();
             this.navCtrl.pop();
           }
         });

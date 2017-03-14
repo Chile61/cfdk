@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, PopoverController, Content } from 'ionic-angular';
+import { NavController, NavParams, PopoverController, Content, LoadingController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
@@ -18,14 +18,21 @@ export class seeworkPage {
   gallery:any = null;
   pswpElement:any = null;
   comment:any = [];
+  loading:any;
 
-  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
     this.getwork();
   }
 
   //获取作品数据
   getwork(){
+
+    this.loading.present();
+    
     let url = "http://www.devonhello.com/cfdk/seeworkdata";
 
     var headers = new Headers();
@@ -105,6 +112,7 @@ export class seeworkPage {
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.comment = res.json();
+        this.loading.dismiss();
       });
 
       

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { UserService } from '../service/User.service';
-import { NavController } from 'ionic-angular';
+import { NavController, Content, LoadingController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { toutiaoPage } from '../toutiao/toutiao';
 
@@ -9,16 +9,21 @@ import { toutiaoPage } from '../toutiao/toutiao';
   templateUrl: 'toutiaoHotList.html'
 })
 export class toutiaoHotListPage {
-
+  @ViewChild(Content) content: Content;
   items = [];
+  loading:any;
 
-  constructor(public navCtrl: NavController, public userService: UserService, public http: Http) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public userService: UserService, public http: Http) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
     this.getData();
+    
   }
 
   getData(){
-
+    this.loading.present();
     let url = "http://www.devonhello.com/cfdk/hotarticlelist";
 
     var headers = new Headers();
@@ -30,7 +35,7 @@ export class toutiaoHotListPage {
       .subscribe((res) => {
         
         this.items = res.json();
-        
+        this.loading.dismiss();
       });
   }
 
@@ -41,6 +46,11 @@ export class toutiaoHotListPage {
     this.navCtrl.push(toutiaoPage,{
       id:this.items[index]["_id"]
     });
+  }
+
+  //点击到顶部
+  tapEvent(e) {
+    this.content.scrollToTop();
   }
 
 }

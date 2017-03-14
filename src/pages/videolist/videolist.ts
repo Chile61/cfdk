@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, LoadingController, Content } from 'ionic-angular';
 import { videoPage } from '../video/video';
 import { UserService } from '../service/User.service';
 
@@ -8,7 +8,7 @@ import { UserService } from '../service/User.service';
   templateUrl: 'videolist.html'
 })
 export class videolistPage {
-
+  @ViewChild(Content) content: Content;
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public userService: UserService) {
     userService.setnav(this.navCtrl);
   }
@@ -39,6 +39,11 @@ export class videolistPage {
     setTimeout(() => {
       loading.dismiss();
     }, 3000);
+  }
+
+  //点击到顶部
+  tapEvent(e) {
+    this.content.scrollToTop();
   }
 
 }

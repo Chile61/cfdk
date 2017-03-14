@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Content, LoadingController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { UserService } from '../service/User.service';
 import { writecommentPage } from '../writecomment/writecomment';
@@ -9,19 +9,24 @@ import { writecommentPage } from '../writecomment/writecomment';
   templateUrl: 'seecont.html'
 })
 export class seecontPage {
-
+  @ViewChild(Content) content: Content;
   title:any;
 
   comment:any = [];
   type:any;
   _id:any;
   artid:any;
+  loading:any;
 
   url:any;
 
-  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService) {
     //this.getque();
-    
+    userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
+    this.loading.present();
     this.type = this.navParams.get('type');
     this._id = this.navParams.get('_id');
     this.artid = this.navParams.get('artid');
@@ -59,6 +64,7 @@ export class seecontPage {
       .subscribe((res) => {
         //alert(JSON.stringify(res));
           this.comment = res.json();
+          this.loading.dismiss();
         });
   
   }
@@ -78,5 +84,8 @@ export class seecontPage {
     });
   }
 
-  
+  //点击到顶部
+  tapEvent(e) {
+    this.content.scrollToTop();
+  }
 }

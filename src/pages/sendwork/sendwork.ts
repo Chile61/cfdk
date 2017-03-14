@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController, LoadingController, AlertController } from 'ionic-angular';
+import { NavController, ActionSheetController, AlertController, LoadingController } from 'ionic-angular';
 import { Camera, Transfer } from 'ionic-native';
 import { Headers, Http } from '@angular/http';
 import { Work } from '../service/Work';
@@ -16,8 +16,7 @@ export class sendworkPage {
   title: string = "";
   text: string = "";
   tip: string = "";
-
-  loading = null;
+  loading:any;
 
   url = "http://www.devonhello.com/cfdk/upload";
 
@@ -31,8 +30,11 @@ export class sendworkPage {
 
   isReordering: boolean = false;
 
-  constructor(public navCtrl: NavController, public userService: UserService, public http: Http, public actionSheetCtrl: ActionSheetController, public work: Work, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public userService: UserService, public http: Http, public actionSheetCtrl: ActionSheetController, public work: Work, public alertCtrl: AlertController) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
     this.init();
   }
 
@@ -43,9 +45,7 @@ export class sendworkPage {
     obj["fname"] = "";
     obj["fnum"] = "";
     this.foods.push(obj);
-    this.loading = this.loadingCtrl.create({
-      content: '图片上传中，请稍后...'
-    });
+    
   }
 
   reorderItems(indexes) {
@@ -131,7 +131,7 @@ export class sendworkPage {
       this.work._work[index]["ishasimg"] = true;
       this.upload(imageData, index);
 
-      alert(this.work._work);
+      //alert(this.work._work);
     }, (err) => {
       // Handle error
     });
@@ -180,7 +180,7 @@ export class sendworkPage {
 
   //发布问题
   send() {
-
+    this.loading.present();
     this.checkup();
 
     //alert(JSON.stringify(this.items));
@@ -196,6 +196,7 @@ export class sendworkPage {
         buttons: ['确定']
       });
       alert.present();
+      this.loading.dismiss();
       return true;
     }
 
@@ -206,6 +207,7 @@ export class sendworkPage {
         buttons: ['确定']
       });
       alert.present();
+      this.loading.dismiss();
       return true;
     }
 
@@ -217,6 +219,7 @@ export class sendworkPage {
           buttons: ['确定']
         });
         alert.present();
+        this.loading.dismiss();
         return true;
       }
     }
@@ -238,7 +241,7 @@ export class sendworkPage {
     })
       .subscribe((res) => {
 
-        alert(JSON.stringify(res.json()));
+        //alert(JSON.stringify(res.json()));
         if (res.json()["ops"][0]["_id"]) {
           this.navCtrl.pop();
         }
@@ -251,14 +254,9 @@ export class sendworkPage {
 
     this.loading.present();
 
-
-
     this.fileTransfer.upload(dataurl, this.url, {}).then((data) => {
       data = JSON.parse(data["response"]);
-      alert(data["width"]);
-      alert(data["height"]);
-      alert(data["img"]);
-      alert(index);
+      
       if (index != -1) {
         this.work._work[index]["img"] = "http://7xp2ia.com1.z0.glb.clouddn.com/" + data["img"];
         this.work._work[index]["isupload"] = true;
@@ -275,7 +273,6 @@ export class sendworkPage {
         this.bannerisup = true;
       }
 
-      alert(JSON.stringify(this.items));
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();

@@ -14,21 +14,20 @@ export class registerPage {
   name: string = "";
   password: string = "";
   password2: string = "";
+  loading:any;
 
   public headers: Headers;
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public http: Http, public alertCtrl: AlertController, public userService: UserService) {
-
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
   }
 
   //注册
   register() {
 
-    let loading = this.loadingCtrl.create({
-      content: '请稍后...'
-    });
-
-    loading.present();
+    this.loading.present();
 
     let url = "http://www.devonhello.com/cfdk/register";
 
@@ -55,9 +54,7 @@ export class registerPage {
           this.userService.getStorage();
           this.navCtrl.pop();
         }
-
-
-        loading.dismiss();
+        this.loading.dismiss();
       });
 
   }

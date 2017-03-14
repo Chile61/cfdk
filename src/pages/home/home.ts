@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { NavController, LoadingController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, LoadingController } from 'ionic-angular';
 import { toutiaoPage } from '../toutiao/toutiao';
 import { toutiaoHotListPage } from '../toutiaoHotList/toutiaoHotList';
 import { toutiaoListPage } from '../toutiaoList/toutiaoList';
@@ -31,19 +31,28 @@ export class HomePage {
   work:any = [];
   art:any = [];
   user:any = [];
+  loading:any;
 
   public headers: Headers;
 
-  constructor(public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, public loadingCtrl: LoadingController, public userService: UserService) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, public modalCtrl: ModalController, public userService: UserService) {
     //this.RongCloudS.RongCloudLibPlugin_init();
     //this.initJPush();
-    this.gethotart();
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
     userService.setpage(seecontPage);
     userService.setnav(this.navCtrl);
+    this.gethotart();
+    
+    
   }
 
   //获取最热头条
   gethotart(){
+
+    this.loading.present();
+    
     let url = "http://www.devonhello.com/cfdk/indexarticlelist";
 
     var headers = new Headers();
@@ -106,34 +115,15 @@ export class HomePage {
         //alert(JSON.stringify(res.json()));
         this.work = this.work.concat(res.json());
         //this.getquecomment();
+        
+        this.loading.dismiss();
+        
       });
 
       
   }
 
 
-  //刷新视频
-  doRefresh(refresher) {
-
-    this.presentLoadingDefault();
-
-    setTimeout(() => {
-      refresher.complete();
-    }, 3000);
-  }
-
-
-  presentLoadingDefault() {
-    let loading = this.loadingCtrl.create({
-      content: '请稍后...'
-    });
-
-    loading.present();
-
-    setTimeout(() => {
-      loading.dismiss();
-    }, 3000);
-  }
 
   //打开菜谱分类／搜索
   pushsearchPage() {

@@ -26,7 +26,6 @@ import { searchPage } from '../pages/search/search';
 import { slidesPage } from '../pages/slides/slides';
 import { rankingPage } from '../pages/ranking/ranking';
 import { chartPage } from '../pages/chart/chart';
-import { seecommentPage } from '../pages/seecomment/seecomment';
 import { writecommentPage } from '../pages/writecomment/writecomment';
 import { mysendPage } from '../pages/mysend/mysend';
 import { seecontPage } from '../pages/seecont/seecont';
@@ -65,7 +64,6 @@ import { ContactData } from '../pages/service/ContactData';
     seechartPage,
     chartPage,
     toutiaoListPage,
-    seecommentPage,
     writecommentPage,
     mysendPage,
     seecontPage,
@@ -103,7 +101,6 @@ import { ContactData } from '../pages/service/ContactData';
     seechartPage,
     chartPage,
     toutiaoListPage,
-    seecommentPage,
     writecommentPage,
     mysendPage,
     seecontPage,

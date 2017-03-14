@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { UserService } from '../service/User.service';
 
@@ -11,19 +11,19 @@ export class sendqusPage {
 
   title: string = "";
   text: string = "";
+  loading:any;
 
-  constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController, public userService: UserService, public alertCtrl: AlertController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, public userService: UserService, public alertCtrl: AlertController) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
   }
 
   //发布问题
   send() {
 
-    let loading = this.loadingCtrl.create({
-      content: '请稍后...'
-    });
-
-    loading.present();
+    this.loading.present();
 
     let url = "http://www.devonhello.com/cfdk/post_question";
 
@@ -38,7 +38,7 @@ export class sendqusPage {
         if (res.json()["ops"][0]["_id"]) {
           this.navCtrl.pop();
         }
-        loading.dismiss();
+        this.loading.dismiss();
       });
 
   }

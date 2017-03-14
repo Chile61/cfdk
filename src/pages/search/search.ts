@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { seeworkPage } from '../seework/seework';
 import { UserService } from '../service/User.service';
 import { Headers, Http } from '@angular/http';
@@ -11,9 +11,13 @@ import { Headers, Http } from '@angular/http';
 export class searchPage {
 
   items:any=[];
+  loading:any;
 
-  constructor(public navCtrl: NavController, public userService: UserService, public http: Http) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public userService: UserService, public http: Http) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
     
   }
 
@@ -28,6 +32,9 @@ export class searchPage {
   }
 
   search(val){
+
+    this.loading.present();
+
     var url = "http://www.devonhello.com/cfdk/search";
 
     var headers = new Headers();
@@ -39,6 +46,7 @@ export class searchPage {
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.items = res.json();
+        this.loading.dismiss();
       });
   }
 

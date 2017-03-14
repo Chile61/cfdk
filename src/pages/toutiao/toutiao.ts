@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Content, LoadingController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { UserService } from '../service/User.service';
 
@@ -8,19 +8,24 @@ import { UserService } from '../service/User.service';
   templateUrl: 'toutiao.html'
 })
 export class toutiaoPage {
-
+  @ViewChild(Content) contentv: Content;
   id = null;
   content = '';
+  loading:any;
 
-  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
     this.id = navParams.get('id');
     this.getData();
+    
   }
 
 
   getData(){
-
+    this.loading.present();
     let url = "http://www.devonhello.com/cfdk/article";
 
     var headers = new Headers();
@@ -32,8 +37,13 @@ export class toutiaoPage {
       .subscribe((res) => {
         
         this.content = res.json()[0];
-        
+        this.loading.dismiss();
       });
+  }
+
+  //点击到顶部
+  tapEvent(e) {
+    this.contentv.scrollToTop();
   }
 
 }

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, Content, LoadingController } from 'ionic-angular';
 import { UserService } from '../service/User.service';
 import { Headers, Http } from '@angular/http';
 import { seequsPage } from '../seequs/seequs';
@@ -11,7 +11,7 @@ import { seechartPage } from '../seechart/seechart';
   templateUrl: 'mysend.html'
 })
 export class mysendPage {
-
+  @ViewChild(Content) content: Content;
   type:any;
   work:any = [];
   que:any = [];
@@ -19,9 +19,14 @@ export class mysendPage {
   quehideWhen: any = true;
   workhideWhen: any = true;
   charthideWhen: any = true;
+  loading:any;
 
-  constructor(public navCtrl: NavController, private navParams: NavParams, public userService: UserService, public http: Http) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, private navParams: NavParams, public userService: UserService, public http: Http) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
+    this.loading.present();
     this.type = navParams.get('type');
     switch (this.type) {
       case "work":
@@ -51,6 +56,7 @@ export class mysendPage {
       .subscribe((res) => {
           this.work = res.json();
           this.workhideWhen = false;
+          this.loading.dismiss();
         });
   
   }
@@ -68,6 +74,7 @@ export class mysendPage {
       .subscribe((res) => {
           this.que = res.json();
           this.quehideWhen = false;
+          this.loading.dismiss();
         });
   
   }
@@ -85,6 +92,7 @@ export class mysendPage {
       .subscribe((res) => {
           this.chart = res.json();
           this.charthideWhen = false;
+          this.loading.dismiss();
         });
   
   }
@@ -108,6 +116,11 @@ export class mysendPage {
     this.navCtrl.push(seechartPage, {
       id: id
     });
+  }
+
+  //点击到顶部
+  tapEvent(e) {
+    this.content.scrollToTop();
   }
 
 

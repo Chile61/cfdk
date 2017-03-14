@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, LoadingController } from 'ionic-angular';
 import { ImagePicker, Transfer } from 'ionic-native';
 import { Headers, Http } from '@angular/http';
 import { UserService } from '../service/User.service';
@@ -15,14 +15,14 @@ export class sendchartPage {
   images: any[] = [];
   upimages: any[] = [];
   url = "http://www.devonhello.com/cfdk/upload";
-  loading = null;
+  loading:any;
+  
 
-  constructor(public navCtrl: NavController, public http: Http, public loadingCtrl: LoadingController, public userService: UserService, public alertCtrl: AlertController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, public userService: UserService, public alertCtrl: AlertController) {
     userService.setnav(this.navCtrl);
     this.loading = this.loadingCtrl.create({
-      content: '请稍后...'
-    });
-
+			content: '加载中，稍等...'
+		});
   }
 
   //调价图片

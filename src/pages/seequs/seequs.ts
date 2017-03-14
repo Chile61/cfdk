@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, PopoverController, Content } from 'ionic-angular';
+import { NavController, NavParams, PopoverController, Content, LoadingController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
@@ -15,16 +15,21 @@ export class seequsPage {
   datas = {
 
   };
+  loading:any;
 
   comment:any = [];
 
-  constructor(public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService,public popoverCtrl: PopoverController) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
     this.getque();
   }
 
   //获取问答数据
   getque(){
+    this.loading.present();
     let url = "http://www.devonhello.com/cfdk/seequedata";
 
     var headers = new Headers();
@@ -55,6 +60,7 @@ export class seequsPage {
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.comment = res.json();
+        this.loading.dismiss();
       });
 
       

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { UserService } from '../service/User.service';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, Content, LoadingController } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { MedataPage } from '../medata/medata';
 
@@ -9,11 +9,16 @@ import { MedataPage } from '../medata/medata';
   templateUrl: 'ranking.html'
 })
 export class rankingPage {
-
+  @ViewChild(Content) content: Content;
   userlist:any = [];
+  loading:any;
 
-  constructor(public navCtrl: NavController, public userService: UserService, public http: Http, public modalCtrl: ModalController) {
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public userService: UserService, public http: Http, public modalCtrl: ModalController) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
+    
     this.getdata();
   }
 
@@ -26,6 +31,7 @@ export class rankingPage {
   }
 
   getdata() {
+    this.loading.present();
     var url = "http://www.devonhello.com/cfdk/usersort";
 
     var headers = new Headers();
@@ -37,12 +43,18 @@ export class rankingPage {
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.userlist = res.json();
+        this.loading.dismiss();
       });
   }
 
   //打开养生头条
   pushtoutiaoPage() {
     //this.navCtrl.push(toutiaoPage);
+  }
+
+  //点击到顶部
+  tapEvent(e) {
+    this.content.scrollToTop();
   }
 
 }

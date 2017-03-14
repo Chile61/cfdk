@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, LoadingController, Content } from 'ionic-angular';
+import { NavController, Content, LoadingController } from 'ionic-angular';
 import { loginPage } from '../login/login';
 import { sendqusPage } from '../sendqus/sendqus';
 import { sendchartPage } from '../sendchart/sendchart';
@@ -21,18 +21,23 @@ export class SharePage {
   workarr = [];
   qusarr = [];
   chartarr = [];
-
-  loading: any;
   infiniteScroll: any;
+  loading:any;
 
 
-  constructor(public navCtrl: NavController, public userService: UserService, public loadingCtrl: LoadingController, public work: Work, public http: Http) {
-    this.getque();
+  constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public userService: UserService, public work: Work, public http: Http) {
     userService.setnav(this.navCtrl);
+    this.loading = this.loadingCtrl.create({
+			content: '加载中，稍等...'
+		});
+    this.getque();
   }
 
   //获取作品数据
   getwork() {
+
+    this.loading.present();
+
     let url = "http://www.devonhello.com/cfdk/workdata";
 
     var headers = new Headers();
@@ -44,9 +49,9 @@ export class SharePage {
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.workarr = this.workarr.concat(res.json());
-
-        this.infiniteScroll.complete();
         this.loading.dismiss();
+        this.infiniteScroll.complete();
+        
 
       });
 
@@ -55,6 +60,9 @@ export class SharePage {
 
   //获取问答数据
   getque() {
+
+    this.loading.present();
+
     let url = "http://www.devonhello.com/cfdk/quedata";
 
     //alert(this.qusarr.length);
@@ -68,9 +76,8 @@ export class SharePage {
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.qusarr = this.qusarr.concat(res.json());
-
-        this.infiniteScroll.complete();
         this.loading.dismiss();
+        this.infiniteScroll.complete();
 
 
       });
@@ -80,6 +87,9 @@ export class SharePage {
 
   //分享心情数据
   getchart() {
+
+    this.loading.present();
+
     let url = "http://www.devonhello.com/cfdk/chartdata";
 
     var headers = new Headers();
@@ -148,7 +158,7 @@ export class SharePage {
 
   //刷新视频
   doRefresh(refresher) {
-    this.presentLoadingDefault();
+    
     switch (this.pet) {
       case "new1":
         this.getque();
@@ -164,16 +174,6 @@ export class SharePage {
 
   }
 
-
-  presentLoadingDefault() {
-    this.loading = this.loadingCtrl.create({
-      content: '请稍后...'
-    });
-
-    this.loading.present();
-
-  }
-
   ionViewDidEnter() {
 
     this.work.init();
@@ -183,7 +183,7 @@ export class SharePage {
   doInfinite(infiniteScroll) {
 
     this.infiniteScroll = infiniteScroll;
-    this.presentLoadingDefault();
+    
     switch (this.pet) {
       case "new1":
         this.getque();
