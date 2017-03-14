@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, PopoverController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, PopoverController, Content } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
@@ -12,7 +12,7 @@ declare var PhotoSwipeUI_Default: any;
   templateUrl: 'seechart.html'
 })
 export class seechartPage {
-
+  @ViewChild(Content) content: Content;
   datas = {
 
   };
@@ -106,6 +106,10 @@ export class seechartPage {
       
   }
 
+  //点击到顶部
+  tapEvent(e) {
+    this.content.scrollToTop();
+  }
 
   opencomment(id,index){
     

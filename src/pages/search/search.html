@@ -1,23 +1,20 @@
 <ion-header>
     <ion-navbar color="secondary">
         <ion-toolbar>
-            <ion-searchbar (ionInput)="ionInput($event)" placeholder="输入菜名或关键字..."></ion-searchbar>
+            <ion-searchbar (ionInput)="ionInput($event)" [debounce]="600" [animated]="true" placeholder="输入菜名或关键字..."></ion-searchbar>
         </ion-toolbar>
     </ion-navbar>
 </ion-header>
 <ion-content>
 
-    <button ion-button color="secondary" clear>早餐</button>
-    <button ion-button color="secondary" clear>午餐</button>
-    <button ion-button color="secondary" clear>晚餐</button>
-    <button ion-button color="secondary" clear>下午茶</button>
-    <button ion-button color="secondary" clear>宵夜</button>
-    <button ion-button color="secondary" clear>西餐</button>
-    <button ion-button color="secondary" clear>中餐</button>
-
     <ion-list>
-        <ion-item *ngFor="let item of items" (click)="openwork();">
-            {{ item }}
+
+        <ion-list-header>
+            搜索结果：
+        </ion-list-header>
+
+        <ion-item *ngFor="let item of items; let i=index" (click)="openwork(i);">
+            {{ item.utitle }}
         </ion-item>
     </ion-list>
 </ion-content>

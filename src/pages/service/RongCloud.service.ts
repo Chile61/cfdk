@@ -78,7 +78,7 @@ export class RongCloudService {
 	webgetUnreadCount(targetId) {
 		RongIMClient.getInstance().getUnreadCount(0, targetId, {
 			onSuccess: function (count) {
-				alert("count:" + count);
+				//alert("count:" + count);
 			},
 			onError: function (error) {
 			}
@@ -103,7 +103,7 @@ export class RongCloudService {
 		RongIMClient.getInstance().getRemoteConversationList({
 			onSuccess: function (list) {
 				//list 会话列表
-				alert("会话列表:" + list);
+				//alert("会话列表:" + list);
 			},
 			onError: function (error) {
 				//getRemoteConversationList error
@@ -161,7 +161,7 @@ export class RongCloudService {
 
 		RongIMClient.getInstance().getTotalUnreadCount({
 			onSuccess: function (count) {
-				alert("count:" + count);
+				//alert("count:" + count);
 			},
 			onError: function (error) {
 			}
@@ -225,7 +225,7 @@ export class RongCloudService {
 		// 连接融云服务器。
 		RongIMClient.connect(token, {
 			onSuccess: function (userId) {
-				alert("Login successfully." + userId);
+				//alert("Login successfully." + userId);
 			},
 			onTokenIncorrect: function () {
 				alert('token无效');

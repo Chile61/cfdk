@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { seeworkPage } from '../seework/seework';
 import { UserService } from '../service/User.service';
+import { Headers, Http } from '@angular/http';
 
 @Component({
   selector: 'page-search',
@@ -9,26 +10,43 @@ import { UserService } from '../service/User.service';
 })
 export class searchPage {
 
-  items: string[];
+  items:any=[];
 
-  constructor(public navCtrl: NavController, public userService: UserService) {
+  constructor(public navCtrl: NavController, public userService: UserService, public http: Http) {
     userService.setnav(this.navCtrl);
-    this.items = [
-      '搜索结果',
-      '搜索结果',
-      '搜索结果',
-      '搜索结果',
-      '搜索结果'
-    ];
+    
   }
 
   //
   ionInput(ev: any) {
-    alert(ev.target.value);
+    if(ev.target.value){
+      //alert(ev.target.value);
+      this.items = [];
+      this.search(ev.target.value);
+    }
+    
+  }
+
+  search(val){
+    var url = "http://www.devonhello.com/cfdk/search";
+
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    
+    this.http.post(url, "name="+val+"&len="+this.items.length, {
+      headers: headers
+    })
+      .subscribe((res) => {
+        //alert(JSON.stringify(res.json()));
+        this.items = res.json();
+      });
   }
 
   //查看菜谱
-  openwork() {
-    this.navCtrl.push(seeworkPage);
+  openwork(index) {
+    
+    this.navCtrl.push(seeworkPage,{
+      id:this.items[index]['_id']
+    });
   }
 }

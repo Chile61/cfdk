@@ -8,96 +8,19 @@
 <ion-content>
 
     <section id="toutiaoHotList">
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_1.jpeg" />
+        <div class="home_hot_list" *ngFor="let item of items; let i=index">
+
+            <div class="home_hot_item_img" (click)="pushtoutiaoPage(i)">
+                <img src="http://7xp2ia.com1.z0.glb.clouddn.com/{{item.uimg}}" />
             </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
+            <div class="home_hot_item" (click)="pushtoutiaoPage(i)">
+                <p class="home_hot_item_title">{{item.utitle}}</p>
+                <p>浏览数：{{item.usee}}</p>
+                <p>{{item.utime | date:"yyyy-MM-dd"}}</p>
             </div>
+
         </div>
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_2.jpeg" />
-            </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
-            </div>
-        </div>
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_3.jpeg" />
-            </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
-            </div>
-        </div>
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_1.jpeg" />
-            </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
-            </div>
-        </div>
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_2.jpeg" />
-            </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
-            </div>
-        </div>
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_3.jpeg" />
-            </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
-            </div>
-        </div>
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_1.jpeg" />
-            </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
-            </div>
-        </div>
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_2.jpeg" />
-            </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
-            </div>
-        </div>
-        <div class="home_hot_list" (click)="pushtoutiaoPage()">
-            <div class="home_hot_item_img">
-                <img src="assets/img2/hot_3.jpeg" />
-            </div>
-            <div class="home_hot_item">
-                <p class="home_hot_item_title">明日霜降,入冬前养生3注意。</p>
-                <p>浏览数：100</p>
-                <p>10-22</p>
-            </div>
-        </div>
+
     </section>
 
 </ion-content>

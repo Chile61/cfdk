@@ -7,57 +7,15 @@
 </ion-header>
 <ion-content>
     <ion-list-header>人气排名</ion-list-header>
-    <ion-item>
+
+    <ion-item *ngFor="let item of userlist; let i=index" (click)="openTA(i)">
         <ion-avatar item-left>
-            <img src="assets/img2/user_4.jpeg">
+            <img [src]="item.uheader">
         </ion-avatar>
-        <h2>1. Woody</h2>
-        <p>This town ain't big enough for the two of us!</p>
-        <ion-note item-right>9999</ion-note>
+        <h2>{{i+1}}. {{item.uname}}</h2>
+        <p>注册时间：{{item.utime | date:"yyyy-MM-dd"}}</p>
+        <ion-note item-right>{{item.uhot}}</ion-note>
     </ion-item>
 
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_3.jpeg">
-        </ion-avatar>
-        <h2>2. Buzz Lightyear</h2>
-        <p>My eyeballs could have been sucked from their sockets!</p>
-        <ion-note item-right>789</ion-note>
-    </ion-item>
-
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_2.jpeg">
-        </ion-avatar>
-        <h2>3. Jessie</h2>
-        <p>Well aren't you just the sweetest space toy I ever did meet!</p>
-        <ion-note item-right>654</ion-note>
-    </ion-item>
-
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_1.jpeg">
-        </ion-avatar>
-        <h2>4. Mr. Potato Head</h2>
-        <p>You're not turning me into a Mashed Potato.</p>
-        <ion-note item-right>633</ion-note>
-    </ion-item>
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_4.jpeg">
-        </ion-avatar>
-        <h2>5. Woody</h2>
-        <p>This town ain't big enough for the two of us!</p>
-        <ion-note item-right>543</ion-note>
-    </ion-item>
-
-    <ion-item>
-        <ion-avatar item-left>
-            <img src="assets/img2/user_3.jpeg">
-        </ion-avatar>
-        <h2>6. Buzz Lightyear</h2>
-        <p>My eyeballs could have been sucked from their sockets!</p>
-        <ion-note item-right>23</ion-note>
-    </ion-item>
 
 </ion-content>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, PopoverController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, PopoverController, Content } from 'ionic-angular';
 import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
@@ -11,6 +11,7 @@ import { PopoverPage } from '../PopoverPage/PopoverPage';
 })
 export class seequsPage {
 
+  @ViewChild(Content) content: Content;
   datas = {
 
   };
@@ -69,6 +70,11 @@ export class seequsPage {
     popover.present({
       ev: ev
     });
+  }
+
+  //点击到顶部
+  tapEvent(e) {
+    this.content.scrollToTop();
   }
 
   opencomment(id,index){
