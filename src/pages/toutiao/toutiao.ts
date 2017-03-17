@@ -46,4 +46,8 @@ export class toutiaoPage {
     this.contentv.scrollToTop();
   }
 
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
+
 }

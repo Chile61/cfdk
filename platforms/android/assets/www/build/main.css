@@ -29348,6 +29348,22 @@ ion-navbar.toolbar {
   }
 }
 
+#ctab-true {
+  display: none;
+}
+
+#ctab-false {
+  display: block;
+}
+
+#stab-true {
+  display: block;
+}
+
+#stab-false {
+  display: none;
+}
+
 .chart_p_left {
   text-align: right;
 }
@@ -29621,6 +29637,14 @@ ion-list {
   margin: 0;
 }
 
+#chart-true {
+  display: block;
+}
+
+#chart-false {
+  display: none;
+}
+
 .chart_p_left {
   text-align: right;
 }
@@ -29812,6 +29836,26 @@ page-search {
 }
 
 .ishiden-false {
+  display: none;
+}
+
+.ishiden-true {
+  display: block;
+}
+
+#htab-true {
+  display: none;
+}
+
+#htab-false {
+  display: block;
+}
+
+#htab2-true {
+  display: block;
+}
+
+#htab2-false {
   display: none;
 }
 

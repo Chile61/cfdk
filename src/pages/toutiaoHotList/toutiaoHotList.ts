@@ -12,6 +12,7 @@ export class toutiaoHotListPage {
   @ViewChild(Content) content: Content;
   items = [];
   loading:any;
+  infiniteScroll: any = null;
 
   constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public userService: UserService, public http: Http) {
     userService.setnav(this.navCtrl);
@@ -29,13 +30,17 @@ export class toutiaoHotListPage {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "len=0", {
+    this.http.post(url, "len="+this.items.length, {
       headers: headers
     })
       .subscribe((res) => {
-        
-        this.items = res.json();
+        if(res.json()!="0"){
+          this.items = this.items.concat(res.json());
+        }
         this.loading.dismiss();
+        if(this.infiniteScroll != null){
+          this.infiniteScroll.complete();
+        }
       });
   }
 
@@ -51,6 +56,16 @@ export class toutiaoHotListPage {
   //点击到顶部
   tapEvent(e) {
     this.content.scrollToTop();
+  }
+
+  doInfinite(infiniteScroll) {
+
+    this.infiniteScroll = infiniteScroll;
+    this.getData();
+  }
+
+  ionViewDidLeave(){
+    this.loading.dismiss();
   }
 
 }

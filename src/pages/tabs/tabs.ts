@@ -5,6 +5,7 @@ import { SharePage } from '../share/share';
 import { MePage } from '../me/me';
 import { ContactPage } from '../contact/contact';
 import { UserService } from '../service/User.service';
+import { ContactData } from '../service/ContactData';
 
 
 @Component({
@@ -18,11 +19,16 @@ export class TabsPage {
   tab3Root: any = ContactPage;
   tab4Root: any = MePage;
 
-  constructor(public userService: UserService) {
+  _num:any = 0;
+
+  constructor(public userService: UserService,public contactData: ContactData) {
     //this.userService.clear();
     var _that = this;
+    
     setTimeout(() => {
       _that.userService.getStorage();
+      //_that._num = _that.contactData._num;
+      
     }, 2000);
     
   }

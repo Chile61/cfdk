@@ -46,15 +46,15 @@
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ionicframework.cfdk2866067"
         },
-        "cordova-plugin-qqsdk": {
-            "QQ_APP_ID": "nLrV5ErJp1muglzw",
-            "PACKAGE_NAME": "com.cfdk"
-        },
         "jpush-phonegap-plugin": {
             "APP_KEY": "520865321813385a601043b3",
             "PACKAGE_NAME": "com.cfdk"
         },
         "io.rong.imlib": {
+            "PACKAGE_NAME": "com.cfdk"
+        },
+        "cordova-plugin-qqsdk": {
+            "QQ_APP_ID": "1104885342",
             "PACKAGE_NAME": "com.cfdk"
         }
     },

@@ -108,4 +108,8 @@ export class sendchartPage {
       });
   }
 
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
+
 }

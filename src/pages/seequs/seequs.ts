@@ -4,6 +4,7 @@ import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
 import { PopoverPage } from '../PopoverPage/PopoverPage';
+import { PopoverPage2 } from '../PopoverPage2/PopoverPage2';
 import { loginPage } from '../login/login';
 
 @Component({
@@ -17,6 +18,7 @@ export class seequsPage {
 
   };
   loading: any;
+  hideWhen:any = true;
 
   comment: any = [];
 
@@ -42,6 +44,11 @@ export class seequsPage {
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
         this.datas = res.json()[0];
+        if(this.datas["uid"] == this.userService._user._id){
+          this.hideWhen = false;
+          //this.showWhen = false;
+        }
+        
         this.getquecomment();
       });
 
@@ -81,6 +88,18 @@ export class seequsPage {
     });
   }
 
+  presentPopover2(ev) {
+
+    let popover = this.popoverCtrl.create(PopoverPage2, {
+      datas: this.datas,
+      type: 1 + ''
+    });
+
+    popover.present({
+      ev: ev
+    });
+  }
+
   //点击到顶部
   tapEvent(e) {
     this.content.scrollToTop();
@@ -103,5 +122,9 @@ export class seequsPage {
     }
   }
 
+
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
 
 }

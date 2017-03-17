@@ -34,7 +34,7 @@ export class registerPage {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "uname=" + this.name + "&usex=" + this.sex + "&upas=" + SHA1(this.password) + "&ufrom=APP", {
+    this.http.post(url, "uname=" + this.name + "&usex=" + this.sex + "&upas=" + SHA1(this.password) + "&ufrom=APP" + "&qqtoken=0", {
       headers: headers
     })
       .subscribe((res) => {
@@ -57,6 +57,10 @@ export class registerPage {
         this.loading.dismiss();
       });
 
+  }
+
+  ionViewDidLeave(){
+    this.loading.dismiss();
   }
 
 

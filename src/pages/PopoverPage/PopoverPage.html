@@ -1,23 +1,23 @@
 <ion-content>
 
 
-    <ion-list inset>
-        <button ion-item>
+    <ion-list inset id='ctab-{{hideWhen}}'>
+        <button ion-item (click)="tocoll();">
             收藏
         </button>
     </ion-list>
     <ion-list inset>
-        <button ion-item>
+        <button ion-item (click)="presentConfirm();">
             举报
         </button>
     </ion-list>
-    <ion-list inset>
+    <ion-list inset hideWhen="isshow" id='stab-{{hideWhen2}}'>
         <button ion-item (click)="writecom();">
             评论
         </button>
     </ion-list>
     <ion-list inset>
-        <button ion-item>
+        <button ion-item (click)="openTA();">
             TA的资料
         </button>
     </ion-list>

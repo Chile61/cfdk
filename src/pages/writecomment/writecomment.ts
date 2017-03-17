@@ -64,5 +64,9 @@ export class writecommentPage {
         });
   }
 
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
+
 
 }

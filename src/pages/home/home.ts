@@ -150,8 +150,7 @@ export class HomePage {
 
   //打开养生头条
   pushtoutiaoPage(index) {
-    alert(index);
-    alert(this.art[index]["_id"]);
+    
     this.navCtrl.push(toutiaoPage,{
       id:this.art[index]["_id"]
     });
@@ -211,5 +210,7 @@ export class HomePage {
     this.getwork();
     infiniteScroll.complete();
   }
+
+  
 
 }

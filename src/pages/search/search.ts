@@ -57,4 +57,8 @@ export class searchPage {
       id:this.items[index]['_id']
     });
   }
+
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
 }

@@ -4,6 +4,7 @@ import { Headers, Http } from '@angular/http';
 import { writecommentPage } from '../writecomment/writecomment';
 import { UserService } from '../service/User.service';
 import { PopoverPage } from '../PopoverPage/PopoverPage';
+import { PopoverPage2 } from '../PopoverPage2/PopoverPage2';
 import { loginPage } from '../login/login';
 
 declare var PhotoSwipe: any;
@@ -22,6 +23,7 @@ export class seechartPage {
   gallery: any;
   pswpElement: any = null;
   comment: any = [];
+  hideWhen:any = true;
 
   constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public http: Http, private navParams: NavParams, public userService: UserService, public popoverCtrl: PopoverController) {
     userService.setnav(this.navCtrl);
@@ -34,6 +36,18 @@ export class seechartPage {
   presentPopover(ev) {
 
     let popover = this.popoverCtrl.create(PopoverPage, {
+      datas: this.datas,
+      type: 3 + ''
+    });
+
+    popover.present({
+      ev: ev
+    });
+  }
+
+  presentPopover2(ev) {
+
+    let popover = this.popoverCtrl.create(PopoverPage2, {
       datas: this.datas,
       type: 3 + ''
     });
@@ -59,6 +73,10 @@ export class seechartPage {
       .subscribe((res) => {
         this.datas = res.json()[0];
         //alert(JSON.stringify(res.json()));
+        if(this.datas["uid"] == this.userService._user._id){
+          this.hideWhen = false;
+          //this.showWhen = false;
+        }
         this.getquecomment();
       });
 
@@ -138,6 +156,10 @@ export class seechartPage {
     } else {
       this.navCtrl.push(loginPage);
     }
+  }
+
+  ionViewDidLeave(){
+    this.loading.dismiss();
   }
 
 }

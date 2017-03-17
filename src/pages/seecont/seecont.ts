@@ -88,4 +88,8 @@ export class seecontPage {
   tapEvent(e) {
     this.content.scrollToTop();
   }
+
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
 }

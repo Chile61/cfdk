@@ -123,5 +123,9 @@ export class mysendPage {
     this.content.scrollToTop();
   }
 
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
+
 
 }

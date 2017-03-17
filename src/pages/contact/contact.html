@@ -9,14 +9,14 @@
     <ion-list>
 
         <ion-list-header>闲聊／系统</ion-list-header>
-        <ion-item-sliding (click)="chart();">
+        <ion-item-sliding *ngFor="let item of data; let i=index" (click)="chart(i);">
             <ion-item>
                 <ion-avatar item-left>
-                    <img src="assets/img2/user_4.jpeg">
+                    <img [src]="item.latestMessage.content.extra.head">
                 </ion-avatar>
-                <h2>Woody</h2>
-                <p>This town ain't big enough for the two of us!</p>
-                <ion-note item-right>3:43 pm</ion-note>
+                <h2>{{item.latestMessage.content.extra.name}}</h2>
+                <p>{{item.latestMessage.content.content}}</p>
+                <ion-note item-right>{{item.sentTime | date:"yyyy-MM-dd"}}</ion-note>
             </ion-item>
             <ion-item-options side="right">
                 <button ion-button color="primary">
@@ -31,138 +31,5 @@
         </ion-item-sliding>
 
     </ion-list>
-    <ion-list>
-        <ion-list-header>问答回复</ion-list-header>
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="assets/img2/user_2.jpeg">
-                </ion-avatar>
-                <h2>Jessie</h2>
-                <p>Well aren't you just the sweetest space toy I ever did meet!</p>
-                <ion-note item-right>10:03 am</ion-note>
-            </ion-item>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
 
-        <ion-item-sliding>
-
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="assets/img2/user_1.jpeg">
-                </ion-avatar>
-                <h2>Mr. Potato Head</h2>
-                <p>You're not turning me into a Mashed Potato.</p>
-                <ion-note item-right>5:47 am</ion-note>
-            </ion-item>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-    </ion-list>
-    <ion-list>
-        <ion-list-header>作品评论</ion-list-header>
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="assets/img2/user_4.jpeg">
-                </ion-avatar>
-                <h2>Woody</h2>
-                <p>This town ain't big enough for the two of us!</p>
-                <ion-note item-right>3:43 pm</ion-note>
-            </ion-item>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="assets/img2/user_3.jpeg">
-                </ion-avatar>
-                <h2>Buzz Lightyear</h2>
-                <p>My eyeballs could have been sucked from their sockets!</p>
-                <ion-note item-right>1:12 pm</ion-note>
-            </ion-item>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-    </ion-list>
-    <ion-list>
-        <ion-list-header>厨圈</ion-list-header>
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="assets/img2/user_4.jpeg">
-                </ion-avatar>
-                <h2>Woody</h2>
-                <p>This town ain't big enough for the two of us!</p>
-                <ion-note item-right>3:43 pm</ion-note>
-            </ion-item>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-
-        <ion-item-sliding>
-            <ion-item>
-                <ion-avatar item-left>
-                    <img src="assets/img2/user_3.jpeg">
-                </ion-avatar>
-                <h2>Buzz Lightyear</h2>
-                <p>My eyeballs could have been sucked from their sockets!</p>
-                <ion-note item-right>1:12 pm</ion-note>
-            </ion-item>
-            <ion-item-options side="right">
-                <button ion-button color="primary">
-                    <ion-icon name="text"></ion-icon>
-                    Text
-                </button>
-                <button ion-button color="secondary">
-                    <ion-icon name="call"></ion-icon>
-                    Call
-                </button>
-            </ion-item-options>
-        </ion-item-sliding>
-
-    </ion-list>
 </ion-content>

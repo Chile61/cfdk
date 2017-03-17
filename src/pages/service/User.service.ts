@@ -40,7 +40,7 @@ export class UserService {
 		NativeStorage.getItem('_user')
 			.then(
 			data => {
-				alert("缓存：" + data._id + "--" + data.uname + "--" + data.usex);
+				//alert("缓存：" + data._id + "--" + data.uname + "--" + data.usex);
 				this._user = data;
 
 				this.rongCloudService.RongCloudLibPlugin_init(this._user._id, this._user.uname);

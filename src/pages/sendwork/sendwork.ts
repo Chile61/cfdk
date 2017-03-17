@@ -281,5 +281,10 @@ export class sendworkPage {
   }
 
 
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
+
+
 
 }

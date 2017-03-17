@@ -43,4 +43,8 @@ export class sendqusPage {
 
   }
 
+  ionViewDidLeave(){
+    this.loading.dismiss();
+  }
+
 }

@@ -30,7 +30,9 @@ export class MePage {
   //我的资料
   openme() {
     if (this.userService._user._id) {
-      let modal = this.modalCtrl.create(MedataPage);
+      let modal = this.modalCtrl.create(MedataPage,{
+      id:this.userService._user._id
+    });
       modal.present();
     } else {
       this.navCtrl.push(loginPage);

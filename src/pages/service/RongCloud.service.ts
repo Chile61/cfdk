@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
+import { ContactData } from '../service/ContactData';
 
 declare var RongCloudLibPlugin: any;
 declare var SHA1: any;
@@ -16,11 +17,8 @@ export class RongCloudService {
 	token: any;
 	Signature: any;
 
-	constructor(public http: Http) {
-		//alert(SHA1);
-		//alert(RongIMClient);
-		//alert(RongIMLib);
-		//this.webRongIMClient();
+	constructor(public http: Http, public contactData: ContactData) {
+
 	}
 
 
@@ -32,17 +30,17 @@ export class RongCloudService {
 				switch (status) {
 					//链接成功
 					case RongIMLib.ConnectionStatus.CONNECTED:
-						alert('链接成功');
-						_that.webgetTotalUnreadCount();
+						//alert('链接成功');
+
 						_that.webgetRemoteConversationList();
 						break;
 					//正在链接
 					case RongIMLib.ConnectionStatus.CONNECTING:
-						alert('正在链接');
+						//alert('正在链接');
 						break;
 					//重新链接
 					case RongIMLib.ConnectionStatus.DISCONNECTED:
-						alert('断开连接');
+						//alert('断开连接');
 						break;
 					//其他设备登录
 					case RongIMLib.ConnectionStatus.KICKED_OFFLINE_BY_OTHER_CLIENT:
@@ -100,10 +98,13 @@ export class RongCloudService {
 
 	//获取会话列表
 	webgetRemoteConversationList() {
+		var _that = this;
 		RongIMClient.getInstance().getRemoteConversationList({
 			onSuccess: function (list) {
 				//list 会话列表
-				//alert("会话列表:" + list);
+				alert("会话列表:" + JSON.stringify(list));
+				_that.contactData.setList(list);
+				_that.webgetTotalUnreadCount();
 			},
 			onError: function (error) {
 				//getRemoteConversationList error
@@ -113,13 +114,14 @@ export class RongCloudService {
 
 	//发送信息
 	websendMessage(targetId, content, extra) {
+		alert(content);
 		// 定义消息类型,文字消息使用 RongIMLib.TextMessage
-		var msg = new RongIMLib.TextMessage({ content: content, extra: extra });
+		var msg = new RongIMLib.TextMessage({ content: content+'', extra: extra });
 		//或者使用RongIMLib.TextMessage.obtain 方法.具体使用请参见文档
 		//var msg = RongIMLib.TextMessage.obtain("hello");
-		var conversationtype = '0' //RongIMLib.ConversationType.PRIVATE; // 私聊
+		var conversationtype = 0; //RongIMLib.ConversationType.PRIVATE; // 私聊
 		//var targetId = "xxx"; // 目标 Id
-		RongIMClient.getInstance().sendMessage(conversationtype, targetId, msg, {
+		RongIMClient.getInstance().sendMessage(conversationtype, targetId+'', msg, {
 			// 发送消息成功
 			onSuccess: function (message) {
 				//message 为发送的消息对象并且包含服务器返回的消息唯一Id和发送消息时间戳
@@ -158,10 +160,11 @@ export class RongCloudService {
 
 	//获取未读数
 	webgetTotalUnreadCount() {
-
+		var _that = this;
 		RongIMClient.getInstance().getTotalUnreadCount({
 			onSuccess: function (count) {
 				//alert("count:" + count);
+				_that.contactData.setNum(count);
 			},
 			onError: function (error) {
 			}
@@ -254,5 +257,47 @@ export class RongCloudService {
 		});
 	}
 
-	
+
+	//清除指定用户未读消息数
+	webclearUnreadCount(targetId) {
+		RongIMClient.getInstance().clearUnreadCount(0, targetId, {
+			onSuccess: function (isClear) {
+				alert(isClear);
+			},
+			onError: function () {
+			}
+		});
+	}
+
+	//返回用户信息，获取用户指定会话
+	webgetConversation(targetId): any {
+		RongIMClient.getInstance().getConversation(0, targetId, {
+			onSuccess: function (conver) {
+				//成功 conver 为Conversation对象
+				alert(JSON.stringify(conver));
+				return conver;
+			},
+			onError: function (error) {
+				//失败
+			}
+		});
+	}
+
+	//发送信息－快捷发送内容
+	websendTextMessaget(targetId, text) {
+		alert(targetId);
+		alert(text);
+		RongIMLib.RongIMClient.getInstance().sendTextMessage(0, targetId+'', text+'', {
+			onSuccess: function (data) {
+				alert(JSON.stringify(data));
+				//=> data {messageUId:"消息唯一Id",timestamp:"发送消息时间戳"}
+				alert("SendTextMessage Successfully");
+			},
+			onError: function (errorcode) {
+				alert("SendTextMessage,errorcode:" + errorcode);
+			}
+		});
+	}
+
+
 }

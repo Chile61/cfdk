@@ -12,6 +12,7 @@ export class rankingPage {
   @ViewChild(Content) content: Content;
   userlist:any = [];
   loading:any;
+  infiniteScroll: any = null;
 
   constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, public userService: UserService, public http: Http, public modalCtrl: ModalController) {
     userService.setnav(this.navCtrl);
@@ -42,8 +43,13 @@ export class rankingPage {
     })
       .subscribe((res) => {
         //alert(JSON.stringify(res.json()));
-        this.userlist = res.json();
+        if(res.json()!="0"){
+          this.userlist = this.userlist.concat(res.json());
+        }
         this.loading.dismiss();
+        if(this.infiniteScroll != null){
+          this.infiniteScroll.complete();
+        }
       });
   }
 
@@ -55,6 +61,16 @@ export class rankingPage {
   //点击到顶部
   tapEvent(e) {
     this.content.scrollToTop();
+  }
+
+  doInfinite(infiniteScroll) {
+
+    this.infiniteScroll = infiniteScroll;
+    this.getdata();
+  }
+
+  ionViewDidLeave(){
+    this.loading.dismiss();
   }
 
 }

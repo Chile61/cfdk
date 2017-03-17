@@ -298,14 +298,6 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-qqsdk.QQSDK",
-        "file": "plugins/cordova-plugin-qqsdk/www/qq.js",
-        "pluginId": "cordova-plugin-qqsdk",
-        "clobbers": [
-            "QQSDK"
-        ]
-    },
-    {
         "id": "jpush-phonegap-plugin.JPushPlugin",
         "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
         "pluginId": "jpush-phonegap-plugin",
@@ -319,6 +311,14 @@ module.exports = [
         "pluginId": "io.rong.imlib",
         "clobbers": [
             "RongCloudLibPlugin"
+        ]
+    },
+    {
+        "id": "cordova-plugin-qqsdk.QQSDK",
+        "file": "plugins/cordova-plugin-qqsdk/www/qq.js",
+        "pluginId": "cordova-plugin-qqsdk",
+        "clobbers": [
+            "QQSDK"
         ]
     }
 ];
@@ -339,9 +339,9 @@ module.exports.metadata =
     "cordova-plugin-file-transfer": "1.6.2",
     "cordova-plugin-jcore": "1.1.0",
     "cordova-plugin-network-information": "1.3.2",
-    "cordova-plugin-qqsdk": "0.8.5",
     "jpush-phonegap-plugin": "3.1.0",
-    "io.rong.imlib": "2.3.7"
+    "io.rong.imlib": "2.3.7",
+    "cordova-plugin-qqsdk": "0.8.5"
 };
 // BOTTOM OF METADATA
 });
