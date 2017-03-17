@@ -14,7 +14,7 @@ export class ContactData {
 	//设置未读数
 	setNum(Num){
 		this._num = Num;
-		alert("未读数："+this._num);
+		//alert("未读数："+this._num);
 	}
 
 	//设置会话列表

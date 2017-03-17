@@ -236,7 +236,7 @@ export class sendworkPage {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "uid=" + this.userService._user._id + "&uhead=" + "https://avatars0.githubusercontent.com/u/11835988?v=3&s=460" + "&uname=" + this.userService._user.uname + "&utitle=" + this.title + "&ubanner=" + this.banner+"&utext="+this.text+"&ueat="+JSON.stringify(this.foods)+"&uimg="+JSON.stringify(this.work._work)+"&utip="+this.tip, {
+    this.http.post(url, "uid=" + this.userService._user._id + "&uhead=" + this.userService._user.uheader + "&uname=" + this.userService._user.uname + "&utitle=" + this.title + "&ubanner=" + this.banner+"&utext="+this.text+"&ueat="+JSON.stringify(this.foods)+"&uimg="+JSON.stringify(this.work._work)+"&utip="+this.tip, {
       headers: headers
     })
       .subscribe((res) => {

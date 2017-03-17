@@ -20,7 +20,7 @@
     <section id="seequs_wrap" class="home_works">
         <div class="seequs_list">
             <div class="seequs_user_wrap">
-                <img [src]="datas.uhead" />
+                <img src="{{datas.uhead==''?'assets/logo/logo.png':datas.uhead}}" />
                 <p>{{datas.uname}}</p>
             </div>
             <br/>
@@ -49,7 +49,7 @@
 
             <ion-item>
                 <ion-avatar item-left>
-                    <img [src]="item.uhead">
+                    <img src="{{item.uhead==''?'assets/logo/logo.png':item.uhead}}">
                 </ion-avatar>
                 <h2>{{item.uname}}</h2>
 

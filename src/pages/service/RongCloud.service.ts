@@ -102,7 +102,7 @@ export class RongCloudService {
 		RongIMClient.getInstance().getRemoteConversationList({
 			onSuccess: function (list) {
 				//list 会话列表
-				alert("会话列表:" + JSON.stringify(list));
+				//alert("会话列表:" + JSON.stringify(list));
 				_that.contactData.setList(list);
 				_that.webgetTotalUnreadCount();
 			},
@@ -114,7 +114,7 @@ export class RongCloudService {
 
 	//发送信息
 	websendMessage(targetId, content, extra) {
-		alert(content);
+		//alert(content);
 		// 定义消息类型,文字消息使用 RongIMLib.TextMessage
 		var msg = new RongIMLib.TextMessage({ content: content+'', extra: extra });
 		//或者使用RongIMLib.TextMessage.obtain 方法.具体使用请参见文档
@@ -262,7 +262,7 @@ export class RongCloudService {
 	webclearUnreadCount(targetId) {
 		RongIMClient.getInstance().clearUnreadCount(0, targetId, {
 			onSuccess: function (isClear) {
-				alert(isClear);
+				//alert(isClear);
 			},
 			onError: function () {
 			}
@@ -285,8 +285,7 @@ export class RongCloudService {
 
 	//发送信息－快捷发送内容
 	websendTextMessaget(targetId, text) {
-		alert(targetId);
-		alert(text);
+		
 		RongIMLib.RongIMClient.getInstance().sendTextMessage(0, targetId+'', text+'', {
 			onSuccess: function (data) {
 				alert(JSON.stringify(data));

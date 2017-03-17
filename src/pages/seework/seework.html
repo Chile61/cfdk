@@ -27,7 +27,7 @@
                     <p>{{datas.utime | date:"yyyy-MM-dd"}}</p>
                 </div>
                 <div class="home_work_cont_right">
-                    <img [src]="datas.uhead" />
+                    <img src="{{datas.uhead==''?'assets/logo/logo.png':datas.uhead}}" />
                     <p>{{datas.uname}}</p>
                 </div>
             </div>
@@ -85,7 +85,7 @@
 
         <ion-item>
             <ion-avatar item-left>
-                <img [src]="item.uhead">
+                <img src="{{item.uhead==''?'assets/logo/logo.png':item.uhead}}">
             </ion-avatar>
             <h2>{{item.uname}}</h2>
 

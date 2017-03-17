@@ -11,7 +11,7 @@
 
         <ion-item>
             <ion-avatar item-left>
-                <img [src]="item.uhead">
+                <img src="{{item.uhead==''?'assets/logo/logo.png':item.uhead}}">
             </ion-avatar>
             <h2>{{item.uname}}</h2>
 

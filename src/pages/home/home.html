@@ -69,7 +69,7 @@
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide" *ngFor="let item of user; let i=index" (click)="openTA(i);">
-                        <img src="assets/img2/user_1.jpeg" />
+                        <img src="{{item.uheader==''?'assets/logo/logo.png':item.uheader}}" />
                         <p>{{item.uname}}</p>
                     </div>
 

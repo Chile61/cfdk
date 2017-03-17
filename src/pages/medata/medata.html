@@ -15,38 +15,46 @@
     <ion-list no-border>
 
         <ion-item>
+            <ion-avatar item-left>
+                <img src="{{datas.uheader==''?'assets/logo/logo.png':datas.uheader}}">
+            </ion-avatar>
+            <h2>{{datas.uname}}</h2>
+            <p>注册时间：{{datas.utime | date:"yyyy-MM-dd"}}</p>
+        </ion-item>
+
+        <ion-item>
             <ion-icon name='flask' item-left></ion-icon>
-            我的好友
+            昵称
             <ion-note item-right>
-                Poisonous
+                {{datas.uname}}
             </ion-note>
         </ion-item>
         <ion-item>
             <ion-icon name='flask' item-left></ion-icon>
-            我的好友
+            性别
             <ion-note item-right>
-                Poisonous
+                {{datas.usex=="0"?"男":"女"}}
             </ion-note>
         </ion-item>
         <ion-item>
             <ion-icon name='flask' item-left></ion-icon>
-            我的好友
+            作品数
             <ion-note item-right>
-                Poisonous
+                {{datas.uwork}}
             </ion-note>
         </ion-item>
         <ion-item>
             <ion-icon name='flask' item-left></ion-icon>
-            我的好友
+            提问数
             <ion-note item-right>
-                Poisonous
+                {{datas.uqus}}
             </ion-note>
         </ion-item>
         <ion-item>
             <ion-icon name='flask' item-left></ion-icon>
-            我的好友
+            分享数
             <ion-note item-right>
-                Poisonous
+                {{datas.ushare}}
             </ion-note>
         </ion-item>
 

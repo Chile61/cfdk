@@ -10,7 +10,7 @@
 
     <ion-item *ngFor="let item of userlist; let i=index" (click)="openTA(i)">
         <ion-avatar item-left>
-            <img [src]="item.uheader">
+            <img src="{{item.uheader==''?'assets/logo/logo.png':item.uheader}}">
         </ion-avatar>
         <h2>{{i+1}}. {{item.uname}}</h2>
         <p>注册时间：{{item.utime | date:"yyyy-MM-dd"}}</p>

@@ -12,10 +12,11 @@ import { loginPage } from '../login/login';
 export class MePage {
 
   public uname: any;
+  datas:any = {};
 
   constructor(public navCtrl: NavController, public modalCtrl: ModalController, public userService: UserService, private navParams: NavParams) {
     userService.setnav(this.navCtrl);
-    this.uname = this.userService._user.uname;
+    this.datas = this.userService._user;
 
   }
 

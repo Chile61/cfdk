@@ -36,7 +36,7 @@ export class UserService {
 
 	//设置缓存
 	getStorage() {
-		alert("获取缓存");
+		//alert("获取缓存");
 		NativeStorage.getItem('_user')
 			.then(
 			data => {
