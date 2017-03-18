@@ -141,5 +141,13 @@
         "variables": {
             "APP_KEY": "520865321813385a601043b3"
         }
+    },
+    "cordova-plugin-app-version": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-app-version"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

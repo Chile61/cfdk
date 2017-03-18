@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { MePage } from '../pages/me/me';
+import { mycollPage } from '../pages/mycoll/mycoll';
+import { settingPage } from '../pages/setting/setting';
+import { forkPage } from '../pages/fork/fork';
 import { MedataPage } from '../pages/medata/medata';
 import { toutiaoPage } from '../pages/toutiao/toutiao';
 import { toutiaoHotListPage } from '../pages/toutiaoHotList/toutiaoHotList';
@@ -71,6 +74,9 @@ import { ContactData } from '../pages/service/ContactData';
     MedataPage,
     PopoverPage,
     PopoverPage2,
+    settingPage,
+    forkPage,
+    mycollPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -109,6 +115,9 @@ import { ContactData } from '../pages/service/ContactData';
     MedataPage,
     PopoverPage,
     PopoverPage2,
+    settingPage,
+    forkPage,
+    mycollPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ContactData, RongCloudService, UserService, Work]
 })

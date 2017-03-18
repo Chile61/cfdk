@@ -320,6 +320,14 @@ module.exports = [
         "clobbers": [
             "QQSDK"
         ]
+    },
+    {
+        "id": "cordova-plugin-app-version.AppVersionPlugin",
+        "file": "plugins/cordova-plugin-app-version/www/AppVersionPlugin.js",
+        "pluginId": "cordova-plugin-app-version",
+        "clobbers": [
+            "cordova.getAppVersion"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -341,7 +349,8 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.3.2",
     "jpush-phonegap-plugin": "3.1.0",
     "io.rong.imlib": "2.3.7",
-    "cordova-plugin-qqsdk": "0.8.5"
+    "cordova-plugin-qqsdk": "0.8.5",
+    "cordova-plugin-app-version": "0.1.9"
 };
 // BOTTOM OF METADATA
 });

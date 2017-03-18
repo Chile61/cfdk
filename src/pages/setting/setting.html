@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            系统设置
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+
+    <ion-list no-border>
+
+        <ion-list-header>
+            设置
+        </ion-list-header>
+
+        <ion-item>
+            <ion-icon name='planet' item-left></ion-icon>
+            版本
+            <ion-note item-right>
+                {{VersionCode}}
+            </ion-note>
+        </ion-item>
+
+        <!--<ion-item>
+            <ion-toggle checked="{{ischecked}}"></ion-toggle>
+            <ion-label>
+                评论推送
+            </ion-label>
+            <ion-icon name='body' item-left></ion-icon>
+        </ion-item>-->
+
+        <ion-item (click)="AppV();">
+            <ion-icon name='leaf' item-left></ion-icon>
+            检查新版本
+            <ion-icon name='rose' item-right color="secondary"></ion-icon>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name='flask' item-left></ion-icon>
+            关于我们
+
+        </ion-item>
+
+    </ion-list>
+    <br/>
+    <button ion-button block full>退出当前帐号</button>
+
+
+</ion-content>

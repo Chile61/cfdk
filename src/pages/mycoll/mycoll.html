@@ -1,0 +1,21 @@
+<ion-header (tap)="tapEvent($event)">
+    <ion-navbar color="secondary">
+        <ion-title>
+            我的收藏
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+
+
+
+    <ion-list>
+        <button ion-item *ngFor="let item of work; let i=index" (click)="openwork(item.uartid);">
+            {{ item.utitle }}
+        </button>
+    </ion-list>
+
+
+
+</ion-content>

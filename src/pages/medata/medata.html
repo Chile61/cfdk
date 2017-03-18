@@ -36,21 +36,21 @@
                 {{datas.usex=="0"?"男":"女"}}
             </ion-note>
         </ion-item>
-        <ion-item>
+        <ion-item (click)="getwork();">
             <ion-icon name='flask' item-left></ion-icon>
             作品数
             <ion-note item-right>
                 {{datas.uwork}}
             </ion-note>
         </ion-item>
-        <ion-item>
+        <ion-item (click)="getque();">
             <ion-icon name='flask' item-left></ion-icon>
             提问数
             <ion-note item-right>
                 {{datas.uqus}}
             </ion-note>
         </ion-item>
-        <ion-item>
+        <ion-item (click)="getchart();">
             <ion-icon name='flask' item-left></ion-icon>
             分享数
             <ion-note item-right>
@@ -62,6 +62,7 @@
     </ion-list>
     <br/>
     <br/>
+    <button id="chart-{{isshow}}" ion-button full (click)="chart();">留言</button>
     <br/>
-    <button id="chart-{{isshow}}" ion-button full (click)="chart();">聊天</button>
+    <button id="chart-{{isshow}}" ion-button full (click)="fork();">关注</button>
 </ion-content>

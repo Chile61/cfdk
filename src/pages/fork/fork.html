@@ -1,0 +1,20 @@
+<ion-header (tap)="tapEvent($event)">
+    <ion-navbar color="secondary">
+        <ion-title>
+            我的关注
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ion-list>
+        <ion-item *ngFor="let item of arr; let i=index" (click)="openta(item.fid);">
+            <ion-avatar item-left>
+                <img src="{{item.fhead==''?'assets/logo/logo.png':item.fhead}}">
+            </ion-avatar>
+            <h2>{{item.fname}}</h2>
+            <p>&nbsp;&nbsp; </p>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

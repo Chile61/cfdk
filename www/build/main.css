@@ -29649,6 +29649,10 @@ ion-list {
   text-align: right;
 }
 
+.chart_p_left {
+  text-align: right;
+}
+
 page-ranking {
   width: 100%;
   background: #fff;

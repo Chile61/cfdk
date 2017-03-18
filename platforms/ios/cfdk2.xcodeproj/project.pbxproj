@@ -102,6 +102,7 @@
 		741C1CB0C10744DEA28DC905 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A2EF479B5440B9BEC7468A /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		42291379DC7E4782B538C204 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D85B439B8F4D76A9039B7B /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9BC8DD292B1B456E9A5B4277 /* libresolv.tbd in Resources */ = {isa = PBXBuildFile; fileRef = 2CF2AF97171645A18509257C /* libresolv.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
+		85B515FDB3EE46058258FA50 /* AppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = DD565F95389C4179877DBCB3 /* AppVersion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +267,8 @@
 		81A2EF479B5440B9BEC7468A /* AdSupport.framework */ = {isa = PBXFileReference; name = "AdSupport.framework"; path = "System/Library/Frameworks/AdSupport.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		32D85B439B8F4D76A9039B7B /* UserNotifications.framework */ = {isa = PBXFileReference; name = "UserNotifications.framework"; path = "System/Library/Frameworks/UserNotifications.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		2CF2AF97171645A18509257C /* libresolv.tbd */ = {isa = PBXFileReference; name = "libresolv.tbd"; path = "libresolv.tbd"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DD565F95389C4179877DBCB3 /* AppVersion.m */ = {isa = PBXFileReference; name = "AppVersion.m"; path = "cordova-plugin-app-version/AppVersion.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		5D4FCE9C23C74ED7BA727375 /* AppVersion.h */ = {isa = PBXFileReference; name = "AppVersion.h"; path = "cordova-plugin-app-version/AppVersion.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -530,6 +533,8 @@
 				8F6F1F0CEC434B0F96EDBE83 /* JPushPlugin.h */,
 				E079417908294A8EA7FD2967 /* AppDelegate+JPush.h */,
 				6EE151D570C1428092BD4DC3 /* JPUSHService.h */,
+				DD565F95389C4179877DBCB3 /* AppVersion.m */,
+				5D4FCE9C23C74ED7BA727375 /* AppVersion.h */,
 			);
 			name = Plugins;
 			path = "cfdk2/Plugins";
@@ -694,6 +699,7 @@
 				52809F1DBDE74078A0EF4D34 /* RongCloudModel.m in Sources */,
 				5F0FDE186481456282284296 /* JPushPlugin.m in Sources */,
 				E331B8ED33F046548C953DEC /* AppDelegate+JPush.m in Sources */,
+				85B515FDB3EE46058258FA50 /* AppVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -336,6 +336,14 @@ module.exports = [
         "clobbers": [
             "JPush"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-app-version/www/AppVersionPlugin.js",
+        "id": "cordova-plugin-app-version.AppVersionPlugin",
+        "pluginId": "cordova-plugin-app-version",
+        "clobbers": [
+            "cordova.getAppVersion"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -357,7 +365,8 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.3.2",
     "cordova-plugin-qqsdk": "0.8.5",
     "io.rong.imlib": "2.3.7",
-    "jpush-phonegap-plugin": "3.1.0"
+    "jpush-phonegap-plugin": "3.1.0",
+    "cordova-plugin-app-version": "0.1.9"
 }
 // BOTTOM OF METADATA
 });

@@ -56,6 +56,9 @@
     <access origin="http://*.ptlogin2.qq.com/*" />
     <access origin="http://*.qq.com/*" />
     <access origin="http://q2.qlogo.cn/*" />
+    <feature name="AppVersion">
+        <param name="android-package" value="uk.co.whiteoctober.cordova.AppVersion" />
+    </feature>
     <name>厨房大咖</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>

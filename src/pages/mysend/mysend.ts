@@ -20,14 +20,16 @@ export class mysendPage {
   workhideWhen: any = true;
   charthideWhen: any = true;
   loading:any;
+  uid:any;
 
   constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, private navParams: NavParams, public userService: UserService, public http: Http) {
     userService.setnav(this.navCtrl);
     this.loading = this.loadingCtrl.create({
 			content: '加载中，稍等...'
 		});
-    this.loading.present();
+    
     this.type = navParams.get('type');
+    this.uid = navParams.get('id');
     switch (this.type) {
       case "work":
         this.getwork();
@@ -45,12 +47,13 @@ export class mysendPage {
 
   //获取评论
   getwork(){
+    this.loading.present();
     let url = "http://www.devonhello.com/cfdk/getmywork";
 
       var headers = new Headers();
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
       
-      this.http.post(url, "uid="+this.userService._user._id+"&len="+this.work.length, {
+      this.http.post(url, "uid="+ this.uid +"&len="+this.work.length, {
         headers: headers
       })
       .subscribe((res) => {
@@ -63,12 +66,13 @@ export class mysendPage {
 
   //获取评论
   getque(){
+    this.loading.present();
     let url = "http://www.devonhello.com/cfdk/getmyquestion";
 
       var headers = new Headers();
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
       
-      this.http.post(url, "uid="+this.userService._user._id+"&len="+this.que.length, {
+      this.http.post(url, "uid="+ this.uid +"&len="+this.que.length, {
         headers: headers
       })
       .subscribe((res) => {
@@ -81,12 +85,13 @@ export class mysendPage {
 
   //获取评论
   getchart(){
+    this.loading.present();
     let url = "http://www.devonhello.com/cfdk/getmychart";
 
       var headers = new Headers();
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
       
-      this.http.post(url, "uid="+this.userService._user._id+"&len="+this.chart.length, {
+      this.http.post(url, "uid="+ this.uid +"&len="+this.chart.length, {
         headers: headers
       })
       .subscribe((res) => {

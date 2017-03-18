@@ -56,6 +56,9 @@
         "cordova-plugin-qqsdk": {
             "QQ_APP_ID": "1104885342",
             "PACKAGE_NAME": "com.cfdk"
+        },
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "com.cfdk"
         }
     },
     "dependent_plugins": {
