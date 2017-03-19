@@ -127,10 +127,10 @@ export class loginPage {
         } else {
           //已经注册过
           var datas = res.json()[0];
-          this.userService.update(datas);
-          this.userService.getStorage();
-          this.loading.dismiss();
-          this.navCtrl.pop();
+          _that.userService.update(datas);
+          _that.userService.getStorage();
+          _that.loading.dismiss();
+          _that.navCtrl.pop();
 
         }
       });

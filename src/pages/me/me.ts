@@ -24,7 +24,7 @@ export class MePage {
 
   ionViewDidEnter() {
 
-    if (this.userService._user._is) {
+    if (this.userService._user._id) {
       this.uname = this.userService._user.uname;
     }
 

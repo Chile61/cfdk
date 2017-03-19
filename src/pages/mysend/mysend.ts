@@ -12,22 +12,22 @@ import { seechartPage } from '../seechart/seechart';
 })
 export class mysendPage {
   @ViewChild(Content) content: Content;
-  type:any;
-  work:any = [];
-  que:any = [];
-  chart:any = [];
+  type: any;
+  work: any = [];
+  que: any = [];
+  chart: any = [];
   quehideWhen: any = true;
   workhideWhen: any = true;
   charthideWhen: any = true;
-  loading:any;
-  uid:any;
+  loading: any;
+  uid: any;
 
   constructor(public loadingCtrl: LoadingController, public navCtrl: NavController, private navParams: NavParams, public userService: UserService, public http: Http) {
     userService.setnav(this.navCtrl);
     this.loading = this.loadingCtrl.create({
-			content: '加载中，稍等...'
-		});
-    
+      content: '加载中，稍等...'
+    });
+
     this.type = navParams.get('type');
     this.uid = navParams.get('id');
     switch (this.type) {
@@ -46,60 +46,69 @@ export class mysendPage {
 
 
   //获取评论
-  getwork(){
+  getwork() {
     this.loading.present();
     let url = "http://www.devonhello.com/cfdk/getmywork";
 
-      var headers = new Headers();
-      headers.append('Content-Type', 'application/x-www-form-urlencoded');
-      
-      this.http.post(url, "uid="+ this.uid +"&len="+this.work.length, {
-        headers: headers
-      })
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "uid=" + this.uid + "&len=" + this.work.length, {
+      headers: headers
+    })
       .subscribe((res) => {
+        if (res.json() != '0') {
           this.work = res.json();
           this.workhideWhen = false;
-          this.loading.dismiss();
-        });
-  
+        }
+
+        this.loading.dismiss();
+      });
+
   }
 
   //获取评论
-  getque(){
+  getque() {
     this.loading.present();
     let url = "http://www.devonhello.com/cfdk/getmyquestion";
 
-      var headers = new Headers();
-      headers.append('Content-Type', 'application/x-www-form-urlencoded');
-      
-      this.http.post(url, "uid="+ this.uid +"&len="+this.que.length, {
-        headers: headers
-      })
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "uid=" + this.uid + "&len=" + this.que.length, {
+      headers: headers
+    })
       .subscribe((res) => {
+        if (res.json() != '0') {
           this.que = res.json();
           this.quehideWhen = false;
-          this.loading.dismiss();
-        });
-  
+        }
+
+        this.loading.dismiss();
+      });
+
   }
 
   //获取评论
-  getchart(){
+  getchart() {
     this.loading.present();
     let url = "http://www.devonhello.com/cfdk/getmychart";
 
-      var headers = new Headers();
-      headers.append('Content-Type', 'application/x-www-form-urlencoded');
-      
-      this.http.post(url, "uid="+ this.uid +"&len="+this.chart.length, {
-        headers: headers
-      })
+    var headers = new Headers();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+
+    this.http.post(url, "uid=" + this.uid + "&len=" + this.chart.length, {
+      headers: headers
+    })
       .subscribe((res) => {
+        if (res.json() != '0') {
           this.chart = res.json();
           this.charthideWhen = false;
-          this.loading.dismiss();
-        });
-  
+        }
+
+        this.loading.dismiss();
+      });
+
   }
 
   //查看问题
@@ -128,7 +137,7 @@ export class mysendPage {
     this.content.scrollToTop();
   }
 
-  ionViewDidLeave(){
+  ionViewDidLeave() {
     this.loading.dismiss();
   }
 

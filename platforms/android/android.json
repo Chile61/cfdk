@@ -107,6 +107,10 @@
                         {
                             "xml": "<feature name=\"AppVersion\"><param name=\"android-package\" value=\"uk.co.whiteoctober.cordova.AppVersion\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileOpener2\"><param name=\"android-package\" value=\"io.github.pwlin.cordova.plugins.fileopener2.FileOpener2\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -192,6 +196,10 @@
                         },
                         {
                             "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"com.tencent.connect.common.AssistActivity\" android:screenOrientation=\"portrait\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<provider android:authorities=\"com.cfdk.opener.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"io.github.pwlin.cordova.plugins.fileopener2.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/opener_paths\" /></provider>",
                             "count": 1
                         }
                     ],
@@ -281,6 +289,10 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "count": 1
                         }
                     ],
                     "application": [
@@ -348,6 +360,9 @@
             "PACKAGE_NAME": "com.cfdk"
         },
         "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "com.cfdk"
+        },
+        "cordova-plugin-file-opener2": {
             "PACKAGE_NAME": "com.cfdk"
         }
     },
@@ -681,6 +696,14 @@
             "clobbers": [
                 "cordova.getAppVersion"
             ]
+        },
+        {
+            "id": "cordova-plugin-file-opener2.FileOpener2",
+            "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
+            "pluginId": "cordova-plugin-file-opener2",
+            "clobbers": [
+                "cordova.plugins.fileOpener2"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -701,6 +724,7 @@
         "jpush-phonegap-plugin": "3.1.0",
         "io.rong.imlib": "2.3.7",
         "cordova-plugin-qqsdk": "0.8.5",
-        "cordova-plugin-app-version": "0.1.9"
+        "cordova-plugin-app-version": "0.1.9",
+        "cordova-plugin-file-opener2": "2.0.8"
     }
 }

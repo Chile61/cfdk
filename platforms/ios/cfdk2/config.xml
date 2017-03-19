@@ -64,6 +64,9 @@
     <feature name="AppVersion">
         <param name="ios-package" value="AppVersion" />
     </feature>
+    <feature name="FileOpener2">
+        <param name="ios-package" value="FileOpener2" />
+    </feature>
     <name>厨房大咖</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>

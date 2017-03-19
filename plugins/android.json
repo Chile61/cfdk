@@ -59,6 +59,9 @@
         },
         "cordova-plugin-app-version": {
             "PACKAGE_NAME": "com.cfdk"
+        },
+        "cordova-plugin-file-opener2": {
+            "PACKAGE_NAME": "com.cfdk"
         }
     },
     "dependent_plugins": {

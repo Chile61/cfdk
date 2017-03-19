@@ -14,14 +14,14 @@ export class registerPage {
   name: string = "";
   password: string = "";
   password2: string = "";
-  loading:any;
+  loading: any;
 
   public headers: Headers;
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public http: Http, public alertCtrl: AlertController, public userService: UserService) {
     this.loading = this.loadingCtrl.create({
-			content: '加载中，稍等...'
-		});
+      content: '加载中，稍等...'
+    });
   }
 
   //注册
@@ -29,37 +29,41 @@ export class registerPage {
 
     this.loading.present();
 
-    let url = "http://www.devonhello.com/cfdk/register";
+    if (this.name.length && this.password.length && this.password == this.password2) {
+      let url = "http://www.devonhello.com/cfdk/register";
 
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+      var headers = new Headers();
+      headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
-    this.http.post(url, "uname=" + this.name + "&usex=" + this.sex + "&upas=" + SHA1(this.password) + "&ufrom=APP" + "&qqtoken=0" + "&uheader="+'', {
-      headers: headers
-    })
-      .subscribe((res) => {
+      this.http.post(url, "uname=" + this.name + "&usex=" + this.sex + "&upas=" + SHA1(this.password) + "&ufrom=APP" + "&qqtoken=0" + "&uheader=" + '', {
+        headers: headers
+      })
+        .subscribe((res) => {
 
-        if (res.json() == "0") {
-          let alert = this.alertCtrl.create({
-            title: '提示!',
-            subTitle: '用户名已存在，请重新填写!',
-            buttons: ['确定']
-          });
-          alert.present();
-          this.name = "";
-        } else {
+          if (res.json() == "0") {
+            let alert = this.alertCtrl.create({
+              title: '提示!',
+              subTitle: '用户名已存在，请重新填写!',
+              buttons: ['确定']
+            });
+            alert.present();
+            this.name = "";
+          } else {
 
-          var datas = res.json()[0];
-          this.userService.update(datas);
-          this.userService.getStorage();
-          this.navCtrl.pop();
-        }
-        this.loading.dismiss();
-      });
+            var datas = res.json()[0];
+            this.userService.update(datas);
+            this.userService.getStorage();
+            this.navCtrl.pop();
+          }
+          this.loading.dismiss();
+        });
+    }else{
+      alert("错误操作");
+    }
 
   }
 
-  ionViewDidLeave(){
+  ionViewDidLeave() {
     this.loading.dismiss();
   }
 

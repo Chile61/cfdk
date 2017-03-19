@@ -37,6 +37,7 @@ import { PopoverPage2 } from '../pages/PopoverPage2/PopoverPage2';
 
 
 import { RongCloudService } from '../pages/service/RongCloud.service';
+import { UpdateService } from '../pages/service/Update.service';
 import { UserService } from '../pages/service/User.service';
 import { Work } from '../pages/service/Work';
 import { ContactData } from '../pages/service/ContactData';
@@ -119,6 +120,6 @@ import { ContactData } from '../pages/service/ContactData';
     forkPage,
     mycollPage,
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ContactData, RongCloudService, UserService, Work]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UpdateService, ContactData, RongCloudService, UserService, Work]
 })
 export class AppModule {}

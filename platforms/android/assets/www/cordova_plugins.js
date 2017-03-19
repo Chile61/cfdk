@@ -328,6 +328,14 @@ module.exports = [
         "clobbers": [
             "cordova.getAppVersion"
         ]
+    },
+    {
+        "id": "cordova-plugin-file-opener2.FileOpener2",
+        "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
+        "pluginId": "cordova-plugin-file-opener2",
+        "clobbers": [
+            "cordova.plugins.fileOpener2"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -350,7 +358,8 @@ module.exports.metadata =
     "jpush-phonegap-plugin": "3.1.0",
     "io.rong.imlib": "2.3.7",
     "cordova-plugin-qqsdk": "0.8.5",
-    "cordova-plugin-app-version": "0.1.9"
+    "cordova-plugin-app-version": "0.1.9",
+    "cordova-plugin-file-opener2": "2.0.8"
 };
 // BOTTOM OF METADATA
 });

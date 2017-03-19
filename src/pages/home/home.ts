@@ -13,6 +13,7 @@ import { seecontPage } from '../seecont/seecont';
 import { MedataPage } from '../medata/medata';
 
 
+
 declare var $: any;
 declare var Swiper: any;
 declare var window;
@@ -45,7 +46,6 @@ export class HomePage {
     userService.setpage(seecontPage);
     userService.setnav(this.navCtrl);
     this.gethotart();
-    
     
   }
 
